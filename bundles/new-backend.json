@@ -34,14 +34,28 @@
       "note": ""
     },
     {
-      "id": "resources",
-      "when": "as-needed",
+      "id": "skill-selection",
+      "when": "skill-choice-needed",
       "skills": [
-        "aw-skill-selection",
-        "aw-model-routing",
+        "aw-skill-selection"
+      ],
+      "note": "仅候选冲突或职责选择未决时单独加载；简单判断内联。"
+    },
+    {
+      "id": "model-routing",
+      "when": "capability-gap",
+      "skills": [
+        "aw-model-routing"
+      ],
+      "note": "仅实际能力瓶颈或明确资源比较请求触发。"
+    },
+    {
+      "id": "effort-estimation",
+      "when": "time-estimate-needed",
+      "skills": [
         "aw-effort-estimation"
       ],
-      "note": "简单任务仅做必要判断，不强制额外模型或代理。"
+      "note": "用户要时间或较长任务需初估时启用；不捆绑另两项。"
     },
     {
       "id": "requirements",
@@ -138,8 +152,7 @@
   ],
   "conditions": {
     "always": "适用任务的必要判断。",
-    "as-needed": "判断确有收益才加载该能力；小任务可内联判断。",
-    "behavior-requirements-needed": "新增/改变行为或验收尚不清楚；明确文案微调不额外写设计。",
+    "behavior-requirements-needed": "目标、关键行为/验收仍缺或方向存在实质取舍，或用户要求需求/头脑风暴；已明确的局部改动内联承接。",
     "contract-change": "接口/字段/数据/调用方契约改变。",
     "trust-boundary-change": "本次涉及认证、授权、归属、私有数据/文件或其他实际信任边界。",
     "before-code-or-behavior-checks": "代码实现或行为检查前确保同一次验证/TDD/保留决定有效；已有决定直接承接，风险变化更新该决定，不重复询问。",
@@ -148,7 +161,10 @@
     "implementation-without-tdd": "本次要求正式产品代码实施且未选择TDD；仅执行受影响端。独立展示原型在UI阶段制作，不因此进入产品实现。",
     "new-stack-needed": "本次真正新产品正式实施，且语言/框架尚未选定或已选栈的关键版本/平台约束证据缺失或受变化影响；已有有效选择和证据直接承接，不重新比较候选或询问。纯设计/独立展示原型跳过。",
     "new-reference-needed": "本次新产品正式实施且已选栈，但所需工程规则缺少适配的固定范本/采纳依据，或已有来源受本次变化影响；已有有效依据只消费或补缺口，不重搜同一范本。",
-    "new-standards-needed": "本次新产品正式实施且已选栈，同一项目规范入口缺失、所需关键约束未记录或与当前已核实决定不一致；已有有效规范直接消费，只增量维护变化。"
+    "new-standards-needed": "本次新产品正式实施且已选栈，同一项目规范入口缺失、所需关键约束未记录或与当前已核实决定不一致；已有有效规范直接消费，只增量维护变化。",
+    "skill-choice-needed": "候选技能职责冲突或采纳尚未确定；已明确主要能力时不单独加载。",
+    "capability-gap": "已有实际模型/工具能力瓶颈，或用户明确要求资源比较；普通任务开始不触发。",
+    "time-estimate-needed": "用户要求时间，或较长任务需要开始/修订剩余初估；小改不增加估时日志。"
   },
-  "execution": "按阶段与条件选择，不是自动引擎；resources/审查/协作不因清单存在而强制启动。TDD是实现阶段的顺序，不是实现后的补测。 先按交付物选范围：仅需求/页面稿/独立展示原型在相应产物处停止，不机械执行产品门禁和实现；编写可运行原型代码/执行自动交互前先承接同一次局部验证决定。"
+  "execution": "先按产物和项目规则选择主要能力，只有真实缺口才补技能。skills是可导出全集，不是必读/必跑列表；先筛描述、再读适用正文，引用只读相关段落。已完成判断/基线/规范/验证决定直接复用，同职责只实施一次；纯稿件在产物处停止，正式接入保留开发门禁。"
 }
