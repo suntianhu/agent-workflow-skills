@@ -89,7 +89,7 @@ python scripts/validate.py
 
 驗證器會檢查宣告、生成內容是否同步、精確資源集合、本機連結、Python 語法、組合順序及部分分發衛生規則；不證明代理決策正確，也不保證框架沒有漏洞。
 
-Windows/Linux CI 檢查原始碼、執行離線範例並預演封裝。Codex 與 Claude 已在 Windows 隔離專案中原生探索全部 24 個技能；模型驅動的工作流程仍未驗證。版本與範圍見[驗證紀錄](docs/validation.md)及[原生載入證據](docs/agent-loading.md)。
+Windows/Linux CI 檢查原始碼、執行離線範例並預演封裝。Codex 與 Claude 已在 Windows 隔離專案中原生探索全部 24 個技能。另外已在兩個可執行的虛構 Web 工程完成新舊專案與後續需求，最終 42 項瀏覽器檢查通過；這不代表目前 26 個技能的自動探索／觸發或正式環境覆蓋。版本與範圍見[實際流程](docs/executed-workflows.md)、[驗證紀錄](docs/validation.md)及[原生載入證據](docs/agent-loading.md)。
 
 ## 使用範例與自動發佈
 

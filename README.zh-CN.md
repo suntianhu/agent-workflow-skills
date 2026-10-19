@@ -89,7 +89,7 @@ python scripts/validate.py
 
 校验覆盖源声明、生成内容新鲜度、精确资源集合、相对引用、Python 语法、组合顺序和部分分发卫生规则；不证明智能体决策正确，也不证明框架没有漏洞。
 
-Windows/Linux CI 校验源码、执行离线示例并预演打包。Codex 与 Claude 已在 Windows 隔离项目中原生发现全部 24 个技能；模型驱动的工作流执行仍未验证。具体版本和范围见[验证记录](docs/validation.md)与[原生加载证据](docs/agent-loading.md)。
+Windows/Linux CI 校验源码、执行离线示例并预演打包。Codex 与 Claude 已在 Windows 隔离项目中原生发现全部 24 个技能。另已由执行者在两个可运行虚构 Web 工程中完成新老项目与后续需求，最终 42 项浏览器检查通过；这不代表当前 26 技能自动发现/触发或生产覆盖。具体版本和范围见[实际流程](docs/executed-workflows.md)、[验证记录](docs/validation.md)与[原生加载证据](docs/agent-loading.md)。
 
 ## 使用示例与自动发布
 
