@@ -1,6 +1,6 @@
 ---
 name: aw-framework-selection
-description: "Use for a genuinely new project when the user language and platform constraints must be matched to currently maintained mainstream framework candidates before initialization."
+description: "Use before initializing a genuinely new product project when language and platform constraints must be matched to maintained framework candidates; standalone page designs and isolated display prototypes do not need product stack selection."
 license: MIT
 ---
 

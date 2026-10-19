@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "version": "1.4.1",
+  "passed": true,
+  "official_skill_structure_checks": 26,
+  "generated_manifest_repeat_identical": true,
+  "exports": [
+    {
+      "bundle": "debug-and-fix",
+      "skills": 21,
+      "byte_identical_skill_files": 106
+    },
+    {
+      "bundle": "existing-backend",
+      "skills": 16,
+      "byte_identical_skill_files": 76
+    },
+    {
+      "bundle": "existing-frontend",
+      "skills": 19,
+      "byte_identical_skill_files": 96
+    },
+    {
+      "bundle": "fullstack",
+      "skills": 22,
+      "byte_identical_skill_files": 110
+    },
+    {
+      "bundle": "new-backend",
+      "skills": 17,
+      "byte_identical_skill_files": 77
+    },
+    {
+      "bundle": "new-frontend",
+      "skills": 20,
+      "byte_identical_skill_files": 97
+    },
+    {
+      "bundle": "release",
+      "skills": 11,
+      "byte_identical_skill_files": 48
+    },
+    {
+      "bundle": "small-change",
+      "skills": 22,
+      "byte_identical_skill_files": 110
+    }
+  ],
+  "readme_skill_sets": 6,
+  "distribution_privacy_pattern_flags": 0,
+  "source_ledger": "unchanged: 11 repositories, 54 selected files; source hashing not rerun",
+  "model_routing_scenarios": "recorded separately in docs/design-scenarios.md",
+  "product_rendering": "not_run",
+  "native_host_discovery": "not_rerun",
+  "limits": "Structure and exact export checks only; not product UI tests or a model-effectiveness benchmark"
+}

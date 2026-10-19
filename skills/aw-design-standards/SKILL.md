@@ -1,6 +1,6 @@
 ---
 name: aw-design-standards
-description: "Use when establishing, documenting or changing shared project design standards, semantic tokens, components, content and platform adaptations for Web, mini-program, native app, desktop or cross-platform UI."
+description: "Use when explicitly requested to establish shared project design standards, or when product implementation needs shared tokens, components, content or platform rules; a standalone page draft does not require a project design system."
 license: MIT
 ---
 
@@ -10,7 +10,7 @@ license: MIT
 
 ## 前置条件与边界
 
-复用已有设计文档/token/组件源与规范目录；项目 Skill 只建薄入口，单页小改不重建体系。 遵从当前用户、适用项目规则与宿主权限；不因技能存在扩大任务或外部写入授权，已有授权继续执行。
+只设计单页/独立原型不强制建体系；需要共用规范时复用原有设计文档/token/组件与项目规范入口。 遵从当前用户、适用项目规则与宿主权限；不因技能存在扩大任务或外部写入授权，已有授权继续执行。
 
 进入已有项目时读取当前项目规则与既有内部规范，承接已完成的梳理、技能采纳和验证决定。后续启用本技能也先核对这些记录；发现冲突先收敛到同一规范入口，不另起脱节流程。
 
