@@ -79,7 +79,7 @@ def main():
         if not re.fullmatch(r"v(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)", args.tag) or args.tag != "v" + version:
             raise ValueError("tag must exactly match catalog version v" + version)
         files = tracked_source()
-        check = subprocess.run([sys.executable, "-B", str(ROOT / "scripts/validate.py")], cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
+        check = subprocess.run([sys.executable, "-B", "-X", "utf8", str(ROOT / "scripts/validate.py")], cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
         if check.returncode:
             raise ValueError("source validation failed: " + check.stdout.strip())
         notes = files["docs/release-notes.md"]

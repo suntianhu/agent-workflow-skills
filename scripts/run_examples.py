@@ -13,7 +13,7 @@ from build_release import ROOT, new_output
 
 
 def run(script, *args, expected=0):
-    result = subprocess.run([sys.executable, "-B", str(ROOT / "scripts" / script), *map(str, args)], capture_output=True, text=True, encoding="utf-8")
+    result = subprocess.run([sys.executable, "-B", "-X", "utf8", str(ROOT / "scripts" / script), *map(str, args)], capture_output=True, text=True, encoding="utf-8")
     if result.returncode != expected:
         raise ValueError(script + " returned " + str(result.returncode) + ": " + result.stderr)
     return json.loads(result.stdout)
