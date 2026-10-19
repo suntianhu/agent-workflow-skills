@@ -164,5 +164,277 @@
     "scope": "selected files only; not a complete repository or security audit",
     "retrieval": "public git HEAD and pinned raw files; API metadata unavailable due shared rate limit",
     "reuse": "principles rewritten; no upstream skill body, script, asset, or database redistributed"
+  },
+  {
+    "repository": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills",
+    "commit": "5c99c03fb8a9ea568432ecbcba5d86e9f4ac2bf0",
+    "snapshot_date": "2026-10-19",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/trailofbits/skills/blob/5c99c03fb8a9ea568432ecbcba5d86e9f4ac2bf0/LICENSE",
+        "sha256": "7abe19ec9bb73b36141b999b861d24ad855e808bafe0f81e84cce28556f6c297",
+        "bytes": 20131,
+        "retrieved": true,
+        "review_scope": "license identity and applicable terms; exact complete file retrieved and hashed"
+      },
+      {
+        "path": "plugins/audit-context-building/skills/audit-context-building/SKILL.md",
+        "url": "https://github.com/trailofbits/skills/blob/5c99c03fb8a9ea568432ecbcba5d86e9f4ac2bf0/plugins/audit-context-building/skills/audit-context-building/SKILL.md",
+        "sha256": "33fa693dc6e166cfa4919e4373cb6578c009d296234c2ae7cb3cd4e79b443765",
+        "bytes": 3991,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      },
+      {
+        "path": "plugins/differential-review/skills/differential-review/SKILL.md",
+        "url": "https://github.com/trailofbits/skills/blob/5c99c03fb8a9ea568432ecbcba5d86e9f4ac2bf0/plugins/differential-review/skills/differential-review/SKILL.md",
+        "sha256": "f9af6a8193fc1a9f8ca3c54bb8d19095a5f20c9472ca6d014488bbde50b67da0",
+        "bytes": 7439,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      },
+      {
+        "path": "plugins/differential-review/skills/differential-review/methodology.md",
+        "url": "https://github.com/trailofbits/skills/blob/5c99c03fb8a9ea568432ecbcba5d86e9f4ac2bf0/plugins/differential-review/skills/differential-review/methodology.md",
+        "sha256": "16b335d24cf2145e3dc4a37f50056550d29db2efa20e6df78fec95ec1e6fb0b4",
+        "bytes": 6738,
+        "retrieved": true,
+        "review_scope": "baseline, intake, changed-code analysis and history sections, lines 1-110"
+      },
+      {
+        "path": "plugins/fp-check/skills/fp-check/SKILL.md",
+        "url": "https://github.com/trailofbits/skills/blob/5c99c03fb8a9ea568432ecbcba5d86e9f4ac2bf0/plugins/fp-check/skills/fp-check/SKILL.md",
+        "sha256": "129223b79b8cb1e7c289c90cbe4ba288d9b210e318a0d1464f319e30329481b3",
+        "bytes": 6747,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      },
+      {
+        "path": "plugins/fp-check/skills/fp-check/references/standard-verification.md",
+        "url": "https://github.com/trailofbits/skills/blob/5c99c03fb8a9ea568432ecbcba5d86e9f4ac2bf0/plugins/fp-check/skills/fp-check/references/standard-verification.md",
+        "sha256": "09032334d472b0fd796fc13f6d95cf6f0ae98cce34f1aa8dbd0c3fdce2854710",
+        "bytes": 4521,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      }
+    ],
+    "scope": "selected files only; not a complete repository or security audit",
+    "retrieval": "public shallow Git snapshot; selected blob bytes retrieved without running upstream code",
+    "reuse": "abstract principles studied; independently written instructions; no upstream bodies, code, assets or databases redistributed",
+    "license": "CC-BY-SA-4.0; retrieved root LICENSE, applies to upstream material only"
+  },
+  {
+    "repository": "supabase/agent-skills",
+    "url": "https://github.com/supabase/agent-skills",
+    "commit": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+    "snapshot_date": "2026-10-19",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/LICENSE",
+        "sha256": "b65e575eb4f04a13c187d64e958321298e2ab84d67aa8428819f362056ba292c",
+        "bytes": 1065,
+        "retrieved": true,
+        "review_scope": "license identity and applicable terms; exact complete file retrieved and hashed"
+      },
+      {
+        "path": "skills/supabase-postgres-best-practices/SKILL.md",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/SKILL.md",
+        "sha256": "ad65e776f45e761bafc609d3f506c77c1032225aa65e0c4c02f241b8071e5855",
+        "bytes": 3231,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      },
+      {
+        "path": "skills/supabase-postgres-best-practices/references/query-missing-indexes.md",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/references/query-missing-indexes.md",
+        "sha256": "91ad8b0ff4365704b4830a7f077c6f140f7140fd5d3ce5cd0b92b160cf9e25f1",
+        "bytes": 1218,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      },
+      {
+        "path": "skills/supabase-postgres-best-practices/references/query-composite-indexes.md",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/references/query-composite-indexes.md",
+        "sha256": "73e42424e671f0266e74fdb220db3196790f69fb43e2b19c7b9483eb4971b554",
+        "bytes": 1454,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      },
+      {
+        "path": "skills/supabase-postgres-best-practices/references/conn-pooling.md",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/references/conn-pooling.md",
+        "sha256": "88cf086bf98ba865d2e9d0579974e1366b14157619d6a93e7da77be91084e4a5",
+        "bytes": 1382,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      },
+      {
+        "path": "skills/supabase-postgres-best-practices/references/conn-prepared-statements.md",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/references/conn-prepared-statements.md",
+        "sha256": "174e9332fe3dda5c99b2b00159fb1915ae36c00bab3a7882c14e73e4344e946e",
+        "bytes": 1529,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      },
+      {
+        "path": "skills/supabase-postgres-best-practices/references/lock-short-transactions.md",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/references/lock-short-transactions.md",
+        "sha256": "5aa7f61095916986d39644b446cdbcd2bacca7ef698a3bb50b3f82dd60207602",
+        "bytes": 1350,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      },
+      {
+        "path": "skills/supabase-postgres-best-practices/references/lock-deadlock-prevention.md",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/references/lock-deadlock-prevention.md",
+        "sha256": "09aee46f51d7178c8e55fe056cd5a94a64ba2c122fe418e6900cd99f297b2347",
+        "bytes": 1855,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      },
+      {
+        "path": "skills/supabase-postgres-best-practices/references/monitor-explain-analyze.md",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/references/monitor-explain-analyze.md",
+        "sha256": "4cb67ffbf8e57f2e5b380b0beb4242528b513723ce314a2c2ffcf083bd4203d7",
+        "bytes": 1441,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      },
+      {
+        "path": "skills/supabase-postgres-best-practices/references/security-rls-basics.md",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/references/security-rls-basics.md",
+        "sha256": "e04dd1a3a382aafdaaa73fe9f7976352acdde6e90c2a2470d281b94d4f44b096",
+        "bytes": 1372,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      },
+      {
+        "path": "skills/supabase-postgres-best-practices/references/security-rls-performance.md",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/references/security-rls-performance.md",
+        "sha256": "2e1faeca7d5746e246b1c78f9492fe2a9cfa41c4d7fa1e23c402d58fa18ea014",
+        "bytes": 2103,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      },
+      {
+        "path": "skills/supabase-postgres-best-practices/references/data-pagination.md",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/references/data-pagination.md",
+        "sha256": "73c9fa10a3d439bedea0e11b640bd25bf30dd50f0d9006cf85baf7c3151543fa",
+        "bytes": 1358,
+        "retrieved": true,
+        "review_scope": "full selected skill/rule text"
+      }
+    ],
+    "scope": "selected files only; not a complete repository or security audit",
+    "retrieval": "public shallow Git snapshot; selected blob bytes retrieved without running upstream code",
+    "reuse": "abstract principles studied; independently written instructions; no upstream bodies, code, assets or databases redistributed",
+    "license": "MIT; retrieved root LICENSE, applies to upstream material only"
+  },
+  {
+    "repository": "microsoft/playwright-cli",
+    "url": "https://github.com/microsoft/playwright-cli",
+    "commit": "b85c7a736bb473bf55b584e54a09ffa698d6d871",
+    "snapshot_date": "2026-10-19",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/microsoft/playwright-cli/blob/b85c7a736bb473bf55b584e54a09ffa698d6d871/LICENSE",
+        "sha256": "9a7110fc2d2f964038e5dc49128f908f29f47a574c961cba16085914e879cbda",
+        "bytes": 11552,
+        "retrieved": true,
+        "review_scope": "license identity and applicable terms; exact complete file retrieved and hashed"
+      },
+      {
+        "path": "skills/playwright-cli/SKILL.md",
+        "url": "https://github.com/microsoft/playwright-cli/blob/b85c7a736bb473bf55b584e54a09ffa698d6d871/skills/playwright-cli/SKILL.md",
+        "sha256": "9bba755285a4c9ad72a4a41b9c7baef6fb516d329c0b44ed0573715f4479b906",
+        "bytes": 15428,
+        "retrieved": true,
+        "review_scope": "selected snapshot/targeting/session sections and first 45-95 lines of specialized references; commands studied, not executed"
+      },
+      {
+        "path": "skills/playwright-cli/references/session-management.md",
+        "url": "https://github.com/microsoft/playwright-cli/blob/b85c7a736bb473bf55b584e54a09ffa698d6d871/skills/playwright-cli/references/session-management.md",
+        "sha256": "a4f16271f95d3eec7bc56e659d8adbb8f6ad7d603a6fa15efdcdd071a50c6ce3",
+        "bytes": 5929,
+        "retrieved": true,
+        "review_scope": "selected snapshot/targeting/session sections and first 45-95 lines of specialized references; commands studied, not executed"
+      },
+      {
+        "path": "skills/playwright-cli/references/storage-state.md",
+        "url": "https://github.com/microsoft/playwright-cli/blob/b85c7a736bb473bf55b584e54a09ffa698d6d871/skills/playwright-cli/references/storage-state.md",
+        "sha256": "9ac47f9ae4a1aedcd2077f8ac9ab1ba6bee1962cb83ff51adcd36fb6d83b5ec6",
+        "bytes": 5198,
+        "retrieved": true,
+        "review_scope": "selected snapshot/targeting/session sections and first 45-95 lines of specialized references; commands studied, not executed"
+      },
+      {
+        "path": "skills/playwright-cli/references/request-mocking.md",
+        "url": "https://github.com/microsoft/playwright-cli/blob/b85c7a736bb473bf55b584e54a09ffa698d6d871/skills/playwright-cli/references/request-mocking.md",
+        "sha256": "54e801c9663fc2b6d68ceb058cb1c360724c2499f42acc7852a68e83e5b5f37c",
+        "bytes": 2182,
+        "retrieved": true,
+        "review_scope": "selected snapshot/targeting/session sections and first 45-95 lines of specialized references; commands studied, not executed"
+      },
+      {
+        "path": "skills/playwright-cli/references/test-generation.md",
+        "url": "https://github.com/microsoft/playwright-cli/blob/b85c7a736bb473bf55b584e54a09ffa698d6d871/skills/playwright-cli/references/test-generation.md",
+        "sha256": "27ecb11ef647999bd7486695bb1aacc3682097e6bb5742804cb6c8769c2b5364",
+        "bytes": 16070,
+        "retrieved": true,
+        "review_scope": "selected snapshot/targeting/session sections and first 45-95 lines of specialized references; commands studied, not executed"
+      },
+      {
+        "path": "skills/playwright-cli/references/tracing.md",
+        "url": "https://github.com/microsoft/playwright-cli/blob/b85c7a736bb473bf55b584e54a09ffa698d6d871/skills/playwright-cli/references/tracing.md",
+        "sha256": "ef73e71bee792e341df9cd4f60529c929ade48b538ac76e033f4f20843e8dbda",
+        "bytes": 3456,
+        "retrieved": true,
+        "review_scope": "selected snapshot/targeting/session sections and first 45-95 lines of specialized references; commands studied, not executed"
+      }
+    ],
+    "scope": "selected files only; not a complete repository or security audit",
+    "retrieval": "public shallow Git snapshot; selected blob bytes retrieved without running upstream code",
+    "reuse": "abstract principles studied; independently written instructions; no upstream bodies, code, assets or databases redistributed",
+    "license": "Apache-2.0; retrieved root LICENSE, applies to upstream material only"
+  },
+  {
+    "repository": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "commit": "56ea9cf174ed86786187daa9de0e6247cb0747e4",
+    "snapshot_date": "2026-10-19",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/56ea9cf174ed86786187daa9de0e6247cb0747e4/LICENSE",
+        "sha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014",
+        "bytes": 1075,
+        "retrieved": true,
+        "review_scope": "license identity and applicable terms; exact complete file retrieved and hashed"
+      },
+      {
+        "path": "src/ui-ux-pro-max/templates/base/skill-content.md",
+        "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/56ea9cf174ed86786187daa9de0e6247cb0747e4/src/ui-ux-pro-max/templates/base/skill-content.md",
+        "sha256": "4956ab03fcf850fbd05ea658cb694cea767ff8e42aaf59ccf59fef0172271394",
+        "bytes": 27433,
+        "retrieved": true,
+        "review_scope": "selected requirements, routing, persistence, design decisions and pre-delivery sections; no template execution"
+      },
+      {
+        "path": "src/ui-ux-pro-max/data/ux-guidelines.csv",
+        "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/56ea9cf174ed86786187daa9de0e6247cb0747e4/src/ui-ux-pro-max/data/ux-guidelines.csv",
+        "sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5",
+        "bytes": 27516,
+        "retrieved": true,
+        "review_scope": "selected rows 9,10,19,22,23,28,50,66,75,78,79,96,108"
+      }
+    ],
+    "scope": "selected files only; not a complete repository or security audit",
+    "retrieval": "public shallow Git snapshot; selected blob bytes retrieved without running upstream code",
+    "reuse": "abstract principles studied; independently written instructions; no upstream bodies, code, assets or databases redistributed",
+    "license": "MIT; retrieved root LICENSE, applies to upstream material only"
   }
 ]

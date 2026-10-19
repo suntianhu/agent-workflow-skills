@@ -1,5 +1,7 @@
 # Isolated native loading validation
 
+These are historical 1.2.0 discovery results. Version 1.3.0 changes instructions and conditional references, while keeping the same 24 names; native host discovery was not rerun for that revision. Structural and scenario checks for the new content are recorded separately in [validation](validation.md).
+
 Checked on 2026-10-19 on Windows. All native processes used disposable projects under system TEMP with separate home/config/cache directories. No default skills were installed, replaced, or removed.
 
 | Host | Version | Native evidence | Scope |

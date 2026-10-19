@@ -21,9 +21,11 @@ The second command creates a new system-TEMP directory and leaves `result.json` 
 | --- | --- |
 | Inventory one source file, then check an empty reading ledger | Gate blocked with missing reading evidence; scanning alone never authorizes development |
 | Estimate 10 implementation minutes with explicit prior 0.5, plus 1 check minute and 1 review minute | Likely 7 minutes; heuristic range 6–8.5; zero historical samples; external CI queue remains unknown |
-| Export `small-change`, then compare every exported skill resource with source | 19 available skills, 83 byte-identical files, no installation |
+| Export `small-change`, then compare every exported skill resource with source | 1.3.0: 19 available skills, 89 byte-identical files, no installation |
 
 The 0.5 factor is an explicit demonstration input, not a global accuracy guarantee or a real calibration sample. The fixture is synthetic. These are executed utility examples, not transcripts of a model completing a product task. Native host results and exact versions are in [loading validation](../docs/agent-loading.md).
+
+The 1.3.0 export includes conditional specialist references. See [source integration](../docs/provenance.md) for their reading conditions and [launch materials](../docs/promotion.en.md) for accurate public descriptions.
 
 ## Scenario: a small documentation correction
 

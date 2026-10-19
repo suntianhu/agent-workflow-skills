@@ -46,8 +46,8 @@ After the version PR merges and CI passes, synchronize `main` and create a new a
 git switch main
 git pull --ff-only
 python scripts/validate.py
-git tag -a v1.2.0 -m "Release v1.2.0"
-git push origin v1.2.0
+git tag -a v1.3.0 -m "Release v1.3.0"
+git push origin v1.3.0
 ```
 
 Do not repeat these tag commands if the tag already exists. For future releases, change the source version and notes through a PR, then use the new tag. Never move a published tag to fix an asset.
@@ -68,7 +68,7 @@ Watch Actions → Release, then inspect Releases. Failed validation never publis
 From a clean committed tree, select a new output directory outside source and agent configuration trees:
 
 ```sh
-python scripts/build_release.py --tag v1.2.0 --out ../release-v1.2.0
+python scripts/build_release.py --tag v1.3.0 --out ../release-v1.3.0
 ```
 
 This prepares the ZIP, `.zip.sha256`, and release notes. It does not publish, create a tag, or install skills. It checks the proposed version; tag existence and ancestry are enforced by the workflow. Identical tracked bytes produce identical ZIP bytes. Fixed stored ZIP entries trade compression size for reproducibility.

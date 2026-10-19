@@ -1,19 +1,22 @@
-# v1.2.0 — Reproducible releases and native discovery
+# v1.3.0 — Conditional specialist references and launch materials
 
-Agent Workflow Skills provides 24 focused skills and eight documented development compositions, with six README languages.
+Agent Workflow Skills retains 24 skills, eight compositions and six README languages while adding targeted guidance without another mandatory workflow.
 
 ## Changes
 
-- Publish version tags through Windows/Linux validation, reproducible tracked-source packaging, and a separate release job with minimal permissions.
-- Attach a prepared ZIP and SHA-256 checksum; reject stale versions, dirty trees, unsafe output paths, and nonregular Git entries.
-- Add worked usage scenarios and executable offline examples for repository-reading gates, explicit time calibration, and byte-verified composition export.
-- Add isolated native Codex/Claude discovery probes and sanitized evidence with before/after default-skill snapshots.
-- Document PR maintenance, solo-maintainer branch protection, future releases, and exact compatibility limits across all six READMEs.
+- Study 28 selected files from pinned Trail of Bits, Supabase, Microsoft Playwright CLI and UI UX Pro Max snapshots. The source ledger now covers nine repositories and 43 selected files, with hashes, reading scope, adoption decisions and separate upstream licenses.
+- Integrate security evidence into security/review skills, PostgreSQL into backend/security skills, browser validation into frontend work, and design-system detail into UI design. Shared references have one maintenance source and portable generated copies.
+- Keep project gates, test policies, TDD selection and external-operation authorization unchanged. Load specialist references only when their conditions apply.
+- Inventory existing project skills, agent/plugin configuration and external rule references. Later skill adoption and handoffs consume and update the same project standards instead of starting a disconnected workflow.
+- Distinguish estimated database plans from executed queries, browser actions from business assertions, and supported security claims from unresolved candidates. Avoid generalized performance promises and fixed stack parameters.
+- Add Chinese short/long launch copy, a video script and English community copy. Keep six-language README versions and scope notes synchronized.
 
 ## Validation and limits
 
-Codex CLI `0.163.0-alpha.10.2` and Claude Code `2.1.303` discovered all 24 skills in disposable Windows projects. Claude named discovery used the official Agent SDK `0.3.303`. Default skill trees were unchanged. This verifies discovery and metadata/command loading, not model decisions or full workflow execution. No credentials were copied; authenticated agent scenarios remain unverified.
+See [the validation record](validation.md) for actual structural, export, source-hash, scenario and archive checks on this revision. Synthetic scenario responses do not demonstrate real browser, database or application execution and are not a cross-model effectiveness benchmark.
 
-CI validates source, executes offline synthetic examples, and dry-runs packaging on Windows and Linux. Native host probes are separate local checks. See the validation record and Actions result for the tagged commit. Skill bodies and guides remain Chinese; Gemini, Copilot, and other host versions remain untested.
+Native discovery records for Codex and Claude belong to 1.2.0. Native discovery was not rerun for 1.3.0. Gemini, Copilot, other platforms and end-to-end agent workflows remain outside that evidence. Check Actions for CI results on the actual release commit; local preparation does not establish remote CI success.
 
-The attached SHA-256 file applies only to the named prepared ZIP. Nothing is installed automatically and no default agent settings are changed.
+Original material remains MIT-licensed. Upstream material retains its own license, including Trail of Bits CC-BY-SA-4.0; no upstream skill bodies, translations, implementations, datasets or assets are bundled.
+
+The SHA-256 sidecar applies only to the named prepared ZIP. Preparing this source does not publish a release, install skills or change default agent settings.

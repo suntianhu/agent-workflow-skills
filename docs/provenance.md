@@ -1,6 +1,8 @@
 # GitHub蒸馏来源与取舍
 
-2026-10-18实际获取五个公开仓库的固定提交和所列文件；记录见[upstreams.json](../provenance/upstreams.json)。这是选定文件/章节审阅，不是整仓安全审计。基于这些材料重新写成通用规则，没有复制上游技能正文、脚本、资产或数据库，也不把所有上游都称为统一许可或当前推荐。
+1.3.0 共记录九个公开仓库、43 个选定文件：前五仓的 15 个文件取得于 2026-10-18，新增四仓的 28 个文件取得于 2026-10-19。固定提交、原始字节散列、大小及本次阅读范围见 [upstreams.json](../provenance/upstreams.json)。完整文件已取得不等于全文审阅；部分文件只读相关章节或数据行。这是选定材料研究，不是整仓审计。
+
+基于抽象思想与本集合需求独立撰写规则，不分发上游技能正文、翻译、脚本、资产、数据库、SQL 示例或报告模板。各上游许可分别记录；“蒸馏”不是把外部作品重新授权为 MIT 的方法。
 
 | 来源 | 实际采纳的原则 | 明确不采纳 |
 | --- | --- | --- |
@@ -9,16 +11,47 @@
 | obra/superpowers | 复现/数据流/单一假设、确认真实失败、分离审查职责 | 一切先TDD、全量套件、删除用户实现重做、强制worktree与代理 |
 | vercel-labs/agent-skills | 栈限定触发、按影响排序、具体规则渐进加载、可定位审查 | 把React/Next/Vercel规则推广所有栈；每次自动取远端指令并扩大授权 |
 | github/awesome-copilot | 明确技能/指令/代理区别、单职责、固定来源、补足真实能力缺口 | Copilot工具名和.agent.md作为通用前提；外部插件自动继承许可/授权 |
+| trailofbits/skills | 从实际调用链建立证据、变更前后控制比较、主动查反证、保留未决结论 | 强制代理、固定阶段/数量、二元判定、审查切换工作区、复制其表达或报告格式 |
+| supabase/agent-skills | 基于查询计划选索引、连接预算、事务与锁、实际角色下的 RLS | 性能倍数、游标恒定耗时、顺序扫描必缺索引、固定池参数/端口、事务池能力一概而论 |
+| microsoft/playwright-cli | 当前页面定位、会话隔离、操作与断言分开、mock/trace 证据边界 | 强制安装 CLI、录制即验收、默认持久测试、全局关浏览器、导出私人会话 |
+| nextlevelbuilder/ui-ux-pro-max-skill | 需求驱动设计规则、全局约定与局部差异、密度/状态/资源核对 | 复制搜索库/模板/素材、固定风格与数值、覆盖既有设计规范、自动安装与全主题检查 |
 
-新旧项目门禁、全仓阅读后内部规范、语言→候选→用户选择→范本→规范的流程来自本集合明确需求；后端具体规则是通用工程整理，不冒称已从这些上游获得完整后端专项验证。多代理读取了职责与分离审查原则，没有声称审阅过上游全部多代理实现。
+新旧项目门禁、全仓阅读后内部规范、语言→候选→用户选择→范本→规范的流程来自本集合明确需求。PostgreSQL 专项补充不代表所有后端技术栈都完成了上游专项验证。多代理只研究相关职责与分离原则，没有声称审阅全部实现。
+
+老仓库既有 Skills、代理/插件配置的清点，以及后续启用技能必须接回同一项目规范的规则，来自本次用户明确要求。其落点包括项目判断、全仓阅读、技能采纳、规范模板和交接；不冒称来自新增上游或已在真实项目全流程验证。
+
+## 四套新增资料的去重落点
+
+保留 24 个技能、八套组合及原有阶段关系。新增四份按条件读取的指南；共同主题只在对应指南维护，生成副本用于技能独立分发，不要求重复加载。
+
+| 唯一维护源 | 使用技能 | 职责边界 |
+| --- | --- | --- |
+| [安全证据](../guides/security-review-evidence.md) | aw-security-boundaries / aw-adversarial-review | 前者核对控制，后者只读评估；不重复实施修复 |
+| [PostgreSQL](../guides/postgres-data.md) | aw-backend-implementation / aw-security-boundaries | 前者负责数据实现，后者按角色/策略核对；其他数据库不加载 |
+| [浏览器验收](../guides/browser-validation.md) | aw-frontend-implementation | 按已选测试政策执行；aw-evidence-verification 只核对结论与证据 |
+| [设计体系](../guides/ui-system.md) | aw-ui-design | 消费已有需求与规范，必要时补设计细则，不重做需求和选栈 |
+
+原测试策略继续决定范围、TDD 与保留，不从上游继承强制测试。安全、数据库或浏览器能力也不扩大外部写入授权。
+
+## 对具体规则的官方补核
+
+2026-10-19 补查 PostgreSQL、PgBouncer、Supabase 与 Playwright 官方文档，核对 EXPLAIN 的执行副作用、组合索引和版本差异、池能力、请求身份与 RLS、定位与等待。它们是技术核对资料，不计为额外已蒸馏仓库；具体项目运行时仍按目标版本复核。
+
+- [PostgreSQL EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html)
+- [PostgreSQL 组合索引](https://www.postgresql.org/docs/current/indexes-multicolumn.html)
+- [PgBouncer 能力](https://www.pgbouncer.org/features.html)
+- [Supabase RLS](https://supabase.com/docs/guides/database/postgres/row-level-security)
+- [Playwright 定位](https://playwright.dev/docs/locators)与[可操作性](https://playwright.dev/docs/actionability)
 
 ## 当前官方示例入口
 
-openai/skills的README指向[openai/plugins](https://github.com/openai/plugins)，本次已打开其README，确认它提供当前Codex插件示例。该补充只作为当前入口，不与已固定提交的五仓源码审阅混淆；没有复制其插件或把skill-only目录冒充已制作原生插件包。
+2026-10-18 的 openai/skills 快照 README 指向 [openai/plugins](https://github.com/openai/plugins)，当时补看了其 README。该补充只作为入口记录，不计入九仓固定文件审阅，也不代表每次已复核其当前状态；没有复制其插件或把 skill-only 目录冒充原生插件包。
 
 ## 许可范围
 
 obra/superpowers与github/awesome-copilot已取得根MIT许可；Vercel React技能frontmatter标注MIT，但其他技能不能据此推断统一许可。Anthropic与OpenAI所读部分指向逐技能许可，未取得全部对应许可文件；未知许可的实现不复制。第三方贡献、链接的插件、文档、字体与素材始终各按自身许可。
+
+新增四仓均取得固定提交的根许可：Trail of Bits 为 CC-BY-SA-4.0，Supabase 与 Next Level Builder 为 MIT，Microsoft Playwright CLI 为 Apache-2.0。只学习抽象方法，独立组织本集合规则；没有把 Trail of Bits 正文翻译或适配后挂 MIT，也没有随包携带其他三仓实现或数据。将来若复制或改编第三方表达，应先按具体文件许可处理归属、声明和分发条件，不能仅凭本次来源表推断授权。
 
 本集合原创重写内容和工具用MIT分发，见[LICENSE](../LICENSE)。[第三方说明](../THIRD_PARTY_NOTICES.md)保留来源与边界，不声称MIT覆盖外部作品。
 

@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.0 — 2026-10-19
+
+- Study selected pinned files from Trail of Bits, Supabase, Microsoft Playwright CLI and UI UX Pro Max; record nine repositories, 43 selected files, reading scope, hashes and separate license boundaries.
+- Integrate four conditional references into existing security/review, backend, frontend and UI skills; retain 24 skills, eight compositions, project gates and test-retention decisions.
+- Add version-aware PostgreSQL guidance, security evidence and unresolved findings, browser business assertions and session hygiene, and local design-system decisions.
+- Clarify conditional reference loading and final evidence claims; keep native discovery records explicitly historical to 1.2.0.
+- Add Chinese and English launch copy with accurate scope, attribution and validation limits.
+- Include existing project skills, agent/plugin configuration and external rule references in repository review; reconnect later skill adoption and handoffs to the same project standards and decisions.
+
 ## 1.2.0 — 2026-10-19
 
 - Add tag-triggered releases with cross-platform validation, reproducible tracked-source ZIPs, SHA-256 sidecars, and a separate minimal-permission publish job.

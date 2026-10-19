@@ -8,12 +8,15 @@ Composable development workflows for coding agents, with explicit project gates 
 ![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**Version 1.2.0** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
+**Version 1.3.0** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
+
+Version 1.3.0 integrates conditional references for security evidence, PostgreSQL, browser validation and design systems, while retaining 24 skills and eight compositions. See [source and responsibility mapping](docs/provenance.md), [Chinese launch copy](docs/promotion.zh-CN.md) and [English launch copy](docs/promotion.en.md). Native discovery evidence below was recorded for 1.2.0; 1.3.0 discovery has not been rerun.
 
 Build on an existing codebase or start a new project without mixing the two workflows. Select only the skills that fit the task. Keep frontend and backend conventions separate, choose validation before implementation, and report what was actually verified.
 
 ## Why this collection
 
+- **Existing skills stay connected:** inventory project skills and agent/plugin rules, then align later skill adoption with the same project standards and prior decisions.
 - **Existing projects:** review all project-owned code and write evidence-backed standards inside the project before changing code, configuration, or engineering scripts.
 - **New projects:** respect the requested language, research maintained frameworks and known relevant risks, obtain the user's stack choice, then derive conventions from matching public repositories.
 - **Proportional validation:** decide scope, TDD order, and artifact retention separately. Small edits do not automatically require TDD; existing user tests are preserved.
@@ -69,8 +72,8 @@ Each skill includes its own instructions, necessary references/resources, and li
 
 | Host | Packaging | Evidence |
 | --- | --- | --- |
-| Codex | Agent Skills directory plus optional `agents/openai.yaml` UI metadata | Native isolated Windows discovery: 24/24; no model execution |
-| Claude Code | Complete skill directories in documented host locations | Native CLI + official SDK discovery: 24/24; no successful model execution |
+| Codex | Agent Skills directory plus optional `agents/openai.yaml` UI metadata | 1.2.0: Native isolated Windows discovery: 24/24; no model execution |
+| Claude Code | Complete skill directories in documented host locations | 1.2.0: Native CLI + official SDK discovery: 24/24; no successful model execution |
 | Gemini CLI | Complete skill directories in documented host locations | Documentation mapping only; end-to-end use not tested |
 | GitHub Copilot | Complete skill directories in supported clients | Documentation mapping only; individual clients not tested |
 | Other agents | Read `SKILL.md` and relative references when supported | No blanket claim of native compatibility |
