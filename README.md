@@ -86,7 +86,7 @@ python scripts/validate.py
 
 The validator checks declarations, generated content freshness, exact resource sets, local links, Python syntax, composition order, and selected distribution hygiene rules. It does not prove that an agent will make the right decision or that a framework is vulnerability-free.
 
-The 1.1.0 audit included 24 official structural checks, eight composition exports, and targeted synthetic utility checks outside the repository. The 1.1.x documentation updates are validated separately in the [validation record](docs/validation.md) (Chinese). CI is configured for Windows and Linux; it has not yet run on GitHub. Native host discovery and end-to-end agent scenarios remain untested.
+The 1.1.0 audit included 24 official structural checks, eight composition exports, and targeted synthetic utility checks outside the repository. The 1.1.x documentation updates are validated separately in the [validation record](docs/validation.md) (Chinese). CI runs on Windows and Linux; inspect the workflow result for the commit you use. Native host discovery and end-to-end agent scenarios remain untested.
 
 ## Languages
 
@@ -96,7 +96,7 @@ The project overview is available in English, Simplified Chinese, Traditional Ch
 
 Start with a concrete task that demonstrates a gap. Prefer improving the responsible skill over adding another overlapping rule. See [contributing](CONTRIBUTING.md), [security](SECURITY.md), and the [GitHub publishing guide](docs/github-publishing.md).
 
-No repository has been created or published by this package. There is no configured maintainer identity, private reporting address, or adoption claim.
+The export and validation utilities do not publish repositories or operate remote accounts. No private reporting address or adoption claim is preconfigured.
 
 ## License and provenance
 
