@@ -8,12 +8,15 @@
 ![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**版本 1.2.0** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
+**版本 1.3.1** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
+
+1.3.1 将安全证据、PostgreSQL、浏览器验收和设计体系细则整合为按条件读取的参考资料，仍保留 24 个技能、8 套组合。见[来源与去重落点](docs/provenance.md)、[中文宣传文案](docs/promotion.zh-CN.md)和[英文宣传文案](docs/promotion.en.md)。下方原生发现证据来自 1.2.0，1.3.1 未重跑宿主发现。
 
 区分已有项目和新项目，按任务选择适用技能，分别维护前后端规范，在实现前选定验证策略，并如实报告实际验证范围。
 
 ## 为什么使用这套技能
 
+- **承接已有技能：** 梳理项目已配 Skills 和代理/插件规则，后续启用技能先对齐同一份项目规范与既有决定。
 - **老项目：** 修改代码、配置或工程脚本前，阅读全部自有代码，并在项目内部形成有证据的工程规范。
 - **新项目：** 尊重指定语言，核查框架维护状态和已知相关风险，由用户选栈，再从匹配的公开项目提炼规范。
 - **按风险验证：** 范围、TDD 顺序和产物保留分别决定。小改不自动 TDD，不擅删用户已有测试。
@@ -69,8 +72,8 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 | 宿主 | 打包方式 | 实际证据 |
 | --- | --- | --- |
-| Codex | Agent Skills 目录，可选 `agents/openai.yaml` 界面扩展 | Windows 隔离原生发现 24/24；未执行模型任务 |
-| Claude Code | 按官方目录放完整技能 | 原生 CLI 与官方 SDK 发现 24/24；未成功执行模型任务 |
+| Codex | Agent Skills 目录，可选 `agents/openai.yaml` 界面扩展 | 1.2.0: Windows 隔离原生发现 24/24；未执行模型任务 |
+| Claude Code | 按官方目录放完整技能 | 1.2.0: 原生 CLI 与官方 SDK 发现 24/24；未成功执行模型任务 |
 | Gemini CLI | 按官方目录放完整技能 | 文档适配，未端到端实测 |
 | GitHub Copilot | 按支持客户端的目录放完整技能 | 文档适配，各客户端未实测 |
 | 其他代理 | 支持时读取 `SKILL.md` 及相对引用 | 不承诺未经核对的原生兼容 |

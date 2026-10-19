@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "version": "1.3.1",
+  "passed": true,
+  "examples": {
+    "existing_project_empty_ledger": "blocked",
+    "estimate_explicit_prior": {
+      "samples": 0,
+      "local_minutes": {
+        "low": 6.0,
+        "likely": 7.0,
+        "high": 8.5
+      },
+      "unknown": "external CI queue"
+    },
+    "small_change_export": {
+      "skills": 19,
+      "byte_identical_files": 90,
+      "installed": false
+    }
+  },
+  "model_execution": "not_run",
+  "fixtures": "synthetic; not real calibration samples or product acceptance"
+}

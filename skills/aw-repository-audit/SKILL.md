@@ -12,9 +12,11 @@ license: MIT
 
 不得用目录扫描、抽样、已有README或局部检索冒充全仓阅读；未完成不开始产品实现。 遵从当前用户、适用项目规则与宿主权限；不因技能存在扩大任务或外部写入授权，已有授权继续执行。
 
+进入已有项目时读取当前项目规则与既有内部规范，承接已完成的梳理、技能采纳和验证决定。后续启用本技能也先核对这些记录；发现冲突先收敛到同一规范入口，不另起脱节流程。
+
 ## 执行
 
-1. 清点隐藏/未跟踪、前后端、共享库、迁移、生成器、CI和部署。
+1. 清点隐藏/未跟踪、前后端、共享库、迁移、生成器、CI和部署，以及既有技能/代理配置与外部规则引用。
 2. 逐项阅读，记录每项用途、调用关系、约束、证据和指纹；排除项给实际依据。
 3. 汇总完整阅读证据与真实阻断，交给内部规范阶段；规范完成前不开始产品实现。
 
@@ -24,8 +26,8 @@ license: MIT
 
 ## 按需资料
 
-- [repository-audit.md](references/repository-audit.md)：本次触发该能力时读取。
-- [audit-tool.md](references/audit-tool.md)：本次触发该能力时读取。
+- [repository-audit.md](references/repository-audit.md)：触发本技能时读取的基础指南。
+- [audit-tool.md](references/audit-tool.md)：触发本技能时读取的基础指南。
 - [repo_audit.py](scripts/repo_audit.py)：按指南使用；模板按真实项目填写。
 - [reading-ledger.json](assets/reading-ledger.json)：按指南使用；模板按真实项目填写。
 

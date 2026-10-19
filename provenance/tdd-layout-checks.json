@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "version": "1.3.1",
+  "checked_on": "2026-10-19",
+  "platform": "Windows",
+  "official_structural_checks": 24,
+  "generation_idempotent": true,
+  "generated_manifest_sha256": "1e19a2626aff294c91da96ca3ed0c17034bf47f6ba6a4f5ccbd9b88313964b88",
+  "composition_exports": [
+    {
+      "bundle": "debug-and-fix",
+      "skills": 18,
+      "files": 85,
+      "byte_identical": true
+    },
+    {
+      "bundle": "existing-backend",
+      "skills": 16,
+      "files": 75,
+      "byte_identical": true
+    },
+    {
+      "bundle": "existing-frontend",
+      "skills": 17,
+      "files": 80,
+      "byte_identical": true
+    },
+    {
+      "bundle": "fullstack",
+      "skills": 20,
+      "files": 94,
+      "byte_identical": true
+    },
+    {
+      "bundle": "new-backend",
+      "skills": 17,
+      "files": 76,
+      "byte_identical": true
+    },
+    {
+      "bundle": "new-frontend",
+      "skills": 18,
+      "files": 81,
+      "byte_identical": true
+    },
+    {
+      "bundle": "release",
+      "skills": 11,
+      "files": 48,
+      "byte_identical": true
+    },
+    {
+      "bundle": "small-change",
+      "skills": 20,
+      "files": 94,
+      "byte_identical": true
+    }
+  ],
+  "project_skill_template_fixtures": [
+    {
+      "kind": "existing",
+      "entry": ".claude/skills/project-demo-standards/SKILL.md",
+      "canonical_standards": "docs/team/TEAM_RULES.md",
+      "relative_path_resolved": true,
+      "structure_valid": true,
+      "native_discovery": "not_run"
+    },
+    {
+      "kind": "new",
+      "entry": ".agents/skills/project-demo-standards/SKILL.md",
+      "canonical_standards": "docs/engineering/PROJECT_STANDARDS.md",
+      "relative_path_resolved": true,
+      "structure_valid": true,
+      "native_discovery": "not_run"
+    }
+  ],
+  "offline_examples": "passed",
+  "real_java_frontend_tdd_execution": "not_run",
+  "native_host_discovery": "not_rerun",
+  "passed": true
+}
