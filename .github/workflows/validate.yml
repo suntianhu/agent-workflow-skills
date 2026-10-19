@@ -20,5 +20,5 @@ jobs:
       - name: Dry-run release packaging
         shell: bash
         run: |
-          version=$(python -c 'import json; print(json.load(open("catalog.json"))["version"])')
+          version=$(python -c 'import json; print(json.load(open("catalog.json", encoding="utf-8"))["version"])')
           python scripts/build_release.py --tag "v$version" --out "$RUNNER_TEMP/release-preview"
