@@ -1,5 +1,26 @@
 # 开源审查与本地验证记录
 
+## 1.2.0 自动发布、示例与隔离加载
+
+日期：2026-10-19。下方旧版本记录保持当时状态，本节描述新增证据。24 个技能职责与 8 套组合未改变；新增发布工程、可执行示例和宿主发现探针。
+
+实际执行：
+
+- `python scripts/build_catalog.py` 与 `python scripts/validate.py` 核对 24 技能、8 组合、版本 1.2.0 和生成散列。
+- `python scripts/run_examples.py` 在仓库外 TEMP 执行：空阅读台账阻断、明确先验估时、19 技能组合导出并逐字节核对 83 个资源；合成夹具不是用户产品或真实估时历史。结果见[离线示例](../provenance/offline-examples.json)。
+- `python scripts/verify_agent_loading.py --host both` 使用独立 Git 根、独立 HOME/配置/临时目录，清除继承的提供商认证变量，实际调用 Codex app-server 与 Claude 原生 CLI/官方 SDK。两者均发现全部 24 个技能；默认 .codex/.agents/.claude 技能树的前后散列一致。结果见[原生发现证据](../provenance/native-discovery.json)，重现步骤见[加载说明](agent-loading.md)。
+- 本次真实加载环境为 Windows、Codex CLI 0.163.0-alpha.10.2、Claude Code 2.1.303 与 Agent SDK 0.3.303。`node --check scripts/claude_discovery.mjs` 通过。没有复制认证文件或改动默认 skills。
+
+探针只验证原生发现、元数据解析和命令注册，不证明模型读完正文、自动选中技能或完成产品开发。Claude 单独的隔离调用尝试因未登录停止，API 时长、费用与输入输出 token 均为零；不计作执行通过。没有为此迁移用户凭据。
+
+Codex 的 Windows 全条目复核显示，该版本即使覆盖 HOME 仍会枚举 OS 用户技能元数据；不属于完整的操作系统沙箱。原生结果单独记录额外条目数量，并要求本集合所有技能路径在临时项目内；没有调用外部技能或改动默认目录。初始仅检查本集合的结果不再被表述为“宿主所有读取均在 TEMP”。
+
+本地打包器 15 项临时夹具检查通过：连续两次相同 ZIP、校验和/成员路径/CRC、错误版本/前导零/预发布标签、源码内/原生配置内/既有输出目录、脏源码/未跟踪文件、Windows junction、错误发布标题、过期生成入口与 Git 符号链接模式。拒绝案例均核对未新建输出；既有标记保持原样。见[打包证据](../provenance/release-checks.json)。这不等于 15 个产品测试。
+
+独立只读审查发现默认 Windows 编码会使示例子进程输出无法解码，已在子进程显式开启 UTF-8 并复跑通过。首次实际 PR CI 的 Linux 通过，Windows 在工作流内联读取中文 catalog 时失败，已补明确 UTF-8 编码后重跑。另将生成清单写入强制为 LF，避免 Windows 重新生成后偏离提交字节。最终独立审查未发现其他实质问题。
+
+真实 CI 与标签发布结果以本次 [PR #2](https://github.com/suntianhu/agent-workflow-skills/pull/2) 和 Actions 为准；不能用本地静态校验代替远端执行结果。新工具不安装技能、不读取产品目录、不引入持久测试框架。临时夹具与原始宿主日志不进入分发包。
+
 ## 1.1.2 六语 README 验证
 
 日期：2026-10-19。新增完整的繁体中文、日语、韩语与俄语README；英文仍为默认入口，与简体中文版共同构成六语项目概览。翻译范围不包括技能正文、详细指南或工具提示。

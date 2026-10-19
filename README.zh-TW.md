@@ -8,7 +8,7 @@
 ![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**版本 1.1.2** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
+**版本 1.2.0** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
 
 區分既有專案與新專案，依任務選擇適用技能，分別維護前後端規範，在實作前選定驗證策略，並如實回報實際驗證範圍。
 
@@ -69,8 +69,8 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 | 執行環境 | 封裝方式 | 實際證據 |
 | --- | --- | --- |
-| Codex | Agent Skills 目錄，可選用 `agents/openai.yaml` 介面中繼資料 | 已在目前 Codex 環境讀寫檔案並執行工具；尚未測試原生探索 |
-| Claude Code | 在文件指定位置放置完整技能目錄 | 僅依文件對應；尚未進行端到端測試 |
+| Codex | Agent Skills 目錄，可選用 `agents/openai.yaml` 介面中繼資料 | Windows 隔離原生探索 24/24；未執行模型任務 |
+| Claude Code | 在文件指定位置放置完整技能目錄 | 原生 CLI 與官方 SDK 探索 24/24；未成功執行模型任務 |
 | Gemini CLI | 在文件指定位置放置完整技能目錄 | 僅依文件對應；尚未進行端到端測試 |
 | GitHub Copilot | 在支援的用戶端使用完整技能目錄 | 僅依文件對應；尚未測試各用戶端 |
 | 其他代理 | 支援時讀取 `SKILL.md` 及相對引用 | 不概括承諾未經驗證的原生相容性 |
@@ -86,7 +86,13 @@ python scripts/validate.py
 
 驗證器會檢查宣告、生成內容是否同步、精確資源集合、本機連結、Python 語法、組合順序及部分分發衛生規則；不證明代理決策正確，也不保證框架沒有漏洞。
 
-1.1.0 審查曾執行 24 項官方結構檢查、八套組合匯出及儲存庫外的合成工具檢查。1.1.x 文件更新的驗證另記於[驗證紀錄](docs/validation.md)（簡體中文）。Windows/Linux CI 會在 GitHub 執行，請核對所用提交的實際結果；原生技能探索與端到端代理使用仍未測試。
+Windows/Linux CI 檢查原始碼、執行離線範例並預演封裝。Codex 與 Claude 已在 Windows 隔離專案中原生探索全部 24 個技能；模型驅動的工作流程仍未驗證。版本與範圍見[驗證紀錄](docs/validation.md)及[原生載入證據](docs/agent-loading.md)。
+
+## 使用範例與自動發佈
+
+[完整範例](examples/README.md)包含已執行的本儲存庫案例，以及小改、既有後端與新前後端的提示詞。執行 `python scripts/run_examples.py` 可在 TEMP 重現離線工具檢查。
+
+推送符合版本的標籤後自動檢查並發佈 ZIP 與 SHA-256 檔案，見[發佈步驟](docs/github-publishing.md)。[原生探索重跑](docs/agent-loading.md)使用隔離目錄，不改預設技能。選用原生檢查需要實際客戶端；Claude 另需 Node 與官方 Agent SDK，其餘 Python 工具只依賴標準函式庫。
 
 ## 語言
 

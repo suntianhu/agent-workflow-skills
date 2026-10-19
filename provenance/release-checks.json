@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "version": "1.2.0",
+  "platform": "Windows",
+  "cases": {
+    "success": "passed",
+    "repeat": "passed",
+    "determinism_checksum_members": "passed",
+    "wrong-version": "rejected_before_output",
+    "leading-zero": "rejected_before_output",
+    "prerelease": "rejected_before_output",
+    "source-output": "rejected_before_output",
+    "native-output": "rejected_before_output",
+    "existing-output": "rejected_before_output",
+    "dirty-tracked": "rejected_before_output",
+    "untracked": "rejected_before_output",
+    "junction-output": "rejected_before_output",
+    "wrong-notes": "rejected_before_output",
+    "stale-generated": "rejected_before_output",
+    "git-symbolic-mode": "rejected_before_output"
+  },
+  "count": 15,
+  "passed": true,
+  "fixtures": "disposable clone outside source; not a product test suite",
+  "checked_on": "2026-10-19"
+}
