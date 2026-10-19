@@ -1,20 +1,22 @@
-# v1.4.2 — Reuse verified context and close workflow handoffs
+# v1.2.1 — Precise skill loading and consistent patch releases
 
-All 26 skills and eight compositions were reviewed for triggering, scope, ownership, repeated execution and project continuity. This patch fixes six routing and handoff issues without adding skills or a runtime workflow engine.
+Keep the 26 skills and eight conditional compositions. Shorten repeated entry instructions, load only the task-relevant capability and reference sections, and reuse valid project decisions. Skill selection, model routing and time estimation now have separate conditions rather than activating together.
 
 ## Changes
 
-- Reuse a verifiable complete project baseline and review all later differences. A new request, chat or skill does not reset unchanged reading; unsupported claims of prior reading still do not satisfy the gate.
-- Separate missing reading coverage from missing standards, and separate missing stack selection, reference evidence and new-project rules. Existing valid outputs are consumed instead of recreated; frontend/backend implementation consumes these prerequisites.
-- Permit compatible single-side API changes when other consumers do not need modifications, with supporting evidence.
-- Keep generic skill authoring independent of this repository's catalog and generator.
-- Preserve licensed public images, necessary public author/repository identifiers and legal notices; remove private material only from the scoped distribution copy.
-- Run scoped cleanup before final evidence verification. Only changes to relevant engineering inputs require focused rechecks; deleting unrelated logs does not trigger full retesting.
+- Clear local changes proceed within existing rules; ordinary work does not automatically trigger full requirements/design research, model comparison, estimates, multiple agents or duplicate reviews.
+- Project-local skills and partial work are read first. Prefer retaining or adjusting valid content; before rewriting, merging, replacing or changing an existing user Skill's resources/entry/configuration, show the concrete proposal and obtain explicit confirmation. Continue independent authorized work while the proposal waits.
+- Initial estimates use known scope and comparable measured work. Distinguish overestimation from overruns, calibrate only comparable implementation time, and separate verification and external/user waits; do not blindly halve or double totals.
+- Preserve complete-baseline gates, canonical standards, old-product fonts/themes/components, native-language validation, P0/P1/P2 and bounded TDD retention.
+- Normalize the current version to 1.2.1 after the published 1.2.0. Routine future changes increment patch; existing tags remain unchanged. Source-only 1.3/1.4 checkpoint labels are archived, not claimed as public releases.
 
-## Validation and limits
+## History since 1.1.1
 
-See the [26-skill audit](workflow-audit.md), [validation record](validation.md) and revision-specific machine records. Checks cover structure, exact exports, prerequisite separation, final-stage order, six README skill sets and a small external skill-editing fixture. Read-only scenarios are not real application execution or an effectiveness benchmark.
+- **1.1.1:** English/Simplified Chinese overview and public contribution/publishing metadata; no corresponding tag.
+- **v1.1.2:** Six-language README and portable checkout validation; existing tag preserved.
+- **v1.2.0:** Reproducible release automation, offline examples and historical 24-skill native discovery; existing public Release preserved.
+- **Development checkpoints after v1.2.0:** Specialist references, project skills/native-test rules, cross-platform design, standalone-page scope, workflow handoffs and two runnable Web demonstrations. Included here without inventing intermediate published tags.
 
-Existing project design inheritance, chosen stacks, P0/P1/P2, native toolchains and bounded test retention remain. The source ledger is unchanged at 11 repositories and 54 selected files; upstream hashes were not rerun. Native discovery remains historical 1.2.0 evidence for 24 skills, not this 26-skill revision. No product UI, real deployment or default skill installation was performed. Remote CI and any archive checks apply to their actual commit/artifact; this source update does not create a tag or Release.
+See [CHANGELOG](../CHANGELOG.md), [version status](versioning.md) and [validation](validation.md) for exact history and evidence. Historical 42 browser checks cover the recorded Web demos, not a rerun of this revision or every platform. Native discovery still covers the historical 24-skill 1.2.0 snapshot; the current 26-skill set has not been automatically discovered again. No default skills or global user configuration are changed.
 
-Original content remains MIT. Third-party sources retain their licenses; no upstream skill bodies, tools, datasets or assets are bundled.
+Original content is MIT; upstream sources retain separate terms. Tag/Release creation and remote CI are verified against their actual commit, not inferred from preparing this file.

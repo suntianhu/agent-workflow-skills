@@ -122,7 +122,7 @@ def render_skill(row):
     steps = "\n".join(f"{index}. {value}" for index, value in enumerate(row["steps"], 1))
     conditions = row.get("reference_conditions", {})
     references = "\n".join(
-        f"- [{value}](references/{value})：" + conditions.get(value, "触发本技能时读取的基础指南。")
+        f"- [{value}](references/{value})：" + conditions.get(value, "入口不足以处理本次细节时，仅读相关段落；已读且未变则复用。")
         for value in row["references"]
     )
     resources = "\n".join(f"- [{PurePosixPath(target).name}]({target})：按指南使用；模板按真实项目填写。" for target in row["resources"].values())
@@ -136,26 +136,24 @@ license: MIT
 
 {row['goal']}
 
-## 前置条件与边界
+{row['gate']}
 
-{row['gate']} 遵从当前用户、适用项目规则与宿主权限；不因技能存在扩大任务或外部写入授权，已有授权继续执行。
-
-进入已有项目时读取当前项目规则与既有内部规范，承接已完成的梳理、技能采纳和验证决定。后续启用本技能也先核对这些记录；发现冲突先收敛到同一规范入口，不另起脱节流程。
+沿用当前项目规范、有效基线及验证决定，缺口才补。改写、合并或替换用户已有 Skill，先展示具体差异并获明确确认；已确认范围直接沿用。只使用本次获授权的工具与操作。
 
 ## 执行
 
 {steps}
 
-## 必须得到的结果
+## 交付
 
-{row['outputs']} 没有证据的项目标为未核实，不补写完成结论。
+{row['outputs']} 未核实项如实标注。
 
 ## 按需资料
 
 {references}
 {resources}
 
-本目录可独立复制；缺少其他技能时按本技能前置条件调查/产出，不绕过门禁。组合清单仅描述条件和顺序，不是执行引擎。工具调用使用宿主实际能力，不假定平台专用API。
+本目录可独立使用；只补真实缺口，不自动串联其他技能。组合是条件说明，不是必跑清单。
 """
 
 

@@ -8,3 +8,6 @@ Use temporary fixtures outside this repository for script behavior checks.
 Do not install skills, alter user configuration, publish, or operate external accounts without explicit authorization.
 Keep private product rules, credentials, user data, and machine-specific paths out of the distribution.
 Document actual validation separately from format compatibility and untested agent runtimes.
+Use only task-relevant skills and references; reuse valid project decisions instead of reopening completed stages.
+Before modifying an existing user Skill, show the exact proposal and obtain explicit confirmation; preserve partial work and project rules.
+For routine releases increment the latest published patch; preserve published tags and record substantial version changes explicitly in docs/versioning.md.

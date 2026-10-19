@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.4.2",
+  "version": "1.2.1",
   "skills": [
     {
       "name": "aw-project-triage",
@@ -17,7 +17,10 @@
       "references": [
         "project-mode.md"
       ],
-      "resources": {}
+      "resources": {},
+      "reference_conditions": {
+        "project-mode.md": "交付类型、新旧判断或开发门禁尚有缺口时读取；已有有效判断直接复用。"
+      }
     },
     {
       "name": "aw-skill-selection",
@@ -26,11 +29,11 @@
       "goal": "用最少适用技能形成一致工作流。",
       "gate": "用户明确指定的技能先读；不因关键词或可能性阈值强制加载无关能力。",
       "steps": [
-        "先读项目既有技能清单、规则与规范，再按目标、产物、平台和风险筛选；后续启用也承接已定栈、冻结区和验证决定。",
-        "对实质影响方案的候选记录采纳/部分采纳/不采纳及理由。",
-        "冲突按当前指令和目标项目约束收敛，不叠加审批/TDD门禁。"
+        "按目标/产物/平台/风险筛选主要能力；承接项目已有规则与已读资料，只补真实缺口。",
+        "已有或部分完成的项目Skill先评估复用/局部调整/合并/重建；改文件、资源或入口前展示具体差异并获明确确认。",
+        "同职责只保留一个主流程；冲突按当前用户与项目规则收敛，小任务不额外建采纳表或调用其他资源技能。"
       ],
-      "outputs": "复杂任务的简短采纳表；小任务直接执行适用部分。",
+      "outputs": "必要的采纳/冲突结论；改用户已有Skill时附具体方案与确认状态。",
       "references": [
         "skill-selection.md"
       ],
@@ -39,7 +42,7 @@
     {
       "name": "aw-model-routing",
       "title": "模型与能力判断",
-      "description": "Use when deciding whether the current model and tools can complete a task or whether additional reasoning, vision, or delegation has a concrete benefit.",
+      "description": "Use when an observed capability gap or an explicit resource-comparison request justifies evaluating available models or tools; ordinary task startup is not a trigger.",
       "goal": "根据能力缺口选择资源。",
       "gate": "不能自行切换当前聊天模型或虚构允许列表；普通小改不追加模型。",
       "steps": [
@@ -56,13 +59,13 @@
     {
       "name": "aw-effort-estimation",
       "title": "基于实耗的估时",
-      "description": "Use when estimating remaining work, revising a time range after new evidence, or calibrating repeated overestimation from comparable measured tasks.",
+      "description": "Use when the user asks for time or a substantial task needs an initial or revised remaining-time estimate; trivial edits do not need clock or logging overhead.",
       "goal": "给可校准的本地剩余时间，外部未知单列。",
-      "gate": "先调查再估；已测步骤不重复校准，已完成调查不计入剩余。",
+      "gate": "开始给有依据的初估并单列未知；辨明历史偏差方向，只校准同类未校准部分，不统一乘二或减半。",
       "steps": [
-        "读取真实时钟和用户时区，分解未完成实现/检查/审查/清理。",
-        "用同类实耗比例校准未校准实现部分，缺样本时明确先验。",
-        "范围/假设改变就更新；完成后只记录真实匿名分钟。"
+        "用已知范围、项目检查命令与可信同类实耗给初始剩余区间；必要调查后修订，不先展开估时专项调研。",
+        "同类实际/预计比值校准实现，少于三条标弱证据；验证/外部等待分别估，并行按关键路径计时。",
+        "范围改变或接近上界及时更新；结束比较真实用时与偏差，持久记录只写约定位置。"
       ],
       "outputs": "时间范围、证据/样本数、未知阶段与偏差。",
       "references": [
@@ -91,6 +94,9 @@
       "resources": {
         "scripts/repo_audit.py": "scripts/repo_audit.py",
         "templates/reading-ledger.json": "assets/reading-ledger.json"
+      },
+      "reference_conditions": {
+        "audit-tool.md": "需要清点/校验台账工具时读取；手工有效记录不额外跑工具。"
       }
     },
     {
@@ -100,7 +106,7 @@
       "goal": "把当前项目实际约束变成可执行内部文档。",
       "gate": "完整代码覆盖未成立不能声称基线完成；已有有效阅读记录不重复审计，现有规范只补缺失/改变规则，框架候选不冒称已选。",
       "steps": [
-        "优先项目现有规范目录，否则写docs/engineering/PROJECT_STANDARDS.md；需要项目级Skill时复用宿主项目目录，以薄入口引用同一规范并核对相对路径。",
+        "沿用项目规范与技能目录，缺省才用docs/engineering/PROJECT_STANDARDS.md；部分Skill优先保留/局部调整，改用户旧入口先展示差异并获明确确认，薄入口只引用同一规范。",
         "前端与后端规则分别填写，附真实代码/配置或固定范本证据。",
         "分开现状、规范、例外和待改进；承接既有技能采纳与冲突表，后续启用技能接回同一规范，开发与架构变化同步更新。"
       ],
@@ -137,7 +143,7 @@
       "goal": "提炼成熟项目的可验证工程习惯，交接本项目规范阶段。",
       "gate": "不能只看stars、README或框架内核；不执行未知脚本、不复制许可不明实现。",
       "steps": [
-        "读取范本工程清单、关键代码、LICENSE、规则、CI和配置；核对维护与适配。",
+        "先复用有效固定来源；缺口才选择一个适配范本，读取待采纳规则及许可，证据够用即停。",
         "固定commit/tag及文件位置，形成采纳/调整/不采纳及落点。",
         "拒绝无关业务和过度架构，内部规范完成后再落地。"
       ],
@@ -150,7 +156,7 @@
     {
       "name": "aw-requirements-design",
       "title": "需求设计与头脑风暴",
-      "description": "Use when defining goals, exploring alternative directions through brainstorming, or specifying behavior and acceptance for frontend, API, task or data requirements; visual styling belongs to UI design.",
+      "description": "Use when goals, acceptance or product direction remain unresolved, or brainstorming is explicitly requested; a settled local change needs no separate requirements stage.",
       "goal": "从需求得到可审查交互方案。",
       "gate": "处理行为需求与验收，不规定配色/字体；重要方向缺口才询问，不重复已有批准。",
       "steps": [
@@ -247,7 +253,7 @@
       "gate": "消费已有有效完整基线、已选栈及同一规范；前置缺口先补齐，TDD循环内提供约束，不重复审计/选栈或另做实现。",
       "steps": [
         "读取前端规范与实际后端契约，识别路由/状态/样式/平台边界。",
-        "实现正常、加载、错误、重试、取消、重复操作和账号切换。",
+        "仅实现本次涉及的页面/状态与约束；加载、失败、重试、取消、重复或账号切换按真实行为选择，不补无关流程。",
         "执行项目规定工程检查，按测试政策验证直接影响并更新规范；需要且允许浏览器交互验证时读取browser-validation.md。"
       ],
       "outputs": "前端改动、规范同步、工程/行为证据与外部缺口。",
@@ -260,7 +266,8 @@
       "resources": {},
       "reference_conditions": {
         "browser-validation.md": "本次需要且允许浏览器实际交互验证时读取；不自动安装工具或新增持久测试。",
-        "design-platforms.md": "涉及平台原生交互、设备/窗口适配或跨端迁移时，只读目标平台相关部分。"
+        "design-platforms.md": "涉及平台原生交互、设备/窗口适配或跨端迁移时，只读目标平台相关部分。",
+        "project-mode.md": "交付类型、新旧判断或开发门禁尚有缺口时读取；已有有效判断直接复用。"
       }
     },
     {
@@ -271,7 +278,7 @@
       "gate": "消费有效基线/选栈/范本/规范，缺口只交回对应阶段；不固定ORM/数据库/分层库，不在TDD后再实现。",
       "steps": [
         "读取真实入口、业务、事务、数据与部署规范。",
-        "落实输入、归属、错误、并发/幂等、迁移和外部调用边界；实际涉及PostgreSQL/Supabase查询、连接、锁、迁移或权限时读取postgres-data.md。",
+        "只落实本次涉及的输入、归属、错误、并发/幂等、迁移与外部调用边界；实际涉及PostgreSQL/Supabase时再读postgres-data.md对应部分。",
         "执行规定工程检查及允许的局部验证，同步契约与规范。"
       ],
       "outputs": "后端改动、契约/迁移/规范同步及实际证据。",
@@ -282,7 +289,8 @@
       ],
       "resources": {},
       "reference_conditions": {
-        "postgres-data.md": "实际使用PostgreSQL/Supabase且涉及查询、连接、锁、迁移或权限时读取。"
+        "postgres-data.md": "实际使用PostgreSQL/Supabase且涉及查询、连接、锁、迁移或权限时读取。",
+        "project-mode.md": "交付类型、新旧判断或开发门禁尚有缺口时读取；已有有效判断直接复用。"
       }
     },
     {
@@ -328,7 +336,7 @@
     {
       "name": "aw-test-strategy",
       "title": "测试策略与保留",
-      "description": "Use before code implementation or behavioral validation to decide test scope, whether TDD is selected, existing project policy, and disposable versus retained artifacts.",
+      "description": "Use before code or behavior checks when validation scope, TDD choice or retention is missing or materially changed; consume an existing valid policy directly.",
       "goal": "分开验证范围、TDD顺序与保留政策。",
       "gate": "小改不自动TDD；不把其他项目禁测规则推广全局；已有用例不擅删。",
       "steps": [
@@ -470,7 +478,7 @@
       "title": "技能编写与维护",
       "description": "Use when creating or revising a reusable skill, its discovery description, supporting resources, or provenance and checking it against realistic task boundaries.",
       "goal": "保持单一职责、可发现、可组合、可验证。",
-      "gate": "不捆绑特定代理工具或私有产品，不伪造评测效果。",
+      "gate": "遵从真实维护源；部分技能不自动覆盖，修改用户已有Skill/资源/入口先展示具体方案并获明确确认，不伪造效果。",
       "steps": [
         "确认触发/排除/输入输出与真实用户需要。",
         "保持短入口与按需参考，脚本实际运行，模板显式标记用途。",

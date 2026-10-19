@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "version": "1.2.1",
+  "date": "2026-10-20",
+  "baseline_commit": "51d63cdd7f1614e52a6a7d5c387faaa472a09ffe",
+  "structure_and_exports": {
+    "version": "1.2.1",
+    "skill_count": 26,
+    "official_structure_checks": 26,
+    "exported_compositions": [
+      {
+        "bundle": "debug-and-fix",
+        "exact_skill_files": 106
+      },
+      {
+        "bundle": "existing-backend",
+        "exact_skill_files": 76
+      },
+      {
+        "bundle": "existing-frontend",
+        "exact_skill_files": 96
+      },
+      {
+        "bundle": "fullstack",
+        "exact_skill_files": 110
+      },
+      {
+        "bundle": "new-backend",
+        "exact_skill_files": 77
+      },
+      {
+        "bundle": "new-frontend",
+        "exact_skill_files": 97
+      },
+      {
+        "bundle": "release",
+        "exact_skill_files": 48
+      },
+      {
+        "bundle": "small-change",
+        "exact_skill_files": 110
+      }
+    ],
+    "skill_names_and_resources_preserved": true,
+    "bundle_closures_preserved": true,
+    "independent_resource_conditions": true,
+    "entry_bytes_before": 46647,
+    "entry_bytes_after": 39779,
+    "entry_byte_reduction_percent": 14.7,
+    "changed_files": 71,
+    "original_repository_modified": false,
+    "limits": "Byte size and structural/export checks, not elapsed-time or model-effectiveness measurements."
+  },
+  "actual_forward_fixture": {
+    "owned_files": 4,
+    "changed_files": [
+      "src/index.html"
+    ],
+    "existing_skill_preserved": true,
+    "skill_sha256": "e3796c63d6683b82a76acc45675fc4d9120ce89c5cf69ffb1e0b61ab3c69fdc1",
+    "proposal_prepared": true,
+    "proposal_applied": false,
+    "confirmation_not_invented": true,
+    "checks": "Static byte/hash comparison only, consistent with P0 for the wording-only fixture; no browser/test run."
+  },
+  "independent_review": {
+    "passes": 1,
+    "agents": 1,
+    "focused_version_wording_finding": "Two current-version references to 1.4.2 corrected to 1.2.1; historical 1.2.0 native evidence preserved.",
+    "scope": "Relevant deltas and one actual synthetic task; not a repeat of the entire 26-skill audit."
+  },
+  "estimate_tool_examples": {
+    "overestimate_example": {
+      "uncalibrated_work": 10,
+      "explicit_prior": 0.5,
+      "checks_and_review": 2,
+      "likely_local_minutes": 7
+    },
+    "overrun_example": {
+      "uncalibrated_work": 10,
+      "explicit_prior": 2,
+      "checks_and_review": 2,
+      "likely_local_minutes": 22
+    },
+    "samples": 0,
+    "scope": "Synthetic explicit-prior examples, not real calibration or measured forecasting accuracy."
+  },
+  "versions_before_release": {
+    "existing_tags": [
+      "v1.1.2",
+      "v1.2.0"
+    ],
+    "target": "v1.2.1",
+    "untagged_development_labels": [
+      "1.3.0",
+      "1.3.1",
+      "1.4.0",
+      "1.4.1",
+      "1.4.2"
+    ],
+    "old_tags_preserved": true
+  },
+  "limits": [
+    "Entry-byte reduction does not establish elapsed-time or productivity improvement.",
+    "The historical 42 browser checks were not rerun against this revision.",
+    "No automatic discovery of current 26 skills, default installation, global user Skill edits or production validation."
+  ]
+}

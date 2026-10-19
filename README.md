@@ -8,9 +8,9 @@ Composable development workflows for coding agents, with explicit project gates 
 ![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**Version 1.4.2** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
+**Version 1.2.1** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
 
-Version 1.4.2 connects design reference research and project design standards: 26 skills and eight compositions now connect brainstorming, platform guidance, shared rules and page design across Web, mini-programs, native apps, desktop and cross-platform UI. See [the design workflow](docs/design-workflow.md), [sources](docs/provenance.md) and [launch copy](docs/promotion.en.md). Native discovery below belongs to 1.2.0; discovery of the current 26-skill set has not been rerun. A standalone page draft or isolated prototype can be delivered without starting a product project; product integration retains the normal development gates. Verified baselines and completed prerequisites are reused by evidence, with separate conditions for real gaps. See the [26-skill workflow audit](docs/workflow-audit.md).
+Version 1.2.1 keeps 26 skills and eight optional compositions. Select the main capability, load only missing detail, and reuse project rules; changing an existing user Skill requires an approved concrete proposal. See [short paths](docs/bundles.md), [design](docs/design-workflow.md), [sources](docs/provenance.md) and [version/tag history](docs/versioning.md).
 
 Build on an existing codebase or start a new project without mixing the two workflows. Select only the skills that fit the task. Keep frontend and backend conventions separate, choose validation before implementation, and report what was actually verified.
 

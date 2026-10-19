@@ -1,4 +1,4 @@
-# Launch copy: Agent Workflow Skills 1.4.2
+# Launch copy: Agent Workflow Skills 1.2.1
 
 Repository: [suntianhu/agent-workflow-skills](https://github.com/suntianhu/agent-workflow-skills). These are drafts, not published posts. Say “preparing” while source is under review; merging source does not establish a tagged Release.
 
@@ -14,7 +14,7 @@ Repository: [suntianhu/agent-workflow-skills](https://github.com/suntianhu/agent
 
 ### Body
 
-I built **Agent Workflow Skills** to make coding agents account for the project they are changing and the evidence behind their results. Version **1.4.2** provides **26 skills and eight compositions**.
+I built **Agent Workflow Skills** to make coding agents account for the project they are changing and the evidence behind their results. Version **1.2.1** provides **26 skills and eight compositions**.
 
 Existing projects start with their code, existing skills and conventions. Later skill adoption reconnects to the same standards, chosen stack and validation decisions. New projects start with the requested language and an explicit stack choice.
 
@@ -38,7 +38,7 @@ Source: https://github.com/suntianhu/agent-workflow-skills
 
 ## Social post
 
-Agent Workflow Skills 1.4.2: 26 skills, eight compositions. Connect brainstorming, design references and project standards across Web, mini-programs, apps and desktop with implementation and bounded validation. Pinned sources and adoption decisions included.
+Agent Workflow Skills 1.2.1: 26 skills, eight compositions. Connect brainstorming, design references and project standards across Web, mini-programs, apps and desktop with implementation and bounded validation. Pinned sources and adoption decisions included.
 
 https://github.com/suntianhu/agent-workflow-skills
 
