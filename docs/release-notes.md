@@ -1,22 +1,16 @@
-# v1.2.1 — Precise skill loading and consistent patch releases
+# v1.2.2 — Clearer launch copy in six README languages
 
-Keep the 26 skills and eight conditional compositions. Shorten repeated entry instructions, load only the task-relevant capability and reference sections, and reuse valid project decisions. Skill selection, model routing and time estimation now have separate conditions rather than activating together.
+Documentation patch for the 26-skill, eight-composition collection. It clarifies the leaner entries, conditional loading and existing-project continuity introduced in v1.2.1. Skill instructions, resources, workflow conditions and utility behavior are unchanged.
 
 ## Changes
 
-- Clear local changes proceed within existing rules; ordinary work does not automatically trigger full requirements/design research, model comparison, estimates, multiple agents or duplicate reviews.
-- Project-local skills and partial work are read first. Prefer retaining or adjusting valid content; before rewriting, merging, replacing or changing an existing user Skill's resources/entry/configuration, show the concrete proposal and obtain explicit confirmation. Continue independent authorized work while the proposal waits.
-- Initial estimates use known scope and comparable measured work. Distinguish overestimation from overruns, calibrate only comparable implementation time, and separate verification and external/user waits; do not blindly halve or double totals.
-- Preserve complete-baseline gates, canonical standards, old-product fonts/themes/components, native-language validation, P0/P1/P2 and bounded TDD retention.
-- Normalize the current version to 1.2.1 after the published 1.2.0. Routine future changes increment patch; existing tags remain unchanged. Source-only 1.3/1.4 checkpoint labels are archived, not claimed as public releases.
+- Align the English, Simplified Chinese, Traditional Chinese, Japanese, Korean and Russian READMEs around three points: remove repeated entry prose, select stages for the task, and build on existing project conventions.
+- Rewrite Chinese and English launch copy with short posts, longer explanations and concrete examples. Existing projects keep their standards directory, fonts, themes, components and interaction patterns; existing or partial user Skills are read first and changes require a concrete confirmed proposal.
+- Separate instructions and measured evidence. The historical 14.7% figure describes entry-text bytes only. No productivity or trigger-accuracy result is claimed.
+- Advance the catalog and current release examples to 1.2.2, record the published v1.2.1 state, and preserve existing tags and historical validation records.
 
-## History since 1.1.1
+## Evidence and limits
 
-- **1.1.1:** English/Simplified Chinese overview and public contribution/publishing metadata; no corresponding tag.
-- **v1.1.2:** Six-language README and portable checkout validation; existing tag preserved.
-- **v1.2.0:** Reproducible release automation, offline examples and historical 24-skill native discovery; existing public Release preserved.
-- **Development checkpoints after v1.2.0:** Specialist references, project skills/native-test rules, cross-platform design, standalone-page scope, workflow handoffs and two runnable Web demonstrations. Included here without inventing intermediate published tags.
+This patch checks multilingual wording, version/link consistency, unchanged skill/workflow bytes, source validation, offline examples and reproducible packaging. Historical browser and native-discovery records keep their original scope: 42 checks on two Web demos, and native discovery of the 24-skill 1.2.0 snapshot. The current 26-skill set has not had a new native-discovery or automatic-trigger-accuracy run. No elapsed-time or productivity improvement is measured.
 
-See [CHANGELOG](../CHANGELOG.md), [version status](versioning.md) and [validation](validation.md) for exact history and evidence. Historical 42 browser checks cover the recorded Web demos, not a rerun of this revision or every platform. Native discovery still covers the historical 24-skill 1.2.0 snapshot; the current 26-skill set has not been automatically discovered again. No default skills or global user configuration are changed.
-
-Original content is MIT; upstream sources retain separate terms. Tag/Release creation and remote CI are verified against their actual commit, not inferred from preparing this file.
+See [CHANGELOG](../CHANGELOG.md), [version history](versioning.md), [validation](validation.md) and launch copy in [Chinese](promotion.zh-CN.md) / [English](promotion.en.md). Six-language coverage applies to the README; detailed skills and guides remain mainly Chinese. Original material is MIT, with separate upstream terms. No community posts are sent by this patch.
