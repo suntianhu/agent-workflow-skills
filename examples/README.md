@@ -21,7 +21,7 @@ The second command creates a new system-TEMP directory and leaves `result.json` 
 | --- | --- |
 | Inventory one source file, then check an empty reading ledger | Gate blocked with missing reading evidence; scanning alone never authorizes development |
 | Estimate 10 implementation minutes with explicit prior 0.5, plus 1 check minute and 1 review minute | Likely 7 minutes; heuristic range 6–8.5; zero historical samples; external CI queue remains unknown |
-| Export `small-change`, then compare every exported skill resource with source | 1.4.1: 21 available skills, 106 byte-identical files, no installation |
+| Export `small-change`, then compare every exported skill resource with source | 1.4.2: 21 available skills, 106 byte-identical files, no installation |
 
 The 0.5 factor is an explicit demonstration input, not a global accuracy guarantee or a real calibration sample. The fixture is synthetic. These are executed utility examples, not transcripts of a model completing a product task. Native host results and exact versions are in [loading validation](../docs/agent-loading.md).
 
@@ -70,3 +70,5 @@ conventions from mature, pinned public repositories and write project standards.
 ```
 
 Expected sequence: separate frontend/backend requirements → present current, sourced options → obtain the user's choice → review reference conventions and licenses → write project standards → design relevant interaction/API states → choose validation → implement each affected side. No fixed framework is recommended here because maintenance and security status change. A skill or reference project does not authorize account creation, paid services, deployment, or copying proprietary code. This is a recipe; no external application has been initialized.
+
+Version 1.4.2 separates missing reading coverage from missing project rules and missing new-project prerequisites, reusing completed outputs. Cleanup precedes final evidence verification; see the [workflow audit](../docs/workflow-audit.md).

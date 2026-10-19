@@ -1,12 +1,12 @@
 ---
 name: aw-repository-audit
-description: "Use before developing code, configuration, or engineering scripts in an existing project when a current complete codebase review and project standards baseline are required."
+description: "Use before implementing in an existing project when complete code understanding is missing or changes since a verifiable baseline need review; reuse valid unchanged coverage instead of restarting for each request."
 license: MIT
 ---
 
 # 老项目全仓梳理
 
-读完当前项目全部自有代码，形成可追溯全仓理解。
+形成或补齐覆盖当前项目的可核对完整代码理解。
 
 ## 前置条件与边界
 
@@ -16,8 +16,8 @@ license: MIT
 
 ## 执行
 
-1. 清点隐藏/未跟踪、前后端、共享库、迁移、生成器、CI和部署，以及既有技能/代理配置与外部规则引用。
-2. 逐项阅读，记录每项用途、调用关系、约束、证据和指纹；排除项给实际依据。
+1. 先核对现行规范、完整阅读记录与版本/指纹；已有基线承接未变覆盖并补查全部差异，没有可核对基线才全仓清点。
+2. 逐项阅读缺失/变化及直接影响，无基线时读全部自有代码；记录用途、关系、约束和证据，排除项给实际依据。
 3. 汇总完整阅读证据与真实阻断，交给内部规范阶段；规范完成前不开始产品实现。
 
 ## 必须得到的结果
