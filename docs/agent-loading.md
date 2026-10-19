@@ -20,7 +20,7 @@ python scripts/verify_agent_loading.py --host claude --claude-exe <NATIVE_CLAUDE
 
 Use `--host both` with the Claude options to check both hosts. Use `--codex-exe <EXECUTABLE>` if Codex is not on PATH. Optionally supply `--out <NEW_TEMP_DIRECTORY>`; an existing directory, source-tree target, agent configuration directory, or non-TEMP target is rejected. Do not point at an active project. The probe copies validated skill directories into its disposable project and never writes a default discovery location. It leaves `result.json` and private diagnostics in that directory for inspection and manual cleanup.
 
-Child processes receive an allowlisted OS environment, isolated `HOME`, `USERPROFILE`, `CODEX_HOME`, `CLAUDE_CONFIG_DIR`, application-data and temporary paths. Provider tokens are not inherited. Credential files are not read or copied. Git templates and global/system Git config are disabled for project initialization.
+Child processes receive an allowlisted OS environment, isolated `HOME`, `USERPROFILE`, `CODEX_HOME`, `CLAUDE_CONFIG_DIR`, application-data and temporary paths. Provider tokens are not inherited. The probe does not copy credentials or request authentication; native client file reads are not sandbox-enforced. Git templates and global/system Git config are disabled for project initialization.
 
 **The disposable project must be a Git root.** A first exploratory Claude run without this boundary discovered 34 skills by walking real-home ancestors on Windows, even with isolated home variables. That contaminated run was discarded. The shipped probe creates the boundary before either host starts and verifies the expected names. This matters when TEMP itself is under the real user home.
 
