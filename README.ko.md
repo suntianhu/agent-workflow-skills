@@ -5,12 +5,12 @@
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Русский](README.ru.md)
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
-![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
+![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**버전 1.3.1** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
+**버전 1.4.0** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
 
-1.3.1은 보안 증거, PostgreSQL, 브라우저 검증, 디자인 시스템의 조건부 참고 자료를 기존 24개 스킬과 8개 워크플로에 통합합니다. [출처와 역할 대응](docs/provenance.md), [중국어 소개문](docs/promotion.zh-CN.md), [영어 소개문](docs/promotion.en.md)을 참고하세요. 아래 네이티브 검색 증거는 1.2.0 기록이며, 1.3.1에서는 다시 실행하지 않았습니다.
+1.4.0은 디자인 참고 조사와 프로젝트 디자인 규약을 추가해 26개 스킬과 8개 워크플로로 브레인스토밍, 참고 채택, 공통 규칙, 화면 설계를 연결합니다. Web, 미니 프로그램, 네이티브 앱, 데스크톱, 크로스 플랫폼 UI를 다룹니다. [디자인 흐름](docs/design-workflow.md), [출처](docs/provenance.md), [소개문](docs/promotion.en.md)을 참고하세요. 아래 검색 결과는 1.2.0 기록이며, 현재 26개 스킬의 네이티브 검색은 다시 실행하지 않았습니다.
 
 기존 프로젝트와 새 프로젝트의 절차를 구분하고 작업에 필요한 스킬만 선택합니다. 프런트엔드와 백엔드 규칙을 따로 관리하고, 구현 전에 검증 방침을 정하며, 실제로 확인한 범위를 보고합니다.
 
@@ -28,7 +28,7 @@
 
 ## 빠른 시작
 
-1. 아래에서 워크플로를 선택하거나 [24개 스킬의 책임 범위](docs/skill-map.md)(중국어 간체)를 확인합니다.
+1. 아래에서 워크플로를 선택하거나 [26개 스킬의 책임 범위](docs/skill-map.md)(중국어 간체)를 확인합니다.
 2. 에이전트에게 필요한 `skills/<name>/SKILL.md`와 참조 자료를 읽도록 요청합니다. 현재 작업에 필요한 기능만 불러옵니다.
 3. 이 저장소 바깥의 새 디렉터리에 필요한 파일을 모두 포함한 구성을 내보내려면:
 
@@ -61,7 +61,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 | --- | --- |
 | 작업과 자원 판단 | `aw-project-triage`, `aw-skill-selection`, `aw-model-routing`, `aw-effort-estimation` |
 | 코드 이해와 아키텍처 | `aw-repository-audit`, `aw-project-standards`, `aw-framework-selection`, `aw-github-reference` |
-| 요구사항과 구현 | `aw-requirements-design`, `aw-ui-design`, `aw-frontend-implementation`, `aw-backend-implementation` |
+| 요구사항과 구현 | `aw-requirements-design`, `aw-design-reference`, `aw-design-standards`, `aw-ui-design`, `aw-frontend-implementation`, `aw-backend-implementation` |
 | 계약과 보안 경계 | `aw-api-contracts`, `aw-security-boundaries` |
 | 검증과 문제 진단 | `aw-test-strategy`, `aw-scoped-tdd`, `aw-evidence-debugging`, `aw-adversarial-review`, `aw-evidence-verification` |
 | 전달과 유지 관리 | `aw-delivery-cleanup`, `aw-release-readiness`, `aw-agent-coordination`, `aw-skill-authoring`, `aw-open-source-readiness` |

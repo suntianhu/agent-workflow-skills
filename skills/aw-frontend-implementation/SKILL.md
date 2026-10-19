@@ -29,6 +29,7 @@ license: MIT
 - [frontend.md](references/frontend.md)：触发本技能时读取的基础指南。
 - [project-mode.md](references/project-mode.md)：触发本技能时读取的基础指南。
 - [browser-validation.md](references/browser-validation.md)：本次需要且允许浏览器实际交互验证时读取；不自动安装工具或新增持久测试。
+- [design-platforms.md](references/design-platforms.md)：涉及平台原生交互、设备/窗口适配或跨端迁移时，只读目标平台相关部分。
 
 
 本目录可独立复制；缺少其他技能时按本技能前置条件调查/产出，不绕过门禁。组合清单仅描述条件和顺序，不是执行引擎。工具调用使用宿主实际能力，不假定平台专用API。

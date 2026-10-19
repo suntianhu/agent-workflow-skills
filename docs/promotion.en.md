@@ -1,45 +1,43 @@
-# Launch copy: Agent Workflow Skills 1.3.1
+# Launch copy: Agent Workflow Skills 1.4.0
 
-Repository: [suntianhu/agent-workflow-skills](https://github.com/suntianhu/agent-workflow-skills)
-
-Use the version announcement after that version is available. While it is local or under review, say “Preparing 1.3.1” and link the accessible source or PR.
+Repository: [suntianhu/agent-workflow-skills](https://github.com/suntianhu/agent-workflow-skills). These are drafts, not published posts. Say “preparing” while source is under review; merging source does not establish a tagged Release.
 
 ## Short description
 
-Composable skills for coding agents: understand the project, follow its conventions, choose proportionate validation, and deliver evidence.
+26 composable skills connecting project understanding, brainstorming, design references, platform standards, implementation and evidence-based delivery.
 
 ## Community post
 
 ### Title
 
-I organized my AI coding workflow into 24 composable skills
+26 skills for coding agents, from project conventions to cross-platform design
 
 ### Body
 
-When a coding agent works on an existing project, I want it to understand the code and conventions before making changes. When it reports success, I want to know what it actually verified.
+I built **Agent Workflow Skills** to make coding agents account for the project they are changing and the evidence behind their results. Version **1.4.0** provides **26 skills and eight compositions**.
 
-I built **Agent Workflow Skills** around those requirements. Version **1.3.1** keeps **24 skills and eight compositions** for project review, requirements, frontend/backend work, debugging, contracts, review and delivery.
+Existing projects start with their code, existing skills and conventions. Later skill adoption reconnects to the same standards, chosen stack and validation decisions. New projects start with the requested language and an explicit stack choice.
 
-The collection distinguishes existing projects from new ones. Existing project skills and agent/plugin rules are inventoried; later skill adoption reconnects to the same project standards, stack and validation decisions. Validation scope, TDD order and test retention are separate decisions. Small changes keep a bounded workflow, and each completion claim should match its evidence.
+Design connects brainstorming, reference research, shared project standards and page/flow design across Web, mini-programs, native apps, desktop and cross-platform UI. Brand semantics can be shared; navigation, controls, input and units are mapped to each target. Existing design documents and token/component sources remain canonical.
 
-Project-level skill entries reference the canonical standards in the project's existing directory. Validation uses the actual target and its existing toolchain; temporary TDD checks do not accumulate into persistent files or assertions after every retry.
+Code references come from relevant maintained repositories. Design references start with the project and platform, then suitable systems and real flows; galleries provide inspiration. Adoption records distinguish what was read, seen or operated, including access and licensing gaps.
 
-This update adds conditional references for security finding verification, PostgreSQL data access and isolation, browser interaction checks, and design systems. They are integrated into the existing responsibilities rather than added as another mandatory workflow. The source ledger covers selected material from nine upstream repositories, with pinned commits, file hashes, reading scope and adoption decisions. It is not a full-repository audit or an endorsement by those maintainers.
+Validation scope, TDD and artifact retention are separate decisions. Existing native toolchains exercise real target behavior; temporary checks do not accumulate after every retry. API-only tasks skip UI stages, and local edits reuse existing rules.
 
-The project includes export and validation utilities, offline examples, and native discovery probes. Windows discovery checks for all 24 skills in Codex and Claude were recorded for 1.2.0; discovery does not demonstrate successful model-driven application work. Scenario checks are not a cross-model effectiveness benchmark. The project makes no fixed productivity or universal compatibility claim.
+The ledger covers **11 repositories and 54 selected files**, including licenses and notices. This update supplements UI UX Pro Max and earlier sources with selected Impeccable and wshobson/agents design methods and obra/superpowers brainstorming material. Design-site access is recorded separately. This is selected research, not a full audit or upstream endorsement; no upstream skill bodies, databases, tools or assets are bundled.
 
-READMEs are available in six languages. Skill bodies and detailed guides are currently Chinese. Original material is MIT-licensed; upstream licenses remain separate, and no upstream skill bodies, implementations, design datasets or assets are bundled.
+Six README languages are available; detailed skills remain mainly Chinese. Original material is MIT-licensed, with separate upstream terms. Structural, export and synthetic scenario checks do not establish application usability or productivity gains. Native Codex/Claude discovery records cover the 24-skill 1.2.0 snapshot; the current 26-skill set has not been rerun.
 
-If you try it, feedback on one concrete task is especially useful: what triggered, what helped, which rules conflicted, and what evidence was missing.
+Feedback from one concrete, redacted task is welcome: what triggered, what helped, what repeated, and what evidence was missing.
 
 Source: https://github.com/suntianhu/agent-workflow-skills
 
 ## Social post
 
-Agent Workflow Skills: 24 composable skills and eight workflows for coding agents. Version 1.3.1 integrates conditional security, PostgreSQL, browser validation and design references. Includes pinned sources and validation tools. Feedback from real tasks welcome.
+Agent Workflow Skills 1.4.0: 26 skills, eight compositions. Connect brainstorming, design references and project standards across Web, mini-programs, apps and desktop with implementation and bounded validation. Pinned sources and adoption decisions included.
 
 https://github.com/suntianhu/agent-workflow-skills
 
-## DEV preparation
+## Posting notes
 
-Use the community post with a real worked example and a descriptive image only when available. Distinguish executed results from prompt recipes, disclose agent-assisted drafting, and follow the community's current posting rules. This file is a local draft; it does not create or publish an article.
+Pair the post with a real redacted example when available. Label unexecuted recipes, disclose agent-assisted drafting where required, and follow current community rules. Do not imply a Release, device verification or measured productivity result that has not occurred.

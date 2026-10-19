@@ -1,6 +1,6 @@
 # 技能职责与重复边界
 
-24个技能按能力拆分，可选择其中一个或按组合使用。必要前置条件摘要出现在多个独立技能中是为保证单独使用不绕门禁；正文决策的拥有者如下。guides是维护源，skills中的参考/脚本/模板是便携发行副本，不是另一个需同时加载的流程。
+26个技能按能力拆分，可选择其中一个或按组合使用。必要前置条件摘要出现在多个独立技能中是为保证单独使用不绕门禁；正文决策的拥有者如下。guides是维护源，skills中的参考/脚本/模板是便携发行副本，不是另一个需同时加载的流程。
 
 ## 项目与能力判断
 
@@ -19,8 +19,10 @@
 | [aw-project-standards](../skills/aw-project-standards/SKILL.md) | 项目内规范唯一入口 | 消费审计/选栈证据，不编造现状 |
 | [aw-framework-selection](../skills/aw-framework-selection/SKILL.md) | 语言约束下的框架候选与用户选择 | 用户未选定不初始化 |
 | [aw-github-reference](../skills/aw-github-reference/SKILL.md) | 固定范本引用和采纳表 | 不复制无关业务/许可不明实现 |
-| [aw-requirements-design](../skills/aw-requirements-design/SKILL.md) | 行为、数据、失败恢复与验收 | 不规定配色/字体，支持API/任务/迁移 |
-| [aw-ui-design](../skills/aw-ui-design/SKILL.md) | 层级、布局、视觉token和反馈 | 消费需求简报，不重做需求审批 |
+| [aw-requirements-design](../skills/aw-requirements-design/SKILL.md) | 头脑风暴、行为、数据、失败恢复与验收 | 不规定配色/字体，支持API/任务/迁移 |
+| [aw-design-reference](../skills/aw-design-reference/SKILL.md) | 设计来源阅读证据与采纳 | 不代替平台规则、素材许可或产品验收 |
+| [aw-design-standards](../skills/aw-design-standards/SKILL.md) | 共用设计规则、token/组件与平台映射 | 接回唯一项目规范；不拥有单页布局 |
+| [aw-ui-design](../skills/aw-ui-design/SKILL.md) | 单页/流程的层级、原型、布局和反馈 | 应用共用设计规范，不另建体系或需求审批 |
 
 ## 实现与验证
 
@@ -48,6 +50,10 @@
 
 需求→UI、审计→规范、策略→TDD、实现→只读审查→证据交付是交接关系，不要求重复产出同一份文档。TDD被选中时统筹实现，前/后端技能在循环内作为约束，不执行第二轮独立实现。复杂度不足以需要多个技能时，可在同一执行者内完成必要判断。
 
-## 1.3.0 专项资料整合
+## 1.3.0 专项资料整合（历史）
 
 新增来源不新增技能或组合。数据库实施细则由 aw-backend-implementation 的 postgres-data.md 维护；安全技能携带同源副本以支持独立角色/隔离核对。浏览器验证由前端实现按已选策略执行，证据技能只核对声明。设计体系细则归 UI，安全候选的调用链与反证资料由安全/只读审查按任务共用。具体[来源和去重表](provenance.md)记录取舍，专项资料仅匹配场景时读取。
+
+## 1.4.0 设计职责细分
+
+新增两项独立职责，总计 26 技能、八组合。头脑风暴仍归需求设计；设计参考拥有来源与采纳；设计规范拥有共用规则；UI 设计拥有页面/流程应用。ui-system.md 由规范与 UI 按需共用一份维护源，平台问题统一由 design-platforms.md 维护，便携副本不要求重复读取。具体[设计流程与分流](design-workflow.md)。
