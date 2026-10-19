@@ -1,10 +1,10 @@
 ---
 name: aw-requirements-design
-description: "Define users or callers, goals, inputs, outputs, states, recovery and acceptance criteria for frontend, API, background-task or data-change requirements; visual styling belongs to UI design."
+description: "Use when defining goals, exploring alternative directions through brainstorming, or specifying behavior and acceptance for frontend, API, task or data requirements; visual styling belongs to UI design."
 license: MIT
 ---
 
-# 需求与交互方案
+# 需求设计与头脑风暴
 
 从需求得到可审查交互方案。
 
@@ -16,9 +16,9 @@ license: MIT
 
 ## 执行
 
-1. 提取用户/场景/主任务/交付物/真实数据/冻结区。
+1. 读取已有项目决定；提取用户/场景/主任务/成功与非目标/真实数据/冻结区。
 2. 写触发、正常行为、适用失败恢复和验收标准。
-3. 复杂取舍给具体方案和推荐，已有方向继续推进。
+3. 方向开放或要求头脑风暴时读取 brainstorming.md；实质取舍给少量具体方向及推荐，已有选择继续推进。
 
 ## 必须得到的结果
 
@@ -27,6 +27,7 @@ license: MIT
 ## 按需资料
 
 - [requirements-design.md](references/requirements-design.md)：触发本技能时读取的基础指南。
+- [brainstorming.md](references/brainstorming.md)：方向开放、存在实质方案取舍，或用户要求头脑风暴时读取；明确小改跳过。
 
 
 本目录可独立复制；缺少其他技能时按本技能前置条件调查/产出，不绕过门禁。组合清单仅描述条件和顺序，不是执行引擎。工具调用使用宿主实际能力，不假定平台专用API。

@@ -5,12 +5,12 @@ Composable development workflows for coding agents, with explicit project gates 
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Русский](README.ru.md)
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
-![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
+![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**Version 1.3.1** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
+**Version 1.4.0** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
 
-Version 1.3.1 integrates conditional references for security evidence, PostgreSQL, browser validation and design systems, while retaining 24 skills and eight compositions. See [source and responsibility mapping](docs/provenance.md), [Chinese launch copy](docs/promotion.zh-CN.md) and [English launch copy](docs/promotion.en.md). Native discovery evidence below was recorded for 1.2.0; 1.3.1 discovery has not been rerun.
+Version 1.4.0 adds design reference research and project design standards: 26 skills and eight compositions now connect brainstorming, platform guidance, shared rules and page design across Web, mini-programs, native apps, desktop and cross-platform UI. See [the design workflow](docs/design-workflow.md), [sources](docs/provenance.md) and [launch copy](docs/promotion.en.md). Native discovery below belongs to 1.2.0; discovery of the current 26-skill set has not been rerun.
 
 Build on an existing codebase or start a new project without mixing the two workflows. Select only the skills that fit the task. Keep frontend and backend conventions separate, choose validation before implementation, and report what was actually verified.
 
@@ -28,7 +28,7 @@ This is a collection of instructions and local utilities. Workflow JSON files de
 
 ## Quick start
 
-1. Pick a workflow below or browse the [24 skills](docs/skill-map.md) (Chinese reference).
+1. Pick a workflow below or browse the [26 skills](docs/skill-map.md) (Chinese reference).
 2. Ask your agent to read the relevant `skills/<name>/SKILL.md` and its referenced resources. Load only the capabilities needed for the current task.
 3. To prepare a self-contained composition in a new directory outside this repository:
 
@@ -61,7 +61,7 @@ The `skills` field is the exportable capability closure, not an instruction to r
 | --- | --- |
 | Task and resource decisions | `aw-project-triage`, `aw-skill-selection`, `aw-model-routing`, `aw-effort-estimation` |
 | Codebase and architecture | `aw-repository-audit`, `aw-project-standards`, `aw-framework-selection`, `aw-github-reference` |
-| Requirements and implementation | `aw-requirements-design`, `aw-ui-design`, `aw-frontend-implementation`, `aw-backend-implementation` |
+| Requirements and implementation | `aw-requirements-design`, `aw-design-reference`, `aw-design-standards`, `aw-ui-design`, `aw-frontend-implementation`, `aw-backend-implementation` |
 | Contracts and safety boundaries | `aw-api-contracts`, `aw-security-boundaries` |
 | Validation and diagnosis | `aw-test-strategy`, `aw-scoped-tdd`, `aw-evidence-debugging`, `aw-adversarial-review`, `aw-evidence-verification` |
 | Delivery and maintenance | `aw-delivery-cleanup`, `aw-release-readiness`, `aw-agent-coordination`, `aw-skill-authoring`, `aw-open-source-readiness` |

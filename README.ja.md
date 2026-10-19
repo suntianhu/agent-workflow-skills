@@ -5,12 +5,12 @@
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Русский](README.ru.md)
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
-![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
+![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**バージョン 1.3.1** · Agent Skills ディレクトリ形式 · Python 3.10+ 用ツール · 実行時の依存関係は Python 標準ライブラリのみ
+**バージョン 1.4.0** · Agent Skills ディレクトリ形式 · Python 3.10+ 用ツール · 実行時の依存関係は Python 標準ライブラリのみ
 
-1.3.1 では、セキュリティの証拠、PostgreSQL、ブラウザー検証、デザインシステムの条件付き参照資料を既存の 24 スキル・8 ワークフローに統合しました。[出典と役割の対応](docs/provenance.md)、[中国語の紹介文](docs/promotion.zh-CN.md)、[英語の紹介文](docs/promotion.en.md)を参照してください。以下のネイティブ検出の証拠は 1.2.0 の記録であり、1.3.1 では再実行していません。
+1.4.0 ではデザイン参考調査とプロジェクト設計規約を追加し、26 スキル・8 ワークフローで、ブレインストーミングから参考資料の採用、共通規約、画面設計までをつなぎます。Web、ミニプログラム、ネイティブアプリ、デスクトップ、クロスプラットフォーム UI が対象です。[設計フロー](docs/design-workflow.md)、[出典](docs/provenance.md)、[紹介文](docs/promotion.en.md)を参照してください。以下の検出結果は 1.2.0 の記録であり、現行 26 スキルでは再実行していません。
 
 既存プロジェクトと新規プロジェクトの手順を区別し、タスクに必要なスキルだけを選びます。フロントエンドとバックエンドの規約を分け、実装前に検証方針を決め、実際に確認した範囲を報告します。
 
@@ -28,7 +28,7 @@
 
 ## クイックスタート
 
-1. 下のワークフローを選ぶか、[24 スキルの責務](docs/skill-map.md)（簡体字中国語）を確認します。
+1. 下のワークフローを選ぶか、[26 スキルの責務](docs/skill-map.md)（簡体字中国語）を確認します。
 2. 必要な `skills/<name>/SKILL.md` と参照リソースを読むようエージェントに指示します。現在のタスクに必要な能力だけを読み込みます。
 3. このリポジトリの外にある新しいディレクトリへ、必要なファイルを含む構成をエクスポートするには：
 
@@ -61,7 +61,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 | --- | --- |
 | タスクとリソースの判断 | `aw-project-triage`, `aw-skill-selection`, `aw-model-routing`, `aw-effort-estimation` |
 | コード理解とアーキテクチャ | `aw-repository-audit`, `aw-project-standards`, `aw-framework-selection`, `aw-github-reference` |
-| 要件と実装 | `aw-requirements-design`, `aw-ui-design`, `aw-frontend-implementation`, `aw-backend-implementation` |
+| 要件と実装 | `aw-requirements-design`, `aw-design-reference`, `aw-design-standards`, `aw-ui-design`, `aw-frontend-implementation`, `aw-backend-implementation` |
 | 契約とセキュリティ境界 | `aw-api-contracts`, `aw-security-boundaries` |
 | 検証と不具合調査 | `aw-test-strategy`, `aw-scoped-tdd`, `aw-evidence-debugging`, `aw-adversarial-review`, `aw-evidence-verification` |
 | 成果物の引き渡しと保守 | `aw-delivery-cleanup`, `aw-release-readiness`, `aw-agent-coordination`, `aw-skill-authoring`, `aw-open-source-readiness` |

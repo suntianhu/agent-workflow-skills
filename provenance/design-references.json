@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "checked_on": "2026-10-19",
+  "scope": "public text research only; no screenshots, interaction, user tests or target device execution",
+  "references": [
+    {
+      "title": "Android mobile design",
+      "url": "https://developer.android.com/design/ui/mobile",
+      "platform": "Android",
+      "status": "read",
+      "read_scope": "Overview text: themes/components, layout, behavior, accessibility and window-size classes; linked guides/images not comprehensively reviewed."
+    },
+    {
+      "title": "Fluent Windows",
+      "url": "https://fluent2.microsoft.design/components/windows",
+      "platform": "Windows",
+      "status": "read",
+      "read_scope": "Overview text and WinUI resource boundary; not a WPF implementation guide or visual/component audit."
+    },
+    {
+      "title": "Carbon color overview",
+      "url": "https://www.carbondesignsystem.com/building-blocks/foundations/color/overview",
+      "platform": "design-system",
+      "status": "read",
+      "read_scope": "Color roles/themes/tokens overview text only; no rendered palette/interaction audit."
+    },
+    {
+      "title": "GOV.UK Design System",
+      "url": "https://design-system.service.gov.uk/",
+      "platform": "Web forms",
+      "status": "read",
+      "read_scope": "Styles/components/patterns overview text; no full component audit."
+    },
+    {
+      "title": "GOV.UK accessibility",
+      "url": "https://design-system.service.gov.uk/accessibility/",
+      "platform": "Web accessibility",
+      "status": "read",
+      "read_scope": "Using a design system alone does not establish accessible application behavior; overview text."
+    },
+    {
+      "title": "WeUI WXSS",
+      "url": "https://github.com/Tencent/weui-wxss",
+      "platform": "WeChat",
+      "status": "read",
+      "read_scope": "README introduction, stylesheet/native component distinction and px/rpx notes; no visual or mini-program runtime verification."
+    },
+    {
+      "title": "Apple HIG",
+      "url": "https://developer.apple.com/design/human-interface-guidelines",
+      "platform": "Apple",
+      "status": "entry_only",
+      "read_scope": "Entry reachable; extracted page requires JavaScript, Markdown endpoint attempt failed. No current detailed HIG claims derived from unread text."
+    },
+    {
+      "title": "WeChat mini-program design",
+      "url": "https://developers.weixin.qq.com/miniprogram/design/",
+      "platform": "WeChat",
+      "status": "unavailable",
+      "read_scope": "Retrieval failed; candidate entry only. README evidence from WeUI is recorded separately."
+    },
+    {
+      "title": "Material Design",
+      "url": "https://m3.material.io/",
+      "platform": "Android",
+      "status": "entry_only",
+      "read_scope": "JavaScript-required shell only. Accessible Android Developers overview used separately."
+    }
+  ]
+}

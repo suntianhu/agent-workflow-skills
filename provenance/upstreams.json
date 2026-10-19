@@ -93,11 +93,20 @@
         "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
         "bytes": 1070,
         "retrieved": true
+      },
+      {
+        "path": "skills/brainstorming/SKILL.md",
+        "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/brainstorming/SKILL.md",
+        "sha256": "6ee10d1481b8a2580d5336ff66c5c08acc9d4b251b13bbc3bfd31be99c261d43",
+        "bytes": 10073,
+        "retrieved": true,
+        "review_scope": "lines 1-180: intent, concrete context, alternatives and proportional scope; mandatory approval, fixed directories and companion infrastructure not adopted"
       }
     ],
     "scope": "selected files only; not a complete repository or security audit",
     "retrieval": "public git HEAD and pinned raw files; API metadata unavailable due shared rate limit",
-    "reuse": "principles rewritten; no upstream skill body, script, asset, or database redistributed"
+    "reuse": "principles rewritten; no upstream skill body, script, asset, or database redistributed",
+    "supplement_date": "2026-10-19"
   },
   {
     "repository": "vercel-labs/agent-skills",
@@ -436,5 +445,109 @@
     "retrieval": "public shallow Git snapshot; selected blob bytes retrieved without running upstream code",
     "reuse": "abstract principles studied; independently written instructions; no upstream bodies, code, assets or databases redistributed",
     "license": "MIT; retrieved root LICENSE, applies to upstream material only"
+  },
+  {
+    "repository": "pbakaus/impeccable",
+    "url": "https://github.com/pbakaus/impeccable",
+    "commit": "0665bd812ae0908fcab17b96fd4f840defb882d9",
+    "snapshot_date": "2026-10-19",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/pbakaus/impeccable/blob/0665bd812ae0908fcab17b96fd4f840defb882d9/LICENSE",
+        "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
+        "bytes": 10766,
+        "retrieved": true,
+        "review_scope": "complete license/notice identity and terms"
+      },
+      {
+        "path": "NOTICE.md",
+        "url": "https://github.com/pbakaus/impeccable/blob/0665bd812ae0908fcab17b96fd4f840defb882d9/NOTICE.md",
+        "sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb",
+        "bytes": 503,
+        "retrieved": true,
+        "review_scope": "complete license/notice identity and terms"
+      },
+      {
+        "path": "skill/reference/adapt.native.md",
+        "url": "https://github.com/pbakaus/impeccable/blob/0665bd812ae0908fcab17b96fd4f840defb882d9/skill/reference/adapt.native.md",
+        "sha256": "f7f0ba948cbce75cdbb86836c4479b86cffbfaf6afe4a5a7c8f129807070a68d",
+        "bytes": 3927,
+        "retrieved": true,
+        "review_scope": "complete adaptation checklist; simulator/device advice narrowed to actual supported scope"
+      },
+      {
+        "path": "skill/reference/new-work.md",
+        "url": "https://github.com/pbakaus/impeccable/blob/0665bd812ae0908fcab17b96fd4f840defb882d9/skill/reference/new-work.md",
+        "sha256": "366acd1f81172f41da16f81fc5f0d9555ce1d7f80c810d5274478171cf6a3406",
+        "bytes": 63517,
+        "retrieved": true,
+        "review_scope": "first 30 lines: existing authority, local extension and proportional invention; command procedures not adopted"
+      },
+      {
+        "path": "skill/reference/document.md",
+        "url": "https://github.com/pbakaus/impeccable/blob/0665bd812ae0908fcab17b96fd4f840defb882d9/skill/reference/document.md",
+        "sha256": "aca6d5ea0770131b8f97a3feb68e1bd3cc536b1ef2e7d05bb0c2c1c9c96c68d3",
+        "bytes": 27397,
+        "retrieved": true,
+        "review_scope": "lines 1-105: extracting incumbent tokens/components and preserving their source; format and sidecar not adopted"
+      }
+    ],
+    "scope": "selected files and sections only; not a full repository, visual or security audit",
+    "retrieval": "public shallow Git snapshot; selected blob bytes retrieved without running upstream code",
+    "reuse": "abstract principles studied; independently written instructions; no upstream bodies, code, assets or databases redistributed",
+    "license": "Apache-2.0; retrieved LICENSE and NOTICE.md; selected files do not include the MIT-derived iOS/Android reference bodies"
+  },
+  {
+    "repository": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents",
+    "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+    "snapshot_date": "2026-10-19",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/LICENSE",
+        "sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+        "bytes": 1068,
+        "retrieved": true,
+        "review_scope": "complete license/notice identity and terms"
+      },
+      {
+        "path": "plugins/ui-design/skills/design-system-patterns/SKILL.md",
+        "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/ui-design/skills/design-system-patterns/SKILL.md",
+        "sha256": "618355f0e6c6ba8ca5d231035c9da18302fe6894aedce565743e9181b6c928ee",
+        "bytes": 4003,
+        "retrieved": true,
+        "review_scope": "complete token/design-system skill; no examples or framework/toolchain copied"
+      },
+      {
+        "path": "plugins/ui-design/skills/mobile-ios-design/SKILL.md",
+        "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/ui-design/skills/mobile-ios-design/SKILL.md",
+        "sha256": "2b3b2405aee645a345d137ce93bd86bac65d33da4ad40c4b6f007bf4a51b6c96",
+        "bytes": 6921,
+        "retrieved": true,
+        "review_scope": "first 155 lines: platform context, navigation and semantic type; examples not copied or executed"
+      },
+      {
+        "path": "plugins/ui-design/skills/mobile-android-design/SKILL.md",
+        "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/ui-design/skills/mobile-android-design/SKILL.md",
+        "sha256": "0a209a1c45585ce0056548cc2f0fd352b7fde5980a3b5dd397a9daf5dff19fe7",
+        "bytes": 3797,
+        "retrieved": true,
+        "review_scope": "complete short platform skill: Android context and state/navigation concerns; code examples not adopted as current API authority"
+      },
+      {
+        "path": "plugins/ui-design/skills/interaction-design/SKILL.md",
+        "url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/ui-design/skills/interaction-design/SKILL.md",
+        "sha256": "87f2765ed1deeef3f1c06f9e4338ff103c391c6c4adcdffc885f3516b7c34ff2",
+        "bytes": 7572,
+        "retrieved": true,
+        "review_scope": "first 110 lines: feedback and state transitions; animation constants, React and examples not adopted"
+      }
+    ],
+    "scope": "selected files and sections only; not a full repository, visual or security audit",
+    "retrieval": "public shallow Git snapshot; selected blob bytes retrieved without running upstream code",
+    "reuse": "abstract principles studied; independently written instructions; no upstream bodies, code, assets or databases redistributed",
+    "license": "MIT; retrieved LICENSE, copyright 2024 Seth Hobson"
   }
 ]

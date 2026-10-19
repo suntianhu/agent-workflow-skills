@@ -5,12 +5,12 @@
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Русский](README.ru.md)
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
-![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
+![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**Версия 1.3.1** · Каталоги Agent Skills · Утилиты для Python 3.10+ · Для выполнения нужна только стандартная библиотека Python
+**Версия 1.4.0** · Каталоги Agent Skills · Утилиты для Python 3.10+ · Для выполнения нужна только стандартная библиотека Python
 
-В 1.3.1 добавлены условно загружаемые материалы по доказательствам безопасности, PostgreSQL, проверке браузерных сценариев и дизайн-системам. Сохранены 24 навыка и восемь сценариев. См. [источники и распределение обязанностей](docs/provenance.md), [текст на китайском](docs/promotion.zh-CN.md) и [текст на английском](docs/promotion.en.md). Приведённые ниже проверки нативного обнаружения относятся к 1.2.0; для 1.3.1 они не повторялись.
+Версия 1.4.0 добавляет исследование дизайн-референсов и проектные правила дизайна: 26 навыков и восемь сценариев связывают обсуждение идей, выбор источников, общие правила и проектирование экранов для Web, мини-программ, нативных приложений, настольных и кроссплатформенных интерфейсов. См. [процесс дизайна](docs/design-workflow.md), [источники](docs/provenance.md) и [текст анонса](docs/promotion.en.md). Результаты обнаружения ниже относятся к 1.2.0; для текущих 26 навыков проверка не повторялась.
 
 Разделяйте работу с существующей кодовой базой и создание нового проекта. Выбирайте только нужные навыки, ведите отдельные правила для фронтенда и бэкенда, определяйте способ проверки до реализации и сообщайте, что действительно было проверено.
 
@@ -28,7 +28,7 @@
 
 ## Быстрый старт
 
-1. Выберите процесс ниже или изучите [обязанности 24 навыков](docs/skill-map.md) (на упрощённом китайском).
+1. Выберите процесс ниже или изучите [обязанности 26 навыков](docs/skill-map.md) (на упрощённом китайском).
 2. Попросите агента прочитать нужный `skills/<name>/SKILL.md` и указанные в нём ресурсы. Загружайте только возможности, необходимые для текущей задачи.
 3. Чтобы подготовить полную композицию в новом каталоге за пределами этого репозитория:
 
@@ -61,7 +61,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 | --- | --- |
 | Выбор задач и ресурсов | `aw-project-triage`, `aw-skill-selection`, `aw-model-routing`, `aw-effort-estimation` |
 | Кодовая база и архитектура | `aw-repository-audit`, `aw-project-standards`, `aw-framework-selection`, `aw-github-reference` |
-| Требования и реализация | `aw-requirements-design`, `aw-ui-design`, `aw-frontend-implementation`, `aw-backend-implementation` |
+| Требования и реализация | `aw-requirements-design`, `aw-design-reference`, `aw-design-standards`, `aw-ui-design`, `aw-frontend-implementation`, `aw-backend-implementation` |
 | Контракты и границы безопасности | `aw-api-contracts`, `aw-security-boundaries` |
 | Проверка и диагностика | `aw-test-strategy`, `aw-scoped-tdd`, `aw-evidence-debugging`, `aw-adversarial-review`, `aw-evidence-verification` |
 | Передача результатов и сопровождение | `aw-delivery-cleanup`, `aw-release-readiness`, `aw-agent-coordination`, `aw-skill-authoring`, `aw-open-source-readiness` |

@@ -5,12 +5,12 @@
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Русский](README.ru.md)
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
-![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
+![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**版本 1.3.1** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
+**版本 1.4.0** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
 
-1.3.1 將安全證據、PostgreSQL、瀏覽器驗收與設計系統細則整合為按條件讀取的參考資料，仍保留 24 個技能、8 套組合。詳見[來源與整合對照](docs/provenance.md)、[中文宣傳文案](docs/promotion.zh-CN.md)及[英文宣傳文案](docs/promotion.en.md)。下方原生探索證據來自 1.2.0，1.3.1 尚未重跑宿主探索。
+1.4.0 新增設計參考研究與專案設計規範，共 26 個技能、8 套組合，串起腦力激盪、參考採納、整體規範與頁面設計，涵蓋 Web、後台、小程式、原生 App、桌面與跨平台介面。詳見[設計流程](docs/design-workflow.md)、[來源與整合](docs/provenance.md)及[宣傳文案](docs/promotion.zh-CN.md)。下方原生探索證據來自 1.2.0，目前 26 技能集合尚未重跑宿主探索。
 
 區分既有專案與新專案，依任務選擇適用技能，分別維護前後端規範，在實作前選定驗證策略，並如實回報實際驗證範圍。
 
@@ -28,7 +28,7 @@
 
 ## 快速開始
 
-1. 在下表選擇組合，或查看 [24 個技能的職責邊界](docs/skill-map.md)（簡體中文）。
+1. 在下表選擇組合，或查看 [26 個技能的職責邊界](docs/skill-map.md)（簡體中文）。
 2. 讓代理讀取所需的 `skills/<name>/SKILL.md` 及其引用資源，只載入本次任務適用的能力。
 3. 如需在儲存庫以外的新目錄準備完整組合：
 
@@ -61,7 +61,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 | --- | --- |
 | 任務與資源判斷 | `aw-project-triage`, `aw-skill-selection`, `aw-model-routing`, `aw-effort-estimation` |
 | 程式碼理解與架構 | `aw-repository-audit`, `aw-project-standards`, `aw-framework-selection`, `aw-github-reference` |
-| 需求與實作 | `aw-requirements-design`, `aw-ui-design`, `aw-frontend-implementation`, `aw-backend-implementation` |
+| 需求與實作 | `aw-requirements-design`, `aw-design-reference`, `aw-design-standards`, `aw-ui-design`, `aw-frontend-implementation`, `aw-backend-implementation` |
 | 契約與安全邊界 | `aw-api-contracts`, `aw-security-boundaries` |
 | 驗證與問題診斷 | `aw-test-strategy`, `aw-scoped-tdd`, `aw-evidence-debugging`, `aw-adversarial-review`, `aw-evidence-verification` |
 | 交付與維護 | `aw-delivery-cleanup`, `aw-release-readiness`, `aw-agent-coordination`, `aw-skill-authoring`, `aw-open-source-readiness` |

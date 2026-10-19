@@ -5,12 +5,12 @@
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Русский](README.ru.md)
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
-![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
+![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**版本 1.3.1** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
+**版本 1.4.0** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
 
-1.3.1 将安全证据、PostgreSQL、浏览器验收和设计体系细则整合为按条件读取的参考资料，仍保留 24 个技能、8 套组合。见[来源与去重落点](docs/provenance.md)、[中文宣传文案](docs/promotion.zh-CN.md)和[英文宣传文案](docs/promotion.en.md)。下方原生发现证据来自 1.2.0，1.3.1 未重跑宿主发现。
+1.4.0 新增设计参考研究与项目设计规范，共 26 个技能、8 套组合，串起头脑风暴、参考采纳、整体规范和页面设计，覆盖 Web、后台、小程序、原生 App、桌面与跨端界面。见[设计流程](docs/design-workflow.md)、[来源与去重](docs/provenance.md)和[宣传文案](docs/promotion.zh-CN.md)。下方原生发现证据来自 1.2.0，当前 26 技能集合尚未重跑宿主发现。
 
 区分已有项目和新项目，按任务选择适用技能，分别维护前后端规范，在实现前选定验证策略，并如实报告实际验证范围。
 
@@ -28,7 +28,7 @@
 
 ## 快速开始
 
-1. 在下表选择组合，或查看 [24 个技能的职责边界](docs/skill-map.md)。
+1. 在下表选择组合，或查看 [26 个技能的职责边界](docs/skill-map.md)。
 2. 让智能体读取所需的 `skills/<name>/SKILL.md` 及其引用资料，只加载本次适用能力。
 3. 如需在仓库之外的新目录准备完整组合：
 
@@ -61,7 +61,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 | --- | --- |
 | 任务与资源判断 | `aw-project-triage`、`aw-skill-selection`、`aw-model-routing`、`aw-effort-estimation` |
 | 代码理解与规范 | `aw-repository-audit`、`aw-project-standards`、`aw-framework-selection`、`aw-github-reference` |
-| 需求、设计与实现 | `aw-requirements-design`、`aw-ui-design`、`aw-frontend-implementation`、`aw-backend-implementation` |
+| 需求、设计与实现 | `aw-requirements-design`、`aw-design-reference`、`aw-design-standards`、`aw-ui-design`、`aw-frontend-implementation`、`aw-backend-implementation` |
 | 契约与安全边界 | `aw-api-contracts`、`aw-security-boundaries` |
 | 验证与排障 | `aw-test-strategy`、`aw-scoped-tdd`、`aw-evidence-debugging`、`aw-adversarial-review`、`aw-evidence-verification` |
 | 交付与维护 | `aw-delivery-cleanup`、`aw-release-readiness`、`aw-agent-coordination`、`aw-skill-authoring`、`aw-open-source-readiness` |
