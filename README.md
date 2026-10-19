@@ -8,16 +8,18 @@ Composable development workflows for coding agents, with explicit project gates 
 ![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**Version 1.2.1** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
+**Version 1.2.2** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
 
-Version 1.2.1 keeps 26 skills and eight optional compositions. Select the main capability, load only missing detail, and reuse project rules; changing an existing user Skill requires an approved concrete proposal. See [short paths](docs/bundles.md), [design](docs/design-workflow.md), [sources](docs/provenance.md) and [version/tag history](docs/versioning.md).
+**Select skills for the task. Build on the project's existing rules.** This collection provides 26 skills and eight conditional compositions. Version 1.2.2 clarifies the README and launch copy around the leaner entries and scoped loading introduced in 1.2.1; skill instructions and workflow conditions are unchanged. See [short paths](docs/bundles.md), [design](docs/design-workflow.md), [sources](docs/provenance.md) and [version/tag history](docs/versioning.md).
 
 Build on an existing codebase or start a new project without mixing the two workflows. Select only the skills that fit the task. Keep frontend and backend conventions separate, choose validation before implementation, and report what was actually verified.
 
 ## Why this collection
 
-- **Existing skills stay connected:** inventory project skills and agent/plugin rules, then align later skill adoption with the same project standards and prior decisions.
-- **Existing projects:** review all project-owned code and write evidence-backed standards inside the project before changing code, configuration, or engineering scripts.
+- **Leaner entries:** remove repeated instructions, choose one main capability, and read additional reference sections only when needed. Reuse valid decisions and unchanged material already read.
+- **Task-scoped activation:** eight compositions describe conditions rather than a mandatory sequence. A clear local edit does not automatically start broad research, model comparison or multiple agents; estimates have their own trigger.
+- **Continuity in existing projects:** verify the complete code baseline and subsequent changes, then use the same standards directory and rule sources. New pages inherit fonts, themes, components and interaction patterns even when their business purpose is new.
+- **Respect existing Skills:** read project skills, including partial ones, and agent/plugin rules first. Later skills use the same project standards; show a concrete diff and obtain confirmation before changing an existing user Skill.
 - **New projects:** respect the requested language, research maintained frameworks and known relevant risks, obtain the user's stack choice, then derive conventions from matching public repositories.
 - **Proportional validation:** decide scope, TDD order, and artifact retention separately. Small edits do not automatically require TDD; existing user tests are preserved.
 - **Grounded estimates:** separate implementation, checks, review, and external waits. Calibrate using comparable measured work rather than a universal multiplier.
