@@ -1,18 +1,19 @@
-# v1.1.2 — Multilingual project overview
+# v1.2.0 — Reproducible releases and native discovery
 
-Agent Workflow Skills provides 24 focused skills and eight documented development compositions. This release adds complete README translations in Traditional Chinese, Japanese, Korean, and Russian alongside English and Simplified Chinese.
+Agent Workflow Skills provides 24 focused skills and eight documented development compositions, with six README languages.
 
 ## Changes
 
-- Add four full README translations with the same workflow gates, skill list, commands, compatibility status, validation limits, and license boundaries.
-- Connect all six READMEs through a shared language selector; keep English as the default overview.
-- Update contribution guidance, release instructions, and version metadata for the six-language overview.
-- Fix Windows/Linux checkout validation by enforcing LF text, rebuilding generated hashes, and allowing the repository attributes file.
+- Publish version tags through Windows/Linux validation, reproducible tracked-source packaging, and a separate release job with minimal permissions.
+- Attach a prepared ZIP and SHA-256 checksum; reject stale versions, dirty trees, unsafe output paths, and nonregular Git entries.
+- Add worked usage scenarios and executable offline examples for repository-reading gates, explicit time calibration, and byte-verified composition export.
+- Add isolated native Codex/Claude discovery probes and sanitized evidence with before/after default-skill snapshots.
+- Document PR maintenance, solo-maintainer branch protection, future releases, and exact compatibility limits across all six READMEs.
 
 ## Validation and limits
 
-Local validation checks all README links and generated source consistency. Translation checks cover version numbers, skill identifiers, workflow references, commands, language navigation, and the scope of translated material. These are documentation checks, not native-agent or product tests.
+Codex CLI `0.163.0-alpha.10.2` and Claude Code `2.1.303` discovered all 24 skills in disposable Windows projects. Claude named discovery used the official Agent SDK `0.3.303`. Default skill trees were unchanged. This verifies discovery and metadata/command loading, not model decisions or full workflow execution. No credentials were copied; authenticated agent scenarios remain unverified.
 
-Skill bodies, detailed guides, and utility messages remain in Simplified Chinese. The 24 skill responsibilities and eight compositions are preserved. The validator additionally recognizes `.gitattributes`; generated content and hashes now use stable LF text. Native discovery and end-to-end agent usage remain untested; remote CI status must be checked on the hosting repository. No human native-speaker review has been performed for the new translations.
+CI validates source, executes offline synthetic examples, and dry-runs packaging on Windows and Linux. Native host probes are separate local checks. See the validation record and Actions result for the tagged commit. Skill bodies and guides remain Chinese; Gemini, Copilot, and other host versions remain untested.
 
-The attached SHA-256 file applies only to the named prepared ZIP, not GitHub's automatically generated source archives. Nothing is installed automatically and no default agent settings are changed.
+The attached SHA-256 file applies only to the named prepared ZIP. Nothing is installed automatically and no default agent settings are changed.

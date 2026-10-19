@@ -1,5 +1,20 @@
 # 开源审查与本地验证记录
 
+## 1.2.0 自动发布、示例与隔离加载
+
+日期：2026-10-19。下方旧版本记录保持当时状态，本节描述新增证据。24 个技能职责与 8 套组合未改变；新增发布工程、可执行示例和宿主发现探针。
+
+实际执行：
+
+- `python scripts/build_catalog.py` 与 `python scripts/validate.py` 核对 24 技能、8 组合、版本 1.2.0 和生成散列。
+- `python scripts/run_examples.py` 在仓库外 TEMP 执行：空阅读台账阻断、明确先验估时、19 技能组合导出并逐字节核对 83 个资源；合成夹具不是用户产品或真实估时历史。结果见[离线示例](../provenance/offline-examples.json)。
+- `python scripts/verify_agent_loading.py --host both` 使用独立 Git 根、独立 HOME/配置/临时目录，清除继承的提供商认证变量，实际调用 Codex app-server 与 Claude 原生 CLI/官方 SDK。两者均发现全部 24 个技能；默认 .codex/.agents/.claude 技能树的前后散列一致。结果见[原生发现证据](../provenance/native-discovery.json)，重现步骤见[加载说明](agent-loading.md)。
+- 本次真实加载环境为 Windows、Codex CLI 0.163.0-alpha.10.2、Claude Code 2.1.303 与 Agent SDK 0.3.303。`node --check scripts/claude_discovery.mjs` 通过。没有复制认证文件或改动默认 skills。
+
+探针只验证原生发现、元数据解析和命令注册，不证明模型读完正文、自动选中技能或完成产品开发。Claude 单独的隔离调用尝试因未登录停止，API 时长、费用与输入输出 token 均为零；不计作执行通过。没有为此迁移用户凭据。
+
+发布流水线和本地打包器的边界验证、独立审查、真实 CI 与标签发布结果随本次 PR/Actions 提供；不能用本地静态校验代替远端执行结果。新工具不安装技能、不读取产品目录、不引入持久测试框架。临时夹具与原始宿主日志不进入分发包。
+
 ## 1.1.2 六语 README 验证
 
 日期：2026-10-19。新增完整的繁体中文、日语、韩语与俄语README；英文仍为默认入口，与简体中文版共同构成六语项目概览。翻译范围不包括技能正文、详细指南或工具提示。

@@ -1,0 +1,113 @@
+{
+  "schema": 1,
+  "model_execution": "not_run",
+  "authentication_used": false,
+  "hosts": {
+    "codex": {
+      "version": "codex-cli 0.163.0-alpha.10.2",
+      "native_discovery": "passed",
+      "count": 24,
+      "names": [
+        "aw-adversarial-review",
+        "aw-agent-coordination",
+        "aw-api-contracts",
+        "aw-backend-implementation",
+        "aw-delivery-cleanup",
+        "aw-effort-estimation",
+        "aw-evidence-debugging",
+        "aw-evidence-verification",
+        "aw-framework-selection",
+        "aw-frontend-implementation",
+        "aw-github-reference",
+        "aw-model-routing",
+        "aw-open-source-readiness",
+        "aw-project-standards",
+        "aw-project-triage",
+        "aw-release-readiness",
+        "aw-repository-audit",
+        "aw-requirements-design",
+        "aw-scoped-tdd",
+        "aw-security-boundaries",
+        "aw-skill-authoring",
+        "aw-skill-selection",
+        "aw-test-strategy",
+        "aw-ui-design"
+      ]
+    },
+    "claude": {
+      "version": "2.1.303 (Claude Code)",
+      "native_discovery": "passed",
+      "count": 24,
+      "names": [
+        "aw-adversarial-review",
+        "aw-agent-coordination",
+        "aw-api-contracts",
+        "aw-backend-implementation",
+        "aw-delivery-cleanup",
+        "aw-effort-estimation",
+        "aw-evidence-debugging",
+        "aw-evidence-verification",
+        "aw-framework-selection",
+        "aw-frontend-implementation",
+        "aw-github-reference",
+        "aw-model-routing",
+        "aw-open-source-readiness",
+        "aw-project-standards",
+        "aw-project-triage",
+        "aw-release-readiness",
+        "aw-repository-audit",
+        "aw-requirements-design",
+        "aw-scoped-tdd",
+        "aw-security-boundaries",
+        "aw-skill-authoring",
+        "aw-skill-selection",
+        "aw-test-strategy",
+        "aw-ui-design"
+      ],
+      "sdk_version": "0.3.303",
+      "package_source": "https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-2.1.303.tgz"
+    }
+  },
+  "version": "1.2.0",
+  "passed": true,
+  "default_skills": {
+    "unchanged": true,
+    "before": {
+      ".codex": {
+        "exists": true,
+        "entries": 130,
+        "sha256": "4ce3ff55d2b8744a6724be584255bda49a5c31da7abc2a431c8ef5380b55e020"
+      },
+      ".agents": {
+        "exists": true,
+        "entries": 39,
+        "sha256": "1d60fc1c19e4b97aed690c30cf41aa0869e8b25a06f7e4530e019b8206062692"
+      },
+      ".claude": {
+        "exists": true,
+        "entries": 10,
+        "sha256": "af72acc8df7256cfe7d6b54a494ca7721a8ac9dd9d6afe00d90c142f4ff0e489"
+      }
+    },
+    "after": {
+      ".codex": {
+        "exists": true,
+        "entries": 130,
+        "sha256": "4ce3ff55d2b8744a6724be584255bda49a5c31da7abc2a431c8ef5380b55e020"
+      },
+      ".agents": {
+        "exists": true,
+        "entries": 39,
+        "sha256": "1d60fc1c19e4b97aed690c30cf41aa0869e8b25a06f7e4530e019b8206062692"
+      },
+      ".claude": {
+        "exists": true,
+        "entries": 10,
+        "sha256": "af72acc8df7256cfe7d6b54a494ca7721a8ac9dd9d6afe00d90c142f4ff0e489"
+      }
+    }
+  },
+  "checked_on": "2026-10-19",
+  "platform": "Windows",
+  "scope": "native discovery and command registration only; no model turn"
+}
