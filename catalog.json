@@ -1,19 +1,19 @@
 {
   "schema": 1,
-  "version": "1.4.0",
+  "version": "1.4.1",
   "skills": [
     {
       "name": "aw-project-triage",
       "title": "项目识别与开发门禁",
-      "description": "Use when beginning a development request and the existing/new project status, frontend/backend scope, or prerequisite gates must be identified.",
-      "goal": "确定真实项目类型、影响端、风险和本次可执行范围。",
-      "gate": "老项目代码/配置/脚本开发须先完成全仓梳理与项目内规范；新项目未选栈不初始化。",
+      "description": "Use when beginning a design or development request and the deliverable scope, target project status, affected side or prerequisite gates must be identified.",
+      "goal": "先区分设计稿、独立原型与正式实施，再判断项目、影响端和门禁。",
+      "gate": "需求/单页稿/独立展示原型可先产出；老项目正式代码/配置/脚本开发先全仓理解与规范，新产品未选栈不初始化。",
       "steps": [
-        "读取当前仓库规则、既有技能/代理配置与工作区，确认已有业务、数据和兼容负担；新页面不等于新项目。",
-        "分别判断前端、后端与跨端；依据行为与信任边界分级，不按行数。",
+        "先识别交付与停止位置；属于老产品就读现有规则、技能入口及相关旧页面/组件/样式，新需求或仓库外原型不等于从零设计。",
+        "正式实施再判新旧、前后端/跨端与风险；老项目全仓门禁保留，独立原型不改产品代码或真实业务。",
         "列出前置产物、仍缺决策、允许独立推进的工作；不为已有授权重复确认。"
       ],
-      "outputs": "项目类型、端/风险、前置门禁与下一步。",
+      "outputs": "交付类型与停止位置、目标项目/影响端、适用门禁和下一步。",
       "references": [
         "project-mode.md"
       ],
@@ -116,7 +116,7 @@
     {
       "name": "aw-framework-selection",
       "title": "新项目框架选型",
-      "description": "Use for a genuinely new project when the user language and platform constraints must be matched to currently maintained mainstream framework candidates before initialization.",
+      "description": "Use before initializing a genuinely new product project when language and platform constraints must be matched to maintained framework candidates; standalone page designs and isolated display prototypes do not need product stack selection.",
       "goal": "推荐适配、受支持、较新稳定且已核对已知风险的候选。",
       "gate": "必须用户选择后初始化；无回复不是选择，已有明确选择不重复询问。",
       "steps": [
@@ -154,7 +154,7 @@
       "goal": "从需求得到可审查交互方案。",
       "gate": "处理行为需求与验收，不规定配色/字体；重要方向缺口才询问，不重复已有批准。",
       "steps": [
-        "读取已有项目决定；提取用户/场景/主任务/成功与非目标/真实数据/冻结区。",
+        "识别只写需求、先看页面稿/独立原型或正式实施；提取已有决定、用户/场景/任务/成功与非目标/数据/冻结区。",
         "写触发、正常行为、适用失败恢复和验收标准。",
         "方向开放或要求头脑风暴时读取 brainstorming.md；实质取舍给少量具体方向及推荐，已有选择继续推进。"
       ],
@@ -192,9 +192,9 @@
     {
       "name": "aw-design-standards",
       "title": "跨平台项目设计规范",
-      "description": "Use when establishing, documenting or changing shared project design standards, semantic tokens, components, content and platform adaptations for Web, mini-program, native app, desktop or cross-platform UI.",
+      "description": "Use when explicitly requested to establish shared project design standards, or when product implementation needs shared tokens, components, content or platform rules; a standalone page draft does not require a project design system.",
       "goal": "形成接回项目唯一规范入口的共用设计规则。",
-      "gate": "复用已有设计文档/token/组件源与规范目录；项目 Skill 只建薄入口，单页小改不重建体系。",
+      "gate": "只设计单页/独立原型不强制建体系；需要共用规范时复用原有设计文档/token/组件与项目规范入口。",
       "steps": [
         "读取同一项目基线、技能采纳表、需求与参考；提取既有设计事实，区分新决定、例外与未知。",
         "明确共用语义、内容、token/组件与状态；按实际发布平台映射导航、输入、单位和可访问性。",
@@ -217,24 +217,26 @@
     {
       "name": "aw-ui-design",
       "title": "需求驱动视觉设计",
-      "description": "Use when designing or reviewing a specific page or interface flow, applying project design standards to hierarchy, layout, typography, interaction feedback, prototypes and accessibility.",
-      "goal": "将需求与项目设计规范落实为具体页面/流程。",
-      "gate": "先有需求和平台约束；老项目遵从已生成内部规范与冻结区。",
+      "description": "Use when designing or reviewing a specific page, interface flow or isolated prototype, with or without an existing project design system, including visual hierarchy, layout, interaction feedback and accessibility.",
+      "goal": "按实际范围交付可查看的页面/流程设计或原型。",
+      "gate": "属于老产品就先看旧设计并继承全局字体/样式，业务不同或缺文档不例外；无目标项目可独立设计，正式接入另按开发门禁。",
       "steps": [
-        "读取简报、现有设计规范与参考采纳；应用信息层级、视觉规则及真实数据，共用变更回写同一规范。",
-        "设计适用状态与原型；核对可读性、焦点、触控、响应式、资源和减少动态效果，平台细则按需读取。",
-        "以实际环境核对受影响视觉，未看过的界面不冒称验收。"
+        "先判交付范围；老产品先查看相关旧页面/预览或截图与组件/样式，即使无书面规范也继承原设计；单页/原型按 standalone-page.md。",
+        "复用可用规则，本页补够用的局部视觉/状态/原型；平台细则按需，共用变更写回实际项目规范。",
+        "要求看效果时交可查看产物；老项目与旧页面对照连续性，缺关键视觉证据只交有条件草案，未预览不冒称已看。"
       ],
-      "outputs": "页面/流程方案或原型、局部例外、状态呈现、资源决定与实际核对范围。",
+      "outputs": "符合所需格式的可查看页面/流程稿或原型、适用状态、假设/示例说明、实际核对范围与停止位置。",
       "references": [
         "ui-design.md",
+        "standalone-page.md",
         "ui-system.md",
         "design-platforms.md"
       ],
       "resources": {},
       "reference_conditions": {
         "ui-system.md": "需要具体核对排版、密度、状态或资源时读取；简单局部调整沿用现有规则。",
-        "design-platforms.md": "平台适配/迁移或需要核对原生导航、输入、单位与设备行为时，只读目标平台相关部分。"
+        "design-platforms.md": "平台适配/迁移或需要核对原生导航、输入、单位与设备行为时，只读目标平台相关部分。",
+        "standalone-page.md": "只设计单页、独立展示原型或老项目先看稿而暂不改产品代码时读取。"
       }
     },
     {
