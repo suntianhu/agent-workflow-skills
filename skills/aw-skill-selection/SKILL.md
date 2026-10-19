@@ -1,0 +1,30 @@
+---
+name: aw-skill-selection
+description: "Use when several skills or workflows appear relevant and a task-specific adoption decision is needed without loading every available skill."
+license: MIT
+---
+
+# 技能采纳判断
+
+用最少适用技能形成一致工作流。
+
+## 前置条件与边界
+
+用户明确指定的技能先读；不因关键词或可能性阈值强制加载无关能力。 遵从当前用户、适用项目规则与宿主权限；不因技能存在扩大任务或外部写入授权，已有授权继续执行。
+
+## 执行
+
+1. 看描述并核对目标、产物、平台和风险。
+2. 对实质影响方案的候选记录采纳/部分采纳/不采纳及理由。
+3. 冲突按当前指令和目标项目约束收敛，不叠加审批/TDD门禁。
+
+## 必须得到的结果
+
+复杂任务的简短采纳表；小任务直接执行适用部分。 没有证据的项目标为未核实，不补写完成结论。
+
+## 按需资料
+
+- [skill-selection.md](references/skill-selection.md)：本次触发该能力时读取。
+
+
+本目录可独立复制；缺少其他技能时按本技能前置条件调查/产出，不绕过门禁。组合清单仅描述条件和顺序，不是执行引擎。工具调用使用宿主实际能力，不假定平台专用API。

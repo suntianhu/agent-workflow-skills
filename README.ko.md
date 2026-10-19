@@ -1,0 +1,103 @@
+# Agent Workflow Skills
+
+코딩 에이전트를 위한 조합 가능한 개발 워크플로입니다. 프로젝트별 선행 조건을 명확히 하고 실제 근거에 따라 완료 여부를 판단합니다.
+
+[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Русский](README.ru.md)
+
+![License: MIT](https://img.shields.io/badge/license-MIT-blue)
+![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
+![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
+
+**버전 1.1.2** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
+
+기존 프로젝트와 새 프로젝트의 절차를 구분하고 작업에 필요한 스킬만 선택합니다. 프런트엔드와 백엔드 규칙을 따로 관리하고, 구현 전에 검증 방침을 정하며, 실제로 확인한 범위를 보고합니다.
+
+## 이 컬렉션의 특징
+
+- **기존 프로젝트:** 코드, 설정 또는 개발 스크립트를 수정하기 전에 프로젝트가 직접 관리하는 코드 전체를 읽고, 근거가 있는 개발 규칙을 프로젝트 내부에 작성합니다.
+- **새 프로젝트:** 요청된 언어를 존중하고 유지 관리 중인 프레임워크와 알려진 관련 위험을 조사합니다. 사용자가 기술 스택을 선택한 다음 조건에 맞는 공개 저장소에서 규칙을 도출합니다.
+- **위험에 맞는 검증:** 검증 범위, TDD 순서, 산출물 보관 방침을 각각 결정합니다. 작은 수정에 TDD를 자동으로 요구하지 않으며 사용자의 기존 테스트를 보존합니다.
+- **실측 기반 시간 추정:** 구현, 점검, 리뷰, 외부 대기 시간을 분리합니다. 일률적인 배수 대신 비슷한 작업의 실제 소요 시간으로 보정합니다.
+- **요구사항에서 출발하는 설계:** 동작과 인수 조건을 먼저 정의하고 실제 인터페이스와 사용 맥락에 따라 시각적 결정을 내립니다.
+- **필요한 자원만 사용:** 추가 스킬, 모델, 에이전트는 구체적인 이점과 실행 환경의 실제 기능 및 권한이 있을 때 사용합니다.
+
+이 프로젝트는 지침과 로컬 도구의 모음입니다. 워크플로 JSON은 조건과 순서를 설명하며 실행 환경에 내장된 워크플로 엔진이 아닙니다.
+
+## 빠른 시작
+
+1. 아래에서 워크플로를 선택하거나 [24개 스킬의 책임 범위](docs/skill-map.md)(중국어 간체)를 확인합니다.
+2. 에이전트에게 필요한 `skills/<name>/SKILL.md`와 참조 자료를 읽도록 요청합니다. 현재 작업에 필요한 기능만 불러옵니다.
+3. 이 저장소 바깥의 새 디렉터리에 필요한 파일을 모두 포함한 구성을 내보내려면:
+
+```sh
+python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-export
+```
+
+`--include-optional`을 추가하면 에이전트 협업 스킬도 포함됩니다. 내보내기는 스킬을 설치하거나 기본 설정을 바꾸지 않습니다. 기존 대상, 리디렉션된 경로, 오래된 생성 파일, 저장소 내부 대상, 네이티브 설치 위치는 거부됩니다.
+
+네이티브 스킬 검색을 사용하려면 설치 의도가 있을 때에만 실행 환경의 최신 문서에 따라 개별 스킬 디렉터리 전체를 복사하세요. [에이전트 호환성](docs/agent-compatibility.md)(영어)을 참고하세요.
+
+## 8가지 워크플로
+
+| 워크플로 | 대상 작업 | 핵심 선행 조건 |
+| --- | --- | --- |
+| [existing-frontend](bundles/existing-frontend.json) | 기존 프로젝트의 프런트엔드 개발 | 전체 코드 검토 → 내부 규칙 → 프런트엔드 설계 및 구현 |
+| [existing-backend](bundles/existing-backend.json) | 기존 프로젝트의 백엔드 개발 | 전체 코드 검토 → 내부 규칙 → 백엔드 구현 |
+| [new-frontend](bundles/new-frontend.json) | 처음부터 시작하는 프런트엔드 프로젝트 | 언어/플랫폼 → 후보 조사 → 사용자 선택 → 참고 규칙 → 내부 규칙 |
+| [new-backend](bundles/new-backend.json) | 처음부터 시작하는 백엔드 프로젝트 | 언어/배포 요구사항 → 사용자의 스택 선택 → 참고 규칙 → 내부 규칙 |
+| [fullstack](bundles/fullstack.json) | 프런트엔드와 백엔드를 아우르는 개발 | 기존/신규 분기 선택, 각 영역의 규칙 분리, API 계약 공유 |
+| [small-change](bundles/small-change.json) | 범위가 작고 영향이 낮은 수정 | 절차를 간소화하되 해당 기존/신규 프로젝트의 선행 조건 유지 |
+| [debug-and-fix](bundles/debug-and-fix.json) | 재현 가능한 결함이나 연동 이상 | 재현 실행 전에 검증 방침 선택, 수정 전에 코드와 규칙의 선행 조건 충족 |
+| [release](bundles/release.json) | 요청된 통합, 패키징 또는 릴리스 | 호환성·복구·검증 근거 준비, 코드 수정은 개발 흐름으로 전달 |
+
+`skills`는 내보내기에 필요한 기능을 빠짐없이 포함한 목록이지, 모든 스킬을 실행하라는 지시가 아닙니다. 각 단계는 조건에 따라 선택됩니다. TDD를 선택하면 해당 루프가 구현을 담당하며 별도의 구현 단계는 건너뜁니다. 자세한 [구성 규칙](docs/bundles.md)은 현재 중국어 간체로 제공됩니다.
+
+## 기능 구성
+
+| 분야 | 스킬 |
+| --- | --- |
+| 작업과 자원 판단 | `aw-project-triage`, `aw-skill-selection`, `aw-model-routing`, `aw-effort-estimation` |
+| 코드 이해와 아키텍처 | `aw-repository-audit`, `aw-project-standards`, `aw-framework-selection`, `aw-github-reference` |
+| 요구사항과 구현 | `aw-requirements-design`, `aw-ui-design`, `aw-frontend-implementation`, `aw-backend-implementation` |
+| 계약과 보안 경계 | `aw-api-contracts`, `aw-security-boundaries` |
+| 검증과 문제 진단 | `aw-test-strategy`, `aw-scoped-tdd`, `aw-evidence-debugging`, `aw-adversarial-review`, `aw-evidence-verification` |
+| 전달과 유지 관리 | `aw-delivery-cleanup`, `aw-release-readiness`, `aw-agent-coordination`, `aw-skill-authoring`, `aw-open-source-readiness` |
+
+각 스킬에는 고유한 지침, 필요한 참조 자료와 리소스, 라이선스가 포함됩니다. catalog와 원본 가이드를 유지 관리의 기준으로 삼고 생성된 스킬 사본을 동기화해야 합니다.
+
+## 에이전트 호환성
+
+| 실행 환경 | 패키징 | 실제 확인 범위 |
+| --- | --- | --- |
+| Codex | Agent Skills 디렉터리와 선택적 `agents/openai.yaml` UI 메타데이터 | 현재 Codex 환경에서 파일과 스크립트 사용. 네이티브 검색은 미검증 |
+| Claude Code | 문서에 명시된 위치에 전체 스킬 디렉터리 배치 | 문서 기준으로만 대응. 종단 간 사용은 미검증 |
+| Gemini CLI | 문서에 명시된 위치에 전체 스킬 디렉터리 배치 | 문서 기준으로만 대응. 종단 간 사용은 미검증 |
+| GitHub Copilot | 지원 클라이언트에서 전체 스킬 디렉터리 사용 | 문서 기준으로만 대응. 개별 클라이언트는 미검증 |
+| 기타 에이전트 | 지원하는 경우 `SKILL.md`와 상대 참조 읽기 | 확인하지 않은 네이티브 호환성을 일괄 보장하지 않음 |
+
+[역할 설명](docs/role-briefs.md)(중국어 간체)은 선택적 다중 에이전트 협업의 책임을 설명하며 자동 등록되는 설정이 아닙니다. 실제 권한, 도구, 신뢰 설정과 모델 기능은 실행 환경을 따릅니다.
+
+## 검증
+
+```sh
+python scripts/build_catalog.py
+python scripts/validate.py
+```
+
+검증 도구는 선언, 생성 내용의 동기화, 정확한 리소스 집합, 로컬 링크, Python 문법, 구성 단계 순서, 일부 배포물 점검 규칙을 확인합니다. 에이전트의 판단이 옳거나 프레임워크에 취약점이 없음을 증명하지는 않습니다.
+
+1.1.0 감사에서는 24개 스킬의 공식 구조 검사, 8개 구성의 내보내기, 저장소 밖의 합성 데이터를 이용한 도구 검증을 수행했습니다. 1.1.x 문서 업데이트의 검증은 [검증 기록](docs/validation.md)(중국어 간체)에 별도로 기록합니다. Windows/Linux CI는 설정되어 있지만 GitHub에서는 아직 실행되지 않았습니다. 네이티브 검색과 에이전트의 종단 간 사용도 미검증 상태입니다.
+
+## 언어
+
+프로젝트 개요는 영어, 중국어 간체, 중국어 번체, 일본어, 한국어, 러시아어로 제공합니다. GitHub 기여 문서와 템플릿은 영어로 작성되어 있으며 영어 또는 중국어 기여를 환영합니다. 이번 릴리스의 스킬 본문, 상세 가이드, 도구 메시지는 중국어 간체로 유지되며 스킬 전체를 6개 언어로 번역한 것은 아닙니다. 에이전트에게 원하는 언어로 응답하도록 요청할 수 있습니다.
+
+## 기여와 릴리스
+
+구체적인 작업으로 현재의 부족한 점을 설명해 주세요. 겹치는 규칙을 추가하기보다 해당 책임을 맡은 스킬을 개선하는 것을 우선합니다. [기여 가이드](CONTRIBUTING.md), [보안 정책](SECURITY.md), [GitHub 게시 가이드](docs/github-publishing.md)(영어)를 참고하세요.
+
+이 로컬 패키지는 원격 저장소를 만들거나 게시하지 않았습니다. 관리자의 신원, 비공개 신고 주소, 도입 실적도 미리 설정하거나 주장하지 않습니다.
+
+## 라이선스와 출처
+
+직접 작성한 내용에는 [MIT](LICENSE) 라이선스가 적용됩니다. 공개된 상위 프로젝트 자료를 연구하고 원칙을 새로 작성했으며, 해당 프로젝트의 스킬 본문, 구현, 에셋 또는 데이터베이스를 재배포하지 않습니다. [제3자 고지](THIRD_PARTY_NOTICES.md), [고정된 출처](provenance/upstreams.json), [출처 설명](docs/provenance.md)(중국어 간체)을 참고하세요. 이 저장소의 라이선스는 연결된 제3자 자료를 재라이선스하지 않습니다.

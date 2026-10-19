@@ -1,0 +1,168 @@
+[
+  {
+    "repository": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills",
+    "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+    "license": "see retrieved license files; no upstream implementation redistributed",
+    "snapshot_date": "2026-10-18",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/README.md",
+        "sha256": "2fb9c4cc026366ea6e21c60cb23c908a4d27c62071819cc06beffaac102d0694",
+        "bytes": 5552,
+        "retrieved": true
+      },
+      {
+        "path": "skills/frontend-design/SKILL.md",
+        "url": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/frontend-design/SKILL.md",
+        "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+        "bytes": 9390,
+        "retrieved": true
+      },
+      {
+        "path": "skills/skill-creator/SKILL.md",
+        "url": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/SKILL.md",
+        "sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+        "bytes": 33168,
+        "retrieved": true
+      }
+    ],
+    "scope": "selected files only; not a complete repository or security audit",
+    "retrieval": "public git HEAD and pinned raw files; API metadata unavailable due shared rate limit",
+    "reuse": "principles rewritten; no upstream skill body, script, asset, or database redistributed"
+  },
+  {
+    "repository": "openai/skills",
+    "url": "https://github.com/openai/skills",
+    "commit": "49f948faa9258a0c61caceaf225e179651397431",
+    "license": "see retrieved license files; no upstream implementation redistributed",
+    "snapshot_date": "2026-10-18",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/README.md",
+        "sha256": "0f6a07580f3c627253e15a58dd0439e135049ec38eb16cf3587f7e50abc6f590",
+        "bytes": 1840,
+        "retrieved": true
+      },
+      {
+        "path": "skills/.system/skill-creator/SKILL.md",
+        "url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-creator/SKILL.md",
+        "sha256": "a17383bfb1448637ac1f757ad891ddb9676fa30b0eff620200f0e1cbc0cc0d50",
+        "bytes": 18664,
+        "retrieved": true
+      }
+    ],
+    "scope": "selected files only; not a complete repository or security audit",
+    "retrieval": "public git HEAD and pinned raw files; API metadata unavailable due shared rate limit",
+    "status": "deprecated; historical structure only; current examples point to openai/plugins",
+    "reuse": "principles rewritten; no upstream skill body, script, asset, or database redistributed"
+  },
+  {
+    "repository": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+    "license": "see retrieved license files; no upstream implementation redistributed",
+    "snapshot_date": "2026-10-18",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/README.md",
+        "sha256": "9b7be460027bf53c29f628eee72dceeebb83e52dd5e94a1b6f9828a64c579198",
+        "bytes": 14589,
+        "retrieved": true
+      },
+      {
+        "path": "skills/systematic-debugging/SKILL.md",
+        "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/systematic-debugging/SKILL.md",
+        "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+        "bytes": 9530,
+        "retrieved": true
+      },
+      {
+        "path": "skills/test-driven-development/SKILL.md",
+        "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/test-driven-development/SKILL.md",
+        "sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+        "bytes": 9578,
+        "retrieved": true
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/LICENSE",
+        "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+        "bytes": 1070,
+        "retrieved": true
+      }
+    ],
+    "scope": "selected files only; not a complete repository or security audit",
+    "retrieval": "public git HEAD and pinned raw files; API metadata unavailable due shared rate limit",
+    "reuse": "principles rewritten; no upstream skill body, script, asset, or database redistributed"
+  },
+  {
+    "repository": "vercel-labs/agent-skills",
+    "url": "https://github.com/vercel-labs/agent-skills",
+    "commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+    "license": "see retrieved license files; no upstream implementation redistributed",
+    "snapshot_date": "2026-10-18",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/README.md",
+        "sha256": "7c02f64b08fc6c4eef03c01d64f3e2ed478193ccfcbd14edba379abe23304651",
+        "bytes": 7838,
+        "retrieved": true
+      },
+      {
+        "path": "skills/react-best-practices/SKILL.md",
+        "url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/SKILL.md",
+        "sha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355",
+        "bytes": 7251,
+        "retrieved": true
+      },
+      {
+        "path": "skills/web-design-guidelines/SKILL.md",
+        "url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/web-design-guidelines/SKILL.md",
+        "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f",
+        "bytes": 1231,
+        "retrieved": true
+      }
+    ],
+    "scope": "selected files only; not a complete repository or security audit",
+    "retrieval": "public git HEAD and pinned raw files; API metadata unavailable due shared rate limit",
+    "reuse": "principles rewritten; no upstream skill body, script, asset, or database redistributed"
+  },
+  {
+    "repository": "github/awesome-copilot",
+    "url": "https://github.com/github/awesome-copilot",
+    "commit": "cb64ad12e32737ae764becd6885462e9b4c7cb00",
+    "license": "see retrieved license files; no upstream implementation redistributed",
+    "snapshot_date": "2026-10-18",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://github.com/github/awesome-copilot/blob/cb64ad12e32737ae764becd6885462e9b4c7cb00/README.md",
+        "sha256": "2f3f9fc3632b88726f2325e95242e3e24e3e734dcd131a27cfe242f2096baaca",
+        "bytes": 92200,
+        "retrieved": true
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "url": "https://github.com/github/awesome-copilot/blob/cb64ad12e32737ae764becd6885462e9b4c7cb00/CONTRIBUTING.md",
+        "sha256": "d20b4901853547e69987ea39caf6da44200e5bdf5362baf160babae7ba8f5d5d",
+        "bytes": 32009,
+        "retrieved": true
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/github/awesome-copilot/blob/cb64ad12e32737ae764becd6885462e9b4c7cb00/LICENSE",
+        "sha256": "e32449d23085399adc1222f7a17408b730550258e51627c153cb108ca9955823",
+        "bytes": 1059,
+        "retrieved": true
+      }
+    ],
+    "scope": "selected files only; not a complete repository or security audit",
+    "retrieval": "public git HEAD and pinned raw files; API metadata unavailable due shared rate limit",
+    "reuse": "principles rewritten; no upstream skill body, script, asset, or database redistributed"
+  }
+]

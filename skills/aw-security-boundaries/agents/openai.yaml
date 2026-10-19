@@ -1,0 +1,4 @@
+interface:
+  display_name: "应用安全边界"
+  short_description: "应用安全边界：按任务边界完成对应能力，保留项目规则、真实证据与可组合流程"
+  default_prompt: "使用 $aw-security-boundaries 完成当前任务，并遵守前置条件和证据要求。"

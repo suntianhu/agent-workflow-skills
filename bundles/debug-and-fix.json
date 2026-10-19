@@ -1,0 +1,156 @@
+{
+  "schema": 2,
+  "name": "debug-and-fix",
+  "kind": "documented-composition-not-native-executable-workflow",
+  "project_mode": "existing",
+  "skills": [
+    "aw-project-triage",
+    "aw-skill-selection",
+    "aw-model-routing",
+    "aw-effort-estimation",
+    "aw-test-strategy",
+    "aw-evidence-debugging",
+    "aw-repository-audit",
+    "aw-project-standards",
+    "aw-requirements-design",
+    "aw-api-contracts",
+    "aw-security-boundaries",
+    "aw-scoped-tdd",
+    "aw-frontend-implementation",
+    "aw-backend-implementation",
+    "aw-adversarial-review",
+    "aw-evidence-verification",
+    "aw-delivery-cleanup"
+  ],
+  "optional": [
+    "aw-agent-coordination"
+  ],
+  "stages": [
+    {
+      "id": "triage",
+      "when": "always",
+      "skills": [
+        "aw-project-triage"
+      ],
+      "note": ""
+    },
+    {
+      "id": "resources",
+      "when": "as-needed",
+      "skills": [
+        "aw-skill-selection",
+        "aw-model-routing",
+        "aw-effort-estimation"
+      ],
+      "note": "简单任务仅做必要判断，不强制额外模型或代理。"
+    },
+    {
+      "id": "validation-plan",
+      "when": "before-code-or-behavior-checks",
+      "skills": [
+        "aw-test-strategy"
+      ],
+      "note": "调查如需请求、预览或临时复现，先选择本次策略；纯源码/已有日志调查只需内联确认禁测边界。实现前按新发现风险更新同一决定，不重复询问。"
+    },
+    {
+      "id": "investigate",
+      "when": "defect-investigation",
+      "skills": [
+        "aw-evidence-debugging"
+      ],
+      "note": "静态证据可先行；执行复现遵守已选策略，代码修复仍须满足后续老项目全仓与规范门禁。"
+    },
+    {
+      "id": "repository-audit",
+      "when": "existing-baseline-needed",
+      "skills": [
+        "aw-repository-audit"
+      ],
+      "note": ""
+    },
+    {
+      "id": "project-standards",
+      "when": "existing-baseline-needed",
+      "skills": [
+        "aw-project-standards"
+      ],
+      "note": ""
+    },
+    {
+      "id": "requirements",
+      "when": "behavior-requirements-needed",
+      "skills": [
+        "aw-requirements-design"
+      ],
+      "note": ""
+    },
+    {
+      "id": "contracts",
+      "when": "contract-change",
+      "skills": [
+        "aw-api-contracts"
+      ],
+      "note": ""
+    },
+    {
+      "id": "security-design",
+      "when": "trust-boundary-change",
+      "skills": [
+        "aw-security-boundaries"
+      ],
+      "note": ""
+    },
+    {
+      "id": "tdd-implementation",
+      "when": "tdd-selected",
+      "skills": [
+        "aw-scoped-tdd"
+      ],
+      "note": "以TDD技能统筹红绿循环，并在循环内读取implementation_constraints；完成后跳过独立实现阶段，只补未覆盖约束。",
+      "implementation_constraints": [
+        "aw-frontend-implementation",
+        "aw-backend-implementation"
+      ]
+    },
+    {
+      "id": "implementation",
+      "when": "implementation-without-tdd",
+      "skills": [
+        "aw-frontend-implementation",
+        "aw-backend-implementation"
+      ],
+      "note": "只执行受影响端；已选TDD时本阶段并入TDD循环，不作为第二次实现。"
+    },
+    {
+      "id": "review",
+      "when": "nontrivial-change",
+      "skills": [
+        "aw-adversarial-review"
+      ],
+      "note": ""
+    },
+    {
+      "id": "verify-deliver",
+      "when": "always",
+      "skills": [
+        "aw-evidence-verification",
+        "aw-delivery-cleanup"
+      ],
+      "note": ""
+    }
+  ],
+  "conditions": {
+    "always": "适用任务的必要判断。",
+    "as-needed": "判断确有收益才加载该能力；小任务可内联判断。",
+    "existing-baseline-needed": "目标为老项目且本轮全仓阅读/内部规范尚未有效完成；新项目跳过。",
+    "behavior-requirements-needed": "新增/改变行为或验收尚不清楚；明确文案微调不额外写设计。",
+    "contract-change": "接口/字段/数据/调用方契约改变。",
+    "trust-boundary-change": "本次涉及认证、授权、归属、私有数据/文件或其他实际信任边界。",
+    "before-code-or-behavior-checks": "任何代码实现或行为检查前选定本次验证策略。",
+    "tdd-selected": "本次请求代码实现且明确选择并授权TDD；在循环内使用本端实现约束。",
+    "nontrivial-change": "常规/关键变更；轻微只核对需求/diff。",
+    "defect-investigation": "追踪本次异常；实际复现遵守前置策略，P0不运行自动测试。",
+    "implementation-without-tdd": "本次请求代码实现且未选择TDD；仅执行受影响端。"
+  },
+  "execution": "按阶段与条件选择，不是自动引擎；resources/审查/协作不因清单存在而强制启动。TDD是实现阶段的顺序，不是实现后的补测。"
+}

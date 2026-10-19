@@ -1,0 +1,162 @@
+{
+  "schema": 2,
+  "name": "new-frontend",
+  "kind": "documented-composition-not-native-executable-workflow",
+  "project_mode": "new",
+  "skills": [
+    "aw-project-triage",
+    "aw-skill-selection",
+    "aw-model-routing",
+    "aw-effort-estimation",
+    "aw-requirements-design",
+    "aw-framework-selection",
+    "aw-github-reference",
+    "aw-project-standards",
+    "aw-ui-design",
+    "aw-api-contracts",
+    "aw-security-boundaries",
+    "aw-test-strategy",
+    "aw-scoped-tdd",
+    "aw-frontend-implementation",
+    "aw-adversarial-review",
+    "aw-evidence-verification",
+    "aw-delivery-cleanup"
+  ],
+  "optional": [
+    "aw-agent-coordination"
+  ],
+  "stages": [
+    {
+      "id": "triage",
+      "when": "always",
+      "skills": [
+        "aw-project-triage"
+      ],
+      "note": ""
+    },
+    {
+      "id": "resources",
+      "when": "as-needed",
+      "skills": [
+        "aw-skill-selection",
+        "aw-model-routing",
+        "aw-effort-estimation"
+      ],
+      "note": "简单任务仅做必要判断，不强制额外模型或代理。"
+    },
+    {
+      "id": "requirements",
+      "when": "behavior-requirements-needed",
+      "skills": [
+        "aw-requirements-design"
+      ],
+      "note": ""
+    },
+    {
+      "id": "framework-choice",
+      "when": "new-project",
+      "skills": [
+        "aw-framework-selection"
+      ],
+      "note": ""
+    },
+    {
+      "id": "reference-conventions",
+      "when": "new-project",
+      "skills": [
+        "aw-github-reference"
+      ],
+      "note": ""
+    },
+    {
+      "id": "new-standards",
+      "when": "new-project",
+      "skills": [
+        "aw-project-standards"
+      ],
+      "note": ""
+    },
+    {
+      "id": "ui-design",
+      "when": "ui-change",
+      "skills": [
+        "aw-ui-design"
+      ],
+      "note": ""
+    },
+    {
+      "id": "contracts",
+      "when": "contract-change",
+      "skills": [
+        "aw-api-contracts"
+      ],
+      "note": ""
+    },
+    {
+      "id": "security-design",
+      "when": "trust-boundary-change",
+      "skills": [
+        "aw-security-boundaries"
+      ],
+      "note": ""
+    },
+    {
+      "id": "validation-plan",
+      "when": "before-code-or-behavior-checks",
+      "skills": [
+        "aw-test-strategy"
+      ],
+      "note": "先决定TDD及保留；P0不擅自恢复。"
+    },
+    {
+      "id": "tdd-implementation",
+      "when": "tdd-selected",
+      "skills": [
+        "aw-scoped-tdd"
+      ],
+      "note": "以TDD技能统筹红绿循环，并在循环内读取implementation_constraints；完成后跳过独立实现阶段，只补未覆盖约束。",
+      "implementation_constraints": [
+        "aw-frontend-implementation"
+      ]
+    },
+    {
+      "id": "implementation",
+      "when": "implementation-without-tdd",
+      "skills": [
+        "aw-frontend-implementation"
+      ],
+      "note": "只执行受影响端；已选TDD时本阶段并入TDD循环，不作为第二次实现。"
+    },
+    {
+      "id": "review",
+      "when": "nontrivial-change",
+      "skills": [
+        "aw-adversarial-review"
+      ],
+      "note": ""
+    },
+    {
+      "id": "verify-deliver",
+      "when": "always",
+      "skills": [
+        "aw-evidence-verification",
+        "aw-delivery-cleanup"
+      ],
+      "note": ""
+    }
+  ],
+  "conditions": {
+    "always": "适用任务的必要判断。",
+    "as-needed": "判断确有收益才加载该能力；小任务可内联判断。",
+    "new-project": "目标是真正新项目；用户选定框架前不初始化。",
+    "behavior-requirements-needed": "新增/改变行为或验收尚不清楚；明确文案微调不额外写设计。",
+    "ui-change": "本次涉及视觉/交互，轻微改动沿用现有体系。",
+    "contract-change": "接口/字段/数据/调用方契约改变。",
+    "trust-boundary-change": "本次涉及认证、授权、归属、私有数据/文件或其他实际信任边界。",
+    "before-code-or-behavior-checks": "任何代码实现或行为检查前选定本次验证策略。",
+    "tdd-selected": "本次请求代码实现且明确选择并授权TDD；在循环内使用本端实现约束。",
+    "nontrivial-change": "常规/关键变更；轻微只核对需求/diff。",
+    "implementation-without-tdd": "本次请求代码实现且未选择TDD；仅执行受影响端。"
+  },
+  "execution": "按阶段与条件选择，不是自动引擎；resources/审查/协作不因清单存在而强制启动。TDD是实现阶段的顺序，不是实现后的补测。"
+}
