@@ -24,7 +24,9 @@ Child processes receive an allowlisted OS environment, isolated `HOME`, `USERPRO
 
 **The disposable project must be a Git root.** A first exploratory Claude run without this boundary discovered 34 skills by walking real-home ancestors on Windows, even with isolated home variables. That contaminated run was discarded. The shipped probe creates the boundary before either host starts and verifies the expected names. This matters when TEMP itself is under the real user home.
 
-The Claude adapter holds an empty async input stream while asking the official SDK for initialization and supported commands. It never yields a user prompt. The Codex adapter uses the documented app-server JSON-RPC discovery request and does not start a turn. Unexpected counts, names, parser errors, timeouts, or changed default-tree snapshots fail the probe.
+The Claude adapter holds an empty async input stream while asking the official SDK for initialization and supported commands. It never yields a user prompt. The Codex adapter uses the documented app-server JSON-RPC discovery request and does not start a turn. Unexpected collection counts, names, parser errors, timeouts, or changed default-tree snapshots fail the probe.
+
+**Codex's Windows discovery is not an OS sandbox.** This native version also enumerates existing OS-user skill metadata despite home overrides, plus bundled skills in the temporary CODEX_HOME. The probe reports these extra counts separately and requires every collection skill to come from the temporary project. The initial probe checked only the collection; an all-entry follow-up exposed this host behavior. No outside skill was invoked, and default trees stayed unchanged. The result establishes temporary-project collection loading, not an absence of metadata reads outside TEMP. Raw native rows stay in a private TEMP diagnostic file. The installed native schema and official configuration expose no global user-root exclusion; per-skill enablement overrides do not prove that metadata was never scanned.
 
 ## What remains unverified
 
@@ -35,6 +37,7 @@ Gemini CLI, Copilot, macOS/Linux native loading, and other host versions remain 
 ## Primary sources
 
 - [Codex app-server skill discovery and explicit invocation](https://learn.chatgpt.com/docs/app-server)
+- [Codex configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference)
 - [Codex skill locations](https://learn.chatgpt.com/docs/build-skills)
 - [Claude skill locations](https://code.claude.com/docs/en/skills)
 - [Claude CLI initialization flags](https://code.claude.com/docs/en/cli-reference)

@@ -32,7 +32,13 @@
         "aw-skill-selection",
         "aw-test-strategy",
         "aw-ui-design"
-      ]
+      ],
+      "discovery_scope": {
+        "collection_paths_within_temporary_project": true,
+        "additional_host_metadata_entries": 35,
+        "host_metadata_paths_outside_temporary_root": 30,
+        "note": "Windows host may enumerate OS-user skill metadata despite home overrides; no model turn or default writes"
+      }
     },
     "claude": {
       "version": "2.1.303 (Claude Code)",
@@ -109,5 +115,5 @@
   },
   "checked_on": "2026-10-19",
   "platform": "Windows",
-  "scope": "native discovery and command registration only; no model turn"
+  "scope": "temporary-project collection discovery and command registration; host metadata reads are not an OS sandbox; no model turn"
 }

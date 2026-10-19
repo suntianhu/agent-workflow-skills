@@ -87,12 +87,20 @@ def codex_probe(executable, project, env, target):
             process.stdin.write('{"method":"initialized","params":{}}\n')
             process.stdin.flush()
             data = request(2, "skills/list", {"cwds": [str(project)], "forceReload": True})["data"]
+            (target / "codex-native-private.json").write_text(json.dumps(data, indent=2), encoding="utf-8")
             if len(data) != 1 or data[0].get("errors"):
                 raise ValueError("native Codex skill parser returned errors")
-            skills = data[0]["skills"]
+            all_skills = data[0]["skills"]
+            skills = [skill for skill in all_skills if skill["name"].startswith("aw-")]
             if not all(s.get("enabled", True) and Path(s["path"]).resolve().is_relative_to(project) for s in skills):
                 raise ValueError("disabled skill or a skill loaded outside isolation")
-            return sorted(s["name"] for s in skills)
+            scope = {
+                "collection_paths_within_temporary_project": True,
+                "additional_host_metadata_entries": len(all_skills) - len(skills),
+                "host_metadata_paths_outside_temporary_root": sum(not Path(s["path"]).resolve().is_relative_to(target) for s in all_skills),
+                "note": "Windows host may enumerate OS-user skill metadata despite home overrides; no model turn or default writes",
+            }
+            return sorted(s["name"] for s in skills), scope
         finally:
             process.stdin.close()
             try:
@@ -137,7 +145,7 @@ def main():
             shutil.copytree(ROOT / "skills", destination)
             if host == "codex":
                 executable = str(Path(args.codex_exe).resolve())
-                names = codex_probe(executable, project, env, target)
+                names, scope = codex_probe(executable, project, env, target)
             else:
                 executable = str(Path(args.claude_exe).resolve())
                 debug = target / "claude-private.log"
@@ -155,6 +163,8 @@ def main():
                 raise ValueError(host + " returned a different skill set")
             version = subprocess.run([executable, "--version"], env=env, capture_output=True, text=True, encoding="utf-8", check=True, timeout=20).stdout.strip()
             report["hosts"][host] = {"version": version, "native_discovery": "passed", "count": len(names), "names": names}
+            if host == "codex":
+                report["hosts"][host]["discovery_scope"] = scope
         report["version"] = catalog["version"]
         report["passed"] = True
         code = 0
