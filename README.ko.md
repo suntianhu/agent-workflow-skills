@@ -8,9 +8,9 @@
 ![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**버전 1.3.0** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
+**버전 1.3.1** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
 
-1.3.0은 보안 증거, PostgreSQL, 브라우저 검증, 디자인 시스템의 조건부 참고 자료를 기존 24개 스킬과 8개 워크플로에 통합합니다. [출처와 역할 대응](docs/provenance.md), [중국어 소개문](docs/promotion.zh-CN.md), [영어 소개문](docs/promotion.en.md)을 참고하세요. 아래 네이티브 검색 증거는 1.2.0 기록이며, 1.3.0에서는 다시 실행하지 않았습니다.
+1.3.1은 보안 증거, PostgreSQL, 브라우저 검증, 디자인 시스템의 조건부 참고 자료를 기존 24개 스킬과 8개 워크플로에 통합합니다. [출처와 역할 대응](docs/provenance.md), [중국어 소개문](docs/promotion.zh-CN.md), [영어 소개문](docs/promotion.en.md)을 참고하세요. 아래 네이티브 검색 증거는 1.2.0 기록이며, 1.3.1에서는 다시 실행하지 않았습니다.
 
 기존 프로젝트와 새 프로젝트의 절차를 구분하고 작업에 필요한 스킬만 선택합니다. 프런트엔드와 백엔드 규칙을 따로 관리하고, 구현 전에 검증 방침을 정하며, 실제로 확인한 범위를 보고합니다.
 

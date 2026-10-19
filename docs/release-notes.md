@@ -1,15 +1,14 @@
-# v1.3.0 — Conditional specialist references and launch materials
+# v1.3.1 — Project skill directories and bounded native validation
 
-Agent Workflow Skills retains 24 skills, eight compositions and six README languages while adding targeted guidance without another mandatory workflow.
+Agent Workflow Skills retains 24 skills, eight compositions and the specialist references from 1.3.0. This patch clarifies project standards placement and prevents temporary TDD checks from accumulating or validating substitute implementations.
 
 ## Changes
 
-- Study 28 selected files from pinned Trail of Bits, Supabase, Microsoft Playwright CLI and UI UX Pro Max snapshots. The source ledger now covers nine repositories and 43 selected files, with hashes, reading scope, adoption decisions and separate upstream licenses.
-- Integrate security evidence into security/review skills, PostgreSQL into backend/security skills, browser validation into frontend work, and design-system detail into UI design. Shared references have one maintenance source and portable generated copies.
-- Keep project gates, test policies, TDD selection and external-operation authorization unchanged. Load specialist references only when their conditions apply.
-- Inventory existing project skills, agent/plugin configuration and external rule references. Later skill adoption and handoffs consume and update the same project standards instead of starting a disconnected workflow.
-- Distinguish estimated database plans from executed queries, browser actions from business assertions, and supported security claims from unresolved candidates. Avoid generalized performance promises and fixed stack parameters.
-- Add Chinese short/long launch copy, a video script and English community copy. Keep six-language README versions and scope notes synchronized.
+- Reuse existing project standards directories; fall back to docs/engineering only when no convention exists.
+- Provide a thin project-level skill template in the project host's actual discovery directory, referencing the same canonical standards with verified relative paths. Do not use global skill directories or duplicate standards per host.
+- Select existing native test languages, runtimes, roots and scoped commands. A Python rewrite or source-text check does not demonstrate Java/frontend behavior; real cross-language black-box checks retain their narrower evidence scope.
+- Reuse the same TDD carrier across retries. P1 temporary files and assertions do not become persistent additions, while P2 additions need actual regression value and a maintenance location.
+- Clean only agreed task-owned temporary artifacts, preserving existing tests and other user changes. See [the detailed policy](project-standards-and-tdd.md).
 
 ## Validation and limits
 

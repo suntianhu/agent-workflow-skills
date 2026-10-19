@@ -8,9 +8,9 @@
 ![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**版本 1.3.0** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
+**版本 1.3.1** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
 
-1.3.0 將安全證據、PostgreSQL、瀏覽器驗收與設計系統細則整合為按條件讀取的參考資料，仍保留 24 個技能、8 套組合。詳見[來源與整合對照](docs/provenance.md)、[中文宣傳文案](docs/promotion.zh-CN.md)及[英文宣傳文案](docs/promotion.en.md)。下方原生探索證據來自 1.2.0，1.3.0 尚未重跑宿主探索。
+1.3.1 將安全證據、PostgreSQL、瀏覽器驗收與設計系統細則整合為按條件讀取的參考資料，仍保留 24 個技能、8 套組合。詳見[來源與整合對照](docs/provenance.md)、[中文宣傳文案](docs/promotion.zh-CN.md)及[英文宣傳文案](docs/promotion.en.md)。下方原生探索證據來自 1.2.0，1.3.1 尚未重跑宿主探索。
 
 區分既有專案與新專案，依任務選擇適用技能，分別維護前後端規範，在實作前選定驗證策略，並如實回報實際驗證範圍。
 

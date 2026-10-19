@@ -8,9 +8,9 @@ Composable development workflows for coding agents, with explicit project gates 
 ![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**Version 1.3.0** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
+**Version 1.3.1** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
 
-Version 1.3.0 integrates conditional references for security evidence, PostgreSQL, browser validation and design systems, while retaining 24 skills and eight compositions. See [source and responsibility mapping](docs/provenance.md), [Chinese launch copy](docs/promotion.zh-CN.md) and [English launch copy](docs/promotion.en.md). Native discovery evidence below was recorded for 1.2.0; 1.3.0 discovery has not been rerun.
+Version 1.3.1 integrates conditional references for security evidence, PostgreSQL, browser validation and design systems, while retaining 24 skills and eight compositions. See [source and responsibility mapping](docs/provenance.md), [Chinese launch copy](docs/promotion.zh-CN.md) and [English launch copy](docs/promotion.en.md). Native discovery evidence below was recorded for 1.2.0; 1.3.1 discovery has not been rerun.
 
 Build on an existing codebase or start a new project without mixing the two workflows. Select only the skills that fit the task. Keep frontend and backend conventions separate, choose validation before implementation, and report what was actually verified.
 

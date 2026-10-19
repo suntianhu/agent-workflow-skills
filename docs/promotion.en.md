@@ -1,8 +1,8 @@
-# Launch copy: Agent Workflow Skills 1.3.0
+# Launch copy: Agent Workflow Skills 1.3.1
 
 Repository: [suntianhu/agent-workflow-skills](https://github.com/suntianhu/agent-workflow-skills)
 
-Use the version announcement after that version is available. While it is local or under review, say “Preparing 1.3.0” and link the accessible source or PR.
+Use the version announcement after that version is available. While it is local or under review, say “Preparing 1.3.1” and link the accessible source or PR.
 
 ## Short description
 
@@ -18,9 +18,11 @@ I organized my AI coding workflow into 24 composable skills
 
 When a coding agent works on an existing project, I want it to understand the code and conventions before making changes. When it reports success, I want to know what it actually verified.
 
-I built **Agent Workflow Skills** around those requirements. Version **1.3.0** keeps **24 skills and eight compositions** for project review, requirements, frontend/backend work, debugging, contracts, review and delivery.
+I built **Agent Workflow Skills** around those requirements. Version **1.3.1** keeps **24 skills and eight compositions** for project review, requirements, frontend/backend work, debugging, contracts, review and delivery.
 
 The collection distinguishes existing projects from new ones. Existing project skills and agent/plugin rules are inventoried; later skill adoption reconnects to the same project standards, stack and validation decisions. Validation scope, TDD order and test retention are separate decisions. Small changes keep a bounded workflow, and each completion claim should match its evidence.
+
+Project-level skill entries reference the canonical standards in the project's existing directory. Validation uses the actual target and its existing toolchain; temporary TDD checks do not accumulate into persistent files or assertions after every retry.
 
 This update adds conditional references for security finding verification, PostgreSQL data access and isolation, browser interaction checks, and design systems. They are integrated into the existing responsibilities rather than added as another mandatory workflow. The source ledger covers selected material from nine upstream repositories, with pinned commits, file hashes, reading scope and adoption decisions. It is not a full-repository audit or an endorsement by those maintainers.
 
@@ -34,7 +36,7 @@ Source: https://github.com/suntianhu/agent-workflow-skills
 
 ## Social post
 
-Agent Workflow Skills: 24 composable skills and eight workflows for coding agents. Version 1.3.0 integrates conditional security, PostgreSQL, browser validation and design references. Includes pinned sources and validation tools. Feedback from real tasks welcome.
+Agent Workflow Skills: 24 composable skills and eight workflows for coding agents. Version 1.3.1 integrates conditional security, PostgreSQL, browser validation and design references. Includes pinned sources and validation tools. Feedback from real tasks welcome.
 
 https://github.com/suntianhu/agent-workflow-skills
 

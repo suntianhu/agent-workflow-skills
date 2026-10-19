@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.3.1 — 2026-10-19
+
+- Keep existing project standards directories, use a default only when absent, and provide a thin project-level skill template referencing the canonical standards through verified relative paths.
+- Record native test language/runtime, toolchain, test roots and bounded commands before validation; reject substitute Python implementations as evidence for Java/frontend behavior.
+- Reuse tests and the same TDD carrier across retries, constrain temporary paths and assertions under P1, and require regression value for retained P2 additions.
+- Clarify task-owned cleanup without deleting existing tests or rolling back other user changes.
+
 ## 1.3.0 — 2026-10-19
 
 - Study selected pinned files from Trail of Bits, Supabase, Microsoft Playwright CLI and UI UX Pro Max; record nine repositories, 43 selected files, reading scope, hashes and separate license boundaries.
