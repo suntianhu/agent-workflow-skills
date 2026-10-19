@@ -12,8 +12,8 @@
     "aw-security-boundaries",
     "aw-adversarial-review",
     "aw-open-source-readiness",
-    "aw-evidence-verification",
-    "aw-delivery-cleanup"
+    "aw-delivery-cleanup",
+    "aw-evidence-verification"
   ],
   "optional": [
     "aw-agent-coordination"
@@ -73,17 +73,17 @@
       "id": "verify-deliver",
       "when": "always",
       "skills": [
-        "aw-evidence-verification",
-        "aw-delivery-cleanup"
+        "aw-delivery-cleanup",
+        "aw-evidence-verification"
       ],
-      "note": ""
+      "note": "先按清单定向收尾，再核对最终产物证据后交付；收尾改变工程输入才定向补验，无关日志删除不重跑全量。"
     }
   ],
   "conditions": {
     "always": "适用任务的必要判断。",
     "as-needed": "判断确有收益才加载该能力；小任务可内联判断。",
     "trust-boundary-change": "本次涉及认证、授权、归属、私有数据/文件或其他实际信任边界。",
-    "nontrivial-change": "常规/关键变更；轻微只核对需求/diff。",
+    "nontrivial-change": "用户明确要求审查，或常规/关键变更尚无覆盖最终产物的有效审查；无新增差异时复用既有结果，修复后只定向复核，轻微改动通常核对需求/diff。",
     "release-requested": "用户明确请求集成、打包或发布；不能自动外部写入。",
     "public-distribution": "本次确需公开分发，内部部署不强制开源检查。"
   },
