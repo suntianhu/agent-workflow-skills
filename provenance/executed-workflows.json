@@ -1,0 +1,515 @@
+{
+  "schema": 1,
+  "collection_version": "1.4.2",
+  "collection_commit": "8845770a049611fb3980133e9b5a20f641dd7295",
+  "date": "2026-10-19",
+  "environment": {
+    "os": "Windows",
+    "node": "24.13.0",
+    "browser": "Chrome 155.0.8059.84 (headless)",
+    "driver": "playwright-core 1.58.2 in external evaluation workspace",
+    "viewports": [
+      "1440x1080",
+      "390x844"
+    ]
+  },
+  "scope": "Actual authoring, builds, native JavaScript module checks, local HTTP serving and browser interaction in two isolated synthetic Web products, each followed by a second requirement. Explicit skill reads; not native host discovery or an automated routing engine.",
+  "browser": {
+    "final_passed": 42,
+    "final_failed": 0,
+    "counting": "Grouped behavioral and invariant checks, not 42 independent user scenarios or a model benchmark.",
+    "runs": [
+      {
+        "id": "new-browser",
+        "browser": "155.0.8059.84",
+        "started_at": "2026-10-19T14:43:45.803Z",
+        "completed_at": "2026-10-19T14:43:49.128Z",
+        "passed": 10,
+        "failed": 0,
+        "checks": [
+          {
+            "label": "four activities and full activity state render",
+            "passed": true
+          },
+          {
+            "label": "search and category compose and recover from no results",
+            "passed": true
+          },
+          {
+            "label": "dialog Escape returns keyboard focus",
+            "passed": true
+          },
+          {
+            "label": "invalid nickname stays in dialog with correction feedback",
+            "passed": true
+          },
+          {
+            "label": "reservation succeeds, disables duplicate, and survives reload",
+            "passed": true
+          },
+          {
+            "label": "failed persistence has no phantom reservation and retry saves once",
+            "passed": true
+          },
+          {
+            "label": "390px layout and reservation dialog stay within viewport",
+            "passed": true
+          },
+          {
+            "label": "damaged storage is disclosed without automatic overwrite",
+            "passed": true
+          },
+          {
+            "label": "no permanent test files or dependencies introduced",
+            "passed": true
+          },
+          {
+            "label": "no uncaught browser errors or failed requests",
+            "passed": true
+          }
+        ],
+        "raw_report_sha256": "828c0d2c1c11bb3809af77fa135a3bf9eba70cb4c3488f82ca5ed2f2b16dbf43"
+      },
+      {
+        "id": "new-followup-browser",
+        "browser": "155.0.8059.84",
+        "started_at": "2026-10-19T14:48:07.568Z",
+        "completed_at": "2026-10-19T14:48:10.300Z",
+        "passed": 9,
+        "failed": 0,
+        "checks": [
+          {
+            "label": "first phase bookings remain compatible",
+            "passed": true
+          },
+          {
+            "label": "cancel opens selected activity and abandon preserves both bookings",
+            "passed": true
+          },
+          {
+            "label": "Escape abandons cancellation and restores focus",
+            "passed": true
+          },
+          {
+            "label": "failed cancellation stays visible and retry removes only selected booking",
+            "passed": true
+          },
+          {
+            "label": "cancellation survives reload and activity can be booked again",
+            "passed": true
+          },
+          {
+            "label": "cancelling another item preserves the rebooked reservation",
+            "passed": true
+          },
+          {
+            "label": "global visual source and actual computed styles inherited",
+            "passed": true
+          },
+          {
+            "label": "390px cancel dialog fits and keyboard abandon works",
+            "passed": true
+          },
+          {
+            "label": "no uncaught errors or failed requests",
+            "passed": true
+          }
+        ],
+        "raw_report_sha256": "f628d37674c9488d6566feca8519ab050a2484984ab1fc9f23f06eacfeef8973"
+      },
+      {
+        "id": "old-browser",
+        "browser": "155.0.8059.84",
+        "started_at": "2026-10-19T14:42:25.817Z",
+        "completed_at": "2026-10-19T14:42:28.874Z",
+        "passed": 13,
+        "failed": 0,
+        "checks": [
+          {
+            "label": "original seeded orders remain available",
+            "passed": true
+          },
+          {
+            "label": "new business page has empty state",
+            "passed": true
+          },
+          {
+            "label": "inherited computed styles match baseline",
+            "passed": true
+          },
+          {
+            "label": "invalid empty submission is rejected and focused",
+            "passed": true
+          },
+          {
+            "label": "zero and fractional quantities rejected",
+            "passed": true
+          },
+          {
+            "label": "valid record saves and reloads",
+            "passed": true
+          },
+          {
+            "label": "storage failure preserves input and retries without duplicate",
+            "passed": true
+          },
+          {
+            "label": "unsafe-looking user input renders as text",
+            "passed": true
+          },
+          {
+            "label": "old data and submission still work after new page use",
+            "passed": true
+          },
+          {
+            "label": "390px old and new pages have no horizontal overflow",
+            "passed": true
+          },
+          {
+            "label": "project skill references resolve to same handbook",
+            "passed": true
+          },
+          {
+            "label": "frozen theme and legacy tests remain byte identical",
+            "passed": true
+          },
+          {
+            "label": "browser has no uncaught errors or failed requests",
+            "passed": true
+          }
+        ],
+        "raw_report_sha256": "e8ab5f4d1ef1457d3cae29a3bf4996894e65494c14959c65053ecc7af461f88d"
+      },
+      {
+        "id": "old-followup-browser",
+        "browser": "155.0.8059.84",
+        "started_at": "2026-10-19T14:49:07.728Z",
+        "completed_at": "2026-10-19T14:49:10.081Z",
+        "passed": 10,
+        "failed": 0,
+        "checks": [
+          {
+            "label": "existing material data and full totals remain compatible",
+            "passed": true
+          },
+          {
+            "label": "name and purpose filtering, whitespace and case work",
+            "passed": true
+          },
+          {
+            "label": "no match has explicit recovery and clear restores all",
+            "passed": true
+          },
+          {
+            "label": "filtering does not write storage or change full totals",
+            "passed": true
+          },
+          {
+            "label": "new save keeps query, updates matching rows and persists full data",
+            "passed": true
+          },
+          {
+            "label": "late design skill preserves original global computed styles",
+            "passed": true
+          },
+          {
+            "label": "390px filter, empty state and recovery stay usable",
+            "passed": true
+          },
+          {
+            "label": "old route, original storage and navigation remain connected",
+            "passed": true
+          },
+          {
+            "label": "frozen global files, skill and old test remain unchanged; no parallel rules",
+            "passed": true
+          },
+          {
+            "label": "no uncaught errors or failed requests",
+            "passed": true
+          }
+        ],
+        "raw_report_sha256": "7d79075511ec0844c003f9852d21987db9920cd234d83ae26b081c4f9c728f7b"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "new-project",
+      "owned_files": 11,
+      "built_files": 4,
+      "final_source_matches_browser_report": true,
+      "built_bytes_equal_sources": true,
+      "second_requirement": {
+        "changed": [
+          "docs/engineering/PROJECT_STANDARDS.md",
+          "public/app.js",
+          "public/domain.js",
+          "public/index.html"
+        ],
+        "added": [],
+        "removed": []
+      },
+      "permanent_tests": [],
+      "new_product_dependencies": 0,
+      "files": [
+        {
+          "path": ".agents/skills/xiaoman-project/SKILL.md",
+          "sha256": "bfdc62b9d010031ee70915c123169c019ae3930d84fb998f95573741442683f6",
+          "bytes": 752
+        },
+        {
+          "path": ".gitignore",
+          "sha256": "58aea3d6b4b0f8799c1e00c3b023898516997f6369ee8e13d8d4b4215f70a62b",
+          "bytes": 20
+        },
+        {
+          "path": "AGENTS.md",
+          "sha256": "9bdb98f92ea9c37242dfb24f8cb0ebb154636cd87ca8a01695e44df82b0ebcaa",
+          "bytes": 618
+        },
+        {
+          "path": "docs/engineering/PROJECT_STANDARDS.md",
+          "sha256": "557324e4b7e435d763bc7b111ed0b4bc887bbfac33ba89fa50dc75ed83443eea",
+          "bytes": 9486
+        },
+        {
+          "path": "package.json",
+          "sha256": "0a73cc4a657272f44634526e3b880415c321586c8b8e57ffb7a0ff03fe78103d",
+          "bytes": 387
+        },
+        {
+          "path": "public/app.js",
+          "sha256": "bc8c5626145ff9219332bfc698f94c62d82d1f8dc5dd4dcfb9db298f0920af36",
+          "bytes": 8156
+        },
+        {
+          "path": "public/domain.js",
+          "sha256": "b13dba46d72768a6a892a9fba52acbcf38f5599d828e2996d1460713e53bff74",
+          "bytes": 5758
+        },
+        {
+          "path": "public/index.html",
+          "sha256": "3ad5afa6bf8fb5f3ee14da2a1da1a5891fd7c18b15881e6995ec0192bc7b7183",
+          "bytes": 6374
+        },
+        {
+          "path": "public/styles.css",
+          "sha256": "0322eed922e9724b16fc570b691bc18483c0b74d033325946b6fd3a950e0f988",
+          "bytes": 12153
+        },
+        {
+          "path": "scripts/build.mjs",
+          "sha256": "36e939d762b84965fe8475f0cf7b69b9cf8e8abde60fe6a561fcdfcd305aebc0",
+          "bytes": 1000
+        },
+        {
+          "path": "scripts/server.mjs",
+          "sha256": "a44035de71ea842cdbe4b89029fa66bfb1c3cb9e9e7f13702ed98465038c0b0c",
+          "bytes": 1780
+        }
+      ]
+    },
+    {
+      "name": "old-project",
+      "owned_files": 17,
+      "built_files": 8,
+      "final_source_matches_browser_report": true,
+      "built_bytes_equal_sources": true,
+      "second_requirement": {
+        "changed": [
+          "handbook/project.md",
+          "src/materials-domain.js",
+          "src/materials.css",
+          "src/materials.html",
+          "src/materials.js"
+        ],
+        "added": [],
+        "removed": []
+      },
+      "permanent_tests": [
+        {
+          "path": "test/domain.test.js",
+          "sha256": "43e10c76d44c669c82639873fae706a87bbe172c166179b424650b5237309935"
+        }
+      ],
+      "new_product_dependencies": 0,
+      "files": [
+        {
+          "path": ".agents/skills/workshop-conventions/SKILL.md",
+          "sha256": "411dc6dab68d2280e66783178cc32b507abd29cbf2bac008d090ef1a9663133f",
+          "bytes": 598
+        },
+        {
+          "path": ".gitignore",
+          "sha256": "bd6f35880b7d911822d96b48e1a660a346a4cb74efa435f2e662cfe2a71aaaec",
+          "bytes": 12
+        },
+        {
+          "path": "AGENTS.md",
+          "sha256": "6e636febff5b36c95900298dcb82ee785be312d0734b9fc31b996fd64e3e1d00",
+          "bytes": 598
+        },
+        {
+          "path": "handbook/project.md",
+          "sha256": "d01cb689df1a0cb733b49243fee4af947d7aee8ecaa5ed5ca0bd4e74a6c97dc1",
+          "bytes": 6804
+        },
+        {
+          "path": "handbook/visual.md",
+          "sha256": "9c2833c712db4b6a4438f5cf1a4b8956dff04cbdd87fde33be6299016b491791",
+          "bytes": 1093
+        },
+        {
+          "path": "package.json",
+          "sha256": "f639e491aca7ff2ed986148b0fa1135f93d7442030e359937af8e547729950d7",
+          "bytes": 240
+        },
+        {
+          "path": "scripts/build.mjs",
+          "sha256": "0c589c18db9a7311395b7bf45e6de9cb455c2e83726da760f9dce5038dc8fbf0",
+          "bytes": 632
+        },
+        {
+          "path": "scripts/serve.mjs",
+          "sha256": "7caf1413c24d675dbe59b56e0dae79902159073b78c1ab8bd1fad8dd6ac3710b",
+          "bytes": 1236
+        },
+        {
+          "path": "src/app.js",
+          "sha256": "ba57d8da2249498a8ef23d3870ad865c3f9441561955f7860d7b037890173c63",
+          "bytes": 1802
+        },
+        {
+          "path": "src/domain.js",
+          "sha256": "3f933f0a3bcd6a0af592a5059c2c3729dc9cd996c31de2869f5536d83d51a163",
+          "bytes": 962
+        },
+        {
+          "path": "src/index.html",
+          "sha256": "3c8a4d2485f5a0c437bc2e9f5e8e16760d11fe04099a265113b442b794c1d385",
+          "bytes": 2517
+        },
+        {
+          "path": "src/materials-domain.js",
+          "sha256": "d12e2acb7990d44e3e8eaa06f0e32ad403e3fb282ff263d2fd7649d256ae26bb",
+          "bytes": 2204
+        },
+        {
+          "path": "src/materials.css",
+          "sha256": "d757f7c08b13ca16da5eb23cbe684fa997f7da2c4337cc12a5a32ac82692f5df",
+          "bytes": 1069
+        },
+        {
+          "path": "src/materials.html",
+          "sha256": "310f546237c324ac5094eedfe420a0f8ee6c390ca9ffc3e1474e6dab5ef0150e",
+          "bytes": 3546
+        },
+        {
+          "path": "src/materials.js",
+          "sha256": "62d419efdc22b74c6d7b567dab71955f558720ad167b42dc4c7a36b48a44b142",
+          "bytes": 4176
+        },
+        {
+          "path": "src/theme.css",
+          "sha256": "f2c888a5a975b63bacfa9ea79cb80844790bd98ac8711fac864f59794b4add4d",
+          "bytes": 4359
+        },
+        {
+          "path": "test/domain.test.js",
+          "sha256": "43e10c76d44c669c82639873fae706a87bbe172c166179b424650b5237309935",
+          "bytes": 614
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "old-before-desktop.png",
+      "bytes": 55009,
+      "sha256": "674f1d876b2add2e0ec11c08964efc5887c33d9673379a17594aa761405d648c"
+    },
+    {
+      "file": "old-followup-desktop.png",
+      "bytes": 70613,
+      "sha256": "3335581df147bdd25130ddd3c78635801ded047ba34d9cc7667ba8b2a82e8b33"
+    },
+    {
+      "file": "old-followup-mobile.png",
+      "bytes": 64100,
+      "sha256": "bd37f71cb1fcc97b831dbb8d537431c87acd1591c73b1047d86a370d60173f19"
+    },
+    {
+      "file": "new-before-desktop.png",
+      "bytes": 155600,
+      "sha256": "80c8013f4582978a331b6c54aa38f05b8a922ebeafe80c2049e7568a986278bf"
+    },
+    {
+      "file": "new-after-desktop.png",
+      "bytes": 157994,
+      "sha256": "4bc67825cd4e8354a84a97b17c2275d08f26c0fb00291355ca4f82be5e22d254"
+    },
+    {
+      "file": "new-cancel-mobile.png",
+      "bytes": 138648,
+      "sha256": "de735092a6c8ad318480dcf7b375f3bd6fcace19389bc52d10a4588a6a51230a"
+    }
+  ],
+  "workflow_observations": {
+    "new_project_then_existing_increment": true,
+    "old_initial_reading": {
+      "owned_files": 13,
+      "includes_hidden_project_skill_and_existing_test": true
+    },
+    "old_handoff_validated_files": 17,
+    "new_handoff_validated_files_including_outputs": 15,
+    "canonical_rules": {
+      "new_project": "docs/engineering/PROJECT_STANDARDS.md",
+      "old_project": "handbook/project.md -> handbook/visual.md"
+    },
+    "old_existing_project_skill_preserved": true,
+    "late_frontend_design_adopted_into_same_old_handbook": true,
+    "global_css_unchanged": [
+      "new-project/public/styles.css",
+      "old-project/src/theme.css"
+    ],
+    "computed_shared_visuals_match": true,
+    "repeated_stack_selection_observed": false,
+    "duplicate_canonical_standards_observed": false,
+    "repeated_full_audit_at_second_requirement_observed": false,
+    "duplicate_implementation_observed": false,
+    "policy": "P1 for new checks; existing old Node test remains P2; TDD not selected; no new permanent product tests or dependencies",
+    "blocking_skill_flow_observed": false
+  },
+  "incidents": [
+    {
+      "kind": "reference-acquisition",
+      "result": "GitHub rate limit, TLS/encoding issues and timeouts recovered with bounded fixed-source reads; incomplete upstream inspection disclosed. No repeated stack-selection stage."
+    },
+    {
+      "kind": "pre-start implementation review",
+      "result": "New demo static server path-root issue found and corrected before startup; not presented as a TDD red/green run."
+    },
+    {
+      "kind": "verification-carrier correction",
+      "result": "First follow-up comparison included the unstyled html default font. All actual styled elements and unchanged CSS already matched. Corrected the assertion to every project token and styled UI elements, preserved the first failed report locally and reran; no product code change."
+    }
+  ],
+  "collection_instruction_changes": [],
+  "cleanup": {
+    "demo_servers": "both stopped via their owned sessions",
+    "external_browser_driver": "removal rejected by automatic approval review: blocked by policy; retained outside both product projects and public distribution; no alternate removal attempted",
+    "evaluation_scripts_and_raw_evidence": "retained outside product projects for review"
+  },
+  "privacy": {
+    "published": "Only relative project paths, synthetic data and summarized evidence. Raw diagnostics and screenshots retained outside distribution.",
+    "raw_failed_stack_not_published": true
+  },
+  "limits": [
+    "Two small synthetic Web projects, not the user’s production applications.",
+    "No Java/JVM, mini-program, native app, database, deployment or production service execution.",
+    "No explicit TDD red/green or P0 branch execution in this run.",
+    "No automatic skill trigger/26-skill native host discovery or cross-model effectiveness measurement.",
+    "Only applicable conditional stages executed; the full set of 26 skills was not forced into both tasks."
+  ]
+}

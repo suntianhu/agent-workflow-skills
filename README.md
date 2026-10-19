@@ -89,7 +89,7 @@ python scripts/validate.py
 
 The validator checks declarations, generated content freshness, exact resource sets, local links, Python syntax, composition order, and selected distribution hygiene rules. It does not prove that an agent will make the right decision or that a framework is vulnerability-free.
 
-Windows/Linux CI checks source, executed offline examples and release packaging. Native isolated discovery passed for all 24 skills in Codex and Claude on Windows; model-driven workflow execution remains unverified. See [validation](docs/validation.md) and [native evidence](docs/agent-loading.md) for exact scope and versions.
+Windows/Linux CI checks source, executed offline examples and release packaging. Native isolated discovery passed for all 24 skills in Codex and Claude on Windows. Agents also completed new/existing-project flows and follow-up requirements in two runnable synthetic Web projects, with 42 final browser checks; this does not establish automatic discovery/triggering of the current 26 skills or production coverage. See [executed flows](docs/executed-workflows.md), [validation](docs/validation.md) and [native evidence](docs/agent-loading.md) for exact scope and versions.
 
 ## Examples and automated releases
 
