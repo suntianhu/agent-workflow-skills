@@ -40,7 +40,7 @@ def main():
             target.write_bytes(data)
         manifest = {p.relative_to(ROOT).as_posix(): hashlib.sha256(data).hexdigest() for p, data in plan}
         manifest_path.parent.mkdir(parents=True, exist_ok=True)
-        manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
         print(json.dumps({"skills_generated": len(catalog["skills"]), "version": catalog["version"], "installed": False}))
         return 0
     except (OSError, ValueError, KeyError, TypeError) as error:

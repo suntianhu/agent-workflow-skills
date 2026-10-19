@@ -8,7 +8,7 @@
 ![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**버전 1.1.2** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
+**버전 1.2.0** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
 
 기존 프로젝트와 새 프로젝트의 절차를 구분하고 작업에 필요한 스킬만 선택합니다. 프런트엔드와 백엔드 규칙을 따로 관리하고, 구현 전에 검증 방침을 정하며, 실제로 확인한 범위를 보고합니다.
 
@@ -69,8 +69,8 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 | 실행 환경 | 패키징 | 실제 확인 범위 |
 | --- | --- | --- |
-| Codex | Agent Skills 디렉터리와 선택적 `agents/openai.yaml` UI 메타데이터 | 현재 Codex 환경에서 파일과 스크립트 사용. 네이티브 검색은 미검증 |
-| Claude Code | 문서에 명시된 위치에 전체 스킬 디렉터리 배치 | 문서 기준으로만 대응. 종단 간 사용은 미검증 |
+| Codex | Agent Skills 디렉터리와 선택적 `agents/openai.yaml` UI 메타데이터 | Windows 격리 환경에서 24/24 네이티브 검색 확인. 모델 실행은 미검증 |
+| Claude Code | 문서에 명시된 위치에 전체 스킬 디렉터리 배치 | 네이티브 CLI와 공식 SDK에서 24/24 검색 확인. 성공한 모델 실행은 미검증 |
 | Gemini CLI | 문서에 명시된 위치에 전체 스킬 디렉터리 배치 | 문서 기준으로만 대응. 종단 간 사용은 미검증 |
 | GitHub Copilot | 지원 클라이언트에서 전체 스킬 디렉터리 사용 | 문서 기준으로만 대응. 개별 클라이언트는 미검증 |
 | 기타 에이전트 | 지원하는 경우 `SKILL.md`와 상대 참조 읽기 | 확인하지 않은 네이티브 호환성을 일괄 보장하지 않음 |
@@ -86,7 +86,13 @@ python scripts/validate.py
 
 검증 도구는 선언, 생성 내용의 동기화, 정확한 리소스 집합, 로컬 링크, Python 문법, 구성 단계 순서, 일부 배포물 점검 규칙을 확인합니다. 에이전트의 판단이 옳거나 프레임워크에 취약점이 없음을 증명하지는 않습니다.
 
-1.1.0 감사에서는 24개 스킬의 공식 구조 검사, 8개 구성의 내보내기, 저장소 밖의 합성 데이터를 이용한 도구 검증을 수행했습니다. 1.1.x 문서 업데이트의 검증은 [검증 기록](docs/validation.md)(중국어 간체)에 별도로 기록합니다. Windows/Linux CI는 GitHub에서 실행됩니다. 사용하는 커밋의 실제 결과를 확인하세요. 네이티브 검색과 에이전트의 종단 간 사용도 미검증 상태입니다.
+Windows/Linux CI는 소스, 실행 가능한 오프라인 예제와 패키징을 검사합니다. Codex와 Claude는 Windows 격리 프로젝트에서 24개 스킬을 모두 검색했습니다. 모델 기반 워크플로 실행은 미검증 상태입니다. 버전과 범위는 [검증 기록](docs/validation.md)과 [네이티브 증거](docs/agent-loading.md)를 참조하세요.
+
+## 사용 예제와 자동 릴리스
+
+[전체 예제](examples/README.md)는 이 저장소에서 실행한 사례와 소규모 변경, 기존 백엔드, 새 프런트엔드·백엔드용 프롬프트를 제공합니다. `python scripts/run_examples.py`로 TEMP에서 오프라인 검사를 재현할 수 있습니다.
+
+일치하는 버전 태그를 push하면 검증된 ZIP과 SHA-256 파일이 게시됩니다. [릴리스 단계](docs/github-publishing.md)를 참조하세요. [네이티브 검색 재실행](docs/agent-loading.md)은 격리 디렉터리를 사용하며 기본 스킬을 변경하지 않습니다. 선택적 네이티브 검사에는 실제 클라이언트가, Claude에는 Node와 공식 Agent SDK도 필요합니다. 나머지 Python 도구는 표준 라이브러리만 사용합니다.
 
 ## 언어
 

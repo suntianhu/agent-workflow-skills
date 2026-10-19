@@ -8,7 +8,7 @@ Composable development workflows for coding agents, with explicit project gates 
 ![Skills: 24](https://img.shields.io/badge/skills-24-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**Version 1.1.2** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
+**Version 1.2.0** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
 
 Build on an existing codebase or start a new project without mixing the two workflows. Select only the skills that fit the task. Keep frontend and backend conventions separate, choose validation before implementation, and report what was actually verified.
 
@@ -69,8 +69,8 @@ Each skill includes its own instructions, necessary references/resources, and li
 
 | Host | Packaging | Evidence |
 | --- | --- | --- |
-| Codex | Agent Skills directory plus optional `agents/openai.yaml` UI metadata | Files and scripts used in the current Codex environment; native discovery not tested |
-| Claude Code | Complete skill directories in documented host locations | Documentation mapping only; end-to-end use not tested |
+| Codex | Agent Skills directory plus optional `agents/openai.yaml` UI metadata | Native isolated Windows discovery: 24/24; no model execution |
+| Claude Code | Complete skill directories in documented host locations | Native CLI + official SDK discovery: 24/24; no successful model execution |
 | Gemini CLI | Complete skill directories in documented host locations | Documentation mapping only; end-to-end use not tested |
 | GitHub Copilot | Complete skill directories in supported clients | Documentation mapping only; individual clients not tested |
 | Other agents | Read `SKILL.md` and relative references when supported | No blanket claim of native compatibility |
@@ -86,7 +86,13 @@ python scripts/validate.py
 
 The validator checks declarations, generated content freshness, exact resource sets, local links, Python syntax, composition order, and selected distribution hygiene rules. It does not prove that an agent will make the right decision or that a framework is vulnerability-free.
 
-The 1.1.0 audit included 24 official structural checks, eight composition exports, and targeted synthetic utility checks outside the repository. The 1.1.x documentation updates are validated separately in the [validation record](docs/validation.md) (Chinese). CI runs on Windows and Linux; inspect the workflow result for the commit you use. Native host discovery and end-to-end agent scenarios remain untested.
+Windows/Linux CI checks source, executed offline examples and release packaging. Native isolated discovery passed for all 24 skills in Codex and Claude on Windows; model-driven workflow execution remains unverified. See [validation](docs/validation.md) and [native evidence](docs/agent-loading.md) for exact scope and versions.
+
+## Examples and automated releases
+
+See [worked examples](examples/README.md) for an executed repository case and prompts for small changes, existing backends, and new frontend/backend projects. Run `python scripts/run_examples.py` to reproduce the offline utility checks in TEMP.
+
+Pushing a matching version tag publishes a validated ZIP and SHA-256 checksum; see [release steps](docs/github-publishing.md). [Native discovery replay](docs/agent-loading.md) uses isolated directories without changing default skills. Optional native probes require real clients; Claude also requires Node and the official Agent SDK. Python utilities otherwise use only the standard library.
 
 ## Languages
 
