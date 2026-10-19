@@ -1,0 +1,424 @@
+{
+  "schema": 1,
+  "version": "1.1.2",
+  "skills": [
+    {
+      "name": "aw-project-triage",
+      "title": "项目识别与开发门禁",
+      "description": "Use when beginning a development request and the existing/new project status, frontend/backend scope, or prerequisite gates must be identified.",
+      "goal": "确定真实项目类型、影响端、风险和本次可执行范围。",
+      "gate": "老项目代码/配置/脚本开发须先完成全仓梳理与项目内规范；新项目未选栈不初始化。",
+      "steps": [
+        "读取当前仓库规则与工作区，确认已有业务、数据和兼容负担；新页面不等于新项目。",
+        "分别判断前端、后端与跨端；依据行为与信任边界分级，不按行数。",
+        "列出前置产物、仍缺决策、允许独立推进的工作；不为已有授权重复确认。"
+      ],
+      "outputs": "项目类型、端/风险、前置门禁与下一步。",
+      "references": [
+        "project-mode.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-skill-selection",
+      "title": "技能采纳判断",
+      "description": "Use when several skills or workflows appear relevant and a task-specific adoption decision is needed without loading every available skill.",
+      "goal": "用最少适用技能形成一致工作流。",
+      "gate": "用户明确指定的技能先读；不因关键词或可能性阈值强制加载无关能力。",
+      "steps": [
+        "看描述并核对目标、产物、平台和风险。",
+        "对实质影响方案的候选记录采纳/部分采纳/不采纳及理由。",
+        "冲突按当前指令和目标项目约束收敛，不叠加审批/TDD门禁。"
+      ],
+      "outputs": "复杂任务的简短采纳表；小任务直接执行适用部分。",
+      "references": [
+        "skill-selection.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-model-routing",
+      "title": "模型与能力判断",
+      "description": "Use when deciding whether the current model and tools can complete a task or whether additional reasoning, vision, or delegation has a concrete benefit.",
+      "goal": "根据能力缺口选择资源。",
+      "gate": "不能自行切换当前聊天模型或虚构允许列表；普通小改不追加模型。",
+      "steps": [
+        "识别歧义、上下文、视觉输入、推理与执行需求。",
+        "优先当前能力，只有具体瓶颈才核对可用选项与当前官方事实。",
+        "委派另核对授权、独立性和开销；无代理可顺序完成。"
+      ],
+      "outputs": "能力判断、依据及必要的调整建议。",
+      "references": [
+        "model-routing.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-effort-estimation",
+      "title": "基于实耗的估时",
+      "description": "Use when estimating remaining work, revising a time range after new evidence, or calibrating repeated overestimation from comparable measured tasks.",
+      "goal": "给可校准的本地剩余时间，外部未知单列。",
+      "gate": "先调查再估；已测步骤不重复校准，已完成调查不计入剩余。",
+      "steps": [
+        "读取真实时钟和用户时区，分解未完成实现/检查/审查/清理。",
+        "用同类实耗比例校准未校准实现部分，缺样本时明确先验。",
+        "范围/假设改变就更新；完成后只记录真实匿名分钟。"
+      ],
+      "outputs": "时间范围、证据/样本数、未知阶段与偏差。",
+      "references": [
+        "effort-estimation.md"
+      ],
+      "resources": {
+        "scripts/estimate.py": "scripts/estimate.py"
+      }
+    },
+    {
+      "name": "aw-repository-audit",
+      "title": "老项目全仓梳理",
+      "description": "Use before developing code, configuration, or engineering scripts in an existing project when a current complete codebase review and project standards baseline are required.",
+      "goal": "读完当前项目全部自有代码，形成可追溯全仓理解。",
+      "gate": "不得用目录扫描、抽样、已有README或局部检索冒充全仓阅读；未完成不开始产品实现。",
+      "steps": [
+        "清点隐藏/未跟踪、前后端、共享库、迁移、生成器、CI和部署。",
+        "逐项阅读，记录每项用途、调用关系、约束、证据和指纹；排除项给实际依据。",
+        "汇总完整阅读证据与真实阻断，交给内部规范阶段；规范完成前不开始产品实现。"
+      ],
+      "outputs": "全仓清单、逐项阅读台账、模块/数据流地图、真实未读/排除/阻断。",
+      "references": [
+        "repository-audit.md",
+        "audit-tool.md"
+      ],
+      "resources": {
+        "scripts/repo_audit.py": "scripts/repo_audit.py",
+        "templates/reading-ledger.json": "assets/reading-ledger.json"
+      }
+    },
+    {
+      "name": "aw-project-standards",
+      "title": "项目内部规范",
+      "description": "Use after understanding an existing codebase or selecting a new stack to write and maintain evidence-backed engineering standards inside the target project.",
+      "goal": "把当前项目实际约束变成可执行内部文档。",
+      "gate": "老项目全仓未读完不能标完成；新项目框架未由用户选定不能把候选写成已选。",
+      "steps": [
+        "优先项目现有规范入口，否则写docs/engineering/PROJECT_STANDARDS.md。",
+        "前端与后端规则分别填写，附真实代码/配置或固定范本证据。",
+        "分开现状、规范、例外和待改进，开发与架构变化同步更新。"
+      ],
+      "outputs": "目标项目内部规范，含范围基线、栈、目录、设计、契约、安全、命令、验证和发布。",
+      "references": [
+        "project-standards.md"
+      ],
+      "resources": {
+        "templates/project-standards.md": "assets/project-standards.md"
+      }
+    },
+    {
+      "name": "aw-framework-selection",
+      "title": "新项目框架选型",
+      "description": "Use for a genuinely new project when the user language and platform constraints must be matched to currently maintained mainstream framework candidates before initialization.",
+      "goal": "推荐适配、受支持、较新稳定且已核对已知风险的候选。",
+      "gate": "必须用户选择后初始化；无回复不是选择，已有明确选择不重复询问。",
+      "steps": [
+        "确认语言、平台、需求和部署约束；前后端分别比较。",
+        "打开官方支持/发布、安全公告与公开仓库证据，给2–3候选及日期/许可/风险/成本。",
+        "用户选择后交付选中语言、框架、版本证据与限制，交接GitHub范本研究和项目规范；本技能不初始化代码或重复编写规范。"
+      ],
+      "outputs": "带直接来源的候选表、推荐依据、用户选择或待决事项。",
+      "references": [
+        "framework-selection.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-github-reference",
+      "title": "GitHub范本采纳",
+      "description": "Use after a stack is selected to derive project conventions from maintained public repositories with matching language, framework, version line, and application shape.",
+      "goal": "提炼成熟项目的可验证工程习惯，交接本项目规范阶段。",
+      "gate": "不能只看stars、README或框架内核；不执行未知脚本、不复制许可不明实现。",
+      "steps": [
+        "读取范本工程清单、关键代码、LICENSE、规则、CI和配置；核对维护与适配。",
+        "固定commit/tag及文件位置，形成采纳/调整/不采纳及落点。",
+        "拒绝无关业务和过度架构，内部规范完成后再落地。"
+      ],
+      "outputs": "固定引用、范本采纳表和目标项目规范建议。",
+      "references": [
+        "github-reference.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-requirements-design",
+      "title": "需求与交互方案",
+      "description": "Define users or callers, goals, inputs, outputs, states, recovery and acceptance criteria for frontend, API, background-task or data-change requirements; visual styling belongs to UI design.",
+      "goal": "从需求得到可审查交互方案。",
+      "gate": "处理行为需求与验收，不规定配色/字体；重要方向缺口才询问，不重复已有批准。",
+      "steps": [
+        "提取用户/场景/主任务/交付物/真实数据/冻结区。",
+        "写触发、正常行为、适用失败恢复和验收标准。",
+        "复杂取舍给具体方案和推荐，已有方向继续推进。"
+      ],
+      "outputs": "需求简报、关键路径、状态/验收和未决选择。",
+      "references": [
+        "requirements-design.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-ui-design",
+      "title": "需求驱动视觉设计",
+      "description": "Use when designing or reviewing interface hierarchy, typography, color, layout, interaction feedback, accessibility, or a coherent visual system for a specific brief.",
+      "goal": "根据内容与受众推导视觉，不套统一模板。",
+      "gate": "先有需求和平台约束；老项目遵从已生成内部规范与冻结区。",
+      "steps": [
+        "确定主动作、信息层级、设计token和真实内容。",
+        "检查状态、可读性、焦点、触控、响应式、图片回退和减少动画。",
+        "以实际环境核对受影响视觉，未看过的界面不冒称验收。"
+      ],
+      "outputs": "视觉方案/原型、token、状态与实际核对范围。",
+      "references": [
+        "ui-design.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-frontend-implementation",
+      "title": "前端实现",
+      "description": "Use when implementing frontend pages, admin UI, components, routing, state, or platform interactions after the relevant existing/new project gates are satisfied.",
+      "goal": "按项目规范实现正确交互与状态。",
+      "gate": "已有项目先全仓梳理和内部规范；新项目先用户选栈和范本规范。",
+      "steps": [
+        "读取前端规范与实际后端契约，识别路由/状态/样式/平台边界。",
+        "实现正常、加载、错误、重试、取消、重复操作和账号切换。",
+        "执行项目规定工程检查，按测试政策验证直接影响并更新规范。"
+      ],
+      "outputs": "前端改动、规范同步、工程/行为证据与外部缺口。",
+      "references": [
+        "frontend.md",
+        "project-mode.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-backend-implementation",
+      "title": "后端实现",
+      "description": "Use when implementing API services, business logic, persistence, migrations, tasks, or integrations after existing/new project prerequisites are satisfied.",
+      "goal": "按实际栈的内部规范实现业务与数据边界。",
+      "gate": "不固定ORM/数据库/分层库；老项目先全仓与规范，新项目先用户选栈。",
+      "steps": [
+        "读取真实入口、业务、事务、数据与部署规范。",
+        "落实输入、归属、错误、并发/幂等、迁移和外部调用边界。",
+        "执行规定工程检查及允许的局部验证，同步契约与规范。"
+      ],
+      "outputs": "后端改动、契约/迁移/规范同步及实际证据。",
+      "references": [
+        "backend.md",
+        "project-mode.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-api-contracts",
+      "title": "前后端契约",
+      "description": "Use when requests, responses, validation, pagination, errors, timestamps, identity, or persistence contracts change across callers and services.",
+      "goal": "保持全部直接调用方与数据语义一致。",
+      "gate": "不能只改一端或凭类型编译推断实际兼容。",
+      "steps": [
+        "追踪入口、调用方、旧数据和错误/恢复路径。",
+        "核对字段、枚举、分页、时区、身份、幂等和兼容。",
+        "将事实落入项目内部规范，报告实际契约验证范围。"
+      ],
+      "outputs": "契约差异、受影响调用方、兼容/恢复策略与证据。",
+      "references": [
+        "api-contracts.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-security-boundaries",
+      "title": "应用安全边界",
+      "description": "Use when a change affects authentication, authorization, ownership, private files, external requests, payment, refund, or other concrete trust boundaries.",
+      "goal": "核对本次实际信任边界与恢复路径。",
+      "gate": "不是无范围全仓渗透；不操作未知金额/对象的交易或真实业务数据。",
+      "steps": [
+        "识别入口身份、资源归属、输入和外部依赖。",
+        "按涉及点核对授权/私图/SSRF/签名/支付退款/日志与幂等。",
+        "限定静态检查、局部行为与真实渠道证据，保留未验门槛。"
+      ],
+      "outputs": "有证据的边界发现、修复与真实外部验证缺口。",
+      "references": [
+        "security-boundaries.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-test-strategy",
+      "title": "测试策略与保留",
+      "description": "Use before code implementation or behavioral validation to decide test scope, whether TDD is selected, existing project policy, and disposable versus retained artifacts.",
+      "goal": "分开验证范围、TDD顺序与保留政策。",
+      "gate": "小改不自动TDD；不把其他项目禁测规则推广全局；已有用例不擅删。",
+      "steps": [
+        "读取当前用户/项目P0/P1/P2政策和真实风险。",
+        "选择必要工程检查与直接行为路径，不间接运行禁用套件。",
+        "沿用已有选择并交接执行；实质升级成本/保留政策才一次确认，本阶段不实现或清理。"
+      ],
+      "outputs": "本次验证与保留决定、实际命令范围和必要未决选择。",
+      "references": [
+        "test-strategy.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-scoped-tdd",
+      "title": "已授权局部TDD",
+      "description": "Use only after TDD has been selected for a bounded feature or reproducible defect and its execution and artifact retention are authorized.",
+      "goal": "用真实失败驱动最小修复，避免测试堆积。",
+      "gate": "本次已选择并授权TDD及保留政策；老项目先全仓与内部规范，新项目先用户选栈与规范，不删除用户实现制造红灯。",
+      "steps": [
+        "观察针对真实行为的失败并排除环境/语法错误。",
+        "最小实现转绿，必要重构后对最终代码局部复核。",
+        "保存脱敏红绿证据与本任务产物清单，按约定交给交付清理阶段处理保留或删除。"
+      ],
+      "outputs": "实际红/绿证据、最终版本复核、保留/清理清单。",
+      "references": [
+        "scoped-tdd.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-evidence-debugging",
+      "title": "证据驱动排障",
+      "description": "Use when investigating a reproducible defect, unexpected behavior, failed check, or integration symptom before selecting a code fix.",
+      "goal": "先定位实际根因，不叠猜测补丁。",
+      "gate": "产品修复仍须满足老项目全仓理解和内部规范门禁。",
+      "steps": [
+        "记录已观察的最小复现、预期/实际和相关历史。",
+        "沿层追踪，一个可证伪假设一次，选择最便宜允许证据。",
+        "修根因及直接调用方，验证原症状并记录外部缺口。"
+      ],
+      "outputs": "根因、修复、实际验证和项目既有回归记录。",
+      "references": [
+        "evidence-debugging.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-adversarial-review",
+      "title": "只读反例审查",
+      "description": "Use for a scoped read-only review of a nontrivial change where requirements, contracts, ownership, recovery, privacy, or compatibility need counterexample analysis.",
+      "goal": "找可观察反例，避免为实现背书。",
+      "gate": "轻微改动只核对需求/diff；代理审查需已有授权且不能变成测试/写入。",
+      "steps": [
+        "读取原需求、最终差异、规则与检查证据。",
+        "检查适用边界，逐项给位置、触发、后果和验证办法。",
+        "将核实发现交给实现者处理；由实现者修复后，审查者只读定向复核。"
+      ],
+      "outputs": "有证据的发现或限定范围未见阻断问题。",
+      "references": [
+        "adversarial-review.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-evidence-verification",
+      "title": "完成前证据核对",
+      "description": "Use before claiming a change is fixed, checks passed, acceptance completed, or a release is ready, to align each claim with evidence for the final artifact.",
+      "goal": "让结论精确对应实际证据。",
+      "gate": "构建、模拟页、代理总结不等于真实行为/云/生产验收。",
+      "steps": [
+        "核对最终版本、命令范围、输出和退出码。",
+        "区分工程、行为、外部环境与代码推演；无变化不机械重复全量。",
+        "列出缺口和影响，不用“应该通过”作完成结论。"
+      ],
+      "outputs": "证据清单、可支持的结论与未验证项。",
+      "references": [
+        "evidence-verification.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-delivery-cleanup",
+      "title": "交付与定向清理",
+      "description": "Use when preparing a task handoff and removing only confirmed task-owned disposable artifacts while preserving user changes, runtime files, and production outputs.",
+      "goal": "按精确清单交付与清理。",
+      "gate": "不批量删用户已有测试/整个构建目录；策略拒绝后停止绕行。",
+      "steps": [
+        "核对本次文件、实际用途、入口/引用/依赖和约定保留方式。",
+        "核实绝对路径、授权范围与重定向后定向清理。",
+        "交付结果、实际证据、回归记录和未完成事项。"
+      ],
+      "outputs": "最终改动、清理结果和真实保留/阻断项。",
+      "references": [
+        "delivery-cleanup.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-release-readiness",
+      "title": "发布准备与集成",
+      "description": "Use when a user explicitly requests integration, a pull request, packaging, deployment, or release and the concrete artifact, rollback, and environment gates must be prepared.",
+      "goal": "把已授权发布推进到可审查产物和实际门槛。",
+      "gate": "不自动push/合并/公开发布；发布不授权未知真实交易或数据删除。",
+      "steps": [
+        "检查分支/worktree/最终diff，只纳入本次文件。",
+        "核对构建、配置、契约/迁移、备份回滚和真实环境验收。",
+        "先完成独立可做准备，再说明缺失权限和未达门槛。"
+      ],
+      "outputs": "可审查集成/发布产物、验证与回滚、外部阻断。",
+      "references": [
+        "release-readiness.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-agent-coordination",
+      "title": "智能体协作与交接",
+      "description": "Use when an authorized workflow has independent subtasks suitable for additional agents or needs a bounded handoff across agents or context windows.",
+      "goal": "按真实工具、授权和文件所有权协调。",
+      "gate": "没有代理工具顺序完成；不把支持多个宿主等同自动启动多个代理。",
+      "steps": [
+        "比较独立性、收益与协调成本。",
+        "分派最小原始材料、读写边界、文件所有权和产物标准。",
+        "主执行者核对真实文件与证据，传递状态和未完成项。"
+      ],
+      "outputs": "职责分工、边界、产物核对和交接状态。",
+      "references": [
+        "agent-coordination.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-skill-authoring",
+      "title": "技能编写与维护",
+      "description": "Use when creating or revising a reusable skill, its discovery description, supporting resources, or provenance and checking it against realistic task boundaries.",
+      "goal": "保持单一职责、可发现、可组合、可验证。",
+      "gate": "不捆绑特定代理工具或私有产品，不伪造评测效果。",
+      "steps": [
+        "确认触发/排除/输入输出与真实用户需要。",
+        "保持短入口与按需参考，脚本实际运行，模板显式标记用途。",
+        "验证结构/链接/工具及真实边界，维护来源和采纳理由。"
+      ],
+      "outputs": "标准技能文件、必要资源与真实验证范围。",
+      "references": [
+        "skill-authoring.md"
+      ],
+      "resources": {}
+    },
+    {
+      "name": "aw-open-source-readiness",
+      "title": "开源就绪检查",
+      "description": "Use when preparing a skill collection or project for public distribution and checking packaging, licensing, provenance, privacy, portability, and honest validation claims.",
+      "goal": "形成可公开审阅的规范产物。",
+      "gate": "本地准备不等于授权远端建库、push或发布。",
+      "steps": [
+        "核对分发根、格式、引用、来源与逐文件许可。",
+        "检查私有业务、本机路径、秘密与多代理依赖。",
+        "运行结构和工具核验，列清已测/未测与发布门槛。"
+      ],
+      "outputs": "公开就绪文件、许可/来源与验收报告。",
+      "references": [
+        "open-source-readiness.md"
+      ],
+      "resources": {}
+    }
+  ]
+}

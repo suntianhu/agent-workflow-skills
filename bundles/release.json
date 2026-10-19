@@ -1,0 +1,92 @@
+{
+  "schema": 2,
+  "name": "release",
+  "kind": "documented-composition-not-native-executable-workflow",
+  "project_mode": "determine",
+  "skills": [
+    "aw-project-triage",
+    "aw-skill-selection",
+    "aw-model-routing",
+    "aw-effort-estimation",
+    "aw-release-readiness",
+    "aw-security-boundaries",
+    "aw-adversarial-review",
+    "aw-open-source-readiness",
+    "aw-evidence-verification",
+    "aw-delivery-cleanup"
+  ],
+  "optional": [
+    "aw-agent-coordination"
+  ],
+  "stages": [
+    {
+      "id": "triage",
+      "when": "always",
+      "skills": [
+        "aw-project-triage"
+      ],
+      "note": ""
+    },
+    {
+      "id": "resources",
+      "when": "as-needed",
+      "skills": [
+        "aw-skill-selection",
+        "aw-model-routing",
+        "aw-effort-estimation"
+      ],
+      "note": "简单任务仅做必要判断，不强制额外模型或代理。"
+    },
+    {
+      "id": "release-prepare",
+      "when": "release-requested",
+      "skills": [
+        "aw-release-readiness"
+      ],
+      "note": ""
+    },
+    {
+      "id": "security-release",
+      "when": "trust-boundary-change",
+      "skills": [
+        "aw-security-boundaries"
+      ],
+      "note": ""
+    },
+    {
+      "id": "review",
+      "when": "nontrivial-change",
+      "skills": [
+        "aw-adversarial-review"
+      ],
+      "note": ""
+    },
+    {
+      "id": "public-distribution",
+      "when": "public-distribution",
+      "skills": [
+        "aw-open-source-readiness"
+      ],
+      "note": ""
+    },
+    {
+      "id": "verify-deliver",
+      "when": "always",
+      "skills": [
+        "aw-evidence-verification",
+        "aw-delivery-cleanup"
+      ],
+      "note": ""
+    }
+  ],
+  "conditions": {
+    "always": "适用任务的必要判断。",
+    "as-needed": "判断确有收益才加载该能力；小任务可内联判断。",
+    "trust-boundary-change": "本次涉及认证、授权、归属、私有数据/文件或其他实际信任边界。",
+    "nontrivial-change": "常规/关键变更；轻微只核对需求/diff。",
+    "release-requested": "用户明确请求集成、打包或发布；不能自动外部写入。",
+    "public-distribution": "本次确需公开分发，内部部署不强制开源检查。"
+  },
+  "execution": "按阶段与条件选择，不是自动引擎；resources/审查/协作不因清单存在而强制启动。TDD是实现阶段的顺序，不是实现后的补测。",
+  "fix_handoff": "准备中发现需要代码修复时，先交接至debug-and-fix或相应新/老项目组合，满足其规范与测试门禁，再回到发布。"
+}

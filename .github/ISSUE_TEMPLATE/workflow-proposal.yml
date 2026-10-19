@@ -1,0 +1,28 @@
+name: Workflow improvement
+description: Propose a focused improvement backed by a real task.
+title: "[Proposal]: "
+body:
+  - type: markdown
+    attributes:
+      value: English and Simplified Chinese proposals are welcome. Prefer extending the responsible skill over introducing overlapping rules.
+  - type: textarea
+    id: task
+    attributes:
+      label: Concrete task and current gap
+      description: Describe the user request and the observable decision or outcome that needs improvement.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed responsibility and boundaries
+      description: Identify the existing skill or composition, prerequisites, output, and what should remain optional.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Evidence and validation approach
+      description: Provide primary references where needed and distinguish documented compatibility from executed checks.
+    validations:
+      required: true

@@ -1,0 +1,41 @@
+name: Bug report
+description: Report an observable skill, composition, or utility problem.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        English and Simplified Chinese reports are welcome. Include sanitized, reproducible evidence. For vulnerabilities or secrets, follow SECURITY.md instead of posting sensitive details.
+  - type: input
+    id: version
+    attributes:
+      label: Version and affected skill or workflow
+      placeholder: "1.1.2, aw-test-strategy, existing-frontend"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Agent/client version, OS, Python version if relevant, and documentation-only versus executed usage.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Provide the sanitized request, applicable project constraints, and steps or commands.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Expected and actual behavior
+      description: Include relevant output and exit codes. Explain which boundary is violated.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Additional evidence
+      description: Relevant files, final diff, or a small synthetic example; omit private code, credentials, and personal machine paths.
