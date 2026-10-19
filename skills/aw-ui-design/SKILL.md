@@ -1,12 +1,12 @@
 ---
 name: aw-ui-design
-description: "Use when designing or reviewing interface hierarchy, typography, color, layout, interaction feedback, accessibility, or a coherent visual system for a specific brief."
+description: "Use when designing or reviewing a specific page or interface flow, applying project design standards to hierarchy, layout, typography, interaction feedback, prototypes and accessibility."
 license: MIT
 ---
 
 # 需求驱动视觉设计
 
-根据内容与受众推导视觉，不套统一模板。
+将需求与项目设计规范落实为具体页面/流程。
 
 ## 前置条件与边界
 
@@ -16,18 +16,19 @@ license: MIT
 
 ## 执行
 
-1. 确定主动作、信息层级、设计token和真实内容；建立/扩展体系或核对具体设计细则时读取ui-system.md。
-2. 检查状态、可读性、焦点、触控、响应式、图片回退和减少动画。
+1. 读取简报、现有设计规范与参考采纳；应用信息层级、视觉规则及真实数据，共用变更回写同一规范。
+2. 设计适用状态与原型；核对可读性、焦点、触控、响应式、资源和减少动态效果，平台细则按需读取。
 3. 以实际环境核对受影响视觉，未看过的界面不冒称验收。
 
 ## 必须得到的结果
 
-视觉方案/原型、token、状态与实际核对范围。 没有证据的项目标为未核实，不补写完成结论。
+页面/流程方案或原型、局部例外、状态呈现、资源决定与实际核对范围。 没有证据的项目标为未核实，不补写完成结论。
 
 ## 按需资料
 
 - [ui-design.md](references/ui-design.md)：触发本技能时读取的基础指南。
-- [ui-system.md](references/ui-system.md)：建立/扩展设计体系或需要具体排版、密度、状态、资源细则时读取。
+- [ui-system.md](references/ui-system.md)：需要具体核对排版、密度、状态或资源时读取；简单局部调整沿用现有规则。
+- [design-platforms.md](references/design-platforms.md)：平台适配/迁移或需要核对原生导航、输入、单位与设备行为时，只读目标平台相关部分。
 
 
 本目录可独立复制；缺少其他技能时按本技能前置条件调查/产出，不绕过门禁。组合清单仅描述条件和顺序，不是执行引擎。工具调用使用宿主实际能力，不假定平台专用API。

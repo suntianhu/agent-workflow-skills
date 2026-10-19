@@ -13,6 +13,9 @@
     "aw-repository-audit",
     "aw-project-standards",
     "aw-requirements-design",
+    "aw-design-reference",
+    "aw-design-standards",
+    "aw-ui-design",
     "aw-api-contracts",
     "aw-security-boundaries",
     "aw-scoped-tdd",
@@ -85,6 +88,30 @@
       "note": ""
     },
     {
+      "id": "design-reference",
+      "when": "design-reference-needed",
+      "skills": [
+        "aw-design-reference"
+      ],
+      "note": "沿用项目规范和已选平台；已有适用依据时复用，不重复调研。"
+    },
+    {
+      "id": "design-standards",
+      "when": "design-standards-needed",
+      "skills": [
+        "aw-design-standards"
+      ],
+      "note": "写回同一项目规范入口；单页局部调整不重建体系。"
+    },
+    {
+      "id": "ui-design",
+      "when": "ui-change",
+      "skills": [
+        "aw-ui-design"
+      ],
+      "note": "仅涉及界面设计的缺陷；纯 API 修复跳过。"
+    },
+    {
       "id": "contracts",
       "when": "contract-change",
       "skills": [
@@ -150,7 +177,10 @@
     "tdd-selected": "本次请求代码实现且明确选择并授权TDD；在循环内使用本端实现约束。",
     "nontrivial-change": "常规/关键变更；轻微只核对需求/diff。",
     "defect-investigation": "追踪本次异常；实际复现遵守前置策略，P0不运行自动测试。",
-    "implementation-without-tdd": "本次请求代码实现且未选择TDD；仅执行受影响端。"
+    "implementation-without-tdd": "本次请求代码实现且未选择TDD；仅执行受影响端。",
+    "ui-change": "本次涉及实际界面的视觉/交互设计；轻微改动沿用现有规则，纯 API/服务任务跳过。",
+    "design-reference-needed": "本次有界面且用户要求参考/借鉴，或方向、平台规范、具体设计问题仍需外部依据；已有足够依据不重复搜索。",
+    "design-standards-needed": "本次有界面且建立/改变共用设计规则，或缺少本次所需的项目级设计规范；局部小改直接应用已有规则。"
   },
   "execution": "按阶段与条件选择，不是自动引擎；resources/审查/协作不因清单存在而强制启动。TDD是实现阶段的顺序，不是实现后的补测。"
 }

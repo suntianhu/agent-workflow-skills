@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.3.1",
+  "version": "1.4.0",
   "skills": [
     {
       "name": "aw-project-triage",
@@ -149,40 +149,92 @@
     },
     {
       "name": "aw-requirements-design",
-      "title": "需求与交互方案",
-      "description": "Define users or callers, goals, inputs, outputs, states, recovery and acceptance criteria for frontend, API, background-task or data-change requirements; visual styling belongs to UI design.",
+      "title": "需求设计与头脑风暴",
+      "description": "Use when defining goals, exploring alternative directions through brainstorming, or specifying behavior and acceptance for frontend, API, task or data requirements; visual styling belongs to UI design.",
       "goal": "从需求得到可审查交互方案。",
       "gate": "处理行为需求与验收，不规定配色/字体；重要方向缺口才询问，不重复已有批准。",
       "steps": [
-        "提取用户/场景/主任务/交付物/真实数据/冻结区。",
+        "读取已有项目决定；提取用户/场景/主任务/成功与非目标/真实数据/冻结区。",
         "写触发、正常行为、适用失败恢复和验收标准。",
-        "复杂取舍给具体方案和推荐，已有方向继续推进。"
+        "方向开放或要求头脑风暴时读取 brainstorming.md；实质取舍给少量具体方向及推荐，已有选择继续推进。"
       ],
       "outputs": "需求简报、关键路径、状态/验收和未决选择。",
       "references": [
-        "requirements-design.md"
+        "requirements-design.md",
+        "brainstorming.md"
       ],
-      "resources": {}
+      "resources": {},
+      "reference_conditions": {
+        "brainstorming.md": "方向开放、存在实质方案取舍，或用户要求头脑风暴时读取；明确小改跳过。"
+      }
+    },
+    {
+      "name": "aw-design-reference",
+      "title": "设计参考研究与采纳",
+      "description": "Use when researching design precedents, selecting platform guidelines or design systems, evaluating UI/UX skills, or adapting visual inspiration for Web, mini-program, mobile, desktop or cross-platform interfaces.",
+      "goal": "将适用参考转为有阅读证据的采纳决定。",
+      "gate": "既有规范与选定平台先行；图库不证明交互、可访问性或素材许可，不为参考更换技术栈。",
+      "steps": [
+        "先明确待解问题、简报与已有品牌/规范；按项目、平台官方、成熟系统、真实产品与灵感分层取证。",
+        "记录实际已读/已看/已操作、版本/日期与缺口；借鉴原则并写明调整、不采纳及许可边界。",
+        "共用决定交给同一项目设计规范，局部方向交给页面设计；证据够用即停止搜索。"
+      ],
+      "outputs": "来源/采纳表、推荐方向、适配与许可边界、规范或页面落点。",
+      "references": [
+        "design-reference.md",
+        "design-platforms.md"
+      ],
+      "resources": {},
+      "reference_conditions": {
+        "design-platforms.md": "平台分流、跨平台借鉴或目标设备约束尚不明确时，只读相关平台部分。"
+      }
+    },
+    {
+      "name": "aw-design-standards",
+      "title": "跨平台项目设计规范",
+      "description": "Use when establishing, documenting or changing shared project design standards, semantic tokens, components, content and platform adaptations for Web, mini-program, native app, desktop or cross-platform UI.",
+      "goal": "形成接回项目唯一规范入口的共用设计规则。",
+      "gate": "复用已有设计文档/token/组件源与规范目录；项目 Skill 只建薄入口，单页小改不重建体系。",
+      "steps": [
+        "读取同一项目基线、技能采纳表、需求与参考；提取既有设计事实，区分新决定、例外与未知。",
+        "明确共用语义、内容、token/组件与状态；按实际发布平台映射导航、输入、单位和可访问性。",
+        "维护现有规范入口及可读相对引用，核对真实消费者与验证边界，后续技能沿用同一决定。"
+      ],
+      "outputs": "项目内设计规则/子文档、真实 token/组件映射、平台边界、采纳依据及入口/验证证据。",
+      "references": [
+        "design-standards.md",
+        "ui-system.md",
+        "design-platforms.md"
+      ],
+      "resources": {
+        "templates/design-standards.md": "assets/design-standards.md"
+      },
+      "reference_conditions": {
+        "ui-system.md": "需要具体排版、密度、状态与资源细则时读取。",
+        "design-platforms.md": "设计包含平台交互、设备/窗口或跨端映射时，只读实际目标部分。"
+      }
     },
     {
       "name": "aw-ui-design",
       "title": "需求驱动视觉设计",
-      "description": "Use when designing or reviewing interface hierarchy, typography, color, layout, interaction feedback, accessibility, or a coherent visual system for a specific brief.",
-      "goal": "根据内容与受众推导视觉，不套统一模板。",
+      "description": "Use when designing or reviewing a specific page or interface flow, applying project design standards to hierarchy, layout, typography, interaction feedback, prototypes and accessibility.",
+      "goal": "将需求与项目设计规范落实为具体页面/流程。",
       "gate": "先有需求和平台约束；老项目遵从已生成内部规范与冻结区。",
       "steps": [
-        "确定主动作、信息层级、设计token和真实内容；建立/扩展体系或核对具体设计细则时读取ui-system.md。",
-        "检查状态、可读性、焦点、触控、响应式、图片回退和减少动画。",
+        "读取简报、现有设计规范与参考采纳；应用信息层级、视觉规则及真实数据，共用变更回写同一规范。",
+        "设计适用状态与原型；核对可读性、焦点、触控、响应式、资源和减少动态效果，平台细则按需读取。",
         "以实际环境核对受影响视觉，未看过的界面不冒称验收。"
       ],
-      "outputs": "视觉方案/原型、token、状态与实际核对范围。",
+      "outputs": "页面/流程方案或原型、局部例外、状态呈现、资源决定与实际核对范围。",
       "references": [
         "ui-design.md",
-        "ui-system.md"
+        "ui-system.md",
+        "design-platforms.md"
       ],
       "resources": {},
       "reference_conditions": {
-        "ui-system.md": "建立/扩展设计体系或需要具体排版、密度、状态、资源细则时读取。"
+        "ui-system.md": "需要具体核对排版、密度、状态或资源时读取；简单局部调整沿用现有规则。",
+        "design-platforms.md": "平台适配/迁移或需要核对原生导航、输入、单位与设备行为时，只读目标平台相关部分。"
       }
     },
     {
@@ -200,11 +252,13 @@
       "references": [
         "frontend.md",
         "project-mode.md",
-        "browser-validation.md"
+        "browser-validation.md",
+        "design-platforms.md"
       ],
       "resources": {},
       "reference_conditions": {
-        "browser-validation.md": "本次需要且允许浏览器实际交互验证时读取；不自动安装工具或新增持久测试。"
+        "browser-validation.md": "本次需要且允许浏览器实际交互验证时读取；不自动安装工具或新增持久测试。",
+        "design-platforms.md": "涉及平台原生交互、设备/窗口适配或跨端迁移时，只读目标平台相关部分。"
       }
     },
     {

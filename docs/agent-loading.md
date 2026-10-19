@@ -1,6 +1,6 @@
 # Isolated native loading validation
 
-These are historical 1.2.0 discovery results. Version 1.3.1 changes instructions and conditional references, while keeping the same 24 names; native host discovery was not rerun for that revision. Structural and scenario checks for the new content are recorded separately in [validation](validation.md).
+These are historical 1.2.0 discovery results for 24 skills. Version 1.4.0 now contains 26 skills, including design reference research and project design standards; native discovery of this revision has not been rerun. Current structural and scenario checks are recorded separately in [validation](validation.md).
 
 Checked on 2026-10-19 on Windows. All native processes used disposable projects under system TEMP with separate home/config/cache directories. No default skills were installed, replaced, or removed.
 
