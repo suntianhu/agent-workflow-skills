@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.2.0",
+  "version": "1.3.1",
   "skills": [
     {
       "name": "aw-project-triage",
@@ -9,7 +9,7 @@
       "goal": "确定真实项目类型、影响端、风险和本次可执行范围。",
       "gate": "老项目代码/配置/脚本开发须先完成全仓梳理与项目内规范；新项目未选栈不初始化。",
       "steps": [
-        "读取当前仓库规则与工作区，确认已有业务、数据和兼容负担；新页面不等于新项目。",
+        "读取当前仓库规则、既有技能/代理配置与工作区，确认已有业务、数据和兼容负担；新页面不等于新项目。",
         "分别判断前端、后端与跨端；依据行为与信任边界分级，不按行数。",
         "列出前置产物、仍缺决策、允许独立推进的工作；不为已有授权重复确认。"
       ],
@@ -26,7 +26,7 @@
       "goal": "用最少适用技能形成一致工作流。",
       "gate": "用户明确指定的技能先读；不因关键词或可能性阈值强制加载无关能力。",
       "steps": [
-        "看描述并核对目标、产物、平台和风险。",
+        "先读项目既有技能清单、规则与规范，再按目标、产物、平台和风险筛选；后续启用也承接已定栈、冻结区和验证决定。",
         "对实质影响方案的候选记录采纳/部分采纳/不采纳及理由。",
         "冲突按当前指令和目标项目约束收敛，不叠加审批/TDD门禁。"
       ],
@@ -79,7 +79,7 @@
       "goal": "读完当前项目全部自有代码，形成可追溯全仓理解。",
       "gate": "不得用目录扫描、抽样、已有README或局部检索冒充全仓阅读；未完成不开始产品实现。",
       "steps": [
-        "清点隐藏/未跟踪、前后端、共享库、迁移、生成器、CI和部署。",
+        "清点隐藏/未跟踪、前后端、共享库、迁移、生成器、CI和部署，以及既有技能/代理配置与外部规则引用。",
         "逐项阅读，记录每项用途、调用关系、约束、证据和指纹；排除项给实际依据。",
         "汇总完整阅读证据与真实阻断，交给内部规范阶段；规范完成前不开始产品实现。"
       ],
@@ -100,16 +100,17 @@
       "goal": "把当前项目实际约束变成可执行内部文档。",
       "gate": "老项目全仓未读完不能标完成；新项目框架未由用户选定不能把候选写成已选。",
       "steps": [
-        "优先项目现有规范入口，否则写docs/engineering/PROJECT_STANDARDS.md。",
+        "优先项目现有规范目录，否则写docs/engineering/PROJECT_STANDARDS.md；需要项目级Skill时复用宿主项目目录，以薄入口引用同一规范并核对相对路径。",
         "前端与后端规则分别填写，附真实代码/配置或固定范本证据。",
-        "分开现状、规范、例外和待改进，开发与架构变化同步更新。"
+        "分开现状、规范、例外和待改进；承接既有技能采纳与冲突表，后续启用技能接回同一规范，开发与架构变化同步更新。"
       ],
-      "outputs": "目标项目内部规范，含范围基线、栈、目录、设计、契约、安全、命令、验证和发布。",
+      "outputs": "目标项目内部规范及需要的项目级技能入口，含目录/路径证据、范围基线、栈、设计、契约、安全、原生测试命令、保留及发布；宿主发现另列证据。",
       "references": [
         "project-standards.md"
       ],
       "resources": {
-        "templates/project-standards.md": "assets/project-standards.md"
+        "templates/project-standards.md": "assets/project-standards.md",
+        "templates/project-skill.md": "assets/project-skill.md"
       }
     },
     {
@@ -170,15 +171,19 @@
       "goal": "根据内容与受众推导视觉，不套统一模板。",
       "gate": "先有需求和平台约束；老项目遵从已生成内部规范与冻结区。",
       "steps": [
-        "确定主动作、信息层级、设计token和真实内容。",
+        "确定主动作、信息层级、设计token和真实内容；建立/扩展体系或核对具体设计细则时读取ui-system.md。",
         "检查状态、可读性、焦点、触控、响应式、图片回退和减少动画。",
         "以实际环境核对受影响视觉，未看过的界面不冒称验收。"
       ],
       "outputs": "视觉方案/原型、token、状态与实际核对范围。",
       "references": [
-        "ui-design.md"
+        "ui-design.md",
+        "ui-system.md"
       ],
-      "resources": {}
+      "resources": {},
+      "reference_conditions": {
+        "ui-system.md": "建立/扩展设计体系或需要具体排版、密度、状态、资源细则时读取。"
+      }
     },
     {
       "name": "aw-frontend-implementation",
@@ -189,32 +194,40 @@
       "steps": [
         "读取前端规范与实际后端契约，识别路由/状态/样式/平台边界。",
         "实现正常、加载、错误、重试、取消、重复操作和账号切换。",
-        "执行项目规定工程检查，按测试政策验证直接影响并更新规范。"
+        "执行项目规定工程检查，按测试政策验证直接影响并更新规范；需要且允许浏览器交互验证时读取browser-validation.md。"
       ],
       "outputs": "前端改动、规范同步、工程/行为证据与外部缺口。",
       "references": [
         "frontend.md",
-        "project-mode.md"
+        "project-mode.md",
+        "browser-validation.md"
       ],
-      "resources": {}
+      "resources": {},
+      "reference_conditions": {
+        "browser-validation.md": "本次需要且允许浏览器实际交互验证时读取；不自动安装工具或新增持久测试。"
+      }
     },
     {
       "name": "aw-backend-implementation",
       "title": "后端实现",
-      "description": "Use when implementing API services, business logic, persistence, migrations, tasks, or integrations after existing/new project prerequisites are satisfied.",
+      "description": "Use when implementing API services, business logic, persistence, migrations, tasks, or integrations after existing/new project prerequisites are satisfied, including scoped PostgreSQL query, connection and locking work.",
       "goal": "按实际栈的内部规范实现业务与数据边界。",
       "gate": "不固定ORM/数据库/分层库；老项目先全仓与规范，新项目先用户选栈。",
       "steps": [
         "读取真实入口、业务、事务、数据与部署规范。",
-        "落实输入、归属、错误、并发/幂等、迁移和外部调用边界。",
+        "落实输入、归属、错误、并发/幂等、迁移和外部调用边界；实际涉及PostgreSQL/Supabase查询、连接、锁、迁移或权限时读取postgres-data.md。",
         "执行规定工程检查及允许的局部验证，同步契约与规范。"
       ],
       "outputs": "后端改动、契约/迁移/规范同步及实际证据。",
       "references": [
         "backend.md",
-        "project-mode.md"
+        "project-mode.md",
+        "postgres-data.md"
       ],
-      "resources": {}
+      "resources": {},
+      "reference_conditions": {
+        "postgres-data.md": "实际使用PostgreSQL/Supabase且涉及查询、连接、锁、迁移或权限时读取。"
+      }
     },
     {
       "name": "aw-api-contracts",
@@ -236,19 +249,25 @@
     {
       "name": "aw-security-boundaries",
       "title": "应用安全边界",
-      "description": "Use when a change affects authentication, authorization, ownership, private files, external requests, payment, refund, or other concrete trust boundaries.",
+      "description": "Use when a change affects authentication, authorization, ownership, private files, external requests, payment, refund, or other concrete trust boundaries, or when verifying a specific suspected security finding.",
       "goal": "核对本次实际信任边界与恢复路径。",
       "gate": "不是无范围全仓渗透；不操作未知金额/对象的交易或真实业务数据。",
       "steps": [
-        "识别入口身份、资源归属、输入和外部依赖。",
-        "按涉及点核对授权/私图/SSRF/签名/支付退款/日志与幂等。",
+        "识别入口身份、资源归属、输入和外部依赖；核实疑似漏洞或安全控制变更时读取security-review-evidence.md。",
+        "按涉及点核对授权/私图/SSRF/签名/支付退款/日志与幂等；涉及PostgreSQL/Supabase角色、策略或租户隔离时读取postgres-data.md。",
         "限定静态检查、局部行为与真实渠道证据，保留未验门槛。"
       ],
       "outputs": "有证据的边界发现、修复与真实外部验证缺口。",
       "references": [
-        "security-boundaries.md"
+        "security-boundaries.md",
+        "security-review-evidence.md",
+        "postgres-data.md"
       ],
-      "resources": {}
+      "resources": {},
+      "reference_conditions": {
+        "security-review-evidence.md": "核实具体疑似漏洞或安全控制变更时读取。",
+        "postgres-data.md": "涉及实际PostgreSQL/Supabase角色、策略或租户隔离时读取。"
+      }
     },
     {
       "name": "aw-test-strategy",
@@ -258,10 +277,10 @@
       "gate": "小改不自动TDD；不把其他项目禁测规则推广全局；已有用例不擅删。",
       "steps": [
         "读取当前用户/项目P0/P1/P2政策和真实风险。",
-        "选择必要工程检查与直接行为路径，不间接运行禁用套件。",
+        "确定目标语言/运行时、现有测试工具/目录/局部命令、复用用例与临时路径；验证实际目标，不用跨语言替代实现冒充功能证据。",
         "沿用已有选择并交接执行；实质升级成本/保留政策才一次确认，本阶段不实现或清理。"
       ],
-      "outputs": "本次验证与保留决定、实际命令范围和必要未决选择。",
+      "outputs": "本次验证/TDD/保留决定、目标工具链与测试目录、复用/新增边界、临时产物收尾及必要未决项。",
       "references": [
         "test-strategy.md"
       ],
@@ -274,9 +293,9 @@
       "goal": "用真实失败驱动最小修复，避免测试堆积。",
       "gate": "本次已选择并授权TDD及保留政策；老项目先全仓与内部规范，新项目先用户选栈与规范，不删除用户实现制造红灯。",
       "steps": [
-        "观察针对真实行为的失败并排除环境/语法错误。",
+        "按项目原生工具和已定目录复用最小用例，观察针对真实目标行为的失败，排除环境/语法错误及替代实现伪验证。",
         "最小实现转绿，必要重构后对最终代码局部复核。",
-        "保存脱敏红绿证据与本任务产物清单，按约定交给交付清理阶段处理保留或删除。"
+        "同轮重试复用载体，限制新增范围；保存真实红绿证据和精确产物清单，按约定交接保留/清理，不滚动堆测试文件。"
       ],
       "outputs": "实际红/绿证据、最终版本复核、保留/清理清单。",
       "references": [
@@ -309,14 +328,18 @@
       "gate": "轻微改动只核对需求/diff；代理审查需已有授权且不能变成测试/写入。",
       "steps": [
         "读取原需求、最终差异、规则与检查证据。",
-        "检查适用边界，逐项给位置、触发、后果和验证办法。",
+        "检查适用边界，逐项给位置、触发、后果和验证办法；仅疑似漏洞或安全相关差异另读security-review-evidence.md。",
         "将核实发现交给实现者处理；由实现者修复后，审查者只读定向复核。"
       ],
       "outputs": "有证据的发现或限定范围未见阻断问题。",
       "references": [
-        "adversarial-review.md"
+        "adversarial-review.md",
+        "security-review-evidence.md"
       ],
-      "resources": {}
+      "resources": {},
+      "reference_conditions": {
+        "security-review-evidence.md": "本次涉及疑似漏洞或安全相关差异时读取；通用审查不加载。"
+      }
     },
     {
       "name": "aw-evidence-verification",

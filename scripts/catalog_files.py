@@ -106,6 +106,12 @@ def load_catalog(root):
                 raise ValueError(name + ": invalid " + field)
         if len(set(row["references"])) != len(row["references"]) or not isinstance(row.get("resources"), dict):
             raise ValueError(name + ": invalid resources/references")
+        conditions = row.get("reference_conditions", {})
+        if not isinstance(conditions, dict) or any(
+            key not in row["references"] or not isinstance(value, str) or not value.strip()
+            for key, value in conditions.items()
+        ):
+            raise ValueError(name + ": invalid conditional references")
         expected_files(row)
     if not names:
         raise ValueError("catalog cannot be empty")
@@ -114,7 +120,11 @@ def load_catalog(root):
 
 def render_skill(row):
     steps = "\n".join(f"{index}. {value}" for index, value in enumerate(row["steps"], 1))
-    references = "\n".join(f"- [{value}](references/{value})：本次触发该能力时读取。" for value in row["references"])
+    conditions = row.get("reference_conditions", {})
+    references = "\n".join(
+        f"- [{value}](references/{value})：" + conditions.get(value, "触发本技能时读取的基础指南。")
+        for value in row["references"]
+    )
     resources = "\n".join(f"- [{PurePosixPath(target).name}]({target})：按指南使用；模板按真实项目填写。" for target in row["resources"].values())
     return f"""---
 name: {row['name']}
@@ -129,6 +139,8 @@ license: MIT
 ## 前置条件与边界
 
 {row['gate']} 遵从当前用户、适用项目规则与宿主权限；不因技能存在扩大任务或外部写入授权，已有授权继续执行。
+
+进入已有项目时读取当前项目规则与既有内部规范，承接已完成的梳理、技能采纳和验证决定。后续启用本技能也先核对这些记录；发现冲突先收敛到同一规范入口，不另起脱节流程。
 
 ## 执行
 

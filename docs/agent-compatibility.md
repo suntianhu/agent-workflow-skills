@@ -1,5 +1,7 @@
 # Agent compatibility
 
+Native discovery evidence refers to 1.2.0. The same 24 skill names remain in 1.3.1, with revised instructions and conditional references; native host discovery was not rerun for this content update. See [current validation](validation.md) and [historical host evidence](agent-loading.md).
+
 Documentation mapping and isolated native probes checked on 2026-10-19. Shared entrypoints use Agent Skills `name`, `description`, `license`, and relative resources. `agents/openai.yaml` is an optional Codex UI extension, not a cross-host requirement. Skill bodies and detailed guides are currently in Simplified Chinese; the repository overview is available in six languages.
 
 | Host | Documented integration | Actual evidence |

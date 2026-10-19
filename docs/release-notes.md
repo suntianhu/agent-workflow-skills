@@ -1,19 +1,21 @@
-# v1.2.0 — Reproducible releases and native discovery
+# v1.3.1 — Project skill directories and bounded native validation
 
-Agent Workflow Skills provides 24 focused skills and eight documented development compositions, with six README languages.
+Agent Workflow Skills retains 24 skills, eight compositions and the specialist references from 1.3.0. This patch clarifies project standards placement and prevents temporary TDD checks from accumulating or validating substitute implementations.
 
 ## Changes
 
-- Publish version tags through Windows/Linux validation, reproducible tracked-source packaging, and a separate release job with minimal permissions.
-- Attach a prepared ZIP and SHA-256 checksum; reject stale versions, dirty trees, unsafe output paths, and nonregular Git entries.
-- Add worked usage scenarios and executable offline examples for repository-reading gates, explicit time calibration, and byte-verified composition export.
-- Add isolated native Codex/Claude discovery probes and sanitized evidence with before/after default-skill snapshots.
-- Document PR maintenance, solo-maintainer branch protection, future releases, and exact compatibility limits across all six READMEs.
+- Reuse existing project standards directories; fall back to docs/engineering only when no convention exists.
+- Provide a thin project-level skill template in the project host's actual discovery directory, referencing the same canonical standards with verified relative paths. Do not use global skill directories or duplicate standards per host.
+- Select existing native test languages, runtimes, roots and scoped commands. A Python rewrite or source-text check does not demonstrate Java/frontend behavior; real cross-language black-box checks retain their narrower evidence scope.
+- Reuse the same TDD carrier across retries. P1 temporary files and assertions do not become persistent additions, while P2 additions need actual regression value and a maintenance location.
+- Clean only agreed task-owned temporary artifacts, preserving existing tests and other user changes. See [the detailed policy](project-standards-and-tdd.md).
 
 ## Validation and limits
 
-Codex CLI `0.163.0-alpha.10.2` and Claude Code `2.1.303` discovered all 24 skills in disposable Windows projects. Claude named discovery used the official Agent SDK `0.3.303`. Default skill trees were unchanged. This verifies discovery and metadata/command loading, not model decisions or full workflow execution. No credentials were copied; authenticated agent scenarios remain unverified.
+See [the validation record](validation.md) for actual structural, export, source-hash, scenario and archive checks on this revision. Synthetic scenario responses do not demonstrate real browser, database or application execution and are not a cross-model effectiveness benchmark.
 
-CI validates source, executes offline synthetic examples, and dry-runs packaging on Windows and Linux. Native host probes are separate local checks. See the validation record and Actions result for the tagged commit. Skill bodies and guides remain Chinese; Gemini, Copilot, and other host versions remain untested.
+Native discovery records for Codex and Claude belong to 1.2.0. Native discovery was not rerun for 1.3.0. Gemini, Copilot, other platforms and end-to-end agent workflows remain outside that evidence. Check Actions for CI results on the actual release commit; local preparation does not establish remote CI success.
 
-The attached SHA-256 file applies only to the named prepared ZIP. Nothing is installed automatically and no default agent settings are changed.
+Original material remains MIT-licensed. Upstream material retains its own license, including Trail of Bits CC-BY-SA-4.0; no upstream skill bodies, translations, implementations, datasets or assets are bundled.
+
+The SHA-256 sidecar applies only to the named prepared ZIP. Preparing this source does not publish a release, install skills or change default agent settings.
