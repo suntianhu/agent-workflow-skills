@@ -89,7 +89,7 @@ python scripts/validate.py
 
 검증 도구는 선언, 생성 내용의 동기화, 정확한 리소스 집합, 로컬 링크, Python 문법, 구성 단계 순서, 일부 배포물 점검 규칙을 확인합니다. 에이전트의 판단이 옳거나 프레임워크에 취약점이 없음을 증명하지는 않습니다.
 
-Windows/Linux CI는 소스, 실행 가능한 오프라인 예제와 패키징을 검사합니다. Codex와 Claude는 Windows 격리 프로젝트에서 24개 스킬을 모두 검색했습니다. 모델 기반 워크플로 실행은 미검증 상태입니다. 버전과 범위는 [검증 기록](docs/validation.md)과 [네이티브 증거](docs/agent-loading.md)를 참조하세요.
+Windows/Linux CI는 소스, 실행 가능한 오프라인 예제와 패키징을 검사합니다. Codex와 Claude는 Windows 격리 프로젝트에서 24개 스킬을 모두 검색했습니다. 추가로 실행 가능한 가상 Web 프로젝트 두 개에서 신규·기존 프로젝트 흐름과 후속 요구사항을 수행했고 최종 브라우저 검사 42개를 통과했습니다. 현재 26개 스킬의 자동 검색·실행이나 운영 환경 전체를 검증한 것은 아닙니다. [실행 기록](docs/executed-workflows.md), [검증 기록](docs/validation.md), [네이티브 증거](docs/agent-loading.md)를 참조하세요.
 
 ## 사용 예제와 자동 릴리스
 
