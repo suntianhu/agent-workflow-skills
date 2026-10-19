@@ -40,7 +40,7 @@ def main():
                 errors.append(relative + ": compiled residue")
             if path.name in {".env", "test.env", ".npmrc", ".pypirc"} or path.name.startswith(".env."):
                 errors.append(relative + ": runtime/sensitive configuration is not part of this distribution")
-            if path.suffix not in {".md", ".json", ".py", ".yaml", ".yml", ".txt"} and path.name not in {"LICENSE", ".gitignore"}:
+            if path.suffix not in {".md", ".json", ".py", ".yaml", ".yml", ".txt"} and path.name not in {"LICENSE", ".gitignore", ".gitattributes"}:
                 errors.append(relative + ": unexpected distribution file type")
                 continue
             text = path.read_text(encoding="utf-8")

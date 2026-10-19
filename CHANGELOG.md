@@ -4,7 +4,7 @@
 
 - Add full Traditional Chinese, Japanese, Korean, and Russian README translations.
 - Synchronize six-language navigation, shared overview facts, contribution guidance, and release metadata.
-- Keep skill bodies, detailed guides, compositions, and utility behavior unchanged.
+- Preserve skill responsibilities and workflow definitions; normalize checkout line endings and rebuild generated hashes for cross-platform validation.
 
 ## 1.1.1 — 2026-10-19
 

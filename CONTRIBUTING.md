@@ -32,4 +32,4 @@ Contribution templates and release-facing documentation use English. A report or
 
 Describe the concrete trigger, final behavior, affected files, evidence, and remaining gaps. Include current primary sources when adding host compatibility or time-sensitive framework guidance. Pin borrowed references and check their exact license scope. Follow [SECURITY.md](SECURITY.md) for sensitive reports.
 
-CI is configured but has not run remotely for this local distribution. New adapters should state whether they were checked against documentation, loaded structurally, or exercised end to end.
+CI runs on Windows and Linux. Check the actual result for each pull request and release commit. Keep text files in LF form as specified by `.gitattributes`; do not disable byte-level freshness or hash checks to accommodate line-ending drift. New adapters should state whether they were checked against documentation, loaded structurally, or exercised end to end.
