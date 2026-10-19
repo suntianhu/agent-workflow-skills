@@ -8,9 +8,9 @@
 ![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**版本 1.4.2** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
+**版本 1.2.1** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
 
-1.4.2 提供设计参考研究与项目设计规范，共 26 个技能、8 套组合，串起头脑风暴、参考采纳、整体规范和页面设计，覆盖 Web、后台、小程序、原生 App、桌面与跨端界面。见[设计流程](docs/design-workflow.md)、[来源与去重](docs/provenance.md)和[宣传文案](docs/promotion.zh-CN.md)。下方原生发现证据来自 1.2.0，当前 26 技能集合尚未重跑宿主发现。 独立单页稿/展示原型无需先建工程、选栈或整套体系；正式接入仍保留开发门禁。 可核对基线和已完成前置按证据复用，只补真实缺口；见[26 技能触发与衔接审计](docs/workflow-audit.md)。
+1.2.1 保留 26 个技能、8 套条件组合：先选主要能力，缺口才补，沿用项目规则；改用户已有 Skill 先展示具体方案并获确认。见[最短路径](docs/bundles.md)、[设计流程](docs/design-workflow.md)、[来源](docs/provenance.md)和[版本/标签记录](docs/versioning.md)。
 
 区分已有项目和新项目，按任务选择适用技能，分别维护前后端规范，在实现前选定验证策略，并如实报告实际验证范围。
 

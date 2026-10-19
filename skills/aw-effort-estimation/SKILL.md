@@ -1,6 +1,6 @@
 ---
 name: aw-effort-estimation
-description: "Use when estimating remaining work, revising a time range after new evidence, or calibrating repeated overestimation from comparable measured tasks."
+description: "Use when the user asks for time or a substantial task needs an initial or revised remaining-time estimate; trivial edits do not need clock or logging overhead."
 license: MIT
 ---
 
@@ -8,25 +8,23 @@ license: MIT
 
 给可校准的本地剩余时间，外部未知单列。
 
-## 前置条件与边界
+开始给有依据的初估并单列未知；辨明历史偏差方向，只校准同类未校准部分，不统一乘二或减半。
 
-先调查再估；已测步骤不重复校准，已完成调查不计入剩余。 遵从当前用户、适用项目规则与宿主权限；不因技能存在扩大任务或外部写入授权，已有授权继续执行。
-
-进入已有项目时读取当前项目规则与既有内部规范，承接已完成的梳理、技能采纳和验证决定。后续启用本技能也先核对这些记录；发现冲突先收敛到同一规范入口，不另起脱节流程。
+沿用当前项目规范、有效基线及验证决定，缺口才补。改写、合并或替换用户已有 Skill，先展示具体差异并获明确确认；已确认范围直接沿用。只使用本次获授权的工具与操作。
 
 ## 执行
 
-1. 读取真实时钟和用户时区，分解未完成实现/检查/审查/清理。
-2. 用同类实耗比例校准未校准实现部分，缺样本时明确先验。
-3. 范围/假设改变就更新；完成后只记录真实匿名分钟。
+1. 用已知范围、项目检查命令与可信同类实耗给初始剩余区间；必要调查后修订，不先展开估时专项调研。
+2. 同类实际/预计比值校准实现，少于三条标弱证据；验证/外部等待分别估，并行按关键路径计时。
+3. 范围改变或接近上界及时更新；结束比较真实用时与偏差，持久记录只写约定位置。
 
-## 必须得到的结果
+## 交付
 
-时间范围、证据/样本数、未知阶段与偏差。 没有证据的项目标为未核实，不补写完成结论。
+时间范围、证据/样本数、未知阶段与偏差。 未核实项如实标注。
 
 ## 按需资料
 
-- [effort-estimation.md](references/effort-estimation.md)：触发本技能时读取的基础指南。
+- [effort-estimation.md](references/effort-estimation.md)：入口不足以处理本次细节时，仅读相关段落；已读且未变则复用。
 - [estimate.py](scripts/estimate.py)：按指南使用；模板按真实项目填写。
 
-本目录可独立复制；缺少其他技能时按本技能前置条件调查/产出，不绕过门禁。组合清单仅描述条件和顺序，不是执行引擎。工具调用使用宿主实际能力，不假定平台专用API。
+本目录可独立使用；只补真实缺口，不自动串联其他技能。组合是条件说明，不是必跑清单。
