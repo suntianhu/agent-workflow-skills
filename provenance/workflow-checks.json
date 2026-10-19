@@ -1,0 +1,106 @@
+{
+  "schema": 1,
+  "version": "1.4.2",
+  "passed": true,
+  "skills_covered": [
+    "aw-adversarial-review",
+    "aw-agent-coordination",
+    "aw-api-contracts",
+    "aw-backend-implementation",
+    "aw-delivery-cleanup",
+    "aw-design-reference",
+    "aw-design-standards",
+    "aw-effort-estimation",
+    "aw-evidence-debugging",
+    "aw-evidence-verification",
+    "aw-framework-selection",
+    "aw-frontend-implementation",
+    "aw-github-reference",
+    "aw-model-routing",
+    "aw-open-source-readiness",
+    "aw-project-standards",
+    "aw-project-triage",
+    "aw-release-readiness",
+    "aw-repository-audit",
+    "aw-requirements-design",
+    "aw-scoped-tdd",
+    "aw-security-boundaries",
+    "aw-skill-authoring",
+    "aw-skill-selection",
+    "aw-test-strategy",
+    "aw-ui-design"
+  ],
+  "official_skill_structure_checks": 26,
+  "generated_manifest_repeat_identical": true,
+  "exports": [
+    {
+      "bundle": "debug-and-fix",
+      "skills": 21,
+      "byte_identical_skill_files": 106,
+      "cleanup_before_final_evidence": true
+    },
+    {
+      "bundle": "existing-backend",
+      "skills": 16,
+      "byte_identical_skill_files": 76,
+      "cleanup_before_final_evidence": true
+    },
+    {
+      "bundle": "existing-frontend",
+      "skills": 19,
+      "byte_identical_skill_files": 96,
+      "cleanup_before_final_evidence": true
+    },
+    {
+      "bundle": "fullstack",
+      "skills": 22,
+      "byte_identical_skill_files": 110,
+      "cleanup_before_final_evidence": true
+    },
+    {
+      "bundle": "new-backend",
+      "skills": 17,
+      "byte_identical_skill_files": 77,
+      "cleanup_before_final_evidence": true
+    },
+    {
+      "bundle": "new-frontend",
+      "skills": 20,
+      "byte_identical_skill_files": 97,
+      "cleanup_before_final_evidence": true
+    },
+    {
+      "bundle": "release",
+      "skills": 11,
+      "byte_identical_skill_files": 48,
+      "cleanup_before_final_evidence": true
+    },
+    {
+      "bundle": "small-change",
+      "skills": 22,
+      "byte_identical_skill_files": 110,
+      "cleanup_before_final_evidence": true
+    }
+  ],
+  "old_project_reading_standards_predicates_separate": 5,
+  "new_project_stack_reference_standards_predicates_separate": 4,
+  "readme_skill_sets": 6,
+  "audit_matrix_skill_set_matches": true,
+  "standalone_authoring_fixture": {
+    "executed": true,
+    "edited_files": 1,
+    "added_files": 0,
+    "removed_files": 0,
+    "name_and_body_unchanged": true,
+    "extra_generator_or_installation": false,
+    "official_structure_check": true,
+    "final_file_sha256": "725217b87da9dacc34976acc46ddd3aa0863e49ed19fa76a68b0b7c6dffbc340"
+  },
+  "source_ledger_bytes_unchanged": true,
+  "source_hashing": "not_rerun; 11 repositories and 54 previously recorded files",
+  "distribution_privacy_pattern_flags": 0,
+  "natural_language_scenarios": "read-only judgments recorded in docs/workflow-audit.md, not an executable routing engine",
+  "product_execution": "not_run",
+  "native_host_discovery": "not_rerun",
+  "limits": "Structure, exact exports, dependency separation, final-stage order and a small synthetic skill-editing fixture; no product UI or measured model-effectiveness benchmark"
+}

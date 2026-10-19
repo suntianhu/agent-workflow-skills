@@ -1,4 +1,4 @@
-# Launch copy: Agent Workflow Skills 1.4.1
+# Launch copy: Agent Workflow Skills 1.4.2
 
 Repository: [suntianhu/agent-workflow-skills](https://github.com/suntianhu/agent-workflow-skills). These are drafts, not published posts. Say “preparing” while source is under review; merging source does not establish a tagged Release.
 
@@ -14,7 +14,7 @@ Repository: [suntianhu/agent-workflow-skills](https://github.com/suntianhu/agent
 
 ### Body
 
-I built **Agent Workflow Skills** to make coding agents account for the project they are changing and the evidence behind their results. Version **1.4.1** provides **26 skills and eight compositions**.
+I built **Agent Workflow Skills** to make coding agents account for the project they are changing and the evidence behind their results. Version **1.4.2** provides **26 skills and eight compositions**.
 
 Existing projects start with their code, existing skills and conventions. Later skill adoption reconnects to the same standards, chosen stack and validation decisions. New projects start with the requested language and an explicit stack choice.
 
@@ -23,6 +23,8 @@ Design connects brainstorming, reference research, shared project standards and 
 Code references come from relevant maintained repositories. Design references start with the project and platform, then suitable systems and real flows; galleries provide inspiration. Adoption records distinguish what was read, seen or operated, including access and licensing gaps.
 
 Standalone page drafts and isolated prototypes do not require a product project or production stack choice; formal integration retains project gates.
+
+The workflow audit reuses verifiable baselines and completed prerequisites, limits contract changes to affected consumers, checks final evidence after cleanup, and preserves licensed public assets and attribution.
 
 Validation scope, TDD and artifact retention are separate decisions. Existing native toolchains exercise real target behavior; temporary checks do not accumulate after every retry. API-only tasks skip UI stages, and local edits reuse existing rules.
 
@@ -36,7 +38,7 @@ Source: https://github.com/suntianhu/agent-workflow-skills
 
 ## Social post
 
-Agent Workflow Skills 1.4.1: 26 skills, eight compositions. Connect brainstorming, design references and project standards across Web, mini-programs, apps and desktop with implementation and bounded validation. Pinned sources and adoption decisions included.
+Agent Workflow Skills 1.4.2: 26 skills, eight compositions. Connect brainstorming, design references and project standards across Web, mini-programs, apps and desktop with implementation and bounded validation. Pinned sources and adoption decisions included.
 
 https://github.com/suntianhu/agent-workflow-skills
 

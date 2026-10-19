@@ -20,8 +20,8 @@
     "aw-scoped-tdd",
     "aw-frontend-implementation",
     "aw-adversarial-review",
-    "aw-evidence-verification",
-    "aw-delivery-cleanup"
+    "aw-delivery-cleanup",
+    "aw-evidence-verification"
   ],
   "optional": [
     "aw-agent-coordination"
@@ -47,19 +47,19 @@
     },
     {
       "id": "repository-audit",
-      "when": "existing-baseline-needed",
+      "when": "existing-audit-needed",
       "skills": [
         "aw-repository-audit"
       ],
-      "note": ""
+      "note": "先消费有效基线，只补缺失覆盖和全部差异；无可靠基线才全仓阅读。"
     },
     {
       "id": "project-standards",
-      "when": "existing-baseline-needed",
+      "when": "existing-standards-needed",
       "skills": [
         "aw-project-standards"
       ],
-      "note": ""
+      "note": "单独判断规范缺口；阅读已完成时只补同一规范，不重新审计或重填整份模板。"
     },
     {
       "id": "requirements",
@@ -148,26 +148,27 @@
       "id": "verify-deliver",
       "when": "always",
       "skills": [
-        "aw-evidence-verification",
-        "aw-delivery-cleanup"
+        "aw-delivery-cleanup",
+        "aw-evidence-verification"
       ],
-      "note": ""
+      "note": "先按清单定向收尾，再核对最终产物证据后交付；收尾改变工程输入才定向补验，无关日志删除不重跑全量。"
     }
   ],
   "conditions": {
     "always": "适用任务的必要判断。",
     "as-needed": "判断确有收益才加载该能力；小任务可内联判断。",
-    "existing-baseline-needed": "本次要求老项目正式代码/配置/工程脚本实施，且本轮全仓阅读/内部规范尚未有效完成；仅需求、页面稿或独立展示原型跳过，不冒称开发门禁已过。",
     "behavior-requirements-needed": "新增/改变行为或验收尚不清楚；明确文案微调不额外写设计。",
     "ui-change": "本次涉及实际界面的视觉/交互设计；轻微改动沿用现有规则，纯 API/服务任务跳过。",
     "contract-change": "接口/字段/数据/调用方契约改变。",
     "trust-boundary-change": "本次涉及认证、授权、归属、私有数据/文件或其他实际信任边界。",
-    "before-code-or-behavior-checks": "任何代码实现或行为检查前选定本次验证策略。",
+    "before-code-or-behavior-checks": "代码实现或行为检查前确保同一次验证/TDD/保留决定有效；已有决定直接承接，风险变化更新该决定，不重复询问。",
     "tdd-selected": "本次要求正式产品代码实施，并明确选择及授权TDD；循环内使用受影响端实现约束。独立原型的显式TDD仍在UI阶段按原型范围执行，不进入本产品实现阶段。",
-    "nontrivial-change": "常规/关键变更；轻微只核对需求/diff。",
+    "nontrivial-change": "用户明确要求审查，或常规/关键变更尚无覆盖最终产物的有效审查；无新增差异时复用既有结果，修复后只定向复核，轻微改动通常核对需求/diff。",
     "implementation-without-tdd": "本次要求正式产品代码实施且未选择TDD；仅执行受影响端。独立展示原型在UI阶段制作，不因此进入产品实现。",
     "design-reference-needed": "本次有界面且用户要求参考/借鉴，或方向、平台规范、具体设计问题仍需外部依据；已有足够依据不重复搜索。",
-    "design-standards-needed": "用户明确要求项目级共用设计规范，或正式产品实施需要建立/改变共用规则；单独页面稿/原型缺规范时只补本页规则，不启动整套体系。"
+    "design-standards-needed": "用户明确要求项目级共用设计规范，或正式产品实施需要建立/改变共用规则；单独页面稿/原型缺规范时只补本页规则，不启动整套体系。",
+    "existing-audit-needed": "本次要求老项目正式代码/配置/工程脚本实施，且无可核对的完整阅读覆盖，或基线后全部差异/理解缺口尚未补齐；有效未变记录继续承接，不按新需求/聊天重读。纯设计/只读调查不触发产品门禁。",
+    "existing-standards-needed": "本次老项目正式实施所需的同一规范入口缺失、关键约束未记录，或与已核实的当前事实/决定不一致；已有阅读基线不重做审计，现有规范仅补相关变化。"
   },
   "execution": "按阶段与条件选择，不是自动引擎；resources/审查/协作不因清单存在而强制启动。TDD是实现阶段的顺序，不是实现后的补测。 先按交付物选范围：仅需求/页面稿/独立展示原型在相应产物处停止，不机械执行产品门禁和实现；编写可运行原型代码/执行自动交互前先承接同一次局部验证决定。"
 }
