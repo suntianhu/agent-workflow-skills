@@ -29,7 +29,7 @@ The 1.3.0 export includes conditional specialist references. See [source integra
 
 The 1.3.1 export also includes a project-level standards skill template. Follow [project directory and TDD rules](../docs/project-standards-and-tdd.md) when filling it; do not install the unfilled template or treat native test tools as interchangeable with substitute implementations.
 
-The unpublished 1.4.0 source checkpoint added conditional design reference research, project design standards and a design template; these remain in current 1.2.1. See [the design workflow](../docs/design-workflow.md). Exported availability does not require running every stage or recreating an existing design system.
+The unpublished 1.4.0 source checkpoint added conditional design reference research, project design standards and a design template; these remain in current 1.2.2. See [the design workflow](../docs/design-workflow.md). Exported availability does not require running every stage or recreating an existing design system.
 
 The unpublished 1.4.1 source checkpoint distinguished standalone page/prototype delivery from product integration. Pages belonging to an existing product still inherit its design and global typography/theme even when the business flow is new or the prototype is outside the repository.
 
@@ -73,4 +73,4 @@ Expected sequence: separate frontend/backend requirements → present current, s
 
 The unpublished 1.4.2 source checkpoint separated missing reading coverage from missing project rules and new-project prerequisites, reusing completed outputs. Cleanup precedes final evidence verification; see the [workflow audit](../docs/workflow-audit.md).
 
-Current v1.2.1 uses precise conditional loading and independent resource decisions. Earlier 1.3/1.4 labels above are [unpublished development checkpoints](../docs/versioning.md), not additional public tags.
+Current v1.2.2 retains the precise conditional loading and independent resource decisions introduced in v1.2.1; this patch updates documentation only. Earlier 1.3/1.4 labels above are [unpublished development checkpoints](../docs/versioning.md), not additional public tags.

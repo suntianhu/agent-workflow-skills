@@ -1,6 +1,13 @@
 # Changelog
 
-Public tags and source-only checkpoints are distinct. See [version policy/status](docs/versioning.md). Keep existing v1.1.2 and v1.2.0 tags; routine releases now increment patch.
+Public tags and source-only checkpoints are distinct. See [version policy/status](docs/versioning.md). Preserve existing tags; routine releases increment patch.
+
+## 1.2.2 — 2026-10-20
+
+- Align all six README languages around leaner entries, task-scoped activation and continuity with existing project standards, fonts, themes and components.
+- Rewrite Chinese/English launch copy with concise posts, concrete scope examples and evidence limits; distinguish instruction policy and entry-byte measurements from unmeasured productivity or trigger accuracy.
+- Update release metadata and current-version references to 1.2.2; record the published v1.2.1 state and preserve historical evidence and tags.
+- Keep all 26 skill directories, eight compositions, source guides, resources and utility behavior unchanged.
 
 ## 1.2.1 — 2026-10-20
 
