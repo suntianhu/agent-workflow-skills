@@ -2,6 +2,14 @@
 
 Public tags and source-only checkpoints are distinct. See [version policy/status](docs/versioning.md). Preserve existing tags; routine releases increment patch.
 
+## 1.2.4 — 2026-10-20
+
+- Prefer precise fixes in the existing business module; repeated attempts reuse the same responsibility instead of adding repair copies or parallel implementations. Explain necessary new business files.
+- Remove or merge logic and references invalidated by the current fix, after checking dynamic callers, configuration and compatibility uses; leave unrelated historical cleanup outside the repair.
+- Verify the original defect, affected normal consumers and applicable failure/recovery paths under the existing test policy. A disappearing error alone does not establish regression coverage.
+- Review the final diff for unrelated formatting, renames, file moves, dependency upgrades and architectural rewrites. Keep necessary migrations and compatible legacy paths.
+- Update five existing skill entries and their guides; retain 26 skills, eight compositions and existing authorization/testing boundaries. Local installation and native discovery evidence is recorded separately from model or product execution.
+
 ## 1.2.3 — 2026-10-20
 
 - Carry explicitly requested reference-project layout conventions into stack selection and canonical module/start/import mappings; cover path migrations and private runtime-state preservation.
