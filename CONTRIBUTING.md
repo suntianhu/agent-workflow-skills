@@ -17,7 +17,7 @@ python scripts/validate.py
 python scripts/run_examples.py
 ```
 
-For changed utility behavior, use temporary synthetic fixtures outside the repository and cover the affected success, error, and boundary paths. Content-only edits do not require a new test framework or persistent test suite. For complex workflows, use scoped scenario review when authorized and useful. Report actual commands and results; format checks are not end-to-end agent validation.
+For changed utility behavior, use task-owned synthetic fixtures inside the authorized local project workspace, separate from distribution sources, and cover the affected success, error, and boundary paths. Do not default to system TEMP; inventory disposable artifacts and verify task-scoped cleanup. A project-local path does not itself grant tool deletion permission. Content-only edits do not require a new test framework or persistent test suite. For complex workflows, use scoped scenario review when authorized and useful. Report actual commands and results; format checks are not end-to-end agent validation.
 
 The builder rejects undeclared leftover resources. When withdrawing a reference or template, inspect its callers and the generated manifest, then remove only the identified files. Do not reclassify obsolete resources as expected just to make validation pass.
 

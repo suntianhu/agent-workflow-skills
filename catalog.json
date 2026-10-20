@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.2.2",
+  "version": "1.2.3",
   "skills": [
     {
       "name": "aw-project-triage",
@@ -124,11 +124,11 @@
       "title": "新项目框架选型",
       "description": "Use before initializing a genuinely new product project when language and platform constraints must be matched to maintained framework candidates; standalone page designs and isolated display prototypes do not need product stack selection.",
       "goal": "推荐适配、受支持、较新稳定且已核对已知风险的候选。",
-      "gate": "必须用户选择后初始化；无回复不是选择，已有明确选择不重复询问。",
+      "gate": "用户已选定或明确委托自主选型后方可初始化；委托时记录依据并继续，未获委托时无回复不是选择，已有有效决定不重复询问。",
       "steps": [
         "确认语言、平台、需求和部署约束；前后端分别比较。",
         "打开官方支持/发布、安全公告与公开仓库证据，给2–3候选及日期/许可/风险/成本。",
-        "用户选择后交付选中语言、框架、版本证据与限制，交接GitHub范本研究和项目规范；本技能不初始化代码或重复编写规范。"
+        "用户选定或在明确委托范围内完成选择后，交付语言、框架、版本证据、限制与决策来源，交接GitHub范本研究和项目规范；本技能不初始化代码或重复编写规范。"
       ],
       "outputs": "带直接来源的候选表、推荐依据、用户选择或待决事项。",
       "references": [
@@ -296,12 +296,12 @@
     {
       "name": "aw-api-contracts",
       "title": "前后端契约",
-      "description": "Use when requests, responses, validation, pagination, errors, timestamps, identity, or persistence contracts change across callers and services.",
+      "description": "Use when requests, responses, validation, pagination, errors, timestamps, identity, persistence or shared configuration contracts change across callers and services.",
       "goal": "保持全部直接调用方与数据语义一致。",
       "gate": "不遗漏受影响端和直接调用方；兼容性单端变更可只改该端，说明其他调用方无需修改的依据，不凭类型编译推断兼容。",
       "steps": [
         "追踪入口、调用方、旧数据和错误/恢复路径。",
-        "核对字段、枚举、分页、时区、身份、幂等和兼容。",
+        "核对字段、枚举、分页、时区、身份、幂等和兼容；可维护参数还要追踪维护入口、消费者、生效方式及私密边界。",
         "将事实落入项目内部规范，报告实际契约验证范围。"
       ],
       "outputs": "契约差异、受影响调用方、兼容/恢复策略与证据。",
@@ -341,7 +341,7 @@
       "gate": "小改不自动TDD；不把其他项目禁测规则推广全局；已有用例不擅删。",
       "steps": [
         "读取当前用户/项目P0/P1/P2政策和真实风险。",
-        "确定目标语言/运行时、现有测试工具/目录/局部命令、复用用例与临时路径；验证实际目标，不用跨语言替代实现冒充功能证据。",
+        "确定原生工具链、复用用例与局部命令；临时验证默认放当前已授权本地项目内的独立任务目录，记录产物与清理边界，不默认使用系统TEMP；验证实际目标，不用跨语言替代实现冒充功能证据。",
         "沿用已有选择并交接执行；实质升级成本/保留政策才一次确认，本阶段不实现或清理。"
       ],
       "outputs": "本次验证/TDD/保留决定、目标工具链与测试目录、复用/新增边界、临时产物收尾及必要未决项。",
@@ -430,7 +430,7 @@
       "gate": "不批量删用户已有测试/整个构建目录；策略拒绝后停止绕行。",
       "steps": [
         "核对本次文件、实际用途、入口/引用/依赖和约定保留方式。",
-        "核实绝对路径、授权范围与重定向后定向清理。",
+        "核实绝对路径、授权范围与重定向，按清单清理项目内任务自有临时文件和空任务目录，并确认实际结果；路径在项目内不等于自动获得工具删除权限。",
         "把清理后最终文件与受影响证据交给完成前核对，再交付实际结果与缺口；仅工程输入变化需定向补验。"
       ],
       "outputs": "最终改动、清理结果和真实保留/阻断项。",

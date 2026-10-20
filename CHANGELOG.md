@@ -2,6 +2,15 @@
 
 Public tags and source-only checkpoints are distinct. See [version policy/status](docs/versioning.md). Preserve existing tags; routine releases increment patch.
 
+## 1.2.3 — 2026-10-20
+
+- Carry explicitly requested reference-project layout conventions into stack selection and canonical module/start/import mappings; cover path migrations and private runtime-state preservation.
+- Close shared configuration contracts across maintenance, validation, storage, consumers, activation, compatibility and credential boundaries without adding unused settings.
+- Clarify scoped visual inspection, native-host stages, structured CLI failures, bounded environment discovery, isolated behavior checks and validation of the actual delivery archive.
+
+- Default temporary project validation artifacts to an owned task directory inside the authorized local project workspace, with an artifact inventory and verified cleanup; do not default to system TEMP.
+- Distinguish project-local paths from actual tool deletion permission and report blocked cleanup without bypassing policy. No installation or publication is implied.
+
 ## 1.2.2 — 2026-10-20
 
 - Align all six README languages around leaner entries, task-scoped activation and continuity with existing project standards, fonts, themes and components.
