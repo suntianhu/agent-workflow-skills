@@ -1,6 +1,6 @@
-# Launch copy: Agent Workflow Skills 1.2.3
+# Launch copy: Agent Workflow Skills 1.2.4
 
-Repository: [suntianhu/agent-workflow-skills](https://github.com/suntianhu/agent-workflow-skills). These are draft posts; no community posting has been performed. Check [Releases](https://github.com/suntianhu/agent-workflow-skills/releases) for publication status. Version 1.2.3 refines configuration contracts, reference-project structure, delegated stack selection, validation evidence and temporary cleanup.
+Repository: [suntianhu/agent-workflow-skills](https://github.com/suntianhu/agent-workflow-skills). These are draft posts; no community posting has been performed. Check [Releases](https://github.com/suntianhu/agent-workflow-skills/releases) for publication status. Version 1.2.4 requires precise fixes in existing business modules, removal of logic invalidated by the fix, checks of affected normal behavior and no unrelated refactoring.
 
 ## One sentence
 
@@ -28,7 +28,7 @@ Agent Workflow Skills: leaner instructions, scoped activation, existing project 
 
 When a coding agent changes an existing product, I want it to understand the rules already in place and choose capabilities for the actual task. A new requirement should carry those conventions forward.
 
-**Agent Workflow Skills** organizes these instructions into **26 skills and eight conditional compositions**, covering requirements, design, implementation, validation, debugging and delivery. **Version 1.2.3 refines configuration contracts, project structure, validation evidence and task-owned temporary cleanup.**
+**Agent Workflow Skills** organizes these instructions into **26 skills and eight conditional compositions**, covering requirements, design, implementation, validation, debugging and delivery. **Version 1.2.4 clarifies precise business-code fixes, removal of invalidated logic and checks of affected normal behavior without unrelated refactoring.**
 
 Three ideas guide the collection:
 
@@ -40,7 +40,7 @@ For example, a new admin page starts with relevant existing pages, shared styles
 
 These describe instruction policy. The recorded 1.2.1 comparison reduced the combined UTF-8 bytes of 26 `SKILL.md` entries from 46,647 to 39,779, about 14.7%. That measures entry-text size; elapsed-time or productivity gains have not been measured. That historical byte comparison is not a measurement of the current entries.
 
-Evidence includes structural checks, bundle exports, offline utility checks and limited synthetic scenarios. Historical 42 browser checks cover two recorded Web demos. Native Codex/Claude discovery evidence still covers the 24-skill 1.2.0 snapshot; native discovery and automatic trigger accuracy have not been retested for the current 26 skills. See [validation](validation.md) and [executed flows](executed-workflows.md).
+Evidence includes structural checks, bundle exports, offline utility checks and limited synthetic scenarios. Historical 42 browser checks cover two recorded Web demos. Isolated Codex/Claude discovery evidence covers the 24-skill 1.2.0 snapshot; a current local Windows Codex check found all 26 enabled installed skills with source-matching bytes. Neither check establishes automatic trigger accuracy or model execution. See [validation](validation.md) and [executed flows](executed-workflows.md).
 
 Six README languages are available; skill bodies and detailed guides remain mainly Chinese. Original material is MIT-licensed. Selected upstream sources, licenses and reading scope are recorded separately, without upstream endorsement or redistribution of upstream skill bodies, databases, tools or assets. See [provenance](provenance.md).
 
@@ -50,7 +50,7 @@ Source: https://github.com/suntianhu/agent-workflow-skills
 
 ## Social post
 
-Agent Workflow Skills 1.2.3 refines configuration contracts, reference-project structure, delegated stack selection, validation evidence and scoped cleanup. 26 skills, eight conditional compositions, and documented validation limits. Feedback from a redacted task is welcome.
+Agent Workflow Skills 1.2.4 requires precise fixes in existing business modules, cleanup of invalidated logic and checks of affected normal behavior without unrelated refactoring. 26 skills, eight conditional compositions, and documented validation limits. Feedback from a redacted task is welcome.
 
 https://github.com/suntianhu/agent-workflow-skills
 
