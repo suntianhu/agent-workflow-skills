@@ -8,9 +8,9 @@
 ![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**版本 1.2.2** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
+**版本 1.2.3** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
 
-**按任务选技能，沿用项目已有规范。** 本集合提供 26 个技能、8 套条件组合。1.2.2 整理 README 与宣传说明，突出 1.2.1 已有的精简入口和按需加载；技能正文与组合触发条件保持不变。见[最短路径](docs/bundles.md)、[设计流程](docs/design-workflow.md)、[来源](docs/provenance.md)和[版本/标签记录](docs/versioning.md)。
+**按任务选技能，沿用项目已有规范。** 本集合提供 26 个技能、8 套条件组合。1.2.3 完善共享配置契约、参考工程结构继承、授权自主选型、验证证据及任务临时文件清理；保持 26 个技能、8 套条件组合。见[最短路径](docs/bundles.md)、[设计流程](docs/design-workflow.md)、[来源](docs/provenance.md)和[版本/标签记录](docs/versioning.md)。
 
 区分已有项目和新项目，按任务选择适用技能，分别维护前后端规范，在实现前选定验证策略，并如实报告实际验证范围。
 

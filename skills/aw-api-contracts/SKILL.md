@@ -1,6 +1,6 @@
 ---
 name: aw-api-contracts
-description: "Use when requests, responses, validation, pagination, errors, timestamps, identity, or persistence contracts change across callers and services."
+description: "Use when requests, responses, validation, pagination, errors, timestamps, identity, persistence or shared configuration contracts change across callers and services."
 license: MIT
 ---
 
@@ -15,7 +15,7 @@ license: MIT
 ## 执行
 
 1. 追踪入口、调用方、旧数据和错误/恢复路径。
-2. 核对字段、枚举、分页、时区、身份、幂等和兼容。
+2. 核对字段、枚举、分页、时区、身份、幂等和兼容；可维护参数还要追踪维护入口、消费者、生效方式及私密边界。
 3. 将事实落入项目内部规范，报告实际契约验证范围。
 
 ## 交付

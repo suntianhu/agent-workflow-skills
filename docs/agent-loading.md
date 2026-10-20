@@ -1,6 +1,6 @@
 # Isolated native loading validation
 
-These are historical 1.2.0 discovery results for 24 skills. Current source version 1.2.2 contains 26 skills, including design reference research and project design standards; native discovery of this revision has not been rerun. Current checks are separate in [validation](validation.md); earlier source-only labels are explained in [version history](versioning.md).
+These are historical 1.2.0 discovery results for 24 skills. Version 1.2.2 contains 26 skills, including design reference research and project design standards. Later Windows Codex discovery of 26 locally installed, unreleased skills is recorded separately in [validation](validation.md); it is not a rerun of the published snapshot or a model task. Earlier source-only labels are explained in [version history](versioning.md).
 
 Checked on 2026-10-19 on Windows. All native processes used disposable projects under system TEMP with separate home/config/cache directories. No default skills were installed, replaced, or removed.
 

@@ -1,6 +1,6 @@
 # Agent compatibility
 
-Native discovery evidence refers to 1.2.0 and its 24 skills. Current source version 1.2.2 contains 26 skills, including two design skills; current native host discovery has not been rerun. See [current validation](validation.md), [historical host evidence](agent-loading.md) and [version history](versioning.md).
+Published native discovery evidence refers to 1.2.0 and its 24 skills. Version 1.2.2 contains 26 skills, including two design skills. Subsequent unreleased local maintenance records fresh Windows Codex discovery of the 26 installed skills; it does not establish discovery of the published 1.2.2 snapshot, other hosts or model execution. See [current validation](validation.md), [historical host evidence](agent-loading.md) and [version history](versioning.md).
 
 Documentation mapping and isolated native probes checked on 2026-10-19. Shared entrypoints use Agent Skills `name`, `description`, `license`, and relative resources. `agents/openai.yaml` is an optional Codex UI extension, not a cross-host requirement. Skill bodies and detailed guides are currently in Simplified Chinese; the repository overview is available in six languages.
 

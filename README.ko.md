@@ -8,9 +8,9 @@
 ![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
 ![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
 
-**버전 1.2.2** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
+**버전 1.2.3** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
 
-**작업에 맞는 스킬을 선택하고 프로젝트의 기존 규칙을 이어갑니다.** 26개 스킬과 8개 조건부 구성을 제공합니다. 1.2.2는 README와 소개 문구를 정리하여 1.2.1에서 도입한 간결한 진입 문서와 필요한 범위만 읽는 방식을 설명하는 문서 업데이트입니다. 스킬 본문과 구성의 실행 조건은 그대로 유지합니다. [최소 경로](docs/bundles.md), [디자인](docs/design-workflow.md), [출처](docs/provenance.md), [버전과 태그](docs/versioning.md)를 참조하세요.
+**작업에 맞는 스킬을 선택하고 프로젝트의 기존 규칙을 이어갑니다.** 26개 스킬과 8개 조건부 구성을 제공합니다. 1.2.3은 공유 설정 계약, 참조 프로젝트 구조 계승, 위임된 기술 선택, 검증 증거와 작업별 임시 파일 정리를 개선합니다. 26개 스킬과 8개 조건부 구성은 유지합니다. [최소 경로](docs/bundles.md), [디자인](docs/design-workflow.md), [출처](docs/provenance.md), [버전과 태그](docs/versioning.md)를 참조하세요.
 
 기존 프로젝트와 새 프로젝트의 절차를 구분하고 작업에 필요한 스킬만 선택합니다. 프런트엔드와 백엔드 규칙을 따로 관리하고, 구현 전에 검증 방침을 정하며, 실제로 확인한 범위를 보고합니다.
 
