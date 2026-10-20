@@ -1,6 +1,6 @@
-# Launch copy: Agent Workflow Skills 1.2.2
+# Launch copy: Agent Workflow Skills 1.2.3
 
-Repository: [suntianhu/agent-workflow-skills](https://github.com/suntianhu/agent-workflow-skills). These are draft posts; no community posting has been performed. Check [Releases](https://github.com/suntianhu/agent-workflow-skills/releases) for publication status. Version 1.2.2 is a documentation patch describing the existing 1.2.1 skill rules.
+Repository: [suntianhu/agent-workflow-skills](https://github.com/suntianhu/agent-workflow-skills). These are draft posts; no community posting has been performed. Check [Releases](https://github.com/suntianhu/agent-workflow-skills/releases) for publication status. Version 1.2.3 refines configuration contracts, reference-project structure, delegated stack selection, validation evidence and temporary cleanup.
 
 ## One sentence
 
@@ -28,7 +28,7 @@ Agent Workflow Skills: leaner instructions, scoped activation, existing project 
 
 When a coding agent changes an existing product, I want it to understand the rules already in place and choose capabilities for the actual task. A new requirement should carry those conventions forward.
 
-**Agent Workflow Skills** organizes these instructions into **26 skills and eight conditional compositions**, covering requirements, design, implementation, validation, debugging and delivery. **Version 1.2.2 updates public documentation and release metadata while retaining the 1.2.1 skill rules.**
+**Agent Workflow Skills** organizes these instructions into **26 skills and eight conditional compositions**, covering requirements, design, implementation, validation, debugging and delivery. **Version 1.2.3 refines configuration contracts, project structure, validation evidence and task-owned temporary cleanup.**
 
 Three ideas guide the collection:
 
@@ -38,7 +38,7 @@ Three ideas guide the collection:
 
 For example, a new admin page starts with relevant existing pages, shared styles and base components, then adds its own information structure and flow within those rules. A button-label change stays within the applicable local scope. Formal integration or shared-rule changes retain their development gates.
 
-These describe instruction policy. The recorded 1.2.1 comparison reduced the combined UTF-8 bytes of 26 `SKILL.md` entries from 46,647 to 39,779, about 14.7%. That measures entry-text size; elapsed-time or productivity gains have not been measured. This patch keeps those entries.
+These describe instruction policy. The recorded 1.2.1 comparison reduced the combined UTF-8 bytes of 26 `SKILL.md` entries from 46,647 to 39,779, about 14.7%. That measures entry-text size; elapsed-time or productivity gains have not been measured. That historical byte comparison is not a measurement of the current entries.
 
 Evidence includes structural checks, bundle exports, offline utility checks and limited synthetic scenarios. Historical 42 browser checks cover two recorded Web demos. Native Codex/Claude discovery evidence still covers the 24-skill 1.2.0 snapshot; native discovery and automatic trigger accuracy have not been retested for the current 26 skills. See [validation](validation.md) and [executed flows](executed-workflows.md).
 
@@ -50,7 +50,7 @@ Source: https://github.com/suntianhu/agent-workflow-skills
 
 ## Social post
 
-Agent Workflow Skills 1.2.2 clarifies the collection's 1.2.1 rules: leaner entries, task-scoped activation and continuity with existing project conventions. 26 skills, eight conditional compositions, and documented validation limits. Feedback from a redacted task is welcome.
+Agent Workflow Skills 1.2.3 refines configuration contracts, reference-project structure, delegated stack selection, validation evidence and scoped cleanup. 26 skills, eight conditional compositions, and documented validation limits. Feedback from a redacted task is welcome.
 
 https://github.com/suntianhu/agent-workflow-skills
 
