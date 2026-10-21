@@ -6,6 +6,8 @@
 
 **Build on existing conventions, keep changes scoped, and back completion claims with evidence.**
 
+Now listed on [skills.sh](https://skills.sh/suntianhu/agent-workflow-skills), where you can browse all 29 skills by category. See the [Skills CLI guide](skills-sh.md) for installation and privacy details.
+
 When a coding agent works on an existing product, I want it to carry the project's decisions forward: where conventions live, which behavior must stay intact, and what evidence is needed to call a change complete.
 
 Consider adding an inventory page to an existing admin app. The page needs its own flow, but it also needs to fit the established fonts, theme, components, and API contracts. A later session should be able to build on the same project knowledge.
