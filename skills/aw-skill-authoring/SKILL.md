@@ -25,6 +25,7 @@ license: MIT
 ## 按需资料
 
 - [skill-authoring.md](references/skill-authoring.md)：入口不足以处理本次细节时，仅读相关段落；已读且未变则复用。
+- [skill-evaluation.md](references/skill-evaluation.md)：需要核对技能触发、相邻职责或请求实际行为效果评估时读取；结构检查不等于模型通过。
 
 
 本目录可独立使用；只补真实缺口，不自动串联其他技能。组合是条件说明，不是必跑清单。

@@ -28,6 +28,7 @@ license: MIT
 - [backend.md](references/backend.md)：入口不足以处理本次细节时，仅读相关段落；已读且未变则复用。
 - [project-mode.md](references/project-mode.md)：交付类型、新旧判断或开发门禁尚有缺口时读取；已有有效判断直接复用。
 - [postgres-data.md](references/postgres-data.md)：实际使用PostgreSQL/Supabase且涉及查询、连接、锁、迁移或权限时读取。
+- [implementation-sources.md](references/implementation-sources.md)：版本敏感行为、陌生接口或弃用/兼容冲突缺少有效依据时读取；已有适配来源直接复用，不重做选型。
 
 
 本目录可独立使用；只补真实缺口，不自动串联其他技能。组合是条件说明，不是必跑清单。

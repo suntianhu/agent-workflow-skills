@@ -18,6 +18,8 @@
     "aw-api-contracts",
     "aw-security-boundaries",
     "aw-test-strategy",
+    "aw-performance-optimization",
+    "aw-observability",
     "aw-scoped-tdd",
     "aw-frontend-implementation",
     "aw-adversarial-review",
@@ -141,12 +143,28 @@
       "note": "先决定TDD及保留；P0不擅自恢复。"
     },
     {
+      "id": "performance-scope",
+      "when": "performance-scope-needed",
+      "skills": [
+        "aw-performance-optimization"
+      ],
+      "note": "本阶段只形成/承接测量方案、基线和瓶颈假设；优化并入下一唯一实现/TDD循环。"
+    },
+    {
+      "id": "observability-scope",
+      "when": "observability-scope-needed",
+      "skills": [
+        "aw-observability"
+      ],
+      "note": "本阶段只形成/承接运行问题到信号方案；埋点并入同一次端内实现，不另起实现或验证策略。"
+    },
+    {
       "id": "tdd-implementation",
       "when": "tdd-selected",
       "skills": [
         "aw-scoped-tdd"
       ],
-      "note": "以TDD技能统筹红绿循环，并在循环内读取implementation_constraints；完成后跳过独立实现阶段，只补未覆盖约束。",
+      "note": "以TDD技能统筹红绿循环，并在循环内读取implementation_constraints；完成后跳过独立实现阶段，只补未覆盖约束。 已触发的性能/观测方案在同一循环内落实；未触发不额外加载专项。",
       "implementation_constraints": [
         "aw-frontend-implementation"
       ]
@@ -157,7 +175,23 @@
       "skills": [
         "aw-frontend-implementation"
       ],
-      "note": "只执行受影响端；已选TDD时本阶段并入TDD循环，不作为第二次实现。"
+      "note": "只执行受影响端；已选TDD时本阶段并入TDD循环，不作为第二次实现。 已触发的性能/观测方案在同一循环内落实；未触发不额外加载专项。"
+    },
+    {
+      "id": "performance-result",
+      "when": "performance-result-needed",
+      "skills": [
+        "aw-performance-optimization"
+      ],
+      "note": "仅核对最终可比较测量、正确性与保留决定；已有有效结果直接复用，不再实施一次。"
+    },
+    {
+      "id": "observability-result",
+      "when": "observability-result-needed",
+      "skills": [
+        "aw-observability"
+      ],
+      "note": "仅补最终信号/查询/告警的适用证据，尊重实际授权；配置或模拟不冒充真实运行。"
     },
     {
       "id": "review",
@@ -194,7 +228,11 @@
     "new-standards-needed": "本次新产品正式实施且已选栈，同一项目规范入口缺失、所需关键约束未记录或与当前已核实决定不一致；已有有效规范直接消费，只增量维护变化。",
     "skill-choice-needed": "候选技能职责冲突或采纳尚未确定；已明确主要能力时不单独加载。",
     "capability-gap": "已有实际模型/工具能力瓶颈，或用户明确要求资源比较；普通任务开始不触发。",
-    "time-estimate-needed": "用户要求时间，或较长任务需要开始/修订剩余初估；小改不增加估时日志。"
+    "time-estimate-needed": "用户要求时间，或较长任务需要开始/修订剩余初估；小改不增加估时日志。",
+    "performance-scope-needed": "本次明确要求性能调查/预算，或具体性能症状属于授权范围，且测量设计/有效基线/瓶颈证据仍缺；只读调查或已有证据按实际范围复用，不自动优化代码或加压生产。",
+    "observability-scope-needed": "本次明确要求信号/告警设计或存在相关运行诊断缺口，且已有信号/方案不足；不是每项功能都触发埋点，不自动采集或发通知。",
+    "performance-result-needed": "本次优化差异或待判断的性能结果尚缺覆盖最终产物的可比较复测/正确性证据；不因阶段存在重做调查或业务实现，允许范围不足则列未验证。",
+    "observability-result-needed": "本次信号/告警实现或相关变化尚缺最终实际输出/查询/关联的适用证据；仅补缺口，不重建方案/埋点，不越权演练或发送通知。"
   },
-  "execution": "先按产物和项目规则选择主要能力，只有真实缺口才补技能。skills是可导出全集，不是必读/必跑列表；先筛描述、再读适用正文，引用只读相关段落。已完成判断/基线/规范/验证决定直接复用，同职责只实施一次；纯稿件在产物处停止，正式接入保留开发门禁。"
+  "execution": "先按产物和项目规则选择主要能力，只有真实缺口才补技能。skills是可导出全集，不是必读/必跑列表；先筛描述、再读适用正文，引用只读相关段落。已完成判断/基线/规范/验证决定直接复用，同职责只实施一次；纯稿件在产物处停止，正式接入保留开发门禁。 性能和观测仅按专项条件触发，前置只定方案/基线，实际改变并入唯一实现/TDD循环，后置只补最终证据；不重复访谈/选策略/编码/重跑有效检查。"
 }

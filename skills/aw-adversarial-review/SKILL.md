@@ -1,6 +1,6 @@
 ---
 name: aw-adversarial-review
-description: "Use for a scoped read-only review of a nontrivial change where requirements, contracts, ownership, recovery, privacy, or compatibility need counterexample analysis."
+description: "Use for a scoped read-only counterexample review of a nontrivial change or a high-impact unresolved decision involving requirements, contracts, ownership, recovery, privacy, compatibility or quality-gate changes; not for routine local edits."
 license: MIT
 ---
 
@@ -14,9 +14,9 @@ license: MIT
 
 ## 执行
 
-1. 读取原需求、最终差异、规则与检查证据。
-2. 检查适用边界，逐项给位置、触发、后果和验证办法；仅疑似漏洞或安全相关差异另读security-review-evidence.md。
-3. 将核实发现交给实现者处理；由实现者修复后，审查者只读定向复核。
+1. 读取原需求、当前产物/差异、适用契约和实际证据，保留必要背景而不传作者预设结论；高影响未决方案可先审，已有有效结果直接复用。
+2. 核对适用反例及本次质量门槛变化，给位置、可达触发、后果和依据；区分背景不足、有效问题、已接受取舍与误读，疑似漏洞才补安全证据资料。
+3. 核实后交实现者处理，修复后只读定向复核；无新增实质证据即停止，不固定多轮或反复询问跨模型。
 
 ## 交付
 

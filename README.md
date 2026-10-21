@@ -5,19 +5,19 @@ Composable development workflows for coding agents, with explicit project gates 
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Русский](README.ru.md)
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
-![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
-![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
+![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
+![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**Version 1.2.4** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
+**Version 1.2.5** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
 
-**Select skills for the task. Build on the project's existing rules.** This collection provides 26 skills and eight conditional compositions. Version 1.2.4 requires precise fixes in existing business modules, removal of logic invalidated by the fix, regression checks for affected normal behavior, and diffs without unrelated refactoring. The collection remains at 26 skills and eight conditional compositions. See [short paths](docs/bundles.md), [design](docs/design-workflow.md), [sources](docs/provenance.md) and [version/tag history](docs/versioning.md).
+**Select skills for the task. Build on the project's existing rules.** Version 1.2.5 provides 29 skills and nine conditional compositions, including [project migration](docs/project-migration.md), [performance and observability](docs/adoption-integration.md), and focused requirements, task, quality-gate and evidence guidance. Existing decisions and delegation carry forward without repeated confirmation or implementation.
 
 Build on an existing codebase or start a new project without mixing the two workflows. Select only the skills that fit the task. Keep frontend and backend conventions separate, choose validation before implementation, and report what was actually verified.
 
 ## Why this collection
 
 - **Leaner entries:** remove repeated instructions, choose one main capability, and read additional reference sections only when needed. Reuse valid decisions and unchanged material already read.
-- **Task-scoped activation:** eight compositions describe conditions rather than a mandatory sequence. A clear local edit does not automatically start broad research, model comparison or multiple agents; estimates have their own trigger.
+- **Task-scoped activation:** nine compositions describe conditions rather than a mandatory sequence. A clear local edit does not automatically start broad research, model comparison or multiple agents; estimates have their own trigger.
 - **Continuity in existing projects:** verify the complete code baseline and subsequent changes, then use the same standards directory and rule sources. New pages inherit fonts, themes, components and interaction patterns even when their business purpose is new.
 - **Respect existing Skills:** read project skills, including partial ones, and agent/plugin rules first. Later skills use the same project standards; show a concrete diff and obtain confirmation before changing an existing user Skill.
 - **New projects:** respect the requested language, research maintained frameworks and known relevant risks, obtain the user's stack choice, then derive conventions from matching public repositories.
@@ -30,7 +30,7 @@ This is a collection of instructions and local utilities. Workflow JSON files de
 
 ## Quick start
 
-1. Pick a workflow below or browse the [26 skills](docs/skill-map.md) (Chinese reference).
+1. Pick a workflow below or browse the [29 skills](docs/skill-map.md) (Chinese reference).
 2. Ask your agent to read the relevant `skills/<name>/SKILL.md` and its referenced resources. Load only the capabilities needed for the current task.
 3. To prepare a self-contained composition in a new directory outside this repository:
 
@@ -42,7 +42,7 @@ Add `--include-optional` to include the agent coordination skill. Exporting does
 
 For native discovery, copy complete individual skill directories only when you intend to install them, following your host's current documentation. See [agent compatibility](docs/agent-compatibility.md).
 
-## Eight workflows
+## Nine workflows
 
 | Workflow | Use it for | Key gate |
 | --- | --- | --- |
@@ -51,6 +51,7 @@ For native discovery, copy complete individual skill directories only when you i
 | [new-frontend](bundles/new-frontend.json) | A genuinely new frontend project | Language/platform → researched options → user choice → reference conventions → standards |
 | [new-backend](bundles/new-backend.json) | A genuinely new backend project | Language/deployment needs → user-selected stack → reference conventions → standards |
 | [fullstack](bundles/fullstack.json) | Work spanning both ends | Select the existing/new branch; separate end-specific rules and share API contracts |
+| [project-migration](bundles/project-migration.json) | Framework, backend/frontend or database migration | Preservation inventory → target/coexistence → business batches → verified cutover/recovery |
 | [small-change](bundles/small-change.json) | A bounded, low-impact change | Reduce ceremony while preserving the applicable existing/new project gates |
 | [debug-and-fix](bundles/debug-and-fix.json) | A reproducible defect or integration symptom | Select validation before executed reproduction; meet codebase gates before a fix |
 | [release](bundles/release.json) | Requested integration, packaging, or release | Prepare evidence, compatibility and recovery; hand code fixes back to development |
@@ -62,8 +63,9 @@ The `skills` field is the exportable capability closure, not an instruction to r
 | Area | Skills |
 | --- | --- |
 | Task and resource decisions | `aw-project-triage`, `aw-skill-selection`, `aw-model-routing`, `aw-effort-estimation` |
-| Codebase and architecture | `aw-repository-audit`, `aw-project-standards`, `aw-framework-selection`, `aw-github-reference` |
+| Codebase and architecture | `aw-repository-audit`, `aw-project-standards`, `aw-framework-selection`, `aw-github-reference`, `aw-project-migration` |
 | Requirements and implementation | `aw-requirements-design`, `aw-design-reference`, `aw-design-standards`, `aw-ui-design`, `aw-frontend-implementation`, `aw-backend-implementation` |
+| Performance and observability | `aw-performance-optimization`, `aw-observability` |
 | Contracts and safety boundaries | `aw-api-contracts`, `aw-security-boundaries` |
 | Validation and diagnosis | `aw-test-strategy`, `aw-scoped-tdd`, `aw-evidence-debugging`, `aw-adversarial-review`, `aw-evidence-verification` |
 | Delivery and maintenance | `aw-delivery-cleanup`, `aw-release-readiness`, `aw-agent-coordination`, `aw-skill-authoring`, `aw-open-source-readiness` |
@@ -74,7 +76,7 @@ Each skill includes its own instructions, necessary references/resources, and li
 
 | Host | Packaging | Evidence |
 | --- | --- | --- |
-| Codex | Agent Skills directory plus optional `agents/openai.yaml` UI metadata | 1.2.0: Native isolated Windows discovery: 24/24; no model execution |
+| Codex | Agent Skills directory plus optional `agents/openai.yaml` UI metadata | Native Windows Codex discovery: 29/29 installed skills enabled, no parser errors; no model turn |
 | Claude Code | Complete skill directories in documented host locations | 1.2.0: Native CLI + official SDK discovery: 24/24; no successful model execution |
 | Gemini CLI | Complete skill directories in documented host locations | Documentation mapping only; end-to-end use not tested |
 | GitHub Copilot | Complete skill directories in supported clients | Documentation mapping only; individual clients not tested |
@@ -91,7 +93,7 @@ python scripts/validate.py
 
 The validator checks declarations, generated content freshness, exact resource sets, local links, Python syntax, composition order, and selected distribution hygiene rules. It does not prove that an agent will make the right decision or that a framework is vulnerability-free.
 
-Windows/Linux CI checks source, executed offline examples and release packaging. Native isolated discovery passed for all 24 skills in Codex and Claude on Windows. Agents also completed new/existing-project flows and follow-up requirements in two runnable synthetic Web projects, with 42 final browser checks; this does not establish automatic discovery/triggering of the current 26 skills or production coverage. See [executed flows](docs/executed-workflows.md), [validation](docs/validation.md) and [native evidence](docs/agent-loading.md) for exact scope and versions.
+Windows/Linux CI checks source, offline utilities and reproducible packaging. Fresh local Windows Codex discovery loaded all 29 installed skills with no parser errors; all 154 installed skill files matched source. Earlier isolated Codex/Claude discovery and 42 browser checks keep their historical scope. This does not establish automatic trigger accuracy, model adherence or production coverage. See [validation](docs/validation.md) and [native evidence](docs/agent-loading.md).
 
 ## Examples and automated releases
 

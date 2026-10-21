@@ -2,6 +2,19 @@
 
 Public tags and source-only checkpoints are distinct. See [version policy/status](docs/versioning.md). Preserve existing tags; routine releases increment patch.
 
+## 1.2.5 — 2026-10-21
+
+- Add aw-performance-optimization and aw-observability: 29 skills and nine conditional compositions.
+- Integrate evidence-based requirements readiness, canonical task/handoff fields, quality-gate change review, version-specific source checks, decision history and scoped skill evaluation into existing owners; reuse decisions and checks without repeated confirmation.
+- Eight development/debug/migration compositions use conditional specialist planning and final evidence around one implementation/TDD loop; release only consumes existing evidence.
+- Add aw-project-migration and the project-migration composition.
+- Map retained business behavior, inbound/outbound APIs, callbacks, scheduled/queued work, identity, historical data and files to verifiable target behavior.
+- Plan target/coexistence choices, business batches, compatible data transitions, execution ownership, reconciliation, cutover, recovery and retirement.
+- Include a portable plan template and optional multi-agent dependency/ownership guidance without requiring delegation, deployment or a particular stack.
+- Record pinned research, rejected upstream assumptions and scoped local verification separately from untested production migrations or agent performance.
+
+- Synchronize all 29 local Codex skills (154 files), preserve unrelated skills/configuration, and verify fresh native discovery: all enabled with no parser errors. Model execution and automatic trigger accuracy remain untested.
+
 ## 1.2.4 — 2026-10-20
 
 - Prefer precise fixes in the existing business module; repeated attempts reuse the same responsibility instead of adding repair copies or parallel implementations. Explain necessary new business files.

@@ -5,19 +5,19 @@
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Русский](README.ru.md)
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
-![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
-![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
+![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
+![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**版本 1.2.4** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
+**版本 1.2.5** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
 
-**依任務選技能，沿用專案既有規範。** 本集合提供 26 個技能、8 套條件組合。1.2.4 明確業務程式碼原位精準修復、清理本次失效邏輯、驗證受影響正常功能及避免無關重構；維持 26 個技能、8 套條件組合。見[最短路徑](docs/bundles.md)、[設計流程](docs/design-workflow.md)、[出處](docs/provenance.md)及[版本／標籤紀錄](docs/versioning.md)。
+**依任務選技能，沿用專案既有規範。** 1.2.5 提供 29 個技能、9 套條件組合，包含[專案遷移](docs/project-migration.md)、[效能與可觀測性](docs/adoption-integration.md)，並完善需求收斂、任務交接、品質門檻與證據重用。承接既有決定與委託，依缺口介入，避免重複確認或實作。
 
 區分既有專案與新專案，依任務選擇適用技能，分別維護前後端規範，在實作前選定驗證策略，並如實回報實際驗證範圍。
 
 ## 為什麼使用這套技能
 
 - **精簡入口：** 移除重複說明，先選一項主要能力，有缺口才補讀相關資料；直接沿用有效決定及未變更的已讀內容。
-- **精準觸發：** 八套組合依條件選擇階段。明確的局部修改不自動啟動大範圍調研、模型比較或多代理；估時也有獨立觸發條件。
+- **精準觸發：** 九套組合依條件選擇階段。明確的局部修改不自動啟動大範圍調研、模型比較或多代理；估時也有獨立觸發條件。
 - **沿用既有專案規範：** 核對完整程式碼基線及後續差異，繼續維護原規範目錄與規則來源。新頁面即使業務全新，也繼承專案字型、主題、元件與互動慣例。
 - **承接既有 Skills：** 先讀專案既有、部分完成的 Skills 與代理／外掛規則，後續技能也接回同一規範；修改使用者既有 Skill 前須展示具體差異並取得確認。
 - **新專案：** 尊重指定語言，查核框架維護狀態與已知相關風險，由使用者選擇技術組合，再從相符的公開專案提煉規範。
@@ -30,7 +30,7 @@
 
 ## 快速開始
 
-1. 在下表選擇組合，或查看 [26 個技能的職責邊界](docs/skill-map.md)（簡體中文）。
+1. 在下表選擇組合，或查看 [29 個技能的職責邊界](docs/skill-map.md)（簡體中文）。
 2. 讓代理讀取所需的 `skills/<name>/SKILL.md` 及其引用資源，只載入本次任務適用的能力。
 3. 如需在儲存庫以外的新目錄準備完整組合：
 
@@ -42,7 +42,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 需要原生技能探索時，僅在確定要安裝的情況下，依執行環境目前的文件複製完整的個別技能目錄。詳見[代理相容性](docs/agent-compatibility.md)（英文）。
 
-## 八套工作流程
+## 九套工作流程
 
 | 工作流程 | 適用任務 | 核心前置條件 |
 | --- | --- | --- |
@@ -51,6 +51,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 | [new-frontend](bundles/new-frontend.json) | 真正從零開始的前端專案 | 語言/平台 → 框架查核 → 使用者選擇 → 範例慣例 → 規範 |
 | [new-backend](bundles/new-backend.json) | 真正從零開始的後端專案 | 語言/部署需求 → 使用者選擇技術組合 → 範例慣例 → 規範 |
 | [fullstack](bundles/fullstack.json) | 前後端跨端開發 | 選擇新舊專案分支，分別維護端內規範，共同核對 API 契約 |
+| [project-migration](bundles/project-migration.json) | 更換框架、前後台或資料庫重構 | 保留台帳 → 目標／共存 → 業務分批 → 驗證後切換與復原 |
 | [small-change](bundles/small-change.json) | 範圍有限、影響較低的修改 | 精簡流程，仍須滿足適用的新舊專案前置條件 |
 | [debug-and-fix](bundles/debug-and-fix.json) | 可重現缺陷或整合異常 | 執行重現前選定驗證策略，修復前滿足程式碼與規範前置條件 |
 | [release](bundles/release.json) | 已提出要求的整合、封裝或發布 | 準備相容性、復原與驗收證據；程式碼修正交回開發流程 |
@@ -62,8 +63,9 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 | 領域 | 技能 |
 | --- | --- |
 | 任務與資源判斷 | `aw-project-triage`, `aw-skill-selection`, `aw-model-routing`, `aw-effort-estimation` |
-| 程式碼理解與架構 | `aw-repository-audit`, `aw-project-standards`, `aw-framework-selection`, `aw-github-reference` |
+| 程式碼理解與架構 | `aw-repository-audit`, `aw-project-standards`, `aw-framework-selection`, `aw-github-reference`, `aw-project-migration` |
 | 需求與實作 | `aw-requirements-design`, `aw-design-reference`, `aw-design-standards`, `aw-ui-design`, `aw-frontend-implementation`, `aw-backend-implementation` |
+| 效能與可觀測性 | `aw-performance-optimization`, `aw-observability` |
 | 契約與安全邊界 | `aw-api-contracts`, `aw-security-boundaries` |
 | 驗證與問題診斷 | `aw-test-strategy`, `aw-scoped-tdd`, `aw-evidence-debugging`, `aw-adversarial-review`, `aw-evidence-verification` |
 | 交付與維護 | `aw-delivery-cleanup`, `aw-release-readiness`, `aw-agent-coordination`, `aw-skill-authoring`, `aw-open-source-readiness` |
@@ -74,7 +76,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 | 執行環境 | 封裝方式 | 實際證據 |
 | --- | --- | --- |
-| Codex | Agent Skills 目錄，可選用 `agents/openai.yaml` 介面中繼資料 | 1.2.0: Windows 隔離原生探索 24/24；未執行模型任務 |
+| Codex | Agent Skills 目錄，可選用 `agents/openai.yaml` 介面中繼資料 | Windows Codex 原生探索：29/29 本機已安裝技能啟用，無解析錯誤；未執行模型任務 |
 | Claude Code | 在文件指定位置放置完整技能目錄 | 1.2.0: 原生 CLI 與官方 SDK 探索 24/24；未成功執行模型任務 |
 | Gemini CLI | 在文件指定位置放置完整技能目錄 | 僅依文件對應；尚未進行端到端測試 |
 | GitHub Copilot | 在支援的用戶端使用完整技能目錄 | 僅依文件對應；尚未測試各用戶端 |
@@ -91,7 +93,7 @@ python scripts/validate.py
 
 驗證器會檢查宣告、生成內容是否同步、精確資源集合、本機連結、Python 語法、組合順序及部分分發衛生規則；不證明代理決策正確，也不保證框架沒有漏洞。
 
-Windows/Linux CI 檢查原始碼、執行離線範例並預演封裝。Codex 與 Claude 已在 Windows 隔離專案中原生探索全部 24 個技能。另外已在兩個可執行的虛構 Web 工程完成新舊專案與後續需求，最終 42 項瀏覽器檢查通過；這不代表目前 26 個技能的自動探索／觸發或正式環境覆蓋。版本與範圍見[實際流程](docs/executed-workflows.md)、[驗證紀錄](docs/validation.md)及[原生載入證據](docs/agent-loading.md)。
+Windows/Linux CI 檢查原始碼、離線工具及可重現封裝。本輪 Windows Codex 原生探索辨識並啟用全部 29 個本機技能，無解析錯誤；154 個安裝檔案與原始碼一致。早期 Codex/Claude 隔離探索與 42 項瀏覽器檢查保留原範圍，不代表本版自動觸發準確率、模型遵循率或正式環境覆蓋。見[驗證紀錄](docs/validation.md)及[原生證據](docs/agent-loading.md)。
 
 ## 使用範例與自動發佈
 

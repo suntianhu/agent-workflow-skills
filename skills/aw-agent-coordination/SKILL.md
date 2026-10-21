@@ -1,6 +1,6 @@
 ---
 name: aw-agent-coordination
-description: "Use when an authorized workflow has independent subtasks suitable for additional agents or needs a bounded handoff across agents or context windows."
+description: "Use when a complex authorized workflow needs independently verifiable task decomposition, dependency ordering, bounded delegation, or handoff across agents or context windows; not for obvious local changes."
 license: MIT
 ---
 
@@ -14,9 +14,9 @@ license: MIT
 
 ## 执行
 
-1. 比较独立性、收益与协调成本。
-2. 分派最小原始材料、读写边界、文件所有权和产物标准。
-3. 主执行者核对真实文件与证据，传递状态和未完成项。
+1. 按可独立验收结果梳理任务/依赖与合并点，比较并行收益和协调成本；沿用现有计划，不覆盖其他未完成工作。
+2. 按同一任务记录分派最小原始材料、契约/规范、权限/独占写入范围和完成判据，不按技能数创建代理。
+3. 主执行者核对实际差异与证据，传递决定来源、工作树状态、有效验证、阻断与下一步；已有授权与未变基线不重置。
 
 ## 交付
 
@@ -25,6 +25,7 @@ license: MIT
 ## 按需资料
 
 - [agent-coordination.md](references/agent-coordination.md)：入口不足以处理本次细节时，仅读相关段落；已读且未变则复用。
-
+- [task-planning.md](references/task-planning.md)：复杂任务分解、依赖/验收/所有权或跨上下文恢复存在缺口时读取；已有等效记录直接复用。
+- [task-record.md](assets/task-record.md)：按指南使用；模板按真实项目填写。
 
 本目录可独立使用；只补真实缺口，不自动串联其他技能。组合是条件说明，不是必跑清单。
