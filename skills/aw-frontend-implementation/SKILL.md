@@ -29,6 +29,7 @@ license: MIT
 - [project-mode.md](references/project-mode.md)：交付类型、新旧判断或开发门禁尚有缺口时读取；已有有效判断直接复用。
 - [browser-validation.md](references/browser-validation.md)：本次需要且允许浏览器实际交互验证时读取；不自动安装工具或新增持久测试。
 - [design-platforms.md](references/design-platforms.md)：涉及平台原生交互、设备/窗口适配或跨端迁移时，只读目标平台相关部分。
+- [implementation-sources.md](references/implementation-sources.md)：版本敏感行为、陌生接口或弃用/兼容冲突缺少有效依据时读取；已有适配来源直接复用，不重做选型。
 
 
 本目录可独立使用；只补真实缺口，不自动串联其他技能。组合是条件说明，不是必跑清单。

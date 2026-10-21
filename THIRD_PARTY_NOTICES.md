@@ -18,4 +18,14 @@ References are pinned in provenance/upstreams.json; individual upstream license 
 
 Public platform and design-system websites are research references, not bundled content or assets. Actual text access and gaps are listed in provenance/design-references.json. A reference link does not establish asset licensing or application accessibility.
 
+Unreleased migration research (2026-10-21), pinned in provenance/upstreams.json and scoped in provenance/migration-references.json:
+
+- addyosmani/agent-skills: selected deprecation-and-migration skill and root MIT license retrieved, copyright (c) 2025 Addy Osmani. Consumer compatibility and retirement concepts were studied; its prose, code and templates are not redistributed.
+- magnus919/agent-skills: selected migration-engineering skill declares MIT in frontmatter; root LICENSE returned HTTP 404, so repository-wide license scope is not established. Cross-system reconciliation and recovery limitations were studied as abstract methods; no upstream expression or assets are redistributed.
+- rmyndharis/antigravity-skills: selected framework-migration-legacy-modernize skill and root MIT license retrieved, copyright (c) 2026 Yudhi Armyndharis. Dependency mapping and role separation were studied; full collection lineage was not audited. No upstream skill prose, translations, templates, code or agent configuration is included.
+
+Microsoft Azure, AWS, Kubernetes, PostgreSQL and Prisma official text sections were used to check specific technical assumptions, not bundled as content or treated as permission to copy implementations. No commands from those external materials were executed and no service deployment was performed during that research.
+
 The MIT license at this repository root applies to this repository's original material, not external repositories or linked services. Do not copy third-party code or assets based solely on this notices file.
+
+Further unreleased workflow adoption from the same pinned addyosmani/agent-skills commit studies the README, ten selected lifecycle skills and three evaluation files, with per-file reading scope in provenance/upstreams.json. Original requirements/task/quality/evidence guidance and the new performance/observability workflows were independently written; upstream prose, translations, templates, scripts, fixtures and default configurations are not redistributed. Official OpenTelemetry, Prometheus and web.dev text sections were checked for narrow technical assumptions, recorded in provenance/workflow-adoption.json; no SDK, benchmark, telemetry service or alert was executed. Its subjective interview confidence, lexical routing floor and reported model results are separate and are not evidence for this collection.

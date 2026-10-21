@@ -1,5 +1,29 @@
 # GitHub蒸馏来源与取舍
 
+## 工作流采纳增量（2026-10-21，1.2.5 采纳）
+
+沿用同一个 addyosmani/agent-skills 固定提交，补入上一轮只读调研实际取得的 README、十项选定技能及三份评估材料，共十四个额外文件；每项实际全文/段落阅读范围随 [upstreams.json](../provenance/upstreams.json) 记录。当前累计为 14 仓/73 个取得文件，不把根许可 404 计入取得数；没有全仓审计、执行上游命令或模型评估。
+
+按用户确认将意图收敛、质量门槛、任务依赖、来源核查、重要决定和反例审查分别融入原职责，新增 aw-performance-optimization 与 aw-observability。唯一维护源和组合交接见[采纳与专项职责](adoption-integration.md)，逐项采纳/排除与四份官方文字补核见 [workflow-adoption.json](../provenance/workflow-adoption.json)。不复制上游正文、翻译、模板、代码或默认检查配置；不继承主观95%门槛、否定委托、强制停轮、逐阶段审批、固定阈值或强制模型/代理。
+
+质量门槛变化由只读审查拥有，最终证据只消费结论；任务通用结构、实现来源指南分别只维护一份，便携技能副本按条件读取。性能/观测方案与结果分阶段交接，实际改变并入唯一实现/TDD循环，不因新增能力重复编码/验证策略或重跑有效检查。
+
+## 项目迁移增量（2026-10-21，1.2.5 采纳）
+
+本次在原 11 仓/54 文件记录上新增三个公开仓库、五个实际取得文件（三个选定 SKILL.md、两份根许可），累计 14 仓/59 个取得文件；另有一条 LICENSE 404 记录不计取得文件。固定 commit、散列和大小记在 [upstreams.json](../provenance/upstreams.json)，官方技术补核及访问缺口见 [migration-references.json](../provenance/migration-references.json)。只读选定技能和所获许可，不是整仓审计；未执行上游工具或链接资源。
+
+| 研究来源 | 采纳原则与本集合落点 | 未采纳 |
+| --- | --- | --- |
+| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) 的 deprecation-and-migration | 消费者实际行为、旧接口适配、迁移后有条件退役 → 保留指南与批次验收 | 所有迁移必须有无损 down 路径、增加 schema 一概安全、固定灰度比例、连带删除仍有价值的回归测试 |
+| [magnus919/agent-skills](https://github.com/magnus919/agent-skills) 的 migration-engineering | 兼容窗口、对账、恢复限制、编排与专项实现分离 → 执行指南 | 强制双跑/双写、每步恢复方式只能选一种、对其兄弟技能/模板的隐藏依赖 |
+| [rmyndharis/antigravity-skills](https://github.com/rmyndharis/antigravity-skills) 的 framework-migration-legacy-modernize | 依赖/外部集成盘点、业务批次、角色分工 → 迁移目标与任务图 | Task/subagent_type 专用 API、固定代理链/评分/阈值/天数、默认事件溯源或跨库双写、审查代理直接改代码 |
+
+本次取得的两份根许可分别是 Addy Osmani 与 Yudhi Armyndharis 的 MIT（对应第一、第三仓）；magnus919 所读技能 frontmatter 标 MIT，根 LICENSE 未取得，不宣称已核实全仓许可。这里只独立组织抽象方法，不复制/翻译其正文、代码或模板；聚合仓的完整来源链未审计。
+
+官方补核覆盖 Azure 渐进替换及过渡成本、AWS 双写/事件幂等、Kubernetes 调度与在途任务限制、PostgreSQL 18 复制边界和 Prisma 分阶段迁移概念；它们不是固定技术栈，也不计作额外已蒸馏技能仓库。定时任务执行权交接、请求接口保留、真实迁移动机、多智能体依赖/文件所有权来自本次明确需求和风险分析，不冒称已在真实产品迁移验证。
+
+唯一维护源为 project-migration.md、migration-preservation.md、migration-execution.md、migration-agents.md 及计划模板，全部由 aw-project-migration 按需携带；既有端内实现、契约、验证与协作技能复用原职责，不改其入口。
+
 1.4.0 共记录 **11 个公开仓库、54 个选定文件**。本版新增 Impeccable、wshobson/agents 两仓的 10 个文件，并在原固定的 obra/superpowers 快照补取头脑风暴文件；许可和 NOTICE 计入文件数。具体日期、固定提交、原始字节散列、大小与部分阅读范围见 [upstreams.json](../provenance/upstreams.json)。官方设计网站另记[实际取证与访问缺口](../provenance/design-references.json)，不计作已审阅的上游技能仓库。
 
 ## 既有研究与许可边界

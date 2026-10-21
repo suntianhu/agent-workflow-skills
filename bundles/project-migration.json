@@ -1,0 +1,238 @@
+{
+  "schema": 2,
+  "name": "project-migration",
+  "kind": "documented-composition-not-native-executable-workflow",
+  "project_mode": "existing",
+  "skills": [
+    "aw-project-triage",
+    "aw-project-migration",
+    "aw-repository-audit",
+    "aw-github-reference",
+    "aw-project-standards",
+    "aw-requirements-design",
+    "aw-design-reference",
+    "aw-design-standards",
+    "aw-ui-design",
+    "aw-api-contracts",
+    "aw-security-boundaries",
+    "aw-test-strategy",
+    "aw-performance-optimization",
+    "aw-observability",
+    "aw-scoped-tdd",
+    "aw-frontend-implementation",
+    "aw-backend-implementation",
+    "aw-adversarial-review",
+    "aw-evidence-verification",
+    "aw-release-readiness",
+    "aw-delivery-cleanup"
+  ],
+  "optional": [
+    "aw-agent-coordination"
+  ],
+  "stages": [
+    {
+      "id": "triage",
+      "when": "always",
+      "skills": [
+        "aw-project-triage"
+      ],
+      "note": "先区分只读迁移方案与正式实施/演练/切换。"
+    },
+    {
+      "id": "migration-plan",
+      "when": "always",
+      "skills": [
+        "aw-project-migration"
+      ],
+      "note": "拥有保留映射、目标/过渡方案、贯通样本、业务分批及恢复/退役计划；已有有效产物直接复用。"
+    },
+    {
+      "id": "repository-audit",
+      "when": "existing-audit-needed",
+      "skills": [
+        "aw-repository-audit"
+      ],
+      "note": "先消费有效基线，只补缺失覆盖和全部差异；无可靠基线才全仓阅读。"
+    },
+    {
+      "id": "target-reference",
+      "when": "migration-reference-needed",
+      "skills": [
+        "aw-github-reference"
+      ],
+      "note": "目标选择由迁移方案处理；已选目标缺少工程依据时才研究适配范本。"
+    },
+    {
+      "id": "project-standards",
+      "when": "existing-standards-needed",
+      "skills": [
+        "aw-project-standards"
+      ],
+      "note": "在目标与过渡规则明确后补同一规范，沿用旧产品基线；迁移新目录不变成新产品。"
+    },
+    {
+      "id": "requirements",
+      "when": "behavior-requirements-needed",
+      "skills": [
+        "aw-requirements-design"
+      ],
+      "note": ""
+    },
+    {
+      "id": "design-reference",
+      "when": "design-reference-needed",
+      "skills": [
+        "aw-design-reference"
+      ],
+      "note": "沿用项目规范和已选平台；已有适用依据时复用，不重复调研。"
+    },
+    {
+      "id": "design-standards",
+      "when": "design-standards-needed",
+      "skills": [
+        "aw-design-standards"
+      ],
+      "note": "写回同一项目规范入口；单页局部调整不重建体系。"
+    },
+    {
+      "id": "ui-design",
+      "when": "ui-change",
+      "skills": [
+        "aw-ui-design"
+      ],
+      "note": ""
+    },
+    {
+      "id": "contracts",
+      "when": "contract-change",
+      "skills": [
+        "aw-api-contracts"
+      ],
+      "note": ""
+    },
+    {
+      "id": "security-design",
+      "when": "trust-boundary-change",
+      "skills": [
+        "aw-security-boundaries"
+      ],
+      "note": ""
+    },
+    {
+      "id": "validation-plan",
+      "when": "before-code-or-behavior-checks",
+      "skills": [
+        "aw-test-strategy"
+      ],
+      "note": "先决定TDD及保留；P0不擅自恢复。"
+    },
+    {
+      "id": "performance-scope",
+      "when": "performance-scope-needed",
+      "skills": [
+        "aw-performance-optimization"
+      ],
+      "note": "本阶段只形成/承接测量方案、基线和瓶颈假设；优化并入下一唯一实现/TDD循环。"
+    },
+    {
+      "id": "observability-scope",
+      "when": "observability-scope-needed",
+      "skills": [
+        "aw-observability"
+      ],
+      "note": "本阶段只形成/承接运行问题到信号方案；埋点并入同一次端内实现，不另起实现或验证策略。"
+    },
+    {
+      "id": "tdd-implementation",
+      "when": "tdd-selected",
+      "skills": [
+        "aw-scoped-tdd"
+      ],
+      "note": "以TDD技能统筹红绿循环，并在循环内读取implementation_constraints；完成后跳过独立实现阶段，只补未覆盖约束。 已触发的性能/观测方案在同一循环内落实；未触发不额外加载专项。",
+      "implementation_constraints": [
+        "aw-frontend-implementation",
+        "aw-backend-implementation"
+      ]
+    },
+    {
+      "id": "implementation",
+      "when": "implementation-without-tdd",
+      "skills": [
+        "aw-frontend-implementation",
+        "aw-backend-implementation"
+      ],
+      "note": "只执行受影响端；已选TDD时本阶段并入TDD循环，不作为第二次实现。 已触发的性能/观测方案在同一循环内落实；未触发不额外加载专项。"
+    },
+    {
+      "id": "performance-result",
+      "when": "performance-result-needed",
+      "skills": [
+        "aw-performance-optimization"
+      ],
+      "note": "仅核对最终可比较测量、正确性与保留决定；已有有效结果直接复用，不再实施一次。"
+    },
+    {
+      "id": "observability-result",
+      "when": "observability-result-needed",
+      "skills": [
+        "aw-observability"
+      ],
+      "note": "仅补最终信号/查询/告警的适用证据，尊重实际授权；配置或模拟不冒充真实运行。"
+    },
+    {
+      "id": "review",
+      "when": "nontrivial-change",
+      "skills": [
+        "aw-adversarial-review"
+      ],
+      "note": ""
+    },
+    {
+      "id": "cutover-evidence",
+      "when": "cutover-requested",
+      "skills": [
+        "aw-evidence-verification"
+      ],
+      "note": "真实切换前核对最终产物、数据/任务/消费者与恢复的适用证据。"
+    },
+    {
+      "id": "cutover-readiness",
+      "when": "cutover-requested",
+      "skills": [
+        "aw-release-readiness"
+      ],
+      "note": "备齐步骤后只执行具体授权范围；单纯写方案不触发真实发布/切换。"
+    },
+    {
+      "id": "verify-deliver",
+      "when": "always",
+      "skills": [
+        "aw-delivery-cleanup",
+        "aw-evidence-verification"
+      ],
+      "note": "报告本次真实状态；区分方案、实现、演练、切换、待观察与退役。"
+    }
+  ],
+  "conditions": {
+    "always": "迁移任务的必要判断；只读方案在文档交付处停止，后续实施阶段均按本次范围筛选。",
+    "existing-audit-needed": "本次要求老项目正式代码/配置/工程脚本实施，且无可核对的完整阅读覆盖，或基线后全部差异/理解缺口尚未补齐；有效未变记录继续承接，不按新需求/聊天重读。纯设计/只读调查不触发产品门禁。",
+    "migration-reference-needed": "已授权正式迁移实施且目标已选，但所需目标工程规则缺少适配固定来源或来源受本次变化影响；只补缺口，不复跑新产品选型。",
+    "existing-standards-needed": "已授权正式迁移实施且完整代码理解有效，但同一项目规范缺少所需目标/过渡约束或事实已变化；只增量补缺，不另建冲突规范。",
+    "behavior-requirements-needed": "目标、关键行为/验收仍缺或方向存在实质取舍，或用户要求需求/头脑风暴；已明确的局部改动内联承接。 只读迁移方案只描述本项，不据此修改产品代码或运行真实业务。",
+    "design-reference-needed": "本次有界面且用户要求参考/借鉴，或方向、平台规范、具体设计问题仍需外部依据；已有足够依据不重复搜索。 只读迁移方案只描述本项，不据此修改产品代码或运行真实业务。",
+    "design-standards-needed": "用户明确要求项目级共用设计规范，或正式产品实施需要建立/改变共用规则；单独页面稿/原型缺规范时只补本页规则，不启动整套体系。 只读迁移方案只描述本项，不据此修改产品代码或运行真实业务。",
+    "ui-change": "本次涉及实际界面的视觉/交互设计；轻微改动沿用现有规则，纯 API/服务任务跳过。 只读迁移方案只描述本项，不据此修改产品代码或运行真实业务。",
+    "contract-change": "接口/字段/数据/调用方契约改变。 只读迁移方案只描述本项，不据此修改产品代码或运行真实业务。",
+    "trust-boundary-change": "本次涉及认证、授权、归属、私有数据/文件或其他实际信任边界。 只读迁移方案只描述本项，不据此修改产品代码或运行真实业务。",
+    "before-code-or-behavior-checks": "代码实现或行为检查前确保同一次验证/TDD/保留决定有效；已有决定直接承接，风险变化更新该决定，不重复询问。",
+    "tdd-selected": "本次要求正式产品代码实施，并明确选择及授权TDD；循环内使用受影响端实现约束。独立原型的显式TDD仍在UI阶段按原型范围执行，不进入本产品实现阶段。",
+    "implementation-without-tdd": "本次要求正式产品代码实施且未选择TDD；仅执行受影响端。独立展示原型在UI阶段制作，不因此进入产品实现。",
+    "nontrivial-change": "用户请求只读审查，或已授权实施的非平凡最终差异尚无有效审查；只读方案不因此启动产品实现。修复后定向复核。",
+    "cutover-requested": "本次明确请求集成、发布或真实切换，或当前具体授权已经覆盖这些操作；只读计划、单纯本地实现/隔离演练不触发。",
+    "performance-scope-needed": "本次明确要求性能调查/预算，或具体性能症状属于授权范围，且测量设计/有效基线/瓶颈证据仍缺；只读调查或已有证据按实际范围复用，不自动优化代码或加压生产。",
+    "observability-scope-needed": "本次明确要求信号/告警设计或存在相关运行诊断缺口，且已有信号/方案不足；不是每项功能都触发埋点，不自动采集或发通知。",
+    "performance-result-needed": "本次优化差异或待判断的性能结果尚缺覆盖最终产物的可比较复测/正确性证据；不因阶段存在重做调查或业务实现，允许范围不足则列未验证。",
+    "observability-result-needed": "本次信号/告警实现或相关变化尚缺最终实际输出/查询/关联的适用证据；仅补缺口，不重建方案/埋点，不越权演练或发送通知。"
+  },
+  "execution": "以迁移技能统筹保留映射、依赖、分批和切换；计划内容不是操作授权。正式实施沿用老项目全仓/规范门禁，目标栈缺口由迁移方案核实。先满足所有适用前置再做贯通样本，每个业务批次复用有效策略/契约并按依赖实施、集成与验收；TDD与独立实现互斥。skills为条件导出闭包，optional协作只有具备授权/工具且有收益时采用；不按技能数启动代理。 性能和观测仅按专项条件触发，前置只定方案/基线，实际改变并入唯一实现/TDD循环，后置只补最终证据；不重复访谈/选策略/编码/重跑有效检查。"
+}
