@@ -2,7 +2,7 @@
 
 [English](promotion.en.md) · [简体中文](promotion.zh-CN.md) · [GitHub](https://github.com/suntianhu/agent-workflow-skills)
 
-**v1.2.8 · 29 skills · Nine conditional workflows · MIT**
+**v1.3.0 · 29 skills · Nine conditional workflows · MIT**
 
 **Build on existing conventions, keep changes scoped, and back completion claims with evidence.**
 
@@ -28,7 +28,7 @@ Five design choices shape the collection:
 
 A documented example extends a fictional maintenance app with an inventory page and a later filtering request. The work keeps its original handbook and theme while checking the existing work-order flow. Together with a separate new-project demo, the historical record contains 42 grouped browser behavior and invariant checks. See the [executed workflows](https://github.com/suntianhu/agent-workflow-skills/blob/main/docs/executed-workflows.md) for scope and limitations.
 
-Original material is MIT-licensed. Selected upstream sources and adoption decisions are recorded. The README is available in six languages; skill bodies and detailed guides are currently in Simplified Chinese.
+Original material is MIT-licensed. Thanks to the authors and maintainers of the referenced open-source projects; see [references and acknowledgments](provenance.md) for sources and adoption decisions. The README is available in six languages; skill bodies and detailed guides are currently in Simplified Chinese.
 
 Try one redacted task and report whether the agent carried the existing conventions forward, kept changes within scope, and provided evidence you could inspect.
 

@@ -2,7 +2,7 @@
 
 [English](promotion.en.md) · [简体中文](promotion.zh-CN.md) · [GitHub](https://github.com/suntianhu/agent-workflow-skills)
 
-**v1.2.8 · 29 个技能 · 9 套条件组合 · MIT**
+**v1.3.0 · 29 个技能 · 9 套条件组合 · MIT**
 
 **沿用已有规范，控制每次改动，用证据说明完成情况。**
 
@@ -36,7 +36,7 @@
 
 已有一个能具体查看的案例：在虚构的老工程“车间台账”中增加领用页，再由后续执行者增加筛选，继续沿用原 handbook 与主题。检查覆盖新功能、原工单流程和共享样式；另一个新工程也完成了后续需求。两个小型 Web 演示合计记录了 42 项行为与不变量检查，详见[实际执行记录](https://github.com/suntianhu/agent-workflow-skills/blob/main/docs/executed-workflows.md)。
 
-原创内容采用 MIT 许可，已记录参考来源和取舍。README 提供六种语言，技能正文和详细指南目前为简体中文。建议先用一个脱敏任务试用：关注项目规则有没有接住、改动有没有对应需求、完成结论是否有实际依据。
+原创内容采用 MIT 许可，感谢相关开源项目作者与维护者，具体参考与采纳情况见[参考来源与鸣谢](provenance.md)。README 提供六种语言，技能正文和详细指南目前为简体中文。建议先用一个脱敏任务试用：关注项目规则有没有接住、改动有没有对应需求、完成结论是否有实际依据。
 
 [源码、快速开始与示例](https://github.com/suntianhu/agent-workflow-skills)
 

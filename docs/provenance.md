@@ -1,4 +1,6 @@
-# GitHub蒸馏来源与取舍
+# 参考来源与鸣谢
+
+感谢相关开源项目的作者与维护者。本文记录本集合参考的材料、采纳与未采纳的原则，以及对应的阅读范围与许可边界。
 
 ## 工作流采纳增量（2026-10-21，1.2.5 采纳）
 
@@ -20,7 +22,7 @@
 
 本次取得的两份根许可分别是 Addy Osmani 与 Yudhi Armyndharis 的 MIT（对应第一、第三仓）；magnus919 所读技能 frontmatter 标 MIT，根 LICENSE 未取得，不宣称已核实全仓许可。这里只独立组织抽象方法，不复制/翻译其正文、代码或模板；聚合仓的完整来源链未审计。
 
-官方补核覆盖 Azure 渐进替换及过渡成本、AWS 双写/事件幂等、Kubernetes 调度与在途任务限制、PostgreSQL 18 复制边界和 Prisma 分阶段迁移概念；它们不是固定技术栈，也不计作额外已蒸馏技能仓库。定时任务执行权交接、请求接口保留、真实迁移动机、多智能体依赖/文件所有权来自本次明确需求和风险分析，不冒称已在真实产品迁移验证。
+官方补核覆盖 Azure 渐进替换及过渡成本、AWS 双写/事件幂等、Kubernetes 调度与在途任务限制、PostgreSQL 18 复制边界和 Prisma 分阶段迁移概念；它们不是固定技术栈，也不计入上游技能仓库的数量。定时任务执行权交接、请求接口保留、真实迁移动机、多智能体依赖/文件所有权来自本次明确需求和风险分析，不冒称已在真实产品迁移验证。
 
 唯一维护源为 project-migration.md、migration-preservation.md、migration-execution.md、migration-agents.md 及计划模板，全部由 aw-project-migration 按需携带；既有端内实现、契约、验证与协作技能复用原职责，不改其入口。
 
@@ -30,7 +32,7 @@
 
 1.3.0 共记录九个公开仓库、43 个选定文件：前五仓的 15 个文件取得于 2026-10-18，新增四仓的 28 个文件取得于 2026-10-19。固定提交、原始字节散列、大小及本次阅读范围见 [upstreams.json](../provenance/upstreams.json)。完整文件已取得不等于全文审阅；部分文件只读相关章节或数据行。这是选定材料研究，不是整仓审计。
 
-基于抽象思想与本集合需求独立撰写规则，不分发上游技能正文、翻译、脚本、资产、数据库、SQL 示例或报告模板。各上游许可分别记录；“蒸馏”不是把外部作品重新授权为 MIT 的方法。
+基于抽象思想与本集合需求独立撰写规则，不分发上游技能正文、翻译、脚本、资产、数据库、SQL 示例或报告模板。各上游许可分别记录；本集合的 MIT 许可不覆盖外部作品。
 
 | 来源 | 实际采纳的原则 | 明确不采纳 |
 | --- | --- | --- |
@@ -81,7 +83,7 @@ Apple HIG、微信设计入口与 Material 页面本次存在正文访问限制�
 
 ## 对具体规则的官方补核
 
-2026-10-19 补查 PostgreSQL、PgBouncer、Supabase 与 Playwright 官方文档，核对 EXPLAIN 的执行副作用、组合索引和版本差异、池能力、请求身份与 RLS、定位与等待。它们是技术核对资料，不计为额外已蒸馏仓库；具体项目运行时仍按目标版本复核。
+2026-10-19 补查 PostgreSQL、PgBouncer、Supabase 与 Playwright 官方文档，核对 EXPLAIN 的执行副作用、组合索引和版本差异、池能力、请求身份与 RLS、定位与等待。它们是技术核对资料，不计入上游技能仓库的数量；具体项目运行时仍按目标版本复核。
 
 - [PostgreSQL EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html)
 - [PostgreSQL 组合索引](https://www.postgresql.org/docs/current/indexes-multicolumn.html)

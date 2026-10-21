@@ -8,11 +8,11 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**バージョン 1.2.9** · Agent Skills ディレクトリ形式 · Python 3.10+ 用ツール · 実行時の依存関係は Python 標準ライブラリのみ
+**バージョン 1.3.0** · Agent Skills ディレクトリ形式 · Python 3.10+ 用ツール · 実行時の依存関係は Python 標準ライブラリのみ
 
 **タスクに合うスキルを選び、既存の規約を引き継ぎます。** 29スキルと9つの条件付き構成で、既存・新規プロジェクト、[移行](docs/project-migration.md)、[性能と可観測性](docs/adoption-integration.md)を扱います。有効な決定を再利用し、必要に応じて分担し、実際の証拠で成果を示します。
 
-[GitHub の参照元](#sources) · [使用例](examples/README.md) · [変更履歴](CHANGELOG.md)
+[参考資料と謝辞](#sources) · [使用例](examples/README.md) · [変更履歴](CHANGELOG.md)
 
 ## このコレクションの特徴
 
@@ -120,9 +120,9 @@ Windows/Linux CI はソース、オフラインツール、再現可能なパッ
 
 <a id="sources"></a>
 
-## GitHub の参照元と謝辞
+## 参考資料と謝辞
 
-以下の14プロジェクトの一部を調査し、適用できる原則を独自のスキルとガイドとして書き直しました。固定コミットから取得した73ファイルが対象で、リポジトリ全体の監査ではありません。主な採用点を下表に示します。範囲、採用しなかった規則、ライセンスは[出典の検討](docs/provenance.md)、[固定した出典](provenance/upstreams.json)、[第三者に関する通知](THIRD_PARTY_NOTICES.md)を参照してください。
+以下の14のオープンソースプロジェクトの作者・メンテナーの皆さまに感謝します。各プロジェクトの設計や開発手法の一部を参考に、本コレクションのスキルとガイドを独自に作成しました。固定コミットから取得した73ファイルが対象で、リポジトリ全体の監査ではありません。主な採用点を下表に示します。範囲、採用しなかった規則、ライセンスは[出典の検討](docs/provenance.md)、[固定した出典](provenance/upstreams.json)、[第三者に関する通知](THIRD_PARTY_NOTICES.md)を参照してください。
 
 | プロジェクト | 採用した考え方 |
 | --- | --- |

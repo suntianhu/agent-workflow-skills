@@ -1,19 +1,18 @@
-# v1.2.9 — Verify dependency behavior and password-flow contracts
+# v1.3.0 — References and acknowledgments
 
-29 skills and nine conditional compositions. This patch distills anonymized maintenance lessons into existing owners, with no product source, credentials, project identifiers or fixed password algorithms/lengths.
+29 skills and nine conditional compositions. This documentation release uses the explicitly requested version 1.3.0 and gives clearer credit to the open-source projects that informed the collection.
 
 ## Changes
 
-- Verify language name resolution and framework responsibilities before renaming or changing qualified references; trace reflective, template, configuration and string consumers.
-- Check the exact configuration definition/loading/read chain and both switch branches, retaining independent mandatory rules.
-- Distinguish password-change entry points and validation stages, including weak unchanged passwords, storage-format compatibility and success-only metadata writes.
-- Require evidence from actual core dependencies where their behavior is under test; cover relevant input boundaries, legacy formats and save/authenticate round trips.
-- Separate dependency execution, substituted external boundaries and real-channel acceptance; do not turn scoped review or compilation into whole-project assurance.
+- Use references and acknowledgments consistently in all six README languages, with thanks to the authors and maintainers of fourteen open-source projects.
+- Retain concrete adoption summaries, fixed commits, 73 retrieved-file records and individual license boundaries.
+- Update the Chinese and English introductions to version 1.3.0 and link their source acknowledgments; keep the skills.sh listing and installation/privacy guide available.
+- Preserve skill instructions, generated resources, workflow compositions and utility behavior.
 
 ## Evidence and limits
 
-Source validation, generated freshness, local links, unchanged utility contracts, offline examples and reproducible tracked-source packaging are checked for this release. A scoped manual counterexample review is recorded in [validation](validation.md); it is static guidance review, not model execution or product acceptance. Windows/Linux PR and release CI, merge, new annotated tag and asset bytes are verified separately after execution.
+The validation scope for this release covers source structure, generated freshness, local links, offline utility examples and reproducible tracked-source packaging. Actual results are recorded in [validation](validation.md). Windows/Linux CI, the merge, the new annotated tag and published asset bytes are verified separately after execution.
 
-No new persistent test suite or skill is added. Existing test/retention and security gates remain in force. Native discovery records keep their historical version and scope; this release does not claim a new local installation, native reload, automatic trigger evaluation, model run, browser login or live database test.
+No new persistent test suite or skill is added. Existing test/retention and security gates remain in force. Native discovery and scenario records retain their historical version and scope; this documentation release does not claim new agent execution or product acceptance. The earlier source-only checkpoint named 1.3.0 remains a historical record distinct from this public release.
 
-See [CHANGELOG](../CHANGELOG.md), [version history](versioning.md), [validation](validation.md), [source research](provenance.md) and [third-party notices](../THIRD_PARTY_NOTICES.md).
+See [CHANGELOG](../CHANGELOG.md), [version history](versioning.md), [validation](validation.md), [references and acknowledgments](provenance.md) and [third-party notices](../THIRD_PARTY_NOTICES.md).

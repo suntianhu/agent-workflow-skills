@@ -8,11 +8,11 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**版本 1.2.9** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
+**版本 1.3.0** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
 
 **依任務選技能，沿用專案既有規範。** 29 個技能、9 套條件組合涵蓋新舊專案開發、[專案遷移](docs/project-migration.md)、[效能與可觀測性](docs/adoption-integration.md)。承接有效決定，按需分工，以實際證據說明交付成果。
 
-[GitHub 借鑑來源](#sources) · [使用範例](examples/README.md) · [版本紀錄](CHANGELOG.md)
+[參考來源與致謝](#sources) · [使用範例](examples/README.md) · [版本紀錄](CHANGELOG.md)
 
 ## 為什麼使用這套技能
 
@@ -120,9 +120,9 @@ Windows/Linux CI 檢查原始碼、離線工具及可重現封裝。1.2.7 的 Wi
 
 <a id="sources"></a>
 
-## GitHub 借鑑與蒸餾來源
+## 參考來源與致謝
 
-本專案研究以下 14 個 GitHub 專案的部分內容，將適用原則重新組織為獨立撰寫的技能與指南。紀錄涵蓋固定提交下實際取得的 73 份檔案，不代表完整審查這些儲存庫。主要借鑑點如下；閱讀範圍、未採納規則與許可見[來源取捨](docs/provenance.md)、[固定提交及檔案指紋](provenance/upstreams.json)、[第三方說明](THIRD_PARTY_NOTICES.md)。
+感謝以下 14 個開源專案的作者與維護者。本專案參考了其中的部分設計與工程方法，結合自身需求獨立編寫技能與指南。紀錄涵蓋固定提交下實際取得的 73 份檔案，不代表完整審查這些儲存庫。主要借鑑點如下；閱讀範圍、未採納規則與許可見[來源與採納說明](docs/provenance.md)、[固定提交及檔案指紋](provenance/upstreams.json)、[第三方說明](THIRD_PARTY_NOTICES.md)。
 
 | 專案 | 主要借鑑內容 |
 | --- | --- |

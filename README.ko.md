@@ -8,11 +8,11 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**버전 1.2.9** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
+**버전 1.3.0** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
 
 **작업에 맞는 스킬을 선택하고 기존 규칙을 이어갑니다.** 스킬 29개와 조건부 구성 9개로 기존·신규 프로젝트, [마이그레이션](docs/project-migration.md), [성능과 관측성](docs/adoption-integration.md)을 다룹니다. 유효한 결정을 재사용하고 필요할 때 분담하며 실제 근거로 결과를 설명합니다.
 
-[GitHub 참고 출처](#sources) · [사용 예시](examples/README.md) · [변경 이력](CHANGELOG.md)
+[참고 자료 및 감사의 말](#sources) · [사용 예시](examples/README.md) · [변경 이력](CHANGELOG.md)
 
 ## 이 컬렉션의 특징
 
@@ -120,9 +120,9 @@ Windows/Linux CI는 소스, 오프라인 도구와 재현 가능한 패키징을
 
 <a id="sources"></a>
 
-## GitHub 참고 프로젝트와 감사의 말
+## 참고 자료 및 감사의 말
 
-아래 14개 GitHub 프로젝트의 일부를 연구하고 적용 가능한 원칙을 독립적으로 작성한 스킬과 가이드로 정리했습니다. 고정 커밋에서 가져온 파일 73개가 대상이며 저장소 전체를 감사한 것은 아닙니다. 주요 채택 내용은 아래 표에, 범위·미채택 규칙·라이선스는 [출처 검토](docs/provenance.md), [고정 출처](provenance/upstreams.json), [제3자 고지](THIRD_PARTY_NOTICES.md)에 기록되어 있습니다.
+아래 14개 오픈 소스 프로젝트의 작성자와 유지관리자에게 감사드립니다. 각 프로젝트의 일부 설계 및 개발 방식을 참고하여 이 모음의 스킬과 가이드를 독립적으로 작성했습니다. 고정 커밋에서 가져온 파일 73개가 대상이며 저장소 전체를 감사한 것은 아닙니다. 주요 채택 내용은 아래 표에, 범위·미채택 규칙·라이선스는 [출처 검토](docs/provenance.md), [고정 출처](provenance/upstreams.json), [제3자 고지](THIRD_PARTY_NOTICES.md)에 기록되어 있습니다.
 
 | 프로젝트 | 채택한 아이디어 |
 | --- | --- |
