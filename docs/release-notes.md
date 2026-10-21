@@ -1,17 +1,19 @@
-# v1.2.8 — Remove the adoption caveat from all README translations
+# v1.2.9 — Verify dependency behavior and password-flow contracts
 
-29 skills and nine conditional compositions. This documentation-only patch removes one corresponding paragraph from each of the six README translations. Skill content, discovery descriptions, compositions and utility scripts remain unchanged from 1.2.7.
+29 skills and nine conditional compositions. This patch distills anonymized maintenance lessons into existing owners, with no product source, credentials, project identifiers or fixed password algorithms/lengths.
 
 ## Changes
 
-- Remove the requested source-adoption caveat paragraph from English, Simplified Chinese, Traditional Chinese, Japanese, Korean and Russian READMEs.
-- Preserve source acknowledgments, pinned provenance and license notices.
-- Synchronize the six README version headers, catalog, changelog and release metadata to 1.2.8; preserve all existing public tags.
+- Verify language name resolution and framework responsibilities before renaming or changing qualified references; trace reflective, template, configuration and string consumers.
+- Check the exact configuration definition/loading/read chain and both switch branches, retaining independent mandatory rules.
+- Distinguish password-change entry points and validation stages, including weak unchanged passwords, storage-format compatibility and success-only metadata writes.
+- Require evidence from actual core dependencies where their behavior is under test; cover relevant input boundaries, legacy formats and save/authenticate round trips.
+- Separate dependency execution, substituted external boundaries and real-channel acceptance; do not turn scoped review or compilation into whole-project assurance.
 
 ## Evidence and limits
 
-Release preparation checks the exact README removals, unchanged skill bytes, generated freshness, source structure, local links and reproducible tracked-source packaging. Windows/Linux CI checks the final PR, including offline utilities and packaging. Remote merge, tag and archive results are verified after each operation.
+Source validation, generated freshness, local links, unchanged utility contracts, offline examples and reproducible tracked-source packaging are checked for this release. A scoped manual counterexample review is recorded in [validation](validation.md); it is static guidance review, not model execution or product acceptance. Windows/Linux PR and release CI, merge, new annotated tag and asset bytes are verified separately after execution.
 
-All 154 skill files retain their 1.2.7 bytes. The 1.2.7 local installation and native Codex discovery evidence remains attributed to that version; this patch does not rerun model execution, automatic triggers or product behavior. Historical discovery and browser checks retain their original versions and scope.
+No new persistent test suite or skill is added. Existing test/retention and security gates remain in force. Native discovery records keep their historical version and scope; this release does not claim a new local installation, native reload, automatic trigger evaluation, model run, browser login or live database test.
 
 See [CHANGELOG](../CHANGELOG.md), [version history](versioning.md), [validation](validation.md), [source research](provenance.md) and [third-party notices](../THIRD_PARTY_NOTICES.md).

@@ -8,7 +8,7 @@ Composable development workflows for coding agents, with explicit project gates 
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**Version 1.2.8** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
+**Version 1.2.9** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
 
 **Select skills for the task. Build on the project's existing rules.** 29 skills and nine conditional compositions cover existing and new projects, [project migration](docs/project-migration.md), and [performance and observability](docs/adoption-integration.md). Reuse valid decisions, delegate when useful, and report evidence for the delivered result.
 

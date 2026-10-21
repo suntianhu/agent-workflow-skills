@@ -8,7 +8,7 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**バージョン 1.2.8** · Agent Skills ディレクトリ形式 · Python 3.10+ 用ツール · 実行時の依存関係は Python 標準ライブラリのみ
+**バージョン 1.2.9** · Agent Skills ディレクトリ形式 · Python 3.10+ 用ツール · 実行時の依存関係は Python 標準ライブラリのみ
 
 **タスクに合うスキルを選び、既存の規約を引き継ぎます。** 29スキルと9つの条件付き構成で、既存・新規プロジェクト、[移行](docs/project-migration.md)、[性能と可観測性](docs/adoption-integration.md)を扱います。有効な決定を再利用し、必要に応じて分担し、実際の証拠で成果を示します。
 
