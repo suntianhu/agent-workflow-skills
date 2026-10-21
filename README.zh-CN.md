@@ -8,7 +8,7 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**版本 1.2.7** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
+**版本 1.2.8** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
 
 **按任务选技能，沿用项目已有规范。** 29 个技能、9 套条件组合覆盖新旧项目开发、[项目迁移](docs/project-migration.md)、[性能优化与可观测性](docs/adoption-integration.md)。承接有效决定，按需拆分协作，以实际证据说明交付结果。
 
@@ -130,8 +130,6 @@ Windows/Linux CI 校验源码、离线工具和可复现打包。1.2.7 的 Windo
 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 需求就绪度、任务交接、质量门槛、迁移、性能与可观测性 |
 | [magnus919/agent-skills](https://github.com/magnus919/agent-skills) | 迁移兼容性、数据对账与恢复能力的真实边界 |
 | [rmyndharis/antigravity-skills](https://github.com/rmyndharis/antigravity-skills) | 集成关系梳理、按业务分批迁移、明确执行责任 |
-
-蒸馏时按本项目任务边界取舍：主观“95% 可信度”不作为已测量的验收门槛，也不照搬反复审批、全任务 TDD、指定工具或强制多代理。`openai/skills` 属于历史参考，其已记录快照提示转向 `openai/plugins`。
 
 ## 许可
 

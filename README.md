@@ -8,7 +8,7 @@ Composable development workflows for coding agents, with explicit project gates 
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**Version 1.2.7** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
+**Version 1.2.8** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
 
 **Select skills for the task. Build on the project's existing rules.** 29 skills and nine conditional compositions cover existing and new projects, [project migration](docs/project-migration.md), and [performance and observability](docs/adoption-integration.md). Reuse valid decisions, delegate when useful, and report evidence for the delivered result.
 
@@ -130,8 +130,6 @@ This collection distills selected ideas from the 14 GitHub projects below into i
 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | Requirements readiness, task handoffs, quality gates, migration, performance and observability |
 | [magnus919/agent-skills](https://github.com/magnus919/agent-skills) | Migration compatibility, data reconciliation and realistic recovery limits |
 | [rmyndharis/antigravity-skills](https://github.com/rmyndharis/antigravity-skills) | Map integrations, migrate by business batch and assign clear responsibilities |
-
-Adoption follows this collection's task boundaries: subjective “95% confidence” is not a measured acceptance gate. Upstream advice does not force repeated approvals, TDD, particular tools or multiple agents. `openai/skills` is a historical reference; its recorded snapshot points to `openai/plugins`.
 
 ## License
 
