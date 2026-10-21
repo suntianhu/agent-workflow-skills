@@ -1,59 +1,51 @@
-# Launch copy: Agent Workflow Skills 1.2.4
+# Agent Workflow Skills: helping coding agents carry existing projects forward
 
-Repository: [suntianhu/agent-workflow-skills](https://github.com/suntianhu/agent-workflow-skills). These are draft posts; no community posting has been performed. Check [Releases](https://github.com/suntianhu/agent-workflow-skills/releases) for publication status. Version 1.2.4 requires precise fixes in existing business modules, removal of logic invalidated by the fix, checks of affected normal behavior and no unrelated refactoring.
+[English](promotion.en.md) · [简体中文](promotion.zh-CN.md) · [GitHub](https://github.com/suntianhu/agent-workflow-skills)
 
-## One sentence
+**v1.2.8 · 29 skills · Nine conditional workflows · MIT**
 
-Select skills for the task, build on project conventions, and deliver results with checkable evidence.
+**Build on existing conventions, keep changes scoped, and back completion claims with evidence.**
 
-## Short community post
+When a coding agent works on an existing product, I want it to carry the project's decisions forward: where conventions live, which behavior must stay intact, and what evidence is needed to call a change complete.
 
-**Agent Workflow Skills** is an open-source collection of **26 skills and eight conditional compositions** for coding agents.
+Consider adding an inventory page to an existing admin app. The page needs its own flow, but it also needs to fit the established fonts, theme, components, and API contracts. A later session should be able to build on the same project knowledge.
 
-The updated introduction focuses on **leaner instructions, task-scoped activation, and continuity with existing project conventions**. Choose one main capability and read more only when a real gap appears. Clear local edits follow their scope; new requirements start with the project's code, Skills and standards. New pages inherit fonts, themes, components and interaction patterns. Changes to an existing user Skill require a concrete proposal and confirmation.
+**Agent Workflow Skills** organizes those expectations into **29 skills and nine conditional workflows**. They cover frontend and backend development in new and existing projects, full-stack work, small changes, debugging, migration, and release preparation.
 
-These are workflow instructions whose execution depends on the host and task. Structural, export, offline utility and limited synthetic checks are recorded; productivity gains and automatic triggering accuracy for the current 26 skills have not been measured.
+Five design choices shape the collection:
 
-https://github.com/suntianhu/agent-workflow-skills
+1. **Carry project conventions forward.** Before formal implementation in an existing product, establish complete codebase understanding and internal standards. Reuse a verifiable baseline, review subsequent changes and knowledge gaps, and keep later skills connected to the same standards entry point. New pages inherit the product's established design conventions.
 
-Feedback from one redacted task is welcome: what helped, what repeated, and whether the existing conventions carried through.
+2. **Trace changes to requested outcomes.** Keep separate acceptance criteria for multiple small requests. Follow actual dependencies when a shared component or service needs to change. Bug fixes address the responsible module, account for invalidated logic, and check affected normal behavior as well as the reported failure.
 
-## Longer community post
+3. **Select workflow stages for the task.** Compositions describe conditions and handoffs. Choose validation scope, TDD order, and test retention separately. Reuse valid decisions and checks within their coverage. Additional models and agents require a concrete benefit and appropriate authorization.
 
-### Title
+4. **Account for the old system during migration.** Map existing evidence, consumers, expected behavior, target ownership, and acceptance. Include API consumers, historical data, scheduled jobs, callbacks, and recovery. Scheduled work needs an explicit handoff of execution responsibility and in-flight work.
 
-Agent Workflow Skills: leaner instructions, scoped activation, existing project conventions
+5. **Make completion claims inspectable.** Report what was implemented, what was actually checked, and which gaps remain. Local utilities support composition export, source tracking, structural validation, and reproducible release archives.
 
-### Body
+A documented example extends a fictional maintenance app with an inventory page and a later filtering request. The work keeps its original handbook and theme while checking the existing work-order flow. Together with a separate new-project demo, the historical record contains 42 grouped browser behavior and invariant checks. See the [executed workflows](https://github.com/suntianhu/agent-workflow-skills/blob/main/docs/executed-workflows.md) for scope and limitations.
 
-When a coding agent changes an existing product, I want it to understand the rules already in place and choose capabilities for the actual task. A new requirement should carry those conventions forward.
+Original material is MIT-licensed. Selected upstream sources and adoption decisions are recorded. The README is available in six languages; skill bodies and detailed guides are currently in Simplified Chinese.
 
-**Agent Workflow Skills** organizes these instructions into **26 skills and eight conditional compositions**, covering requirements, design, implementation, validation, debugging and delivery. **Version 1.2.4 clarifies precise business-code fixes, removal of invalidated logic and checks of affected normal behavior without unrelated refactoring.**
+Try one redacted task and report whether the agent carried the existing conventions forward, kept changes within scope, and provided evidence you could inspect.
 
-Three ideas guide the collection:
+[Source, quick start, and examples](https://github.com/suntianhu/agent-workflow-skills)
 
-- **Leaner entries.** Remove repeated instructions, select one main capability from its name and description, and open relevant reference sections when more detail is needed. Reuse valid decisions and unchanged material already read.
-- **Task-scoped activation.** Compositions describe conditional stages. Clear local edits do not automatically begin full requirements exploration, design research, model comparison or multi-agent work. Skill choice, model routing and estimates have separate conditions. Validation scope and TDD are selected for the task; existing tests are preserved.
-- **Continuity in existing projects.** Verify the complete baseline and subsequent changes, then use the canonical standards directory and rule sources. Even a page for a new business purpose inherits fonts, themes, components and interaction patterns. Later skills use the same standards. Read partial project Skills first and show a concrete proposal for confirmation before rewriting, merging or replacing an existing user Skill.
+## Start with one actual task
 
-For example, a new admin page starts with relevant existing pages, shared styles and base components, then adds its own information structure and flow within those rules. A button-label change stays within the applicable local scope. Formal integration or shared-rule changes retain their development gates.
+| Your task | A starting point |
+| --- | --- |
+| A small, clearly scoped change | [small-change](../bundles/small-change.json) |
+| A new business page in an existing frontend | [existing-frontend](../bundles/existing-frontend.json) |
+| Planning a framework or database migration | [Migration guide](project-migration.md), currently in Chinese |
 
-These describe instruction policy. The recorded 1.2.1 comparison reduced the combined UTF-8 bytes of 26 `SKILL.md` entries from 46,647 to 39,779, about 14.7%. That measures entry-text size; elapsed-time or productivity gains have not been measured. That historical byte comparison is not a measurement of the current entries.
+Choose a composition for the task, or ask your agent to read the required skill directory's SKILL.md and the references it needs. The first formal implementation in an existing product requires a valid codebase understanding and internal standards; later work can reuse that baseline while reviewing changes. See the [quick start](../README.md#quick-start) and [worked examples](../examples/README.md).
 
-Evidence includes structural checks, bundle exports, offline utility checks and limited synthetic scenarios. Historical 42 browser checks cover two recorded Web demos. Isolated Codex/Claude discovery evidence covers the 24-skill 1.2.0 snapshot; a current local Windows Codex check found all 26 enabled installed skills with source-matching bytes. Neither check establishes automatic trigger accuracy or model execution. See [validation](validation.md) and [executed flows](executed-workflows.md).
+## Version and evidence scope
 
-Six README languages are available; skill bodies and detailed guides remain mainly Chinese. Original material is MIT-licensed. Selected upstream sources, licenses and reading scope are recorded separately, without upstream endorsement or redistribution of upstream skill bodies, databases, tools or assets. See [provenance](provenance.md).
+- Workflow JSON files describe stage conditions and order. Execution depends on the coding agent and its host.
+- The v1.2.7 Windows Codex discovery check found all 29 skills enabled; v1.2.8 retains those skill files. Discovery does not establish model behavior. See [compatibility](agent-compatibility.md) for the tested and documented scope of other hosts.
+- The 42 grouped checks cover two historical, small fictional Web demos. They do not establish current skill effectiveness, production migration outcomes, or general productivity gains. See the [validation record](validation.md).
 
-Feedback from a concrete redacted task is welcome: selected capabilities, repeated steps, inherited conventions and the evidence actually obtained.
-
-Source: https://github.com/suntianhu/agent-workflow-skills
-
-## Social post
-
-Agent Workflow Skills 1.2.4 requires precise fixes in existing business modules, cleanup of invalidated logic and checks of affected normal behavior without unrelated refactoring. 26 skills, eight conditional compositions, and documented validation limits. Feedback from a redacted task is welcome.
-
-https://github.com/suntianhu/agent-workflow-skills
-
-## Posting notes
-
-Pair the post with a redacted task showing selected capabilities, inherited rule locations, the local change and actual checks. Label unexecuted examples and retain the versions and scope of historical evidence. Follow community rules and avoid invented comparisons, adoption figures, productivity percentages or cross-host compatibility claims.
+Feedback from one redacted task is welcome: selected capabilities, preserved conventions, repeated steps, and the evidence actually obtained.
