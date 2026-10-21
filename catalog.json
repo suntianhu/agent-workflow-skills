@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.2.4",
+  "version": "1.2.5",
   "skills": [
     {
       "name": "aw-project-triage",
@@ -107,7 +107,7 @@
       "gate": "完整代码覆盖未成立不能声称基线完成；已有有效阅读记录不重复审计，现有规范只补缺失/改变规则，框架候选不冒称已选。",
       "steps": [
         "沿用项目规范与技能目录，缺省才用docs/engineering/PROJECT_STANDARDS.md；部分Skill优先保留/局部调整，改用户旧入口先展示差异并获明确确认，薄入口只引用同一规范。",
-        "前端与后端规则分别填写，附真实代码/配置或固定范本证据。",
+        "前后端规则分别填写，附真实代码/配置或固定范本证据；同一入口按需承接质量门槛、例外及重要决定的来源/替代关系，不另造规则源。",
         "分开现状、规范、例外和待改进；承接既有技能采纳与冲突表，后续启用技能接回同一规范，开发与架构变化同步更新。"
       ],
       "outputs": "目标项目内部规范及需要的项目级技能入口，含目录/路径证据、范围基线、栈、设计、契约、安全、原生测试命令、保留及发布；宿主发现另列证据。",
@@ -160,7 +160,7 @@
       "goal": "从需求得到可审查交互方案。",
       "gate": "处理行为需求与验收，不规定配色/字体；重要方向缺口才询问，不重复已有批准。",
       "steps": [
-        "识别只写需求、先看页面稿/独立原型或正式实施；提取已有决定、用户/场景/任务/成功与非目标/数据/冻结区。",
+        "识别访谈/方案、页面稿/原型或正式实施；提取已有决定与委托、使用者/场景/目标、成功与非目标、数据/冻结区；只澄清会改变交付的缺口，准备度按证据判断。",
         "写触发、正常行为、适用失败恢复和验收标准。",
         "方向开放或要求头脑风暴时读取 brainstorming.md；实质取舍给少量具体方向及推荐，已有选择继续推进。"
       ],
@@ -262,13 +262,15 @@
         "frontend.md",
         "project-mode.md",
         "browser-validation.md",
-        "design-platforms.md"
+        "design-platforms.md",
+        "implementation-sources.md"
       ],
       "resources": {},
       "reference_conditions": {
         "browser-validation.md": "本次需要且允许浏览器实际交互验证时读取；不自动安装工具或新增持久测试。",
         "design-platforms.md": "涉及平台原生交互、设备/窗口适配或跨端迁移时，只读目标平台相关部分。",
-        "project-mode.md": "交付类型、新旧判断或开发门禁尚有缺口时读取；已有有效判断直接复用。"
+        "project-mode.md": "交付类型、新旧判断或开发门禁尚有缺口时读取；已有有效判断直接复用。",
+        "implementation-sources.md": "版本敏感行为、陌生接口或弃用/兼容冲突缺少有效依据时读取；已有适配来源直接复用，不重做选型。"
       }
     },
     {
@@ -287,12 +289,14 @@
       "references": [
         "backend.md",
         "project-mode.md",
-        "postgres-data.md"
+        "postgres-data.md",
+        "implementation-sources.md"
       ],
       "resources": {},
       "reference_conditions": {
         "postgres-data.md": "实际使用PostgreSQL/Supabase且涉及查询、连接、锁、迁移或权限时读取。",
-        "project-mode.md": "交付类型、新旧判断或开发门禁尚有缺口时读取；已有有效判断直接复用。"
+        "project-mode.md": "交付类型、新旧判断或开发门禁尚有缺口时读取；已有有效判断直接复用。",
+        "implementation-sources.md": "版本敏感行为、陌生接口或弃用/兼容冲突缺少有效依据时读取；已有适配来源直接复用，不重做选型。"
       }
     },
     {
@@ -390,13 +394,13 @@
     {
       "name": "aw-adversarial-review",
       "title": "只读反例审查",
-      "description": "Use for a scoped read-only review of a nontrivial change where requirements, contracts, ownership, recovery, privacy, or compatibility need counterexample analysis.",
+      "description": "Use for a scoped read-only counterexample review of a nontrivial change or a high-impact unresolved decision involving requirements, contracts, ownership, recovery, privacy, compatibility or quality-gate changes; not for routine local edits.",
       "goal": "找可观察反例，避免为实现背书。",
       "gate": "轻微改动只核对需求/diff；代理审查需已有授权且不能变成测试/写入。",
       "steps": [
-        "读取原需求、最终差异、规则与检查证据。",
-        "检查适用边界，逐项给位置、触发、后果和验证办法；仅疑似漏洞或安全相关差异另读security-review-evidence.md。",
-        "将核实发现交给实现者处理；由实现者修复后，审查者只读定向复核。"
+        "读取原需求、当前产物/差异、适用契约和实际证据，保留必要背景而不传作者预设结论；高影响未决方案可先审，已有有效结果直接复用。",
+        "核对适用反例及本次质量门槛变化，给位置、可达触发、后果和依据；区分背景不足、有效问题、已接受取舍与误读，疑似漏洞才补安全证据资料。",
+        "核实后交实现者处理，修复后只读定向复核；无新增实质证据即停止，不固定多轮或反复询问跨模型。"
       ],
       "outputs": "有证据的发现或限定范围未见阻断问题。",
       "references": [
@@ -463,19 +467,25 @@
     {
       "name": "aw-agent-coordination",
       "title": "智能体协作与交接",
-      "description": "Use when an authorized workflow has independent subtasks suitable for additional agents or needs a bounded handoff across agents or context windows.",
+      "description": "Use when a complex authorized workflow needs independently verifiable task decomposition, dependency ordering, bounded delegation, or handoff across agents or context windows; not for obvious local changes.",
       "goal": "按真实工具、授权和文件所有权协调。",
       "gate": "没有代理工具顺序完成；不把支持多个宿主等同自动启动多个代理。",
       "steps": [
-        "比较独立性、收益与协调成本。",
-        "分派最小原始材料、读写边界、文件所有权和产物标准。",
-        "主执行者核对真实文件与证据，传递状态和未完成项。"
+        "按可独立验收结果梳理任务/依赖与合并点，比较并行收益和协调成本；沿用现有计划，不覆盖其他未完成工作。",
+        "按同一任务记录分派最小原始材料、契约/规范、权限/独占写入范围和完成判据，不按技能数创建代理。",
+        "主执行者核对实际差异与证据，传递决定来源、工作树状态、有效验证、阻断与下一步；已有授权与未变基线不重置。"
       ],
       "outputs": "职责分工、边界、产物核对和交接状态。",
       "references": [
-        "agent-coordination.md"
+        "agent-coordination.md",
+        "task-planning.md"
       ],
-      "resources": {}
+      "resources": {
+        "templates/task-record.md": "assets/task-record.md"
+      },
+      "reference_conditions": {
+        "task-planning.md": "复杂任务分解、依赖/验收/所有权或跨上下文恢复存在缺口时读取；已有等效记录直接复用。"
+      }
     },
     {
       "name": "aw-skill-authoring",
@@ -490,9 +500,13 @@
       ],
       "outputs": "标准技能文件、必要资源与真实验证范围。",
       "references": [
-        "skill-authoring.md"
+        "skill-authoring.md",
+        "skill-evaluation.md"
       ],
-      "resources": {}
+      "resources": {},
+      "reference_conditions": {
+        "skill-evaluation.md": "需要核对技能触发、相邻职责或请求实际行为效果评估时读取；结构检查不等于模型通过。"
+      }
     },
     {
       "name": "aw-open-source-readiness",
@@ -510,6 +524,95 @@
         "open-source-readiness.md"
       ],
       "resources": {}
+    },
+    {
+      "name": "aw-project-migration",
+      "title": "项目迁移与框架重构",
+      "description": "Use when migrating an existing product to a different frontend/backend framework, language, architecture, ORM or database while preserving business behavior, APIs, scheduled jobs and data; plan phased replacement, coexistence, cutover, recovery and optional multi-agent work. Not for ordinary local refactors, simple dependency upgrades or greenfield projects.",
+      "goal": "从真实迁移目标和业务保留项出发，按可独立验收的业务批次替换技术实现。",
+      "gate": "迁移到新目录仍按老产品理解行为；正式实施先满足有效全仓基线、同一项目规范、目标决定及验证策略。分析不自动授权实施/生产切换，多智能体按实际授权、独立性和工具判断。",
+      "steps": [
+        "核实动机、范围、旧/新栈、停写窗口及成功条件；已有选择直接沿用，缺选择只推进无依赖调查，明确委托时自主核查决定。",
+        "从源码、消费者和获授权的运行证据建立保留映射，覆盖前端/管理端、服务、入站/出站接口、回调、定时/异步任务、历史数据与文件；未知不等于可删除。",
+        "比较原位演进、业务分批替换和窗口切换；明确契约/身份、数据权威写入方、任务执行权、兼容窗口、恢复边界与退役条件，不默认微服务或换库。",
+        "在已授权实施及门禁满足后，先做代表性贯通样本，再按业务能力拆批；每任务给保留项ID、依赖、独占写入范围、输入契约、完成判据和停止/恢复条件。",
+        "可独立任务才考虑并行；先稳定共享契约与模型，实际委派前读协作资料，明确唯一写入者和集成负责人；无工具或收益时顺序完成。",
+        "按批实施与核验兼容矩阵、数据回填/增量对账、任务交接及受影响正常业务；数据与外部副作用的恢复不能仅靠撤回代码。",
+        "切换前备齐可审阅步骤和演练证据，在具体授权范围内执行；逐项报告实现、演练、部署、切换、观察和退役状态，交代尚未验证项。"
+      ],
+      "outputs": "同一项目内的迁移简报、保留/改变台账、目标与过渡方案、依赖任务图、文件/数据所有权、分批验收及切换/恢复/退役记录；复用已有等效文档。",
+      "references": [
+        "project-migration.md",
+        "migration-preservation.md",
+        "migration-execution.md",
+        "migration-agents.md",
+        "task-planning.md"
+      ],
+      "resources": {
+        "templates/project-migration-plan.md": "assets/project-migration-plan.md",
+        "templates/task-record.md": "assets/task-record.md"
+      },
+      "reference_conditions": {
+        "project-migration.md": "目标、迁移路径、现状证据、分批方式或与既有能力衔接有缺口时读取。",
+        "migration-preservation.md": "盘点或核验接口、定时/异步任务、身份、前后端与数据保留项时读取相关段落。",
+        "migration-execution.md": "需要共存、数据搬迁、对账、任务/写入切换、恢复或退役方案时读取。",
+        "migration-agents.md": "需要设计任务依赖/并行方案，或已授权且适合实际委派时读取；不强制启动代理。",
+        "task-planning.md": "业务批次缺通用任务依赖、验收/所有权或恢复交接结构时读取；迁移字段仍在迁移记录维护。"
+      }
+    },
+    {
+      "name": "aw-performance-optimization",
+      "title": "性能调查与优化",
+      "description": "Use when a user requests performance investigation or budgets, or concrete latency, throughput, resource-use or regression symptoms require measurement, bottleneck evidence and comparable before/after results across frontend, backend or data paths. Not for speculative cleanup or ordinary feature implementation.",
+      "goal": "用可比较测量定位实际瓶颈，验证收益与业务正确性后决定保留。",
+      "gate": "沿用项目基线/规范和验证决定；测量/负载只在允许环境，产品修改保留开发门禁，不默认生产压测、安装工具或固定性能阈值。",
+      "steps": [
+        "明确具体流程/症状、主要指标、成功口径和本次范围；复用已有版本/配置、测量与失败结论，不为已有决定重做需求访谈。",
+        "核对工具与允许环境，固定设备/数据/负载、缓存/预热、样本/窗口及预算，取得可比较基线，报告缺环境和测量限制。",
+        "按症状分段定位、提出可区分假设；数据专项按实际引擎读取，缺信号再交观测设计，不先叠缓存/索引或另建观测管道。",
+        "优化并入唯一端内实现或已选TDD循环，保持必要业务工作量与正确性；用匹配条件复测，区分改善、噪声和未确定。",
+        "只保留有依据的优化，撤回仅限本任务增量；记录失败尝试、实际结果及适用预算/回归观察，交证据核对，不自动扩成发布。"
+      ],
+      "outputs": "性能目标、可比较基线/瓶颈证据、实现与正确性范围、复测/波动和保留决定、未验证项；复用项目现有记录。",
+      "references": [
+        "performance-optimization.md",
+        "implementation-sources.md",
+        "postgres-data.md"
+      ],
+      "resources": {
+        "templates/performance-record.md": "assets/performance-record.md"
+      },
+      "reference_conditions": {
+        "performance-optimization.md": "测量设计、瓶颈定位、结果比较或优化保留判断有缺口时读取。",
+        "implementation-sources.md": "测量/实现依赖版本敏感工具/API且尚无有效依据时读取。",
+        "postgres-data.md": "实际使用PostgreSQL/Supabase且瓶颈涉及查询、连接、锁或计划证据时只读相关段落。"
+      }
+    },
+    {
+      "name": "aw-observability",
+      "title": "可观测性设计与验证",
+      "description": "Use when designing, adding or verifying logs, metrics, traces, correlation or alerts to answer concrete operational questions or close an observability gap. Not for routine feature changes, diagnosis using sufficient existing telemetry, or performance optimization itself.",
+      "goal": "把运行问题映射为最小必要信号，并用实际输出证明可查询和可诊断。",
+      "gate": "复用现有观测栈、项目规范及验证决定；具体数据采集、外传、通知和故障演练受实际授权约束，不默认全站埋点、供应商或真实告警。",
+      "steps": [
+        "明确运行问题、业务入口/成功语义与当前信号缺口；已有信号足够就复用，不新建重复管道/仪表盘。",
+        "按问题选择日志/指标/链路或更轻证据，设计字段/单位/关联和查询；区分请求、调度、回调、队列与手工入口。",
+        "明确脱敏、维度基数、采样/容量/保留、导出范围与失败/背压处置，按项目版本核查工具能力。",
+        "埋点/配置并入唯一端内实现，按项目口径设计告警条件、去重/恢复和处置入口，不重复实施或选择验证策略。",
+        "在允许环境核对实际信号、查询、关联、敏感字段与适用告警演练；配置存在、模拟通知和真实渠道送达分开陈述，缺口交证据核对。"
+      ],
+      "outputs": "运行问题到信号/查询映射、数据/成本边界、实际信号与告警证据和未验证范围；复用现有记录及运维入口。",
+      "references": [
+        "observability.md",
+        "implementation-sources.md"
+      ],
+      "resources": {
+        "templates/observability-record.md": "assets/observability-record.md"
+      },
+      "reference_conditions": {
+        "observability.md": "需要信号设计、数据/成本边界、查询/关联或告警验证细节时读取。",
+        "implementation-sources.md": "采集/导出/关联依赖版本敏感API且尚无有效依据时读取。"
+      }
     }
   ]
 }

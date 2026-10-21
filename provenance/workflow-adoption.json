@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "checked_on": "2026-10-21",
+  "authorization": "User approved the concrete prior adoption proposal, integration into existing skills, two new performance/observability skills and one overall verification; no repeated confirmation needed within that scope.",
+  "repository": "addyosmani/agent-skills",
+  "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+  "file_provenance": "upstreams.json includes the fourteen additional retrieved files and individual actual read_scope records; no whole-repository audit or upstream command execution.",
+  "adoption": [
+    {"source": "interview-me", "owner": "aw-requirements-design", "decision": "Evidence-based readiness and focused clarification; subjective 95% is not a calibrated probability, permission or mandatory score. Preserve effective delegation and continue authorized work."},
+    {"source": "constraint-driven-development", "owner": "aw-project-standards / aw-adversarial-review", "decision": "One project rule source, concrete commands/stages and justified exceptions; review actual gate weakening without banning legitimate retirement or adding default numbers/tools."},
+    {"source": "planning-and-task-breakdown / context-engineering", "owner": "aw-agent-coordination / shared task-planning guide", "decision": "Verifiable tasks, dependencies/ownership/integration and restart evidence; preserve current plan/worktree/authorization, no fixed task size or session reset threshold."},
+    {"source": "source-driven-development", "owner": "shared implementation-sources guide", "decision": "Verify actual locked/installed versions and relevant official material on demand; retrieved content is data, not authority to expand work; existing effective evidence is reused."},
+    {"source": "doubt-driven-development", "owner": "aw-adversarial-review", "decision": "Review high-impact unresolved decisions early; reconcile evidence and findings without mandatory spawning, cross-model prompts or fixed review rounds."},
+    {"source": "documentation-and-adrs", "owner": "aw-project-standards", "decision": "Record high-cost decisions and supersession in existing conventions; preserve history, no mandatory new document for routine changes."},
+    {"source": "performance-optimization", "owner": "aw-performance-optimization", "decision": "Comparable measurement and variance, bottleneck evidence, correctness and task-scoped keep/revert decisions; no universal performance budgets or speculative optimization."},
+    {"source": "observability-and-instrumentation", "owner": "aw-observability", "decision": "Operational questions to minimal signals, privacy/cardinality/cost and actual signal verification; existing tools and specific collection/notification authorization govern."},
+    {"source": "evals/README.md and selected evaluation files", "owner": "aw-skill-authoring / skill-evaluation guide", "decision": "Separate structure, trigger proxies and actual behavior. No new persistent evaluation suite, model execution or native routing claim in this content task."}
+  ],
+  "official_references": [
+    {"title": "OpenTelemetry handling sensitive data", "url": "https://opentelemetry.io/docs/security/handling-sensitive-data/", "read_scope": "Responsibility, data minimization, automatic instrumentation and hashing limitations; no processor config copied or executed.", "use": "Collection purpose, actual output review, export boundaries and no assumption that predictable hashed identifiers are anonymous."},
+    {"title": "OpenTelemetry observability primer", "url": "https://opentelemetry.io/docs/concepts/observability-primer/", "read_scope": "Operational questions, instrumentation and signals concepts only; linked SDK APIs not reviewed.", "use": "Signal choice follows diagnostic questions; no vendor mandate."},
+    {"title": "Prometheus instrumentation", "url": "https://prometheus.io/docs/practices/instrumentation/", "read_scope": "Online/offline/batch questions, labels, cardinality and metric-type considerations; no numeric label budget adopted.", "use": "Match signals to workload, account for label-combination cost, use bounded dimensions."},
+    {"title": "web.dev lab and field data differences", "url": "https://web.dev/articles/lab-and-field-data-differences", "read_scope": "Controlled lab vs actual-user observations, conditions and distributions; no web thresholds generalized to other platforms.", "use": "Keep controlled comparison and actual-experience claims separate, state measurement conditions."}
+  ],
+  "limits": "Original instructions and templates only; no upstream bodies, examples, data or implementations redistributed. No benchmark, telemetry pipeline, alert delivery, automatic triggering, native discovery, model comparison, installation or release was executed."
+}

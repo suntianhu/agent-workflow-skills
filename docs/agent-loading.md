@@ -1,4 +1,10 @@
-# Isolated native loading validation
+# Native loading validation
+
+## 1.2.5 authorized local Codex installation
+
+On 2026-10-21, synchronized all 29 collection directories to the user's existing Codex skill location. All 154 skill files match source; 26 previous collection directories were backed up, unrelated skill files and global configuration were preserved. Fresh Codex CLI `0.163.0-alpha.10.2` app-server `skills/list` with `forceReload: true` returned all 29 expected enabled names from that installation, matching descriptions and no parser errors. This is real local installation/discovery, not an isolated-home probe, automatic triggering or a model task. Sanitized evidence: [native-discovery-1.2.5.json](../provenance/native-discovery-1.2.5.json).
+
+## Historical isolated probes
 
 These are historical 1.2.0 discovery results for 24 skills. Version 1.2.2 contains 26 skills, including design reference research and project design standards. Later Windows Codex discovery of 26 locally installed, unreleased skills is recorded separately in [validation](validation.md); it is not a rerun of the published snapshot or a model task. Earlier source-only labels are explained in [version history](versioning.md).
 

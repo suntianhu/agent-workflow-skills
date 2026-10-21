@@ -5,19 +5,19 @@
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Русский](README.ru.md)
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
-![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
-![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
+![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
+![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**バージョン 1.2.4** · Agent Skills ディレクトリ形式 · Python 3.10+ 用ツール · 実行時の依存関係は Python 標準ライブラリのみ
+**バージョン 1.2.5** · Agent Skills ディレクトリ形式 · Python 3.10+ 用ツール · 実行時の依存関係は Python 標準ライブラリのみ
 
-**タスクに合うスキルを選び、既存のプロジェクト規約を引き継ぎます。** 26スキルと8つの条件付き構成を提供します。1.2.4 は既存の業務モジュールでの的確な修正、今回不要になったロジックの削除、影響を受ける正常動作の検証、無関係なリファクタリングの排除を明確にします。26スキルと8つの条件付き構成を維持します。[短い実行経路](docs/bundles.md)、[設計](docs/design-workflow.md)、[出典](docs/provenance.md)、[バージョンとタグ](docs/versioning.md)を参照してください。
+**タスクに合うスキルを選び、既存のプロジェクト規約を引き継ぎます。** 1.2.5 は29スキルと9つの条件付き構成を提供します。[移行](docs/project-migration.md)、[性能と可観測性](docs/adoption-integration.md)、要件の収束、タスク引き継ぎ、品質基準、証拠再利用を含み、既存の決定と委任を尊重して確認や実装を繰り返しません。
 
 既存プロジェクトと新規プロジェクトの手順を区別し、タスクに必要なスキルだけを選びます。フロントエンドとバックエンドの規約を分け、実装前に検証方針を決め、実際に確認した範囲を報告します。
 
 ## このコレクションの特徴
 
 - **簡潔な入口：** 重複した説明を減らし、主要な能力を一つ選び、不足する場合だけ関連資料を読みます。有効な決定と、変更されていない既読資料を再利用します。
-- **タスクに応じた起動：** 8つの構成は条件に応じて段階を選びます。明確な局所変更で広範な調査、モデル比較、複数エージェントを自動的に開始せず、見積もりも独立した条件で判断します。
+- **タスクに応じた起動：** 9つの構成は条件に応じて段階を選びます。明確な局所変更で広範な調査、モデル比較、複数エージェントを自動的に開始せず、見積もりも独立した条件で判断します。
 - **既存規約の継承：** コード全体のベースラインと以後の差分を確認し、同じ規約ディレクトリとルールの管理元を使います。新しい業務のページでも、フォント、テーマ、コンポーネント、操作パターンを引き継ぎます。
 - **既存 Skills の尊重：** 未完成のものを含むプロジェクトの Skills とエージェント・プラグイン規則を先に読みます。後から使うスキルも同じ規約に従い、既存のユーザー Skill を変更する前に具体的な差分を示して確認を得ます。
 - **新規プロジェクト：** 指定された言語を尊重し、保守されているフレームワークと既知の関連リスクを調査します。ユーザーが技術スタックを選んだ後、条件の合う公開リポジトリから規約を導きます。
@@ -30,7 +30,7 @@
 
 ## クイックスタート
 
-1. 下のワークフローを選ぶか、[26 スキルの責務](docs/skill-map.md)（簡体字中国語）を確認します。
+1. 下のワークフローを選ぶか、[29 スキルの責務](docs/skill-map.md)（簡体字中国語）を確認します。
 2. 必要な `skills/<name>/SKILL.md` と参照リソースを読むようエージェントに指示します。現在のタスクに必要な能力だけを読み込みます。
 3. このリポジトリの外にある新しいディレクトリへ、必要なファイルを含む構成をエクスポートするには：
 
@@ -42,7 +42,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 ネイティブのスキル検出を利用する場合は、インストールする意思があるときに限り、実行環境の最新ドキュメントに従って個々のスキルディレクトリ全体をコピーしてください。[エージェント互換性](docs/agent-compatibility.md)（英語）を参照してください。
 
-## 8 つのワークフロー
+## 9 つのワークフロー
 
 | ワークフロー | 対象 | 主な前提条件 |
 | --- | --- | --- |
@@ -51,6 +51,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 | [new-frontend](bundles/new-frontend.json) | ゼロから始めるフロントエンドプロジェクト | 言語・プラットフォーム → 候補調査 → ユーザーの選択 → 参考規約 → 内部規約 |
 | [new-backend](bundles/new-backend.json) | ゼロから始めるバックエンドプロジェクト | 言語・デプロイ要件 → ユーザーによる技術選択 → 参考規約 → 内部規約 |
 | [fullstack](bundles/fullstack.json) | 両側にまたがる開発 | 既存・新規の分岐を選択し、各側の規約を分け、API 契約を共有 |
+| [project-migration](bundles/project-migration.json) | フレームワーク・前後端・DBの移行 | 維持項目 → 移行先と共存 → 業務単位の実装 → 検証と復旧 |
 | [small-change](bundles/small-change.json) | 範囲が限定された低影響の変更 | 手順を簡素化しつつ、該当する既存・新規プロジェクトの前提条件を維持 |
 | [debug-and-fix](bundles/debug-and-fix.json) | 再現可能な不具合や連携の異常 | 再現操作前に検証方針を選択し、修正前にコードと規約の前提条件を満たす |
 | [release](bundles/release.json) | 依頼された統合、パッケージ化、リリース | 互換性・復旧・検証の証拠を準備し、コード修正は開発フローへ戻す |
@@ -62,8 +63,9 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 | 分野 | スキル |
 | --- | --- |
 | タスクとリソースの判断 | `aw-project-triage`, `aw-skill-selection`, `aw-model-routing`, `aw-effort-estimation` |
-| コード理解とアーキテクチャ | `aw-repository-audit`, `aw-project-standards`, `aw-framework-selection`, `aw-github-reference` |
+| コード理解とアーキテクチャ | `aw-repository-audit`, `aw-project-standards`, `aw-framework-selection`, `aw-github-reference`, `aw-project-migration` |
 | 要件と実装 | `aw-requirements-design`, `aw-design-reference`, `aw-design-standards`, `aw-ui-design`, `aw-frontend-implementation`, `aw-backend-implementation` |
+| 性能と可観測性 | `aw-performance-optimization`, `aw-observability` |
 | 契約とセキュリティ境界 | `aw-api-contracts`, `aw-security-boundaries` |
 | 検証と不具合調査 | `aw-test-strategy`, `aw-scoped-tdd`, `aw-evidence-debugging`, `aw-adversarial-review`, `aw-evidence-verification` |
 | 成果物の引き渡しと保守 | `aw-delivery-cleanup`, `aw-release-readiness`, `aw-agent-coordination`, `aw-skill-authoring`, `aw-open-source-readiness` |
@@ -74,7 +76,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 | 実行環境 | パッケージ形式 | 確認済みの範囲 |
 | --- | --- | --- |
-| Codex | Agent Skills ディレクトリと、任意の `agents/openai.yaml` UI メタデータ | 1.2.0: Windows の隔離環境で 24/24 をネイティブ検出。モデル実行は未検証 |
+| Codex | Agent Skills ディレクトリと、任意の `agents/openai.yaml` UI メタデータ | Windows Codexでインストール済み29/29スキルを検出・有効化、解析エラーなし。モデル処理は未実行 |
 | Claude Code | ドキュメントに記載された場所へスキルディレクトリ全体を配置 | 1.2.0: ネイティブ CLI と公式 SDK で 24/24 を検出。モデル実行の成功は未検証 |
 | Gemini CLI | ドキュメントに記載された場所へスキルディレクトリ全体を配置 | ドキュメント上の対応のみ。エンドツーエンド利用は未検証 |
 | GitHub Copilot | 対応クライアントでスキルディレクトリ全体を使用 | ドキュメント上の対応のみ。各クライアントは未検証 |
@@ -91,7 +93,7 @@ python scripts/validate.py
 
 検証ツールは、宣言、生成内容の同期、正確なリソース集合、ローカルリンク、Python 構文、ステージ順序、配布物の一部の健全性ルールを確認します。エージェントの判断が正しいことや、フレームワークに脆弱性がないことを証明するものではありません。
 
-Windows/Linux CI はソース、実行可能なオフライン例、パッケージ作成を検証します。Codex と Claude は Windows の隔離プロジェクトで全 24 スキルを検出しました。さらに、実行可能な架空の Web プロジェクト二つで新規・既存プロジェクトの処理と追加要件を実施し、最終 42 項目のブラウザー確認が通過しました。現行 26 スキルの自動検出・起動や本番環境の網羅を証明するものではありません。[実行記録](docs/executed-workflows.md)、[検証記録](docs/validation.md)、[ネイティブ検出の証拠](docs/agent-loading.md)を参照してください。
+Windows/Linux CI はソース、オフラインツール、再現可能なパッケージを検証します。今回の Windows Codex はインストール済み29スキルを解析エラーなしで検出・有効化し、154ファイルがソースと一致しました。過去の Codex/Claude 隔離検出と42項目のブラウザー確認は当時の範囲を維持します。自動起動精度、モデル遵守率、本番環境の検証ではありません。[検証記録](docs/validation.md)と[検出証拠](docs/agent-loading.md)を参照してください。
 
 ## 使用例と自動リリース
 

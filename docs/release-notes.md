@@ -1,17 +1,19 @@
-# v1.2.4 — Precise bug fixes and affected behavior regression checks
+# v1.2.5 — Migration, performance, observability and focused workflows
 
-Patch release for 26 skills and eight conditional compositions. Existing published tags are preserved.
+29 skills and nine conditional compositions. Existing published tags are preserved.
 
 ## Changes
 
-- Fix defects in the existing business module with the smallest sufficient change. Reuse the same responsibility across retries and explain necessary new business files instead of accumulating repair copies.
-- Remove or merge branches, duplicate logic, temporary fallbacks and references invalidated by the fix. Check dynamic callers and compatibility uses before removal, and keep unrelated historical cleanup outside the repair.
-- Check the original defect, affected normal consumers and applicable failure/recovery paths under the existing test policy. Shared changes require attention to their real consumers.
-- Review the final diff for unrelated formatting, renames, file moves, dependency upgrades and architectural rewrites. Necessary migrations and compatible legacy paths remain supported.
-- Apply these rules to five existing skills and their guides; preserve the skill/composition counts, project gates, test policy and authorization boundaries.
+- Add project migration: preserve business behavior, APIs, scheduled/queued work, identity, historical data and files while replacing frontend/backend frameworks, architecture or databases. Plan business batches, coexistence, reconciliation, cutover, recovery and retirement.
+- Add performance optimization: establish comparable baselines, locate measured bottlenecks, separate gains from noise, preserve correctness and keep or withdraw only task-owned changes.
+- Add observability: map operational questions to minimal signals, correlation and actionable alerts, with privacy/cardinality/cost boundaries and actual-output evidence.
+- Integrate evidence-based requirements readiness, task dependencies/ownership/handoffs, version-specific source checks, quality-gate change review and decision history into their existing owners. Honor clear delegation without repeated confirmation or duplicate implementation.
+- Eight development/debug/migration compositions use conditional specialist planning and final evidence around one implementation/TDD loop. Pure release work consumes existing evidence.
 
 ## Evidence and limits
 
-Source validation, offline utility examples and reproducible tracked-source packaging are the release checks. The current five-skill update was synchronized to the local installation: all 126 skill files matched source, and native Windows Codex discovery found 26 enabled skills without parser errors. Historical isolated Codex/Claude discovery and Web demo checks retain their original scope. Discovery and content review do not prove model execution, automatic trigger accuracy, product regression coverage or productivity gains.
+Source structure, generated freshness, portable links, eighteen composition export variants and manual boundary review passed during preparation. All 29 locally installed Codex skills (154 files) matched source; fresh Windows Codex app-server discovery found every expected skill enabled, with matching descriptions and no parser errors. Other skill files and global configuration were preserved.
 
-See [CHANGELOG](../CHANGELOG.md), [version history](versioning.md) and [validation](validation.md). No community posts are sent by this release.
+Release checks also run offline utilities, source validation and reproducible tracked-source packaging. Native discovery/metadata loading is separate from automatic triggering, full-body model adherence, multi-agent execution, real product migration, benchmarks, telemetry pipelines and production acceptance; these were not tested. Historical Codex/Claude and browser evidence keeps its original scope.
+
+See [CHANGELOG](../CHANGELOG.md), [version history](versioning.md), [validation](validation.md) and [native discovery](agent-loading.md). This release sends no community posts.

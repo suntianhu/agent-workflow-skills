@@ -1,0 +1,4 @@
+interface:
+  display_name: "性能调查与优化"
+  short_description: "性能调查与优化：按任务边界完成对应能力，保留项目规则、真实证据与可组合流程"
+  default_prompt: "使用 $aw-performance-optimization 完成当前任务，并遵守前置条件和证据要求。"

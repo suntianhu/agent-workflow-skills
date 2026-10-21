@@ -1,6 +1,6 @@
 # 技能职责与重复边界
 
-26个技能按能力拆分，可选择其中一个或按组合使用。必要前置条件摘要出现在多个独立技能中是为保证单独使用不绕门禁；正文决策的拥有者如下。guides是维护源，skills中的参考/脚本/模板是便携发行副本，不是另一个需同时加载的流程。
+29个技能按能力拆分，可选择其中一个或按组合使用。必要前置条件摘要出现在多个独立技能中是为保证单独使用不绕门禁；正文决策的拥有者如下。guides是维护源，skills中的参考/脚本/模板是便携发行副本，不是另一个需同时加载的流程。
 
 ## 项目与能力判断
 
@@ -19,6 +19,7 @@
 | [aw-project-standards](../skills/aw-project-standards/SKILL.md) | 项目内规范唯一入口 | 消费审计/选栈证据，不编造现状 |
 | [aw-framework-selection](../skills/aw-framework-selection/SKILL.md) | 语言约束下的框架候选与用户选择 | 用户未选定不初始化 |
 | [aw-github-reference](../skills/aw-github-reference/SKILL.md) | 固定范本引用和采纳表 | 不复制无关业务/许可不明实现 |
+| [aw-project-migration](../skills/aw-project-migration/SKILL.md) | 迁移动机、保留映射、分批/共存/恢复和任务依赖 | 跨端迁移编排；编码/契约/验证由对应能力执行，普通局部重构不触发 |
 | [aw-requirements-design](../skills/aw-requirements-design/SKILL.md) | 头脑风暴、行为、数据、失败恢复与验收 | 不规定配色/字体，支持API/任务/迁移 |
 | [aw-design-reference](../skills/aw-design-reference/SKILL.md) | 设计来源阅读证据与采纳 | 不代替平台规则、素材许可或产品验收 |
 | [aw-design-standards](../skills/aw-design-standards/SKILL.md) | 共用设计规则、token/组件与平台映射 | 接回唯一项目规范；不拥有单页布局 |
@@ -37,6 +38,8 @@
 | [aw-evidence-debugging](../skills/aw-evidence-debugging/SKILL.md) | 复现/假设/根因调查 | 代码修复仍需满足项目门禁 |
 | [aw-adversarial-review](../skills/aw-adversarial-review/SKILL.md) | 只读反例与定位证据 | 实现者修复，审查者只读复核 |
 | [aw-evidence-verification](../skills/aw-evidence-verification/SKILL.md) | 核对最终产物与完成声明 | 不重复跑无变化的全量检查 |
+| [aw-performance-optimization](../skills/aw-performance-optimization/SKILL.md) | 性能目标、测量、瓶颈与收益判断 | 普通功能不触发；实际优化并入唯一端内实现，数据专项复用 |
+| [aw-observability](../skills/aw-observability/SKILL.md) | 运行问题到信号与信号本身验收 | 排障复用已有信号，性能判断另归专项；不自动采集/发通知 |
 
 ## 交付与维护
 
@@ -44,7 +47,7 @@
 | --- | --- | --- |
 | [aw-delivery-cleanup](../skills/aw-delivery-cleanup/SKILL.md) | 最终交付与任务内定向清理 | 不替代验收，不删未知用户文件 |
 | [aw-release-readiness](../skills/aw-release-readiness/SKILL.md) | 已授权集成/发布准备与恢复 | 不自动授权远端发布/真实交易 |
-| [aw-agent-coordination](../skills/aw-agent-coordination/SKILL.md) | 有界委派、所有权与交接 | 没有代理工具可顺序完成 |
+| [aw-agent-coordination](../skills/aw-agent-coordination/SKILL.md) | 可验收任务/依赖、有界委派与恢复交接 | 沿用同一计划；没有代理工具可顺序完成 |
 | [aw-skill-authoring](../skills/aw-skill-authoring/SKILL.md) | 单职责技能与维护来源 | 不引入特定宿主隐藏依赖 |
 | [aw-open-source-readiness](../skills/aw-open-source-readiness/SKILL.md) | 公开分发的许可/隐私/结构核对 | 本地就绪不等于已公开发布 |
 

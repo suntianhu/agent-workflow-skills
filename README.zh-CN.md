@@ -5,19 +5,19 @@
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Русский](README.ru.md)
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
-![Skills: 26](https://img.shields.io/badge/skills-26-2563eb)
-![Workflows: 8](https://img.shields.io/badge/workflows-8-0f766e)
+![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
+![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**版本 1.2.4** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
+**版本 1.2.5** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
 
-**按任务选技能，沿用项目已有规范。** 本集合提供 26 个技能、8 套条件组合。1.2.4 明确业务代码原位精准修复、清理本次失效逻辑、验证受影响正常功能及避免无关重构；保持 26 个技能、8 套条件组合。见[最短路径](docs/bundles.md)、[设计流程](docs/design-workflow.md)、[来源](docs/provenance.md)和[版本/标签记录](docs/versioning.md)。
+**按任务选技能，沿用项目已有规范。** 1.2.5 提供 29 个技能、9 套条件组合，包含[项目迁移](docs/project-migration.md)、[性能优化与可观测性](docs/adoption-integration.md)，并完善需求收敛、任务交接、质量门槛和证据复用。已有选择与委托直接承接，专项按缺口介入，避免重复确认与多轮实施。
 
 区分已有项目和新项目，按任务选择适用技能，分别维护前后端规范，在实现前选定验证策略，并如实报告实际验证范围。
 
 ## 为什么使用这套技能
 
 - **精简入口：** 去除重复说明，先选一项主要能力，缺口才补读相关资料；已成立的决定和未变化的已读内容直接复用。
-- **精准触发：** 八套组合按条件选择阶段。明确的局部改动不自动启动大范围调研、模型比较或多代理；估时也有独立触发条件。
+- **精准触发：** 九套组合按条件选择阶段。明确的局部改动不自动启动大范围调研、模型比较或多代理；估时也有独立触发条件。
 - **沿用老项目规范：** 核对完整代码基线及后续差异，继续维护原规范目录和规则来源。新页面即使业务全新，也继承项目字体、主题、组件和交互习惯。
 - **承接已有 Skills：** 先读项目已有、部分完成的 Skills 及代理/插件规则，后来启用的技能也接回同一规范；修改用户已有 Skill 前展示具体差异并取得确认。
 - **新项目：** 尊重指定语言，核查框架维护状态和已知相关风险，由用户选栈，再从匹配的公开项目提炼规范。
@@ -30,7 +30,7 @@
 
 ## 快速开始
 
-1. 在下表选择组合，或查看 [26 个技能的职责边界](docs/skill-map.md)。
+1. 在下表选择组合，或查看 [29 个技能的职责边界](docs/skill-map.md)。
 2. 让智能体读取所需的 `skills/<name>/SKILL.md` 及其引用资料，只加载本次适用能力。
 3. 如需在仓库之外的新目录准备完整组合：
 
@@ -42,7 +42,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 需要宿主原生发现时，按其当前文档和明确安装意图，复制完整的单个技能目录。详见[代理适配](docs/agent-compatibility.md)（英文）。
 
-## 八套组合
+## 九套组合
 
 | 组合 | 适用任务 | 核心门禁 |
 | --- | --- | --- |
@@ -51,6 +51,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 | [new-frontend](bundles/new-frontend.json) | 真正从零的前端项目 | 语言/平台 → 框架核查 → 用户选择 → 范本 → 规范 |
 | [new-backend](bundles/new-backend.json) | 真正从零的后端项目 | 语言/部署需求 → 用户选栈 → 范本 → 规范 |
 | [fullstack](bundles/fullstack.json) | 前后端跨端开发 | 选择新旧分支，端内规范独立，API 契约共同核对 |
+| [project-migration](bundles/project-migration.json) | 项目换框架、前后台或数据库重构 | 保留台账 → 目标/共存 → 业务分批 → 验证后切换与恢复 |
 | [small-change](bundles/small-change.json) | 低影响的局部改动 | 缩减仪式，仍满足对应新旧项目门禁 |
 | [debug-and-fix](bundles/debug-and-fix.json) | 可复现缺陷或联调异常 | 执行复现前选策略，修复前满足全仓和规范门禁 |
 | [release](bundles/release.json) | 已请求的集成、打包或发布 | 准备兼容/恢复/验收证据，代码修复回到开发流程 |
@@ -62,8 +63,9 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 | 领域 | 技能 |
 | --- | --- |
 | 任务与资源判断 | `aw-project-triage`、`aw-skill-selection`、`aw-model-routing`、`aw-effort-estimation` |
-| 代码理解与规范 | `aw-repository-audit`、`aw-project-standards`、`aw-framework-selection`、`aw-github-reference` |
+| 代码理解与规范 | `aw-repository-audit`、`aw-project-standards`、`aw-framework-selection`、`aw-github-reference`, `aw-project-migration` |
 | 需求、设计与实现 | `aw-requirements-design`、`aw-design-reference`、`aw-design-standards`、`aw-ui-design`、`aw-frontend-implementation`、`aw-backend-implementation` |
+| 性能与可观测性 | `aw-performance-optimization`, `aw-observability` |
 | 契约与安全边界 | `aw-api-contracts`、`aw-security-boundaries` |
 | 验证与排障 | `aw-test-strategy`、`aw-scoped-tdd`、`aw-evidence-debugging`、`aw-adversarial-review`、`aw-evidence-verification` |
 | 交付与维护 | `aw-delivery-cleanup`、`aw-release-readiness`、`aw-agent-coordination`、`aw-skill-authoring`、`aw-open-source-readiness` |
@@ -74,7 +76,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 | 宿主 | 打包方式 | 实际证据 |
 | --- | --- | --- |
-| Codex | Agent Skills 目录，可选 `agents/openai.yaml` 界面扩展 | 1.2.0: Windows 隔离原生发现 24/24；未执行模型任务 |
+| Codex | Agent Skills 目录，可选 `agents/openai.yaml` 界面扩展 | Windows Codex 原生发现：29/29 本机已安装技能启用，无解析错误；未执行模型任务 |
 | Claude Code | 按官方目录放完整技能 | 1.2.0: 原生 CLI 与官方 SDK 发现 24/24；未成功执行模型任务 |
 | Gemini CLI | 按官方目录放完整技能 | 文档适配，未端到端实测 |
 | GitHub Copilot | 按支持客户端的目录放完整技能 | 文档适配，各客户端未实测 |
@@ -91,7 +93,7 @@ python scripts/validate.py
 
 校验覆盖源声明、生成内容新鲜度、精确资源集合、相对引用、Python 语法、组合顺序和部分分发卫生规则；不证明智能体决策正确，也不证明框架没有漏洞。
 
-Windows/Linux CI 校验源码、执行离线示例并预演打包。Codex 与 Claude 已在 Windows 隔离项目中原生发现全部 24 个技能。另已由执行者在两个可运行虚构 Web 工程中完成新老项目与后续需求，最终 42 项浏览器检查通过；这不代表当前 26 技能自动发现/触发或生产覆盖。具体版本和范围见[实际流程](docs/executed-workflows.md)、[验证记录](docs/validation.md)与[原生加载证据](docs/agent-loading.md)。
+Windows/Linux CI 校验源码、离线工具和可复现打包。本轮 Windows Codex 原生发现识别并启用全部 29 个本机技能，无解析错误；154 个安装文件与源码一致。早期 Codex/Claude 隔离发现及 42 项浏览器检查保留原有范围，不代表本版自动触发准确率、模型遵循率或生产覆盖。见[验证记录](docs/validation.md)及[原生加载证据](docs/agent-loading.md)。
 
 ## 使用示例与自动发布
 

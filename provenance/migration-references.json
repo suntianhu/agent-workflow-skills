@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "checked_on": "2026-10-21",
+  "scope": "Selected public skill files at pinned commits plus official text sections. No real product migration, production operation, native discovery or multi-agent performance evaluation.",
+  "skill_sources": [
+    {
+      "repository": "addyosmani/agent-skills",
+      "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/deprecation-and-migration/SKILL.md",
+      "adopt": "Identify observable consumer behavior, adapt old interfaces, migrate consumers and establish retirement criteria.",
+      "reject": "Every migration needs a reversible down path; additive DDL is always safe; fixed rollout percentages; removing all associated tests without considering still-valid regression coverage."
+    },
+    {
+      "repository": "magnus919/agent-skills",
+      "commit": "92c327e525da69c9ad3812fd223a1770e977c2e3",
+      "url": "https://github.com/magnus919/agent-skills/blob/92c327e525da69c9ad3812fd223a1770e977c2e3/migration-engineering/SKILL.md",
+      "adopt": "Separate transition orchestration from specialist implementation; compatibility windows, reconciliation and explicit recovery limitations.",
+      "reject": "Mandatory parallel operation or dual writes; mutually exclusive recovery labels for every step; dependencies on its sibling skills and templates."
+    },
+    {
+      "repository": "rmyndharis/antigravity-skills",
+      "commit": "364ea63c190fcf7cac035f7fa91f0406fa392584",
+      "url": "https://github.com/rmyndharis/antigravity-skills/blob/364ea63c190fcf7cac035f7fa91f0406fa392584/skills/framework-migration-legacy-modernize/SKILL.md",
+      "adopt": "Legacy dependency/integration mapping, business batches and separation of implementation and review responsibilities.",
+      "reject": "Host-specific Task/subagent_type names, forced agent phases, fixed weighted scoring, coverage/percentage/day thresholds, presumed event-sourcing or dual-write solutions, and security review agents mutating implementation.",
+      "lineage_limit": "Selected file and root license studied; collection's full upstream lineage not audited."
+    }
+  ],
+  "official_references": [
+    {
+      "title": "Microsoft Azure Architecture Center: Strangler Fig pattern",
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig",
+      "read_scope": "Context/solution, temporary facade cost, shared resources, performance and cross-system dependency considerations; not Azure deployment instructions.",
+      "used_for": "Choose gradual replacement when interception and coexistence fit; budget adapter/transition cost instead of prescribing a pattern universally."
+    },
+    {
+      "title": "AWS Prescriptive Guidance: Transactional outbox pattern",
+      "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html",
+      "read_scope": "Intent, failure cases, duplicate/order considerations and transactional outbox/CDC explanation; linked code and AWS deployment not executed.",
+      "used_for": "Distinguish same-transaction updates from cross-system dual writes; preserve idempotency and ordering without claiming automatic end-to-end exactly-once."
+    },
+    {
+      "title": "Kubernetes: CronJob",
+      "url": "https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/",
+      "read_scope": "Concurrency policy, suspension, deadlines, time zones, modification and job-creation limitations; no cluster used.",
+      "used_for": "A scheduler may miss or duplicate runs; policy for one CronJob does not prevent another scheduler from executing the same business job; existing jobs continue after suspension."
+    },
+    {
+      "title": "PostgreSQL 18: Logical replication restrictions",
+      "url": "https://www.postgresql.org/docs/18/logical-replication-restrictions.html",
+      "read_scope": "Current page identified as PostgreSQL 18; DDL/schema, sequences, relation/large-object limitations; no database used.",
+      "used_for": "Do not assume row replication also transfers schema, sequences and all related assets; verify actual engine/tool/version."
+    },
+    {
+      "title": "Prisma: Expand-and-contract migrations",
+      "url": "https://www.prisma.io/docs/guides/database/data-migration",
+      "read_scope": "Introduction and example phase sequence only; commands/API are version-specific and were not adopted or executed.",
+      "used_for": "Cross-check additive compatibility followed by migration and later removal; not a Prisma or PostgreSQL stack recommendation."
+    }
+  ],
+  "access_gaps": [
+    "magnus919 root LICENSE returned HTTP 404; selected skill frontmatter says MIT but repository-wide license was not established.",
+    "Optional DEV semantic search returned not connected; no DEV article was retrieved or used and no account connection was initiated."
+  ],
+  "redistribution": "Only original method descriptions, project-specific adoption decisions and public provenance metadata are distributed; upstream text, translations, templates, implementations and assets are not bundled."
+}
