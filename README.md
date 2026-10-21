@@ -8,11 +8,11 @@ Composable development workflows for coding agents, with explicit project gates 
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**Version 1.2.9** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
+**Version 1.3.0** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
 
 **Select skills for the task. Build on the project's existing rules.** 29 skills and nine conditional compositions cover existing and new projects, [project migration](docs/project-migration.md), and [performance and observability](docs/adoption-integration.md). Reuse valid decisions, delegate when useful, and report evidence for the delivered result.
 
-[Project introduction](docs/promotion.en.md) · [Sources and adoption](#sources) · [Usage examples](examples/README.md) · [Release history](CHANGELOG.md)
+[Project introduction](docs/promotion.en.md) · [References and acknowledgments](#sources) · [Usage examples](examples/README.md) · [Release history](CHANGELOG.md)
 
 ## Why this collection
 
@@ -120,9 +120,9 @@ The export and validation utilities do not publish repositories or operate remot
 
 <a id="sources"></a>
 
-## GitHub research and acknowledgments
+## References and acknowledgments
 
-This collection distills selected ideas from the 14 GitHub projects below into independently written guidance. The research covers 73 retrieved files at pinned commits, not complete repository audits. The table summarizes what was adopted; [provenance notes](docs/provenance.md), [fixed sources](provenance/upstreams.json), and [third-party notices](THIRD_PARTY_NOTICES.md) record scope, rejected assumptions and license details.
+Thanks to the authors and maintainers of the 14 open-source projects below. Selected design and engineering ideas from these projects informed the independently written skills and guides in this collection. The research covers 73 retrieved files at pinned commits, not complete repository audits. The table summarizes what was adopted; [source and adoption notes](docs/provenance.md), [fixed sources](provenance/upstreams.json), and [third-party notices](THIRD_PARTY_NOTICES.md) record scope, rejected assumptions and license details.
 
 | Project | Ideas adopted |
 | --- | --- |

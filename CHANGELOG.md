@@ -2,6 +2,13 @@
 
 Public tags and source-only checkpoints are distinct. See [version policy/status](docs/versioning.md). Preserve existing tags; routine releases increment patch.
 
+## 1.3.0 — 2026-10-21
+
+- Present source credits as references and acknowledgments consistently across all six README languages, thanking the authors and maintainers of fourteen open-source projects.
+- Preserve concrete adoption summaries, 73 retrieved-file records, pinned commits and per-source license boundaries.
+- Align the Chinese and English project introductions with these acknowledgments and version 1.3.0; retain the confirmed skills.sh listing and installation/privacy links.
+- Use the explicitly requested 1.3.0 version for this documentation release. Keep all 29 skills, nine compositions, utility behavior and existing validation evidence unchanged.
+
 ## 1.2.9 — 2026-10-21
 
 - Verify language name resolution, same-name types, inheritance responsibilities and reflective/string references before changing names or qualification style; preserve framework extension points.

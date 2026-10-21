@@ -8,11 +8,11 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**版本 1.2.9** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
+**版本 1.3.0** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
 
 **按任务选技能，沿用项目已有规范。** 29 个技能、9 套条件组合覆盖新旧项目开发、[项目迁移](docs/project-migration.md)、[性能优化与可观测性](docs/adoption-integration.md)。承接有效决定，按需拆分协作，以实际证据说明交付结果。
 
-[项目介绍](docs/promotion.zh-CN.md) · [GitHub 借鉴来源](#sources) · [使用示例](examples/README.md) · [版本记录](CHANGELOG.md)
+[项目介绍](docs/promotion.zh-CN.md) · [参考来源与鸣谢](#sources) · [使用示例](examples/README.md) · [版本记录](CHANGELOG.md)
 
 ## 为什么使用这套技能
 
@@ -120,9 +120,9 @@ Windows/Linux CI 校验源码、离线工具和可复现打包。1.2.7 的 Windo
 
 <a id="sources"></a>
 
-## GitHub 借鉴与蒸馏来源
+## 参考来源与鸣谢
 
-本项目研究以下 14 个 GitHub 项目的部分内容，将适用原则重新组织为独立撰写的技能与指南。记录覆盖固定提交下实际取得的 73 份文件，不代表完整审计这些仓库。下表说明主要借鉴点；具体阅读范围、未采纳规则和许可见[来源取舍](docs/provenance.md)、[固定提交与文件指纹](provenance/upstreams.json)、[第三方说明](THIRD_PARTY_NOTICES.md)。
+感谢以下 14 个开源项目的作者与维护者。本项目参考了其中的部分设计与工程方法，结合自身需求独立编写技能与指南。记录覆盖固定提交下实际取得的 73 份文件，不代表完整审计这些仓库。下表说明主要借鉴点；具体阅读范围、未采纳规则和许可见[来源与采纳说明](docs/provenance.md)、[固定提交与文件指纹](provenance/upstreams.json)、[第三方说明](THIRD_PARTY_NOTICES.md)。
 
 | 项目 | 主要借鉴内容 |
 | --- | --- |
