@@ -15,7 +15,7 @@ license: MIT
 ## 执行
 
 1. 读取真实入口、业务、事务、数据与部署规范。
-2. 只落实本次涉及的输入、归属、错误、并发/幂等、迁移与外部调用边界；实际涉及PostgreSQL/Supabase时再读postgres-data.md对应部分。
+2. 改动逐项对应已列需求或有依据的必要联动，保留未要求改变的行为，无关问题只记录；只落实本次涉及的输入、归属、错误、并发/幂等、迁移与外部调用边界；实际涉及PostgreSQL/Supabase时再读postgres-data.md对应部分。
 3. 缺陷优先在原职责位置最小充分修复；新增业务文件说明必要性，同步清理本次失效逻辑，不叠修复副本或夹带无关重构。
 4. 执行规定工程检查及允许的局部验证，同步契约与规范；缺陷修复覆盖原症状、受影响正常业务及适用反例。
 
@@ -26,7 +26,7 @@ license: MIT
 ## 按需资料
 
 - [backend.md](references/backend.md)：入口不足以处理本次细节时，仅读相关段落；已读且未变则复用。
-- [project-mode.md](references/project-mode.md)：交付类型、新旧判断或开发门禁尚有缺口时读取；已有有效判断直接复用。
+- [project-mode.md](references/project-mode.md)：需求范围、必要联动、交付类型、新旧判断或开发门禁尚有缺口时读取；已有有效判断直接复用。
 - [postgres-data.md](references/postgres-data.md)：实际使用PostgreSQL/Supabase且涉及查询、连接、锁、迁移或权限时读取。
 - [implementation-sources.md](references/implementation-sources.md)：版本敏感行为、陌生接口或弃用/兼容冲突缺少有效依据时读取；已有适配来源直接复用，不重做选型。
 

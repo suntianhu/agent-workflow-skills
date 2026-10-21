@@ -8,7 +8,7 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**版本 1.2.6** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
+**版本 1.2.7** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
 
 **依任務選技能，沿用專案既有規範。** 29 個技能、9 套條件組合涵蓋新舊專案開發、[專案遷移](docs/project-migration.md)、[效能與可觀測性](docs/adoption-integration.md)。承接有效決定，按需分工，以實際證據說明交付成果。
 
@@ -18,6 +18,7 @@
 
 - **精簡入口：** 移除重複說明，先選一項主要能力，有缺口才補讀相關資料；直接沿用有效決定及未變更的已讀內容。
 - **精準觸發：** 九套組合依條件選擇階段。明確的局部修改不自動啟動大範圍調研、模型比較或多代理；估時也有獨立觸發條件。
+- **變更有邊界：** 多項小任務逐一對應需求與驗收，只做有依據的必要連動；保留其他功能的既有行為，無關的新問題只記錄、不順手修復。
 - **沿用既有專案規範：** 核對完整程式碼基線及後續差異，繼續維護原規範目錄與規則來源。新頁面即使業務全新，也繼承專案字型、主題、元件與互動慣例。
 - **依風險驗證：** 範圍、TDD 順序與產物保留分別決定。小改動不自動採用 TDD，也不擅自刪除使用者既有測試。
 - **按需使用資源：** 額外技能、模型與代理需要具體效益，以及執行環境的實際能力與相應授權。
@@ -72,7 +73,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 | 執行環境 | 封裝方式 | 實際證據 |
 | --- | --- | --- |
-| Codex | Agent Skills 目錄，可選用 `agents/openai.yaml` 介面中繼資料 | 1.2.5 Windows Codex 原生探索：29/29 本機已安裝技能啟用，無解析錯誤；未執行模型任務 |
+| Codex | Agent Skills 目錄，可選用 `agents/openai.yaml` 介面中繼資料 | 1.2.7 Windows Codex 原生探索：29/29 本機已安裝技能啟用，無解析錯誤；未執行模型任務 |
 | Claude Code | 在文件指定位置放置完整技能目錄 | 1.2.0: 原生 CLI 與官方 SDK 探索 24/24；未成功執行模型任務 |
 | Gemini CLI | 在文件指定位置放置完整技能目錄 | 僅依文件對應；尚未進行端到端測試 |
 | GitHub Copilot | 在支援的用戶端使用完整技能目錄 | 僅依文件對應；尚未測試各用戶端 |
@@ -89,7 +90,7 @@ python scripts/validate.py
 
 驗證器會檢查宣告、生成內容是否同步、精確資源集合、本機連結、Python 語法、組合順序及部分分發衛生規則；不證明代理決策正確，也不保證框架沒有漏洞。
 
-Windows/Linux CI 檢查原始碼、離線工具及可重現封裝。1.2.5 的 Windows Codex 原生探索辨識並啟用全部 29 個本機技能，無解析錯誤；154 個安裝檔案與原始碼一致。早期 Codex/Claude 隔離探索與 42 項瀏覽器檢查保留原範圍，不代表本版自動觸發準確率、模型遵循率或正式環境覆蓋。見[驗證紀錄](docs/validation.md)及[原生證據](docs/agent-loading.md)。
+Windows/Linux CI 檢查原始碼、離線工具及可重現封裝。1.2.7 的 Windows Codex 原生探索辨識並啟用全部 29 個本機技能，無解析錯誤；154 個安裝檔案與原始碼一致。早期 Codex/Claude 隔離探索與 42 項瀏覽器檢查保留原範圍，不代表本版自動觸發準確率、模型遵循率或正式環境覆蓋。見[驗證紀錄](docs/validation.md)及[原生證據](docs/agent-loading.md)。
 
 ## 使用範例與自動發佈
 
