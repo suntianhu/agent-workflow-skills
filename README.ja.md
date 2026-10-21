@@ -8,22 +8,18 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**バージョン 1.2.5** · Agent Skills ディレクトリ形式 · Python 3.10+ 用ツール · 実行時の依存関係は Python 標準ライブラリのみ
+**バージョン 1.2.6** · Agent Skills ディレクトリ形式 · Python 3.10+ 用ツール · 実行時の依存関係は Python 標準ライブラリのみ
 
-**タスクに合うスキルを選び、既存のプロジェクト規約を引き継ぎます。** 1.2.5 は29スキルと9つの条件付き構成を提供します。[移行](docs/project-migration.md)、[性能と可観測性](docs/adoption-integration.md)、要件の収束、タスク引き継ぎ、品質基準、証拠再利用を含み、既存の決定と委任を尊重して確認や実装を繰り返しません。
+**タスクに合うスキルを選び、既存の規約を引き継ぎます。** 29スキルと9つの条件付き構成で、既存・新規プロジェクト、[移行](docs/project-migration.md)、[性能と可観測性](docs/adoption-integration.md)を扱います。有効な決定を再利用し、必要に応じて分担し、実際の証拠で成果を示します。
 
-既存プロジェクトと新規プロジェクトの手順を区別し、タスクに必要なスキルだけを選びます。フロントエンドとバックエンドの規約を分け、実装前に検証方針を決め、実際に確認した範囲を報告します。
+[GitHub の参照元](#sources) · [使用例](examples/README.md) · [変更履歴](CHANGELOG.md)
 
 ## このコレクションの特徴
 
 - **簡潔な入口：** 重複した説明を減らし、主要な能力を一つ選び、不足する場合だけ関連資料を読みます。有効な決定と、変更されていない既読資料を再利用します。
 - **タスクに応じた起動：** 9つの構成は条件に応じて段階を選びます。明確な局所変更で広範な調査、モデル比較、複数エージェントを自動的に開始せず、見積もりも独立した条件で判断します。
 - **既存規約の継承：** コード全体のベースラインと以後の差分を確認し、同じ規約ディレクトリとルールの管理元を使います。新しい業務のページでも、フォント、テーマ、コンポーネント、操作パターンを引き継ぎます。
-- **既存 Skills の尊重：** 未完成のものを含むプロジェクトの Skills とエージェント・プラグイン規則を先に読みます。後から使うスキルも同じ規約に従い、既存のユーザー Skill を変更する前に具体的な差分を示して確認を得ます。
-- **新規プロジェクト：** 指定された言語を尊重し、保守されているフレームワークと既知の関連リスクを調査します。ユーザーが技術スタックを選んだ後、条件の合う公開リポジトリから規約を導きます。
 - **リスクに見合う検証：** 検証範囲、TDD の実施順序、成果物の保持方針を個別に決めます。小さな変更で TDD を自動的に要求せず、ユーザーの既存テストを保持します。
-- **実測に基づく見積もり：** 実装、チェック、レビュー、外部待ち時間を分け、同種の作業の実測値で補正します。一律の倍率は使いません。
-- **要件から設計：** 振る舞いと受け入れ条件を先に定義し、実際の画面と利用状況から視覚設計を導きます。
 - **必要なリソースだけを使用：** 追加のスキル、モデル、エージェントは、具体的な効果と実行環境の機能・権限がある場合に使います。
 
 このプロジェクトは指示とローカルツールのコレクションです。ワークフローの JSON は条件と順序を記述するもので、実行環境に組み込まれたワークフローエンジンではありません。
@@ -76,7 +72,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 | 実行環境 | パッケージ形式 | 確認済みの範囲 |
 | --- | --- | --- |
-| Codex | Agent Skills ディレクトリと、任意の `agents/openai.yaml` UI メタデータ | Windows Codexでインストール済み29/29スキルを検出・有効化、解析エラーなし。モデル処理は未実行 |
+| Codex | Agent Skills ディレクトリと、任意の `agents/openai.yaml` UI メタデータ | 1.2.5 Windows Codexでインストール済み29/29スキルを検出・有効化、解析エラーなし。モデル処理は未実行 |
 | Claude Code | ドキュメントに記載された場所へスキルディレクトリ全体を配置 | 1.2.0: ネイティブ CLI と公式 SDK で 24/24 を検出。モデル実行の成功は未検証 |
 | Gemini CLI | ドキュメントに記載された場所へスキルディレクトリ全体を配置 | ドキュメント上の対応のみ。エンドツーエンド利用は未検証 |
 | GitHub Copilot | 対応クライアントでスキルディレクトリ全体を使用 | ドキュメント上の対応のみ。各クライアントは未検証 |
@@ -93,7 +89,7 @@ python scripts/validate.py
 
 検証ツールは、宣言、生成内容の同期、正確なリソース集合、ローカルリンク、Python 構文、ステージ順序、配布物の一部の健全性ルールを確認します。エージェントの判断が正しいことや、フレームワークに脆弱性がないことを証明するものではありません。
 
-Windows/Linux CI はソース、オフラインツール、再現可能なパッケージを検証します。今回の Windows Codex はインストール済み29スキルを解析エラーなしで検出・有効化し、154ファイルがソースと一致しました。過去の Codex/Claude 隔離検出と42項目のブラウザー確認は当時の範囲を維持します。自動起動精度、モデル遵守率、本番環境の検証ではありません。[検証記録](docs/validation.md)と[検出証拠](docs/agent-loading.md)を参照してください。
+Windows/Linux CI はソース、オフラインツール、再現可能なパッケージを検証します。1.2.5 の Windows Codex はインストール済み29スキルを解析エラーなしで検出・有効化し、154ファイルがソースと一致しました。過去の Codex/Claude 隔離検出と42項目のブラウザー確認は当時の範囲を維持します。自動起動精度、モデル遵守率、本番環境の検証ではありません。[検証記録](docs/validation.md)と[検出証拠](docs/agent-loading.md)を参照してください。
 
 ## 使用例と自動リリース
 
@@ -111,6 +107,31 @@ Windows/Linux CI はソース、オフラインツール、再現可能なパッ
 
 エクスポートと検証のツールは、リポジトリの公開やリモートアカウントの操作を行いません。非公開の報告先や導入実績は設定・主張していません。
 
-## ライセンスと出典
+<a id="sources"></a>
 
-独自に作成した内容は [MIT](LICENSE) ライセンスです。公開されている上流資料を研究し、原則を書き直しました。上流のスキル本文、実装、アセット、データベースは再配布していません。[第三者に関する通知](THIRD_PARTY_NOTICES.md)、[固定した出典](provenance/upstreams.json)、[出典の説明](docs/provenance.md)（簡体字中国語）を参照してください。本リポジトリのライセンスは、リンク先の第三者資料を再ライセンスするものではありません。
+## GitHub の参照元と謝辞
+
+以下の14プロジェクトの一部を調査し、適用できる原則を独自のスキルとガイドとして書き直しました。固定コミットから取得した73ファイルが対象で、リポジトリ全体の監査ではありません。主な採用点を下表に示します。範囲、採用しなかった規則、ライセンスは[出典の検討](docs/provenance.md)、[固定した出典](provenance/upstreams.json)、[第三者に関する通知](THIRD_PARTY_NOTICES.md)を参照してください。
+
+| プロジェクト | 採用した考え方 |
+| --- | --- |
+| [anthropics/skills](https://github.com/anthropics/skills) | 短いスキル入口と参照資料の段階的な読み込み |
+| [openai/skills](https://github.com/openai/skills) | 過去のスキル構成、原本と生成物の分離、スクリプトの実証 |
+| [obra/superpowers](https://github.com/obra/superpowers) | 証拠に基づくデバッグ、明確な仮説、範囲を絞ったレビュー |
+| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | フレームワークに応じた起動と影響度による性能課題の優先順位 |
+| [github/awesome-copilot](https://github.com/github/awesome-copilot) | スキル・指示・エージェント役割の区別と単一責務 |
+| [trailofbits/skills](https://github.com/trailofbits/skills) | 実際の呼び出し経路を追い、反例でセキュリティの結論を検証 |
+| [supabase/agent-skills](https://github.com/supabase/agent-skills) | PostgreSQLの実行計画、索引、接続予算、トランザクションとロックの境界 |
+| [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli) | 実画面のロケーター、セッション分離、操作とアサーションの証拠の区別 |
+| [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 画面要件から導く書体、コンポーネント、プラットフォーム選択 |
+| [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | 既存デザインの継承と局所的な変更・共有規約の区別 |
+| [wshobson/agents](https://github.com/wshobson/agents) | デザイントークン、再利用部品、プラットフォーム別の操作と動き |
+| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 要件の準備状況、タスク引き継ぎ、品質基準、移行、性能、可観測性 |
+| [magnus919/agent-skills](https://github.com/magnus919/agent-skills) | 移行の互換性、データ照合、現実的な復旧の限界 |
+| [rmyndharis/antigravity-skills](https://github.com/rmyndharis/antigravity-skills) | 連携関係の整理、業務単位の段階移行、実行責任の明確化 |
+
+採用は本プロジェクトのタスク境界に従います。主観的な「95%の確信」を測定済みの受け入れ条件とはせず、承認の反復、全タスクでのTDD、特定ツール、複数エージェントも強制しません。`openai/skills` は過去の参照元で、記録したスナップショットは `openai/plugins` を案内しています。
+
+## ライセンス
+
+独自の内容は [MIT](LICENSE) で公開します。上流のスキル本文、コード、テンプレート、素材、データベースは再配布していません。上流のライセンスは別に適用されます。Trail of Bitsの参照元はCC-BY-SA-4.0であり、その本文をMITの内容に翻案していません。範囲の詳細は通知を参照してください。
