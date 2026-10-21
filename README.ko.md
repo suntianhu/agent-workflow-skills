@@ -39,6 +39,16 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 네이티브 스킬 검색을 사용하려면 설치 의도가 있을 때에만 실행 환경의 최신 문서에 따라 개별 스킬 디렉터리 전체를 복사하세요. [에이전트 호환성](docs/agent-compatibility.md)(영어)을 참고하세요.
 
+### 선택적 Skills CLI
+
+Node.js 22.20+에서 공식 CLI로 이 저장소의 스킬 목록을 확인할 수 있습니다.
+
+```sh
+npx skills@1.7.4 add suntianhu/agent-workflow-skills --list
+```
+
+프로젝트 단위 설치, 텔레메트리 비활성화 및 skills.sh 분류는 [설치와 개인정보 안내](docs/skills-sh.md)(영어/중국어 간체)를 참고하세요. CLI 검색과 에이전트 실행 증거는 별도로 구분합니다.
+
 ## 9가지 워크플로
 
 | 워크플로 | 대상 작업 | 핵심 선행 조건 |
