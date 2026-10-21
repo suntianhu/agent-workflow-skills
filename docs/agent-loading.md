@@ -1,5 +1,9 @@
 # Native loading validation
 
+## 1.2.7 authorized local Codex update
+
+On 2026-10-21, backed up and updated only 17 changed files across seven existing collection directories. All 154 installed collection files match source; 137 unchanged collection files, 130 unrelated skill files and global configuration were preserved. Fresh native Codex CLI `0.163.0-alpha.11` app-server `skills/list` with `forceReload: true` returned all 29 expected enabled entries from the authorized local installation, with matching descriptions and no parser errors. This verifies installed bytes and metadata discovery, not automatic triggering, model adherence or a product task. Sanitized evidence: [native-discovery-1.2.7.json](../provenance/native-discovery-1.2.7.json). Earlier discovery records retain their original host versions and scope.
+
 ## 1.2.5 authorized local Codex installation
 
 On 2026-10-21, synchronized all 29 collection directories to the user's existing Codex skill location. All 154 skill files match source; 26 previous collection directories were backed up, unrelated skill files and global configuration were preserved. Fresh Codex CLI `0.163.0-alpha.10.2` app-server `skills/list` with `forceReload: true` returned all 29 expected enabled names from that installation, matching descriptions and no parser errors. This is real local installation/discovery, not an isolated-home probe, automatic triggering or a model task. Sanitized evidence: [native-discovery-1.2.5.json](../provenance/native-discovery-1.2.5.json).

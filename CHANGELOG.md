@@ -2,6 +2,14 @@
 
 Public tags and source-only checkpoints are distinct. See [version policy/status](docs/versioning.md). Preserve existing tags; routine releases increment patch.
 
+## 1.2.7 — 2026-10-21
+
+- Keep each bug fix and small requirement tied to its original goal, preserved behavior and acceptance; splitting or combining tasks does not expand authorization.
+- Map every delivered edit to a requested item or an evidence-backed necessary dependency. Cross-file changes remain possible; proximity in the same file does not authorize unrelated edits.
+- Record newly discovered out-of-scope defects and improvements without silently fixing them. Confirm only behavior changes beyond existing authorization; continue independent authorized work.
+- Extend final diff checks to ordinary small requirements and per-item evidence, retaining existing test policies and lightweight handling for clear local edits.
+- Update six existing skill entries and their shared guides/templates; retain 29 skills and nine compositions. Local installation and fresh native discovery are recorded separately from untested model adherence.
+
 ## 1.2.6 — 2026-10-21
 
 - Simplify the six-language README introduction and task-scoped feature summary without repeated rules.
