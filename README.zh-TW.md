@@ -8,7 +8,7 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**版本 1.2.7** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
+**版本 1.2.8** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
 
 **依任務選技能，沿用專案既有規範。** 29 個技能、9 套條件組合涵蓋新舊專案開發、[專案遷移](docs/project-migration.md)、[效能與可觀測性](docs/adoption-integration.md)。承接有效決定，按需分工，以實際證據說明交付成果。
 
@@ -130,8 +130,6 @@ Windows/Linux CI 檢查原始碼、離線工具及可重現封裝。1.2.7 的 Wi
 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 需求就緒度、任務交接、品質門檻、遷移、效能與可觀測性 |
 | [magnus919/agent-skills](https://github.com/magnus919/agent-skills) | 遷移相容性、資料核對與實際恢復限制 |
 | [rmyndharis/antigravity-skills](https://github.com/rmyndharis/antigravity-skills) | 整合關係梳理、依業務分批遷移、明確執行責任 |
-
-蒸餾時依本專案任務邊界取捨：主觀「95% 信心」不作為已測量的驗收門檻，也不照搬反覆審批、所有任務 TDD、指定工具或強制多代理。`openai/skills` 為歷史參考，已記錄的快照提示轉向 `openai/plugins`。
 
 ## 授權
 

@@ -2,6 +2,12 @@
 
 Public tags and source-only checkpoints are distinct. See [version policy/status](docs/versioning.md). Preserve existing tags; routine releases increment patch.
 
+## 1.2.8 — 2026-10-21
+
+- Remove the source-adoption caveat paragraph consistently from all six README translations.
+- Update release metadata to 1.2.8; preserve skill content, compositions, utility scripts, source acknowledgments and license records.
+- Reuse the unchanged 1.2.7 installation/native-discovery evidence without claiming a new model or product run.
+
 ## 1.2.7 — 2026-10-21
 
 - Keep each bug fix and small requirement tied to its original goal, preserved behavior and acceptance; splitting or combining tasks does not expand authorization.
