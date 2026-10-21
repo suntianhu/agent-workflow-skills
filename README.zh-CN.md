@@ -8,7 +8,7 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**版本 1.2.8** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
+**版本 1.2.9** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
 
 **按任务选技能，沿用项目已有规范。** 29 个技能、9 套条件组合覆盖新旧项目开发、[项目迁移](docs/project-migration.md)、[性能优化与可观测性](docs/adoption-integration.md)。承接有效决定，按需拆分协作，以实际证据说明交付结果。
 

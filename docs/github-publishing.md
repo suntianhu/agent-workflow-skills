@@ -40,7 +40,7 @@ A solo maintainer can require PRs with **zero required approvals**; authors cann
 
 ## Version numbers
 
-Use the next patch of the latest published version for routine changes: v1.2.1 → v1.2.2 → v1.2.3 → v1.2.4 → v1.2.5 → v1.2.6 → v1.2.7 → v1.2.8. Minor/major changes require substantial scope and an explicit version decision. Preserve existing tags; unpublished development checkpoint labels are not releases. See [version history and policy](versioning.md) for records since v1.1.1.
+Use the next patch of the latest published version for routine changes: v1.2.1 → v1.2.2 → v1.2.3 → v1.2.4 → v1.2.5 → v1.2.6 → v1.2.7 → v1.2.8 → v1.2.9. Minor/major changes require substantial scope and an explicit version decision. Preserve existing tags; unpublished development checkpoint labels are not releases. See [version history and policy](versioning.md) for records since v1.1.1.
 
 ## Publish by tag
 
@@ -50,8 +50,8 @@ After the version PR merges and CI passes, synchronize `main` and create a new a
 git switch main
 git pull --ff-only
 python scripts/validate.py
-git tag -a v1.2.8 -m "Release v1.2.8"
-git push origin v1.2.8
+git tag -a v1.2.9 -m "Release v1.2.9"
+git push origin v1.2.9
 ```
 
 Do not repeat these tag commands if the tag already exists. For future releases, change the source version and notes through a PR, then use the new tag. Never move a published tag to fix an asset.
@@ -72,7 +72,7 @@ Watch Actions → Release, then inspect Releases. Failed validation never publis
 From a clean committed tree, select a new output directory outside source and agent configuration trees:
 
 ```sh
-python scripts/build_release.py --tag v1.2.8 --out ../release-v1.2.8
+python scripts/build_release.py --tag v1.2.9 --out ../release-v1.2.9
 ```
 
 This prepares the ZIP, `.zip.sha256`, and release notes. It does not publish, create a tag, or install skills. It checks the proposed version; tag existence and ancestry are enforced by the workflow. Identical tracked bytes produce identical ZIP bytes. Fixed stored ZIP entries trade compression size for reproducibility.
