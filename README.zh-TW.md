@@ -8,22 +8,18 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**版本 1.2.5** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
+**版本 1.2.6** · Agent Skills 目錄格式 · Python 3.10+ 工具 · 執行工具僅依賴 Python 標準函式庫
 
-**依任務選技能，沿用專案既有規範。** 1.2.5 提供 29 個技能、9 套條件組合，包含[專案遷移](docs/project-migration.md)、[效能與可觀測性](docs/adoption-integration.md)，並完善需求收斂、任務交接、品質門檻與證據重用。承接既有決定與委託，依缺口介入，避免重複確認或實作。
+**依任務選技能，沿用專案既有規範。** 29 個技能、9 套條件組合涵蓋新舊專案開發、[專案遷移](docs/project-migration.md)、[效能與可觀測性](docs/adoption-integration.md)。承接有效決定，按需分工，以實際證據說明交付成果。
 
-區分既有專案與新專案，依任務選擇適用技能，分別維護前後端規範，在實作前選定驗證策略，並如實回報實際驗證範圍。
+[GitHub 借鑑來源](#sources) · [使用範例](examples/README.md) · [版本紀錄](CHANGELOG.md)
 
 ## 為什麼使用這套技能
 
 - **精簡入口：** 移除重複說明，先選一項主要能力，有缺口才補讀相關資料；直接沿用有效決定及未變更的已讀內容。
 - **精準觸發：** 九套組合依條件選擇階段。明確的局部修改不自動啟動大範圍調研、模型比較或多代理；估時也有獨立觸發條件。
 - **沿用既有專案規範：** 核對完整程式碼基線及後續差異，繼續維護原規範目錄與規則來源。新頁面即使業務全新，也繼承專案字型、主題、元件與互動慣例。
-- **承接既有 Skills：** 先讀專案既有、部分完成的 Skills 與代理／外掛規則，後續技能也接回同一規範；修改使用者既有 Skill 前須展示具體差異並取得確認。
-- **新專案：** 尊重指定語言，查核框架維護狀態與已知相關風險，由使用者選擇技術組合，再從相符的公開專案提煉規範。
 - **依風險驗證：** 範圍、TDD 順序與產物保留分別決定。小改動不自動採用 TDD，也不擅自刪除使用者既有測試。
-- **依實際耗時估算：** 分開計算實作、檢查、審查與外部等待，使用同類工作的實際紀錄校準，不統一套用固定倍數。
-- **根據需求設計：** 先明確定義行為與驗收條件，再依實際介面和情境推導視覺方案。
 - **按需使用資源：** 額外技能、模型與代理需要具體效益，以及執行環境的實際能力與相應授權。
 
 本專案提供指令與本機工具。組合 JSON 描述條件與順序，不是執行環境原生的工作流程引擎。
@@ -76,7 +72,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 | 執行環境 | 封裝方式 | 實際證據 |
 | --- | --- | --- |
-| Codex | Agent Skills 目錄，可選用 `agents/openai.yaml` 介面中繼資料 | Windows Codex 原生探索：29/29 本機已安裝技能啟用，無解析錯誤；未執行模型任務 |
+| Codex | Agent Skills 目錄，可選用 `agents/openai.yaml` 介面中繼資料 | 1.2.5 Windows Codex 原生探索：29/29 本機已安裝技能啟用，無解析錯誤；未執行模型任務 |
 | Claude Code | 在文件指定位置放置完整技能目錄 | 1.2.0: 原生 CLI 與官方 SDK 探索 24/24；未成功執行模型任務 |
 | Gemini CLI | 在文件指定位置放置完整技能目錄 | 僅依文件對應；尚未進行端到端測試 |
 | GitHub Copilot | 在支援的用戶端使用完整技能目錄 | 僅依文件對應；尚未測試各用戶端 |
@@ -93,7 +89,7 @@ python scripts/validate.py
 
 驗證器會檢查宣告、生成內容是否同步、精確資源集合、本機連結、Python 語法、組合順序及部分分發衛生規則；不證明代理決策正確，也不保證框架沒有漏洞。
 
-Windows/Linux CI 檢查原始碼、離線工具及可重現封裝。本輪 Windows Codex 原生探索辨識並啟用全部 29 個本機技能，無解析錯誤；154 個安裝檔案與原始碼一致。早期 Codex/Claude 隔離探索與 42 項瀏覽器檢查保留原範圍，不代表本版自動觸發準確率、模型遵循率或正式環境覆蓋。見[驗證紀錄](docs/validation.md)及[原生證據](docs/agent-loading.md)。
+Windows/Linux CI 檢查原始碼、離線工具及可重現封裝。1.2.5 的 Windows Codex 原生探索辨識並啟用全部 29 個本機技能，無解析錯誤；154 個安裝檔案與原始碼一致。早期 Codex/Claude 隔離探索與 42 項瀏覽器檢查保留原範圍，不代表本版自動觸發準確率、模型遵循率或正式環境覆蓋。見[驗證紀錄](docs/validation.md)及[原生證據](docs/agent-loading.md)。
 
 ## 使用範例與自動發佈
 
@@ -111,6 +107,31 @@ Windows/Linux CI 檢查原始碼、離線工具及可重現封裝。本輪 Windo
 
 匯出與驗證工具不會發布儲存庫或操作遠端帳號，未預設私密通報地址或使用規模。
 
-## 授權與來源
+<a id="sources"></a>
 
-原創內容採用 [MIT](LICENSE) 授權。公開上游僅用於研究並重新撰寫原則，不分發其技能正文、實作、素材或資料庫。參見[第三方聲明](THIRD_PARTY_NOTICES.md)、[固定來源](provenance/upstreams.json)及[來源說明](docs/provenance.md)（簡體中文）。本儲存庫的授權不會重新授權第三方內容。
+## GitHub 借鑑與蒸餾來源
+
+本專案研究以下 14 個 GitHub 專案的部分內容，將適用原則重新組織為獨立撰寫的技能與指南。紀錄涵蓋固定提交下實際取得的 73 份檔案，不代表完整審查這些儲存庫。主要借鑑點如下；閱讀範圍、未採納規則與許可見[來源取捨](docs/provenance.md)、[固定提交及檔案指紋](provenance/upstreams.json)、[第三方說明](THIRD_PARTY_NOTICES.md)。
+
+| 專案 | 主要借鑑內容 |
+| --- | --- |
+| [anthropics/skills](https://github.com/anthropics/skills) | 精簡技能入口、按需展開引用資源 |
+| [openai/skills](https://github.com/openai/skills) | 歷史技能封裝、來源與生成副本分離、腳本實證 |
+| [obra/superpowers](https://github.com/obra/superpowers) | 證據導向除錯、明確假設、限定範圍的審查 |
+| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | 依框架觸發、依影響排序效能問題 |
+| [github/awesome-copilot](https://github.com/github/awesome-copilot) | 區分技能、指令與代理角色，保持職責集中 |
+| [trailofbits/skills](https://github.com/trailofbits/skills) | 沿實際呼叫鏈核對安全邊界，以反例檢驗結論 |
+| [supabase/agent-skills](https://github.com/supabase/agent-skills) | PostgreSQL 執行計畫、索引、連線預算與交易／鎖定邊界 |
+| [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli) | 依即時定位器操作、隔離瀏覽器工作階段、區分動作與斷言證據 |
+| [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 從介面需求推導字型、元件與平台選擇 |
+| [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | 繼承既有設計慣例，區分局部設計與共用標準 |
+| [wshobson/agents](https://github.com/wshobson/agents) | 設計權杖、可重用元件、平台差異與適量動效 |
+| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 需求就緒度、任務交接、品質門檻、遷移、效能與可觀測性 |
+| [magnus919/agent-skills](https://github.com/magnus919/agent-skills) | 遷移相容性、資料核對與實際恢復限制 |
+| [rmyndharis/antigravity-skills](https://github.com/rmyndharis/antigravity-skills) | 整合關係梳理、依業務分批遷移、明確執行責任 |
+
+蒸餾時依本專案任務邊界取捨：主觀「95% 信心」不作為已測量的驗收門檻，也不照搬反覆審批、所有任務 TDD、指定工具或強制多代理。`openai/skills` 為歷史參考，已記錄的快照提示轉向 `openai/plugins`。
+
+## 授權
+
+原創內容採用 [MIT](LICENSE)，未重新散布上游技能正文、程式碼、範本、素材或資料庫。各來源授權獨立適用；Trail of Bits 來源為 CC-BY-SA-4.0，未將其正文改編為 MIT 內容。逐項授權範圍見第三方說明。

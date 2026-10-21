@@ -2,6 +2,12 @@
 
 Public tags and source-only checkpoints are distinct. See [version policy/status](docs/versioning.md). Preserve existing tags; routine releases increment patch.
 
+## 1.2.6 — 2026-10-21
+
+- Simplify the six-language README introduction and task-scoped feature summary without repeated rules.
+- Credit fourteen GitHub research projects with concrete adoption summaries, pinned source records and per-source license boundaries.
+- Keep all 29 skills, nine compositions and utility behavior unchanged. Native Codex discovery remains evidence from 1.2.5; this documentation release does not claim a new model or product run.
+
 ## 1.2.5 — 2026-10-21
 
 - Add aw-performance-optimization and aw-observability: 29 skills and nine conditional compositions.

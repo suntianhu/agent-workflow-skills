@@ -8,22 +8,18 @@ Composable development workflows for coding agents, with explicit project gates 
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**Version 1.2.5** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
+**Version 1.2.6** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
 
-**Select skills for the task. Build on the project's existing rules.** Version 1.2.5 provides 29 skills and nine conditional compositions, including [project migration](docs/project-migration.md), [performance and observability](docs/adoption-integration.md), and focused requirements, task, quality-gate and evidence guidance. Existing decisions and delegation carry forward without repeated confirmation or implementation.
+**Select skills for the task. Build on the project's existing rules.** 29 skills and nine conditional compositions cover existing and new projects, [project migration](docs/project-migration.md), and [performance and observability](docs/adoption-integration.md). Reuse valid decisions, delegate when useful, and report evidence for the delivered result.
 
-Build on an existing codebase or start a new project without mixing the two workflows. Select only the skills that fit the task. Keep frontend and backend conventions separate, choose validation before implementation, and report what was actually verified.
+[Sources and adoption](#sources) · [Usage examples](examples/README.md) · [Release history](CHANGELOG.md)
 
 ## Why this collection
 
 - **Leaner entries:** remove repeated instructions, choose one main capability, and read additional reference sections only when needed. Reuse valid decisions and unchanged material already read.
 - **Task-scoped activation:** nine compositions describe conditions rather than a mandatory sequence. A clear local edit does not automatically start broad research, model comparison or multiple agents; estimates have their own trigger.
 - **Continuity in existing projects:** verify the complete code baseline and subsequent changes, then use the same standards directory and rule sources. New pages inherit fonts, themes, components and interaction patterns even when their business purpose is new.
-- **Respect existing Skills:** read project skills, including partial ones, and agent/plugin rules first. Later skills use the same project standards; show a concrete diff and obtain confirmation before changing an existing user Skill.
-- **New projects:** respect the requested language, research maintained frameworks and known relevant risks, obtain the user's stack choice, then derive conventions from matching public repositories.
 - **Proportional validation:** decide scope, TDD order, and artifact retention separately. Small edits do not automatically require TDD; existing user tests are preserved.
-- **Grounded estimates:** separate implementation, checks, review, and external waits. Calibrate using comparable measured work rather than a universal multiplier.
-- **Design from requirements:** define behavior and acceptance first; derive visual decisions from the actual interface and context.
 - **Optional resources:** additional skills, models, and agents need a concrete benefit and the host's actual capabilities and authorization.
 
 This is a collection of instructions and local utilities. Workflow JSON files describe conditions and order; they are not a native workflow engine.
@@ -76,7 +72,7 @@ Each skill includes its own instructions, necessary references/resources, and li
 
 | Host | Packaging | Evidence |
 | --- | --- | --- |
-| Codex | Agent Skills directory plus optional `agents/openai.yaml` UI metadata | Native Windows Codex discovery: 29/29 installed skills enabled, no parser errors; no model turn |
+| Codex | Agent Skills directory plus optional `agents/openai.yaml` UI metadata | 1.2.5 Windows Codex discovery: 29/29 installed skills enabled, no parser errors; no model turn |
 | Claude Code | Complete skill directories in documented host locations | 1.2.0: Native CLI + official SDK discovery: 24/24; no successful model execution |
 | Gemini CLI | Complete skill directories in documented host locations | Documentation mapping only; end-to-end use not tested |
 | GitHub Copilot | Complete skill directories in supported clients | Documentation mapping only; individual clients not tested |
@@ -93,7 +89,7 @@ python scripts/validate.py
 
 The validator checks declarations, generated content freshness, exact resource sets, local links, Python syntax, composition order, and selected distribution hygiene rules. It does not prove that an agent will make the right decision or that a framework is vulnerability-free.
 
-Windows/Linux CI checks source, offline utilities and reproducible packaging. Fresh local Windows Codex discovery loaded all 29 installed skills with no parser errors; all 154 installed skill files matched source. Earlier isolated Codex/Claude discovery and 42 browser checks keep their historical scope. This does not establish automatic trigger accuracy, model adherence or production coverage. See [validation](docs/validation.md) and [native evidence](docs/agent-loading.md).
+Windows/Linux CI checks source, offline utilities and reproducible packaging. In 1.2.5, local Windows Codex discovery loaded all 29 installed skills with no parser errors; all 154 installed skill files matched source. Earlier isolated Codex/Claude discovery and 42 browser checks keep their historical scope. This does not establish automatic trigger accuracy, model adherence or production coverage. See [validation](docs/validation.md) and [native evidence](docs/agent-loading.md).
 
 ## Examples and automated releases
 
@@ -111,6 +107,31 @@ Start with a concrete task that demonstrates a gap. Prefer improving the respons
 
 The export and validation utilities do not publish repositories or operate remote accounts. No private reporting address or adoption claim is preconfigured.
 
-## License and provenance
+<a id="sources"></a>
 
-Original material is licensed under [MIT](LICENSE). Public upstream references were studied and rewritten; their skill bodies, implementations, assets, and databases are not redistributed. See [third-party notices](THIRD_PARTY_NOTICES.md), [fixed sources](provenance/upstreams.json), and the [provenance notes](docs/provenance.md) (Chinese). The repository's license does not relicense linked third-party material.
+## GitHub research and acknowledgments
+
+This collection distills selected ideas from the 14 GitHub projects below into independently written guidance. The research covers 73 retrieved files at pinned commits, not complete repository audits. The table summarizes what was adopted; [provenance notes](docs/provenance.md), [fixed sources](provenance/upstreams.json), and [third-party notices](THIRD_PARTY_NOTICES.md) record scope, rejected assumptions and license details.
+
+| Project | Ideas adopted |
+| --- | --- |
+| [anthropics/skills](https://github.com/anthropics/skills) | Short skill entries and progressive disclosure of resources |
+| [openai/skills](https://github.com/openai/skills) | Historical skill packaging, source-of-truth separation and script verification |
+| [obra/superpowers](https://github.com/obra/superpowers) | Evidence-led debugging, explicit hypotheses and bounded review |
+| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | Framework-scoped activation and impact-based performance priorities |
+| [github/awesome-copilot](https://github.com/github/awesome-copilot) | Separate skills, instructions and agent roles; keep responsibilities focused |
+| [trailofbits/skills](https://github.com/trailofbits/skills) | Trace real call chains and test security claims with counterexamples |
+| [supabase/agent-skills](https://github.com/supabase/agent-skills) | PostgreSQL query plans, indexes, connection budgets and transaction/locking boundaries |
+| [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli) | Inspect live locators, isolate browser sessions and distinguish actions from assertion evidence |
+| [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Derive typography, components and platform choices from interface requirements |
+| [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | Inherit existing design conventions; distinguish local changes from shared standards |
+| [wshobson/agents](https://github.com/wshobson/agents) | Design tokens, reusable components and platform-specific interaction/motion |
+| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | Requirements readiness, task handoffs, quality gates, migration, performance and observability |
+| [magnus919/agent-skills](https://github.com/magnus919/agent-skills) | Migration compatibility, data reconciliation and realistic recovery limits |
+| [rmyndharis/antigravity-skills](https://github.com/rmyndharis/antigravity-skills) | Map integrations, migrate by business batch and assign clear responsibilities |
+
+Adoption follows this collection's task boundaries: subjective “95% confidence” is not a measured acceptance gate. Upstream advice does not force repeated approvals, TDD, particular tools or multiple agents. `openai/skills` is a historical reference; its recorded snapshot points to `openai/plugins`.
+
+## License
+
+Original material is licensed under [MIT](LICENSE). Upstream skill bodies, code, templates, assets and databases are not redistributed. Upstream licenses remain separate; the Trail of Bits source is CC-BY-SA-4.0 and its text was not adapted into MIT material. See the notices for per-source limits.
