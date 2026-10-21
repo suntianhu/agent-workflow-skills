@@ -8,7 +8,7 @@ Composable development workflows for coding agents, with explicit project gates 
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**Version 1.2.6** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
+**Version 1.2.7** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
 
 **Select skills for the task. Build on the project's existing rules.** 29 skills and nine conditional compositions cover existing and new projects, [project migration](docs/project-migration.md), and [performance and observability](docs/adoption-integration.md). Reuse valid decisions, delegate when useful, and report evidence for the delivered result.
 
@@ -18,6 +18,7 @@ Composable development workflows for coding agents, with explicit project gates 
 
 - **Leaner entries:** remove repeated instructions, choose one main capability, and read additional reference sections only when needed. Reuse valid decisions and unchanged material already read.
 - **Task-scoped activation:** nine compositions describe conditions rather than a mandatory sequence. A clear local edit does not automatically start broad research, model comparison or multiple agents; estimates have their own trigger.
+- **Bounded changes:** map each edit to a requested item or a necessary dependency, preserve unrelated behavior, and record newly found issues without silently fixing them.
 - **Continuity in existing projects:** verify the complete code baseline and subsequent changes, then use the same standards directory and rule sources. New pages inherit fonts, themes, components and interaction patterns even when their business purpose is new.
 - **Proportional validation:** decide scope, TDD order, and artifact retention separately. Small edits do not automatically require TDD; existing user tests are preserved.
 - **Optional resources:** additional skills, models, and agents need a concrete benefit and the host's actual capabilities and authorization.
@@ -72,7 +73,7 @@ Each skill includes its own instructions, necessary references/resources, and li
 
 | Host | Packaging | Evidence |
 | --- | --- | --- |
-| Codex | Agent Skills directory plus optional `agents/openai.yaml` UI metadata | 1.2.5 Windows Codex discovery: 29/29 installed skills enabled, no parser errors; no model turn |
+| Codex | Agent Skills directory plus optional `agents/openai.yaml` UI metadata | 1.2.7 Windows Codex discovery: 29/29 installed skills enabled, no parser errors; no model turn |
 | Claude Code | Complete skill directories in documented host locations | 1.2.0: Native CLI + official SDK discovery: 24/24; no successful model execution |
 | Gemini CLI | Complete skill directories in documented host locations | Documentation mapping only; end-to-end use not tested |
 | GitHub Copilot | Complete skill directories in supported clients | Documentation mapping only; individual clients not tested |
@@ -89,7 +90,7 @@ python scripts/validate.py
 
 The validator checks declarations, generated content freshness, exact resource sets, local links, Python syntax, composition order, and selected distribution hygiene rules. It does not prove that an agent will make the right decision or that a framework is vulnerability-free.
 
-Windows/Linux CI checks source, offline utilities and reproducible packaging. In 1.2.5, local Windows Codex discovery loaded all 29 installed skills with no parser errors; all 154 installed skill files matched source. Earlier isolated Codex/Claude discovery and 42 browser checks keep their historical scope. This does not establish automatic trigger accuracy, model adherence or production coverage. See [validation](docs/validation.md) and [native evidence](docs/agent-loading.md).
+Windows/Linux CI checks source, offline utilities and reproducible packaging. In 1.2.7, local Windows Codex discovery loaded all 29 installed skills with no parser errors; all 154 installed skill files matched source. Earlier isolated Codex/Claude discovery and 42 browser checks keep their historical scope. This does not establish automatic trigger accuracy, model adherence or production coverage. See [validation](docs/validation.md) and [native evidence](docs/agent-loading.md).
 
 ## Examples and automated releases
 

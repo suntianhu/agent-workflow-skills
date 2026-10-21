@@ -15,7 +15,7 @@ license: MIT
 ## 执行
 
 1. 读取前端规范与实际后端契约，识别路由/状态/样式/平台边界。
-2. 仅实现本次涉及的页面/状态与约束；加载、失败、重试、取消、重复或账号切换按真实行为选择，不补无关流程。
+2. 改动逐项对应已列需求或有依据的必要联动，保留未要求改变的行为，无关问题只记录；仅实现本次涉及的页面/状态与约束；加载、失败、重试、取消、重复或账号切换按真实行为选择，不补无关流程。
 3. 缺陷优先在原职责位置最小充分修复；新增业务文件说明必要性，同步清理本次失效逻辑，不叠修复副本或夹带无关重构。
 4. 执行项目规定工程检查，按测试政策验证直接影响并更新规范；缺陷修复覆盖原症状、受影响正常交互及适用反例；需要且允许浏览器交互验证时读取browser-validation.md。
 
@@ -26,7 +26,7 @@ license: MIT
 ## 按需资料
 
 - [frontend.md](references/frontend.md)：入口不足以处理本次细节时，仅读相关段落；已读且未变则复用。
-- [project-mode.md](references/project-mode.md)：交付类型、新旧判断或开发门禁尚有缺口时读取；已有有效判断直接复用。
+- [project-mode.md](references/project-mode.md)：需求范围、必要联动、交付类型、新旧判断或开发门禁尚有缺口时读取；已有有效判断直接复用。
 - [browser-validation.md](references/browser-validation.md)：本次需要且允许浏览器实际交互验证时读取；不自动安装工具或新增持久测试。
 - [design-platforms.md](references/design-platforms.md)：涉及平台原生交互、设备/窗口适配或跨端迁移时，只读目标平台相关部分。
 - [implementation-sources.md](references/implementation-sources.md)：版本敏感行为、陌生接口或弃用/兼容冲突缺少有效依据时读取；已有适配来源直接复用，不重做选型。
