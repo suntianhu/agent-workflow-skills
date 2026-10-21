@@ -8,22 +8,18 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**버전 1.2.5** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
+**버전 1.2.6** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
 
-**작업에 맞는 스킬을 선택하고 프로젝트의 기존 규칙을 이어갑니다.** 1.2.5는 스킬 29개와 조건부 구성 9개를 제공합니다. [프로젝트 마이그레이션](docs/project-migration.md), [성능과 관측성](docs/adoption-integration.md), 요구사항 수렴·작업 인계·품질 기준·검증 근거 재사용 개선을 포함하며 기존 결정과 위임을 존중하고 확인이나 구현을 반복하지 않습니다.
+**작업에 맞는 스킬을 선택하고 기존 규칙을 이어갑니다.** 스킬 29개와 조건부 구성 9개로 기존·신규 프로젝트, [마이그레이션](docs/project-migration.md), [성능과 관측성](docs/adoption-integration.md)을 다룹니다. 유효한 결정을 재사용하고 필요할 때 분담하며 실제 근거로 결과를 설명합니다.
 
-기존 프로젝트와 새 프로젝트의 절차를 구분하고 작업에 필요한 스킬만 선택합니다. 프런트엔드와 백엔드 규칙을 따로 관리하고, 구현 전에 검증 방침을 정하며, 실제로 확인한 범위를 보고합니다.
+[GitHub 참고 출처](#sources) · [사용 예시](examples/README.md) · [변경 이력](CHANGELOG.md)
 
 ## 이 컬렉션의 특징
 
 - **간결한 진입 문서:** 반복 설명을 줄이고 주요 기능 하나를 선택한 뒤 부족한 부분이 있을 때만 관련 자료를 읽습니다. 유효한 결정과 변경되지 않은 기존 자료는 다시 활용합니다.
 - **작업별 실행 조건:** 9개 구성은 조건에 맞는 단계만 선택합니다. 명확한 국소 수정에 광범위한 조사, 모델 비교, 다중 에이전트를 자동으로 시작하지 않으며 시간 추정에도 별도 실행 조건을 적용합니다.
 - **기존 프로젝트 규칙 계승:** 전체 코드 기준 상태와 이후 변경 사항을 확인하고 기존 규칙 디렉터리와 원본을 계속 사용합니다. 새로운 업무의 페이지도 프로젝트 글꼴, 테마, 컴포넌트와 상호작용 방식을 이어갑니다.
-- **기존 Skills 존중:** 일부만 작성된 스킬을 포함하여 프로젝트 Skills와 에이전트·플러그인 규칙을 먼저 읽습니다. 나중에 사용하는 스킬도 같은 규칙을 따르며 기존 사용자 Skill을 수정하기 전에는 구체적인 차이를 제시하고 확인을 받습니다.
-- **새 프로젝트:** 요청된 언어를 존중하고 유지 관리 중인 프레임워크와 알려진 관련 위험을 조사합니다. 사용자가 기술 스택을 선택한 다음 조건에 맞는 공개 저장소에서 규칙을 도출합니다.
 - **위험에 맞는 검증:** 검증 범위, TDD 순서, 산출물 보관 방침을 각각 결정합니다. 작은 수정에 TDD를 자동으로 요구하지 않으며 사용자의 기존 테스트를 보존합니다.
-- **실측 기반 시간 추정:** 구현, 점검, 리뷰, 외부 대기 시간을 분리합니다. 일률적인 배수 대신 비슷한 작업의 실제 소요 시간으로 보정합니다.
-- **요구사항에서 출발하는 설계:** 동작과 인수 조건을 먼저 정의하고 실제 인터페이스와 사용 맥락에 따라 시각적 결정을 내립니다.
 - **필요한 자원만 사용:** 추가 스킬, 모델, 에이전트는 구체적인 이점과 실행 환경의 실제 기능 및 권한이 있을 때 사용합니다.
 
 이 프로젝트는 지침과 로컬 도구의 모음입니다. 워크플로 JSON은 조건과 순서를 설명하며 실행 환경에 내장된 워크플로 엔진이 아닙니다.
@@ -76,7 +72,7 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 | 실행 환경 | 패키징 | 실제 확인 범위 |
 | --- | --- | --- |
-| Codex | Agent Skills 디렉터리와 선택적 `agents/openai.yaml` UI 메타데이터 | Windows Codex에서 설치된 29/29 스킬을 검색·활성화, 구문 오류 없음; 모델 작업 미실행 |
+| Codex | Agent Skills 디렉터리와 선택적 `agents/openai.yaml` UI 메타데이터 | 1.2.5 Windows Codex에서 설치된 29/29 스킬을 검색·활성화, 구문 오류 없음; 모델 작업 미실행 |
 | Claude Code | 문서에 명시된 위치에 전체 스킬 디렉터리 배치 | 1.2.0: 네이티브 CLI와 공식 SDK에서 24/24 검색 확인. 성공한 모델 실행은 미검증 |
 | Gemini CLI | 문서에 명시된 위치에 전체 스킬 디렉터리 배치 | 문서 기준으로만 대응. 종단 간 사용은 미검증 |
 | GitHub Copilot | 지원 클라이언트에서 전체 스킬 디렉터리 사용 | 문서 기준으로만 대응. 개별 클라이언트는 미검증 |
@@ -93,7 +89,7 @@ python scripts/validate.py
 
 검증 도구는 선언, 생성 내용의 동기화, 정확한 리소스 집합, 로컬 링크, Python 문법, 구성 단계 순서, 일부 배포물 점검 규칙을 확인합니다. 에이전트의 판단이 옳거나 프레임워크에 취약점이 없음을 증명하지는 않습니다.
 
-Windows/Linux CI는 소스, 오프라인 도구와 재현 가능한 패키징을 검사합니다. 이번 Windows Codex는 설치된 스킬 29개를 구문 오류 없이 검색·활성화했고 설치 파일 154개가 소스와 일치했습니다. 과거 Codex/Claude 격리 검색과 브라우저 검사 42개의 범위는 유지합니다. 자동 실행 정확도, 모델 준수율이나 운영 환경 검증은 아닙니다. [검증 기록](docs/validation.md)과 [네이티브 증거](docs/agent-loading.md)를 참고하세요.
+Windows/Linux CI는 소스, 오프라인 도구와 재현 가능한 패키징을 검사합니다. 1.2.5의 Windows Codex는 설치된 스킬 29개를 구문 오류 없이 검색·활성화했고 설치 파일 154개가 소스와 일치했습니다. 과거 Codex/Claude 격리 검색과 브라우저 검사 42개의 범위는 유지합니다. 자동 실행 정확도, 모델 준수율이나 운영 환경 검증은 아닙니다. [검증 기록](docs/validation.md)과 [네이티브 증거](docs/agent-loading.md)를 참고하세요.
 
 ## 사용 예제와 자동 릴리스
 
@@ -111,6 +107,31 @@ Windows/Linux CI는 소스, 오프라인 도구와 재현 가능한 패키징을
 
 내보내기와 검증 도구는 저장소를 게시하거나 원격 계정을 조작하지 않습니다. 비공개 신고 주소나 도입 실적을 미리 설정하거나 주장하지 않습니다.
 
-## 라이선스와 출처
+<a id="sources"></a>
 
-직접 작성한 내용에는 [MIT](LICENSE) 라이선스가 적용됩니다. 공개된 상위 프로젝트 자료를 연구하고 원칙을 새로 작성했으며, 해당 프로젝트의 스킬 본문, 구현, 에셋 또는 데이터베이스를 재배포하지 않습니다. [제3자 고지](THIRD_PARTY_NOTICES.md), [고정된 출처](provenance/upstreams.json), [출처 설명](docs/provenance.md)(중국어 간체)을 참고하세요. 이 저장소의 라이선스는 연결된 제3자 자료를 재라이선스하지 않습니다.
+## GitHub 참고 프로젝트와 감사의 말
+
+아래 14개 GitHub 프로젝트의 일부를 연구하고 적용 가능한 원칙을 독립적으로 작성한 스킬과 가이드로 정리했습니다. 고정 커밋에서 가져온 파일 73개가 대상이며 저장소 전체를 감사한 것은 아닙니다. 주요 채택 내용은 아래 표에, 범위·미채택 규칙·라이선스는 [출처 검토](docs/provenance.md), [고정 출처](provenance/upstreams.json), [제3자 고지](THIRD_PARTY_NOTICES.md)에 기록되어 있습니다.
+
+| 프로젝트 | 채택한 아이디어 |
+| --- | --- |
+| [anthropics/skills](https://github.com/anthropics/skills) | 짧은 스킬 진입 문서와 참조 자료의 점진적 로딩 |
+| [openai/skills](https://github.com/openai/skills) | 과거 스킬 패키징, 원본과 생성물 분리, 스크립트 검증 |
+| [obra/superpowers](https://github.com/obra/superpowers) | 근거 중심 디버깅, 명시적 가설, 범위를 제한한 리뷰 |
+| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | 프레임워크별 실행 조건과 영향에 따른 성능 우선순위 |
+| [github/awesome-copilot](https://github.com/github/awesome-copilot) | 스킬·지침·에이전트 역할 구분과 집중된 책임 |
+| [trailofbits/skills](https://github.com/trailofbits/skills) | 실제 호출 경로 추적과 반례를 통한 보안 결론 검증 |
+| [supabase/agent-skills](https://github.com/supabase/agent-skills) | PostgreSQL 실행 계획, 인덱스, 연결 예산과 트랜잭션·잠금 경계 |
+| [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli) | 실제 로케이터 확인, 브라우저 세션 격리, 동작과 단언 근거 구분 |
+| [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 인터페이스 요구사항에서 글꼴·컴포넌트·플랫폼 선택 도출 |
+| [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | 기존 디자인 계승과 국소 변경·공통 규칙 구분 |
+| [wshobson/agents](https://github.com/wshobson/agents) | 디자인 토큰, 재사용 컴포넌트, 플랫폼별 상호작용과 모션 |
+| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 요구사항 준비도, 작업 인계, 품질 기준, 마이그레이션, 성능과 관측성 |
+| [magnus919/agent-skills](https://github.com/magnus919/agent-skills) | 마이그레이션 호환성, 데이터 대조와 실제 복구 한계 |
+| [rmyndharis/antigravity-skills](https://github.com/rmyndharis/antigravity-skills) | 연동 관계 정리, 업무 단위 단계별 이전과 실행 책임 |
+
+채택은 이 프로젝트의 작업 범위를 따릅니다. 주관적인 “95% 확신”을 측정된 인수 기준으로 삼지 않으며 반복 승인, 모든 작업의 TDD, 특정 도구나 다중 에이전트를 강제하지 않습니다. `openai/skills`는 과거 참고 자료이며 기록된 스냅샷은 `openai/plugins`를 안내합니다.
+
+## 라이선스
+
+독자적으로 작성한 내용에는 [MIT](LICENSE)가 적용됩니다. 상위 프로젝트의 스킬 본문, 코드, 템플릿, 자산과 데이터베이스를 재배포하지 않습니다. 각 출처의 라이선스는 별개이며, Trail of Bits 출처는 CC-BY-SA-4.0이고 그 본문을 MIT 내용으로 각색하지 않았습니다. 세부 범위는 제3자 고지를 참고하세요.
