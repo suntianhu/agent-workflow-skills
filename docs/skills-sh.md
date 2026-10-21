@@ -22,7 +22,7 @@ Review the destination before confirming. Without the global flag, installation 
 
 ### Privacy options
 
-The CLI's enabled installation event includes public source and skill identifiers, agent labels, CLI version, and repository-relative SKILL.md paths. Optional caller metadata is unnecessary. The CLI also requests security-audit information for confirmed-public GitHub repositories. These CLI payload fields are separate from ordinary HTTP connection metadata; consult the platform's [privacy policy](https://skills.sh/privacy) for server-side handling.
+The CLI's enabled installation event includes public source and skill identifiers, agent labels, CLI version, and repository-relative SKILL.md paths. Optional caller metadata is unnecessary. The CLI also requests security-audit information for confirmed-public GitHub repositories. The platform's [privacy policy](https://skills.sh/privacy) additionally describes a short-lived IP-derived hash and JA4 fingerprint for hourly deduplication. Disabling telemetry prevents these installation-event requests.
 
 Disable both CLI telemetry and security-audit requests when you prefer:
 
@@ -45,6 +45,8 @@ skills.sh documents automatic discovery through real CLI installation events wit
 
 The root [skills.sh.json](../skills.sh.json) groups all 29 skills into seven sections. It contains only group descriptions and skill names. The platform reads it from the default branch after an enabled installation event and may cache the result. This display configuration does not change skill instructions or installation behavior.
 
+The optional [Skills CLI compatibility workflow](../.github/workflows/skills-cli.yml) performs a real project-scoped installation on a GitHub-hosted runner and compares installed files with source. Telemetry is disabled by default. A maintainer can explicitly enable public installation reporting for a manual run; then the connection fingerprint is associated with the hosted runner rather than the maintainer's computer. The workflow supplies no personal metadata or account credentials to skills.sh. A reported CI installation does not establish a user adoption count or immediate listing visibility.
+
 Sources checked on 2026-10-21: [listing FAQ](https://skills.sh/docs/faq), [CLI source and commands](https://github.com/vercel-labs/skills), [telemetry controls](https://github.com/vercel-labs/skills/blob/a80e4c9d12d607631249d4d7d059f835d4b2f13a/docs/troubleshooting.md), and [repository page configuration](https://skills.sh/docs/customize).
 
 ## 简体中文
@@ -53,6 +55,8 @@ Sources checked on 2026-10-21: [listing FAQ](https://skills.sh/docs/faq), [CLI s
 
 上面的第一条命令只列出技能，第二条将单个技能复制到当前项目的 Codex 技能位置。确认前检查目标路径；不加全局选项即采用项目范围。按当前任务选择能力，CLI 能发现或复制文件不等于模型执行效果已通过验证。
 
-开启遥测时，安装事件包含公开仓库标识、技能名、代理标签、CLI 版本和仓库相对入口路径，并可请求公开仓库的安全审计信息。不需要附加个人资料或自定义 metadata。示例提供关闭遥测的 sh 与 PowerShell 写法；关闭后仍能安装，但该次安装不会贡献目录发现统计。HTTP 连接信息的服务端处理另见平台隐私政策。
+开启遥测时，安装事件包含公开仓库标识、技能名、代理标签、CLI 版本和仓库相对入口路径，并可请求公开仓库的安全审计信息。不需要附加个人资料或自定义 metadata。平台隐私政策还说明会短时使用 IP 派生散列与 JA4 指纹去重。示例提供关闭遥测的 sh 与 PowerShell 写法；关闭后仍能安装，但该次安装不会贡献目录发现统计。
 
 skills.sh 依据真实安装事件自动发现技能，公开 FAQ 没有单独申请收录的表单。提交安装事件不等于立即显示或获得排名。根目录 skills.sh.json 将 29 项能力分为七组，只包含分组说明和技能名称；平台在默认分支读取配置，刷新可能有缓存延迟。
+
+手动 Skills CLI 兼容工作流在 GitHub 托管运行器完成真实的项目范围安装，并与源码逐文件比较，默认关闭遥测。维护者可明确选择报告公开安装事件，连接指纹对应托管运行器，不使用维护者本机连接。工作流不向 skills.sh 提供个人 metadata 或账号凭据；CI 安装也不等于真实用户采用量。
