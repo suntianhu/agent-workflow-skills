@@ -39,6 +39,16 @@ Add `--include-optional` to include the agent coordination skill. Exporting does
 
 For native discovery, copy complete individual skill directories only when you intend to install them, following your host's current documentation. See [agent compatibility](docs/agent-compatibility.md).
 
+### Optional Skills CLI
+
+With Node.js 22.20+, list this repository's skills using the official CLI:
+
+```sh
+npx skills@1.7.4 add suntianhu/agent-workflow-skills --list
+```
+
+See [installation, telemetry controls, and skills.sh grouping](docs/skills-sh.md) for project-scoped installation and privacy options. CLI discovery is separate from agent execution evidence.
+
 ## Nine workflows
 
 | Workflow | Use it for | Key gate |

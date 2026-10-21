@@ -1,0 +1,41 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Planning",
+      "description": "Choose task scope, requirements, skills, resources, and estimates.",
+      "skills": ["aw-project-triage", "aw-requirements-design", "aw-skill-selection", "aw-model-routing", "aw-effort-estimation"]
+    },
+    {
+      "title": "Codebase and migration",
+      "description": "Understand existing projects, preserve conventions, and plan migrations.",
+      "skills": ["aw-repository-audit", "aw-project-standards", "aw-framework-selection", "aw-github-reference", "aw-project-migration"]
+    },
+    {
+      "title": "Design and frontend",
+      "description": "Research design references, maintain shared rules, and implement interfaces.",
+      "skills": ["aw-design-reference", "aw-design-standards", "aw-ui-design", "aw-frontend-implementation"]
+    },
+    {
+      "title": "Backend and boundaries",
+      "description": "Implement services and verify contracts, ownership, and trust boundaries.",
+      "skills": ["aw-backend-implementation", "aw-api-contracts", "aw-security-boundaries"]
+    },
+    {
+      "title": "Performance and signals",
+      "description": "Measure bottlenecks and design signals for concrete operational questions.",
+      "skills": ["aw-performance-optimization", "aw-observability"]
+    },
+    {
+      "title": "Debugging and validation",
+      "description": "Select validation, investigate failures, review counterexamples, and verify results.",
+      "skills": ["aw-test-strategy", "aw-scoped-tdd", "aw-evidence-debugging", "aw-adversarial-review", "aw-evidence-verification"]
+    },
+    {
+      "title": "Delivery and skills",
+      "description": "Prepare delivery, coordinate work, and maintain portable open-source skills.",
+      "skills": ["aw-delivery-cleanup", "aw-release-readiness", "aw-agent-coordination", "aw-skill-authoring", "aw-open-source-readiness"]
+    }
+  ]
+}
