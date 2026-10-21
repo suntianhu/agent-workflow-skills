@@ -8,7 +8,7 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**버전 1.2.7** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
+**버전 1.2.8** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
 
 **작업에 맞는 스킬을 선택하고 기존 규칙을 이어갑니다.** 스킬 29개와 조건부 구성 9개로 기존·신규 프로젝트, [마이그레이션](docs/project-migration.md), [성능과 관측성](docs/adoption-integration.md)을 다룹니다. 유효한 결정을 재사용하고 필요할 때 분담하며 실제 근거로 결과를 설명합니다.
 
@@ -130,8 +130,6 @@ Windows/Linux CI는 소스, 오프라인 도구와 재현 가능한 패키징을
 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 요구사항 준비도, 작업 인계, 품질 기준, 마이그레이션, 성능과 관측성 |
 | [magnus919/agent-skills](https://github.com/magnus919/agent-skills) | 마이그레이션 호환성, 데이터 대조와 실제 복구 한계 |
 | [rmyndharis/antigravity-skills](https://github.com/rmyndharis/antigravity-skills) | 연동 관계 정리, 업무 단위 단계별 이전과 실행 책임 |
-
-채택은 이 프로젝트의 작업 범위를 따릅니다. 주관적인 “95% 확신”을 측정된 인수 기준으로 삼지 않으며 반복 승인, 모든 작업의 TDD, 특정 도구나 다중 에이전트를 강제하지 않습니다. `openai/skills`는 과거 참고 자료이며 기록된 스냅샷은 `openai/plugins`를 안내합니다.
 
 ## 라이선스
 

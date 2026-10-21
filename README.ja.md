@@ -8,7 +8,7 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**バージョン 1.2.7** · Agent Skills ディレクトリ形式 · Python 3.10+ 用ツール · 実行時の依存関係は Python 標準ライブラリのみ
+**バージョン 1.2.8** · Agent Skills ディレクトリ形式 · Python 3.10+ 用ツール · 実行時の依存関係は Python 標準ライブラリのみ
 
 **タスクに合うスキルを選び、既存の規約を引き継ぎます。** 29スキルと9つの条件付き構成で、既存・新規プロジェクト、[移行](docs/project-migration.md)、[性能と可観測性](docs/adoption-integration.md)を扱います。有効な決定を再利用し、必要に応じて分担し、実際の証拠で成果を示します。
 
@@ -130,8 +130,6 @@ Windows/Linux CI はソース、オフラインツール、再現可能なパッ
 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 要件の準備状況、タスク引き継ぎ、品質基準、移行、性能、可観測性 |
 | [magnus919/agent-skills](https://github.com/magnus919/agent-skills) | 移行の互換性、データ照合、現実的な復旧の限界 |
 | [rmyndharis/antigravity-skills](https://github.com/rmyndharis/antigravity-skills) | 連携関係の整理、業務単位の段階移行、実行責任の明確化 |
-
-採用は本プロジェクトのタスク境界に従います。主観的な「95%の確信」を測定済みの受け入れ条件とはせず、承認の反復、全タスクでのTDD、特定ツール、複数エージェントも強制しません。`openai/skills` は過去の参照元で、記録したスナップショットは `openai/plugins` を案内しています。
 
 ## ライセンス
 
