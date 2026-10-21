@@ -39,6 +39,16 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 需要宿主原生发现时，按其当前文档和明确安装意图，复制完整的单个技能目录。详见[代理适配](docs/agent-compatibility.md)（英文）。
 
+### 可选的 Skills CLI
+
+使用 Node.js 22.20+ 时，可通过官方 CLI 列出本仓库技能：
+
+```sh
+npx skills@1.7.4 add suntianhu/agent-workflow-skills --list
+```
+
+项目范围安装、关闭遥测及 skills.sh 分组见[安装与隐私说明](docs/skills-sh.md#简体中文)。CLI 发现与智能体执行证据分别说明。
+
 ## 九套组合
 
 | 组合 | 适用任务 | 核心门禁 |
