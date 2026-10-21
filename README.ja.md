@@ -39,6 +39,16 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 
 ネイティブのスキル検出を利用する場合は、インストールする意思があるときに限り、実行環境の最新ドキュメントに従って個々のスキルディレクトリ全体をコピーしてください。[エージェント互換性](docs/agent-compatibility.md)（英語）を参照してください。
 
+### 任意の Skills CLI
+
+Node.js 22.20+ では、公式 CLI でこのリポジトリのスキルを一覧表示できます。
+
+```sh
+npx skills@1.7.4 add suntianhu/agent-workflow-skills --list
+```
+
+プロジェクト単位のインストール、テレメトリの無効化、skills.sh の分類は[インストールとプライバシー](docs/skills-sh.md)（英語／簡体字中国語）を参照してください。CLI による検出とエージェント実行の証拠は別です。
+
 ## 9 つのワークフロー
 
 | ワークフロー | 対象 | 主な前提条件 |
