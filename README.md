@@ -12,7 +12,7 @@ Composable development workflows for coding agents, with explicit project gates 
 
 **Select skills for the task. Build on the project's existing rules.** 29 skills and nine conditional compositions cover existing and new projects, [project migration](docs/project-migration.md), and [performance and observability](docs/adoption-integration.md). Reuse valid decisions, delegate when useful, and report evidence for the delivered result.
 
-[Sources and adoption](#sources) · [Usage examples](examples/README.md) · [Release history](CHANGELOG.md)
+[Project introduction](docs/promotion.en.md) · [Sources and adoption](#sources) · [Usage examples](examples/README.md) · [Release history](CHANGELOG.md)
 
 ## Why this collection
 
