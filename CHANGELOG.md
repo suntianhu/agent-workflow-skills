@@ -2,6 +2,15 @@
 
 Public tags and source-only checkpoints are distinct. See [version policy/status](docs/versioning.md). Preserve existing tags; routine releases increment patch.
 
+## 1.2.9 — 2026-10-21
+
+- Verify language name resolution, same-name types, inheritance responsibilities and reflective/string references before changing names or qualification style; preserve framework extension points.
+- Trace configuration keys through definitions, loading and consumers, including enabled/disabled branches and independent mandatory rules.
+- Distinguish self-service password changes, administrator resets and cancellation; keep confirmation, old-password authentication, equivalence, strength and successful metadata writes separate.
+- Use actual core dependency artifacts for relevant branches and save/read or save/authenticate round trips; select input boundaries and historical formats from the project contract.
+- Report real dependency, substituted-boundary and real-channel evidence separately. Keep local-review, compiler and failed-build claims within their observed scope.
+- Retain 29 skills, nine compositions, existing test policies and utility behavior; regenerate portable copies from the established maintenance sources.
+
 ## 1.2.8 — 2026-10-21
 
 - Remove the source-adoption caveat paragraph consistently from all six README translations.

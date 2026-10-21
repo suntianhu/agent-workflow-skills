@@ -8,7 +8,7 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**버전 1.2.8** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
+**버전 1.2.9** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
 
 **작업에 맞는 스킬을 선택하고 기존 규칙을 이어갑니다.** 스킬 29개와 조건부 구성 9개로 기존·신규 프로젝트, [마이그레이션](docs/project-migration.md), [성능과 관측성](docs/adoption-integration.md)을 다룹니다. 유효한 결정을 재사용하고 필요할 때 분담하며 실제 근거로 결과를 설명합니다.
 
@@ -38,16 +38,6 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 `--include-optional`을 추가하면 에이전트 협업 스킬도 포함됩니다. 내보내기는 스킬을 설치하거나 기본 설정을 바꾸지 않습니다. 기존 대상, 리디렉션된 경로, 오래된 생성 파일, 저장소 내부 대상, 네이티브 설치 위치는 거부됩니다.
 
 네이티브 스킬 검색을 사용하려면 설치 의도가 있을 때에만 실행 환경의 최신 문서에 따라 개별 스킬 디렉터리 전체를 복사하세요. [에이전트 호환성](docs/agent-compatibility.md)(영어)을 참고하세요.
-
-### 선택적 Skills CLI
-
-Node.js 22.20+에서 공식 CLI로 이 저장소의 스킬 목록을 확인할 수 있습니다.
-
-```sh
-npx skills@1.7.4 add suntianhu/agent-workflow-skills --list
-```
-
-프로젝트 단위 설치, 텔레메트리 비활성화 및 skills.sh 분류는 [설치와 개인정보 안내](docs/skills-sh.md)(영어/중국어 간체)를 참고하세요. CLI 검색과 에이전트 실행 증거는 별도로 구분합니다.
 
 ## 9가지 워크플로
 

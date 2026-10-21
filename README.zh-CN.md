@@ -8,7 +8,7 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**版本 1.2.8** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
+**版本 1.2.9** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
 
 **按任务选技能，沿用项目已有规范。** 29 个技能、9 套条件组合覆盖新旧项目开发、[项目迁移](docs/project-migration.md)、[性能优化与可观测性](docs/adoption-integration.md)。承接有效决定，按需拆分协作，以实际证据说明交付结果。
 
@@ -38,16 +38,6 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 添加 `--include-optional` 可携带代理协作技能。导出不安装技能、不改默认设置；拒绝既有目录、重定向路径、过期生成内容、仓库内部目标和原生安装位置。
 
 需要宿主原生发现时，按其当前文档和明确安装意图，复制完整的单个技能目录。详见[代理适配](docs/agent-compatibility.md)（英文）。
-
-### 可选的 Skills CLI
-
-使用 Node.js 22.20+ 时，可通过官方 CLI 列出本仓库技能：
-
-```sh
-npx skills@1.7.4 add suntianhu/agent-workflow-skills --list
-```
-
-项目范围安装、关闭遥测及 skills.sh 分组见[安装与隐私说明](docs/skills-sh.md#简体中文)。CLI 发现与智能体执行证据分别说明。
 
 ## 九套组合
 

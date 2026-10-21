@@ -15,7 +15,7 @@ license: MIT
 ## 执行
 
 1. 识别入口身份、资源归属、输入和外部依赖；核实疑似漏洞或安全控制变更时读取security-review-evidence.md。
-2. 按涉及点核对授权/私图/SSRF/签名/支付退款/日志与幂等；涉及PostgreSQL/Supabase角色、策略或租户隔离时读取postgres-data.md。
+2. 按涉及点核对授权/私图/SSRF/签名/支付退款/日志与幂等；密码变更区分入口、认证/同值/强度顺序和成功写入；涉及PostgreSQL/Supabase角色、策略或租户隔离时读取postgres-data.md。
 3. 限定静态检查、局部行为与真实渠道证据，保留未验门槛。
 
 ## 交付

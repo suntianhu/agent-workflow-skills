@@ -8,7 +8,7 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**バージョン 1.2.8** · Agent Skills ディレクトリ形式 · Python 3.10+ 用ツール · 実行時の依存関係は Python 標準ライブラリのみ
+**バージョン 1.2.9** · Agent Skills ディレクトリ形式 · Python 3.10+ 用ツール · 実行時の依存関係は Python 標準ライブラリのみ
 
 **タスクに合うスキルを選び、既存の規約を引き継ぎます。** 29スキルと9つの条件付き構成で、既存・新規プロジェクト、[移行](docs/project-migration.md)、[性能と可観測性](docs/adoption-integration.md)を扱います。有効な決定を再利用し、必要に応じて分担し、実際の証拠で成果を示します。
 
@@ -38,16 +38,6 @@ python scripts/export_bundle.py --bundle existing-frontend --out ../workflow-exp
 `--include-optional` を追加すると、エージェント連携スキルも含められます。エクスポートはスキルのインストールや既定設定の変更を行いません。既存の出力先、リダイレクトされたパス、古い生成ファイル、リポジトリ内の出力先、ネイティブのインストール先は拒否されます。
 
 ネイティブのスキル検出を利用する場合は、インストールする意思があるときに限り、実行環境の最新ドキュメントに従って個々のスキルディレクトリ全体をコピーしてください。[エージェント互換性](docs/agent-compatibility.md)（英語）を参照してください。
-
-### 任意の Skills CLI
-
-Node.js 22.20+ では、公式 CLI でこのリポジトリのスキルを一覧表示できます。
-
-```sh
-npx skills@1.7.4 add suntianhu/agent-workflow-skills --list
-```
-
-プロジェクト単位のインストール、テレメトリの無効化、skills.sh の分類は[インストールとプライバシー](docs/skills-sh.md)（英語／簡体字中国語）を参照してください。CLI による検出とエージェント実行の証拠は別です。
 
 ## 9 つのワークフロー
 
