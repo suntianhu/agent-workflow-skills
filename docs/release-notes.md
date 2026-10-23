@@ -1,18 +1,19 @@
-# v1.3.0 — References and acknowledgments
+# v1.3.1 — Verify real data and complete business paths
 
-29 skills and nine conditional compositions. This documentation release uses the explicitly requested version 1.3.0 and gives clearer credit to the open-source projects that informed the collection.
+29 skills and nine conditional compositions. This patch strengthens the existing debugging, API-contract, test-strategy and evidence-verification responsibilities after a missed data-identity assumption.
 
 ## Changes
 
-- Use references and acknowledgments consistently in all six README languages, with thanks to the authors and maintainers of fourteen open-source projects.
-- Retain concrete adoption summaries, fixed commits, 73 retrieved-file records and individual license boundaries.
-- Update the Chinese and English introductions to version 1.3.0 and link their source acknowledgments; keep the skills.sh listing and installation/privacy guide available.
-- Preserve skill instructions, generated resources, workflow compositions and utility behavior.
+- Verify actual schema, unique constraints, relevant existing data and match counts before selecting a fix. An id/key name or single-row fixture does not establish uniqueness.
+- Follow the complete affected business path: entry identity, lookup, validation, writes, rereads/authentication and the resulting response. Check that every stage addresses the same object and that the deployed build contains the change.
+- Select relevant duplicate-identifier, multi-account/tenant and historical-data counterexamples. Confirm that unselected objects and their metadata remain unchanged.
+- Keep a defect pending when critical real-data or business-path evidence is missing. Compilation and test doubles do not establish a fix; adding an integration disclaimer does not make an unconditional completion claim valid.
+- Regenerate portable skills and align all six README languages. Existing authorization, test/retention policies, utility behavior, skill identities and composition counts remain in force.
 
 ## Evidence and limits
 
-The validation scope for this release covers source structure, generated freshness, local links, offline utility examples and reproducible tracked-source packaging. Actual results are recorded in [validation](validation.md). Windows/Linux CI, the merge, the new annotated tag and published asset bytes are verified separately after execution.
+Source validation, generated freshness, offline utility examples, static scenario review and reproducible tracked-source packaging each support their stated scope. Actual source results are recorded in [validation](validation.md); Windows/Linux CI, main/tag alignment, release assets and the authorized local Codex update are checked separately after execution.
 
-No new persistent test suite or skill is added. Existing test/retention and security gates remain in force. Native discovery and scenario records retain their historical version and scope; this documentation release does not claim new agent execution or product acceptance. The earlier source-only checkpoint named 1.3.0 remains a historical record distinct from this public release.
+No persistent test suite, skill or composition is added. Static scenario review and native skill discovery do not establish model adherence, automatic triggering or product acceptance. Historical evidence keeps its original version and scope. Real-data investigation remains subject to existing authorization and does not permit changing real credentials or business data to obtain a passing result.
 
-See [CHANGELOG](../CHANGELOG.md), [version history](versioning.md), [validation](validation.md), [references and acknowledgments](provenance.md) and [third-party notices](../THIRD_PARTY_NOTICES.md).
+See [CHANGELOG](../CHANGELOG.md), [version history](versioning.md), [validation](validation.md) and [GitHub publishing](github-publishing.md).
