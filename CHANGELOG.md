@@ -2,6 +2,14 @@
 
 Public tags and source-only checkpoints are distinct. See [version policy/status](docs/versioning.md). Preserve existing tags; routine releases increment patch.
 
+## 1.3.1 — 2026-10-23
+
+- Verify actual schema, uniqueness constraints, relevant existing data and match counts before relying on data-identity assumptions; field names and single-row fixtures are not evidence of uniqueness.
+- Trace the complete affected path through identity, lookup, validation, writes and rereads/authentication, and verify the deployed build actually contains the change.
+- Select relevant duplicate-key, multi-account/tenant, historical-data and unchanged-neighbor counterexamples; preserve authorization and existing test/retention policies.
+- Keep fixes pending when critical real-data or business-path evidence is missing. Compilation and test-double success support only their stated scope; a disclaimer does not justify an unconditional fixed claim.
+- Update four existing skill entries and shared guides, regenerate portable copies, and align six README languages. Retain 29 skills, nine compositions, utility behavior and historical evidence.
+
 ## 1.3.0 — 2026-10-21
 
 - Present source credits as references and acknowledgments consistently across all six README languages, thanking the authors and maintainers of fourteen open-source projects.

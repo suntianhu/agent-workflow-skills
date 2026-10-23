@@ -2,7 +2,7 @@
 
 [English](promotion.en.md) · [简体中文](promotion.zh-CN.md) · [GitHub](https://github.com/suntianhu/agent-workflow-skills)
 
-**v1.3.0 · 29 skills · Nine conditional workflows · MIT**
+**v1.3.1 · 29 skills · Nine conditional workflows · MIT**
 
 **Build on existing conventions, keep changes scoped, and back completion claims with evidence.**
 

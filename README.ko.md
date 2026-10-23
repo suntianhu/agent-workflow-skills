@@ -8,9 +8,11 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**버전 1.3.0** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
+**버전 1.3.1** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
 
 **작업에 맞는 스킬을 선택하고 기존 규칙을 이어갑니다.** 스킬 29개와 조건부 구성 9개로 기존·신규 프로젝트, [마이그레이션](docs/project-migration.md), [성능과 관측성](docs/adoption-integration.md)을 다룹니다. 유효한 결정을 재사용하고 필요할 때 분담하며 실제 근거로 결과를 설명합니다.
+
+버그 수정 전 실제 데이터에 대한 가정과 영향을 받는 전체 업무 흐름을 확인합니다. 컴파일과 테스트 대역의 통과만으로 수정 완료를 판단하지 않습니다.
 
 [참고 자료 및 감사의 말](#sources) · [사용 예시](examples/README.md) · [변경 이력](CHANGELOG.md)
 

@@ -2,7 +2,7 @@
 
 [English](promotion.en.md) · [简体中文](promotion.zh-CN.md) · [GitHub](https://github.com/suntianhu/agent-workflow-skills)
 
-**v1.3.0 · 29 个技能 · 9 套条件组合 · MIT**
+**v1.3.1 · 29 个技能 · 9 套条件组合 · MIT**
 
 **沿用已有规范，控制每次改动，用证据说明完成情况。**
 
