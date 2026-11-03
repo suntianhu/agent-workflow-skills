@@ -2,6 +2,15 @@
 
 Public tags and source-only checkpoints are distinct. See [version policy/status](docs/versioning.md). Preserve existing tags; routine releases increment patch.
 
+## 1.3.2 — 2026-11-03
+
+- Reconcile authorized installed edits into the maintenance sources: report development evidence in the current reply instead of appending process journals to skills or references.
+- Preserve explicit visual/content anchors during local UI changes, distinguish reference styling from workflow reuse, and recheck running artifacts before another patch when a user reports no change.
+- Clarify deletion propagation across authoritative data, snapshots, caches, synchronization and derived statistics; distinguish AI modification intent from actual authorized execution and reread results.
+- Integrate overlapping tasks into shared implementations and summarize update scope from the user's undeployed baseline, including applicable clients, services, migrations and external configuration.
+- Separate content versions, production batches and platform states; compare installed edits before upgrades. Retain 29 skills, nine compositions, existing gates, authorization and test/retention policies.
+- Review anonymized real-case decisions and counterexamples separately from structure, native discovery and product/model execution.
+
 ## 1.3.1 — 2026-10-23
 
 - Verify actual schema, uniqueness constraints, relevant existing data and match counts before relying on data-identity assumptions; field names and single-row fixtures are not evidence of uniqueness.
