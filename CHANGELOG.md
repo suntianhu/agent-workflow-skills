@@ -2,6 +2,12 @@
 
 Public tags and source-only checkpoints are distinct. See [version policy/status](docs/versioning.md). Preserve existing tags; routine releases increment patch.
 
+## 1.3.3 — 2026-11-03
+
+- Remove the actual-evidence column and historical validation-result paragraphs from all six READMEs; retain usage and validation commands and separate historical records.
+- Require explicit conditional branches instead of ternary operators in frontend and backend changes. Split long conditions into meaningful names or helpers, preserving short-circuit order, null guards and side-effect timing.
+- Regenerate both implementation skills and their guides without broad cleanup of unrelated existing code. Retain 29 skills, nine compositions, utility behavior and existing gates.
+
 ## 1.3.2 — 2026-11-03
 
 - Reconcile authorized installed edits into the maintenance sources: report development evidence in the current reply instead of appending process journals to skills or references.

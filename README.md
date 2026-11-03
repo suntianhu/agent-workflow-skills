@@ -8,7 +8,7 @@ Composable development workflows for coding agents, with explicit project gates 
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**Version 1.3.2** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
+**Version 1.3.3** · Agent Skills directories · Python 3.10+ utilities · No runtime dependencies beyond the Python standard library
 
 **Select skills for the task. Build on the project's existing rules.** 29 skills and nine conditional compositions cover existing and new projects, [project migration](docs/project-migration.md), and [performance and observability](docs/adoption-integration.md). Reuse valid decisions, delegate when useful, and report evidence for the delivered result.
 
@@ -83,13 +83,13 @@ Each skill includes its own instructions, necessary references/resources, and li
 
 ## Agent compatibility
 
-| Host | Packaging | Evidence |
-| --- | --- | --- |
-| Codex | Agent Skills directory plus optional `agents/openai.yaml` UI metadata | 1.2.7 Windows Codex discovery: 29/29 installed skills enabled, no parser errors; no model turn |
-| Claude Code | Complete skill directories in documented host locations | 1.2.0: Native CLI + official SDK discovery: 24/24; no successful model execution |
-| Gemini CLI | Complete skill directories in documented host locations | Documentation mapping only; end-to-end use not tested |
-| GitHub Copilot | Complete skill directories in supported clients | Documentation mapping only; individual clients not tested |
-| Other agents | Read `SKILL.md` and relative references when supported | No blanket claim of native compatibility |
+| Host | Packaging |
+| --- | --- |
+| Codex | Agent Skills directory plus optional `agents/openai.yaml` UI metadata |
+| Claude Code | Complete skill directories in documented host locations |
+| Gemini CLI | Complete skill directories in documented host locations |
+| GitHub Copilot | Complete skill directories in supported clients |
+| Other agents | Read `SKILL.md` and relative references when supported |
 
 Portable [role briefs](docs/role-briefs.md) (Chinese) describe optional multi-agent responsibilities. They are not automatically registered agent configurations. Host permissions, tools, trust settings, and model capabilities still apply.
 
@@ -101,8 +101,6 @@ python scripts/validate.py
 ```
 
 The validator checks declarations, generated content freshness, exact resource sets, local links, Python syntax, composition order, and selected distribution hygiene rules. It does not prove that an agent will make the right decision or that a framework is vulnerability-free.
-
-Windows/Linux CI checks source, offline utilities and reproducible packaging. In 1.2.7, local Windows Codex discovery loaded all 29 installed skills with no parser errors; all 154 installed skill files matched source. Earlier isolated Codex/Claude discovery and 42 browser checks keep their historical scope. This does not establish automatic trigger accuracy, model adherence or production coverage. See [validation](docs/validation.md) and [native evidence](docs/agent-loading.md).
 
 ## Examples and automated releases
 

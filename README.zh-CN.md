@@ -8,7 +8,7 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**版本 1.3.2** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
+**版本 1.3.3** · Agent Skills 目录格式 · Python 3.10+ 工具 · 运行工具仅依赖 Python 标准库
 
 **按任务选技能，沿用项目已有规范。** 29 个技能、9 套条件组合覆盖新旧项目开发、[项目迁移](docs/project-migration.md)、[性能优化与可观测性](docs/adoption-integration.md)。承接有效决定，按需拆分协作，以实际证据说明交付结果。
 
@@ -83,13 +83,13 @@ npx skills@1.7.4 add suntianhu/agent-workflow-skills --list
 
 ## 智能体兼容性
 
-| 宿主 | 打包方式 | 实际证据 |
-| --- | --- | --- |
-| Codex | Agent Skills 目录，可选 `agents/openai.yaml` 界面扩展 | 1.2.7 Windows Codex 原生发现：29/29 本机已安装技能启用，无解析错误；未执行模型任务 |
-| Claude Code | 按官方目录放完整技能 | 1.2.0: 原生 CLI 与官方 SDK 发现 24/24；未成功执行模型任务 |
-| Gemini CLI | 按官方目录放完整技能 | 文档适配，未端到端实测 |
-| GitHub Copilot | 按支持客户端的目录放完整技能 | 文档适配，各客户端未实测 |
-| 其他代理 | 支持时读取 `SKILL.md` 及相对引用 | 不承诺未经核对的原生兼容 |
+| 宿主 | 打包方式 |
+| --- | --- |
+| Codex | Agent Skills 目录，可选 `agents/openai.yaml` 界面扩展 |
+| Claude Code | 按官方目录放完整技能 |
+| Gemini CLI | 按官方目录放完整技能 |
+| GitHub Copilot | 按支持客户端的目录放完整技能 |
+| 其他代理 | 支持时读取 `SKILL.md` 及相对引用 |
 
 [协作角色说明](docs/role-briefs.md)是可选的文字职责，不是自动注册配置。实际权限、工具、信任和模型能力以宿主为准。
 
@@ -101,8 +101,6 @@ python scripts/validate.py
 ```
 
 校验覆盖源声明、生成内容新鲜度、精确资源集合、相对引用、Python 语法、组合顺序和部分分发卫生规则；不证明智能体决策正确，也不证明框架没有漏洞。
-
-Windows/Linux CI 校验源码、离线工具和可复现打包。1.2.7 的 Windows Codex 原生发现识别并启用全部 29 个本机技能，无解析错误；154 个安装文件与源码一致。早期 Codex/Claude 隔离发现及 42 项浏览器检查保留原有范围，不代表本版自动触发准确率、模型遵循率或生产覆盖。见[验证记录](docs/validation.md)及[原生加载证据](docs/agent-loading.md)。
 
 ## 使用示例与自动发布
 

@@ -8,7 +8,7 @@
 ![Skills: 29](https://img.shields.io/badge/skills-29-2563eb)
 ![Workflows: 9](https://img.shields.io/badge/workflows-9-0f766e)
 
-**버전 1.3.2** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
+**버전 1.3.3** · Agent Skills 디렉터리 형식 · Python 3.10+ 도구 · 실행 시 Python 표준 라이브러리만 필요
 
 **작업에 맞는 스킬을 선택하고 기존 규칙을 이어갑니다.** 스킬 29개와 조건부 구성 9개로 기존·신규 프로젝트, [마이그레이션](docs/project-migration.md), [성능과 관측성](docs/adoption-integration.md)을 다룹니다. 유효한 결정을 재사용하고 필요할 때 분담하며 실제 근거로 결과를 설명합니다.
 
@@ -83,13 +83,13 @@ npx skills@1.7.4 add suntianhu/agent-workflow-skills --list
 
 ## 에이전트 호환성
 
-| 실행 환경 | 패키징 | 실제 확인 범위 |
-| --- | --- | --- |
-| Codex | Agent Skills 디렉터리와 선택적 `agents/openai.yaml` UI 메타데이터 | 1.2.7 Windows Codex에서 설치된 29/29 스킬을 검색·활성화, 구문 오류 없음; 모델 작업 미실행 |
-| Claude Code | 문서에 명시된 위치에 전체 스킬 디렉터리 배치 | 1.2.0: 네이티브 CLI와 공식 SDK에서 24/24 검색 확인. 성공한 모델 실행은 미검증 |
-| Gemini CLI | 문서에 명시된 위치에 전체 스킬 디렉터리 배치 | 문서 기준으로만 대응. 종단 간 사용은 미검증 |
-| GitHub Copilot | 지원 클라이언트에서 전체 스킬 디렉터리 사용 | 문서 기준으로만 대응. 개별 클라이언트는 미검증 |
-| 기타 에이전트 | 지원하는 경우 `SKILL.md`와 상대 참조 읽기 | 확인하지 않은 네이티브 호환성을 일괄 보장하지 않음 |
+| 실행 환경 | 패키징 |
+| --- | --- |
+| Codex | Agent Skills 디렉터리와 선택적 `agents/openai.yaml` UI 메타데이터 |
+| Claude Code | 문서에 명시된 위치에 전체 스킬 디렉터리 배치 |
+| Gemini CLI | 문서에 명시된 위치에 전체 스킬 디렉터리 배치 |
+| GitHub Copilot | 지원 클라이언트에서 전체 스킬 디렉터리 사용 |
+| 기타 에이전트 | 지원하는 경우 `SKILL.md`와 상대 참조 읽기 |
 
 [역할 설명](docs/role-briefs.md)(중국어 간체)은 선택적 다중 에이전트 협업의 책임을 설명하며 자동 등록되는 설정이 아닙니다. 실제 권한, 도구, 신뢰 설정과 모델 기능은 실행 환경을 따릅니다.
 
@@ -101,8 +101,6 @@ python scripts/validate.py
 ```
 
 검증 도구는 선언, 생성 내용의 동기화, 정확한 리소스 집합, 로컬 링크, Python 문법, 구성 단계 순서, 일부 배포물 점검 규칙을 확인합니다. 에이전트의 판단이 옳거나 프레임워크에 취약점이 없음을 증명하지는 않습니다.
-
-Windows/Linux CI는 소스, 오프라인 도구와 재현 가능한 패키징을 검사합니다. 1.2.7의 Windows Codex는 설치된 스킬 29개를 구문 오류 없이 검색·활성화했고 설치 파일 154개가 소스와 일치했습니다. 과거 Codex/Claude 격리 검색과 브라우저 검사 42개의 범위는 유지합니다. 자동 실행 정확도, 모델 준수율이나 운영 환경 검증은 아닙니다. [검증 기록](docs/validation.md)과 [네이티브 증거](docs/agent-loading.md)를 참고하세요.
 
 ## 사용 예제와 자동 릴리스
 
