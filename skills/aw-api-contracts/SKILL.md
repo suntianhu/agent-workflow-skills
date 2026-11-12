@@ -25,6 +25,7 @@ license: MIT
 ## 按需资料
 
 - [api-contracts.md](references/api-contracts.md)：入口不足以处理本次细节时，仅读相关段落；已读且未变则复用。
+- [security-boundaries.md](references/security-boundaries.md)：本次涉及异步身份、共享缓存或过期结果防护时，只读“异步会话与最终提交”；已有有效结论直接复用。
 
 
 本目录可独立使用；只补真实缺口，不自动串联其他技能。组合是条件说明，不是必跑清单。
