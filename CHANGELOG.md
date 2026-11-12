@@ -2,6 +2,14 @@
 
 Public tags and source-only checkpoints are distinct. See [version policy/status](docs/versioning.md). Preserve existing tags; routine releases increment patch.
 
+## 1.3.4 — 2026-11-12
+
+- Verify dependency upgrades and replacements through real consumers, applicable invocation contracts, parsing boundaries, failure and recovery; audit/build success alone does not establish compatibility.
+- Bind identity before asynchronous dispatch and recheck it at final state commits; isolate pending work, caches and invalidation state while preserving current-session retries.
+- Keep asynchronous session rules in one source guide, conditionally referenced by API and frontend skills.
+- Separate application/database/HTTP evidence from external substitutes, real cloud, device and production validation; classify introduced, preexisting and unconfirmed findings.
+- Retain 29 skills, nine compositions, existing utility behavior and temporary-validation retention policies.
+
 ## 1.3.3 — 2026-11-03
 
 - Remove the actual-evidence column and historical validation-result paragraphs from all six READMEs; retain usage and validation commands and separate historical records.
